@@ -1,0 +1,10 @@
+examples:
+  $ref: "./examples/B2B_Logistics.yaml"
+enum:
+  $ref: "./enums/index.yaml"
+tags:
+  $ref: "./tags/TagGroup.yaml"
+flows:
+  $ref: "./flows/index.yaml"
+attributes:
+  $ref: "./attributes/index.yaml"
