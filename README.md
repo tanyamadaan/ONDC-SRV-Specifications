@@ -1,14 +1,14 @@
-# ONDC-LOG-Specifications
+# ONDC-SRV-Specifications
 
 # Open Network for Digital Commerce (ONDC) Protocol Open API Specifications
 
-This repository contains the model implementations for Logistic services for B2B Domestic and International.
+This repository contains the model implementations for Services - Home Services and Consultation Services.
 
 ## Domains:
 | Category                    | ONDC Domain|
 | ----------------------------|------------|
-| B2B Domestic Logistics      | ONDC:LOG10 |
-| B2B International Logistics | ONDC:LOG11 |
+| Home Services               | ONDC:SRV10 |
+| Consultation Services       | ONDC:SRV11 |
 
 ## Latest Release
 2.0.0-draft | Nov 02 2023
