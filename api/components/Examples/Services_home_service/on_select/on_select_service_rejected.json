@@ -239,5 +239,9 @@
         "ttl": "P1D"
       }
     }
+  },
+  "error": {
+    "code": "90001",
+    "message": "Schedule not available"
   }
 }

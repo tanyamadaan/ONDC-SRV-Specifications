@@ -18,7 +18,7 @@
       "bpp_uri":"https://sellerapp.com/grocery",
       "transaction_id":"T1",
       "message_id":"M1",
-      "timestamp":"2023-11-16T09:00:40.000Z",
+      "timestamp":"2023-11-16T09:30:40.000Z",
       "ttl":"PT30S"
     },
   "message":
@@ -161,7 +161,7 @@
                 "token": "1234",
                 "valid_from": "2023-11-16T09:30:00Z",
                 "valid_to": "2023-11-16T09:35:00Z",
-                "status": "valid"
+                "status": "confirmed"
               }
             }
           ]
