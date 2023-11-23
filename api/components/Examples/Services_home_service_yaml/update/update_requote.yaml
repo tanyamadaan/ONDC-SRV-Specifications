@@ -170,7 +170,7 @@ value:
           state:
             descriptor:
               code: Completed
-          type: Delivery
+          type: Home-Service
           tracking: false
           stops:
             - type: start
@@ -184,9 +184,6 @@ value:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
                 timestamp: '2023-11-16T09:00:00.000Z'
-              instructions:
-                name: Special Instructions
-                short_desc: Customer Special Instructions
               contact:
                 phone: '9886098860'
                 email: nobody@nomail.com
@@ -216,6 +213,9 @@ value:
                 timestamp: '2023-11-16T09:00:00.000Z'
               person:
                 name: Ramu
+              instructions:
+                name: Special Instructions
+                short_desc: Customer Special Instructions
               authorization:
                 type: OTP
                 token: '1234'
@@ -227,7 +227,7 @@ value:
           state:
             descriptor:
               code: Pending
-          type: Delivery
+          type: Home-Service
           tracking: false
           stops:
             - type: start
@@ -236,9 +236,6 @@ value:
                 descriptor:
                   name: ABC Store
                 gps: 12.956399,77.636803
-              instructions:
-                name: Special Instructions
-                short_desc: Customer Special Instructions
               contact:
                 phone: '9886098860'
                 email: nobody@nomail.com
@@ -264,6 +261,9 @@ value:
                 email: nobody@nomail.com
               person:
                 name: Ramu
+              instructions:
+                name: Special Instructions
+                short_desc: Customer Special Instructions
           rateable: true
       quote:
         price:

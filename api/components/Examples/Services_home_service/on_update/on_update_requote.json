@@ -295,7 +295,7 @@
                             "code": "Completed"
                         }
                     },
-                    "type": "Delivery",
+                    "type": "Home-Service",
                     "tracking": false,
                     "stops": [
                         {
@@ -373,7 +373,7 @@
                 },
                 {
                     "id": "F2",
-                    "type": "Delivery",
+                    "type": "Home-Service",
                     "tracking": false,
                     "stops": [
                         {

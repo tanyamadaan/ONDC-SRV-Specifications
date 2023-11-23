@@ -53,7 +53,7 @@ value:
           state:
             descriptor:
               code: Pending
-          type: Delivery
+          type: Home-Service
           tracking: false
           stops:
             - type: start
@@ -66,9 +66,6 @@ value:
                 range:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
-              instructions:
-                name: Special Instructions
-                short_desc: Customer Special Instructions
               contact:
                 phone: '9886098860'
                 email: nobody@nomail.com
@@ -97,6 +94,9 @@ value:
                   - '16'
               person:
                 name: Ramu
+              instructions:
+                name: Special Instructions
+                short_desc: Customer Special Instructions
               authorization:
                 type: OTP
                 token: '1234'
@@ -233,3 +233,9 @@ value:
                   value: '3'
       created_at: '2023-02-03T09:30:00.000Z'
       updated_at: '2023-02-03T09:31:30.000Z'
+      xinput:
+        form:
+          url: https//abc.com/checklist
+          mimetype: text/html
+          submission_id: xxxxxxxx
+          status: SUCCESS

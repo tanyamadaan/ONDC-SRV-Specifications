@@ -46,7 +46,7 @@ value:
         phone: '9886098860'
       fulfillments:
         - id: F1
-          type: Delivery
+          type: Home-Service
           tracking: false
           state:
             descriptor:
@@ -65,10 +65,6 @@ value:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
                 timestamp: '2023-11-16T09:00:00.000Z'
-              instructions:
-                name: Special Instructions
-                short_desc: Customer Special Instructions
-                long_desc: Customer Special Instructions
               contact:
                 phone: '9886098860'
                 email: nobody@nomail.com
@@ -98,6 +94,10 @@ value:
                 timestamp: '2023-11-16T09:00:00.000Z'
               person:
                 name: Ramu
+              instructions:
+                name: Special Instructions
+                short_desc: Customer Special Instructions
+                long_desc: Customer Special Instructions
       quote:
         price:
           currency: INR

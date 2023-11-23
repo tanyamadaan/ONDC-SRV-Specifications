@@ -62,6 +62,19 @@
                 "days": [
                   "2023-11-16"
                 ]
+              },
+              "tags": {
+                "descriptor": {
+                  "code": "schedule"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "ttl"
+                    },
+                    "value": "PT1H"
+                  }
+                ]
               }
             }
           ]

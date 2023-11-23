@@ -25,7 +25,7 @@
       {
         "fulfillment":
         {
-          "type":"Delivery",
+          "type":"Home-Service",
           "stops":
           [
             {
@@ -35,28 +35,13 @@
                 "gps":"12.974002,77.613458",
                 "area_code":"560001"
               }
-            },
-            {
-              "type":"end",
-              "location":
-              {
-                "gps":"12.944002,77.603458",
-                "area_code":"560004"
-              }
-            },
-            {
-              "type":"end",
-              "location":
-              {
-                "gps":"12.904002,77.593458",
-                "area_code":"560076"
-              }
             }
           ]
         },
         "payment":
         {
-          "type":"ON-FULFILLMENT"
+          "type":"ON-FULFILLMENT",
+          "collected_by": "BAP"
         },
         "tags":
         [

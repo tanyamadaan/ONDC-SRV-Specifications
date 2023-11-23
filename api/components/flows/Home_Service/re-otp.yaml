@@ -1,4 +1,4 @@
-summary: Home Services
+summary: Home Services - OTP Expired/ Regenerate
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order home services. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
 reference: if any
 steps:
@@ -62,7 +62,13 @@ steps:
       $ref: "../../Examples/Services_home_service_yaml/on_status/on_status_In_Transit.yaml"
   - summary: Seller app sends order status update when service provider has reached the buyer location and seller app generates an OTP.
     api: on_status
-    description: Seller app sends order status update when service provider has reached the buyer location and seller app generates an OTP.
+    description: Seller app sends the OTP from seller app to buyer app and order status as reached the buyer location
+    reference: if any
+    example:
+      $ref: "../../Examples/Services_home_service_yaml/on_status/on_status_Reached.yaml"
+  - summary: In case of expired or incorrect OTP, seller app sends new OTP with the error code.
+    api: on_status
+    description: Seller app sends the OTP from seller app to buyer app and order status as reached the buyer location
     reference: if any
     example:
       $ref: "../../Examples/Services_home_service_yaml/on_status/on_status_Reached.yaml"

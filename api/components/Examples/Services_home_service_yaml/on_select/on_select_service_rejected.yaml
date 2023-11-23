@@ -147,3 +147,6 @@ value:
                       code: type
                     value: misc
         ttl: P1D
+  error:
+    code: 90001
+    message: Schedule not available

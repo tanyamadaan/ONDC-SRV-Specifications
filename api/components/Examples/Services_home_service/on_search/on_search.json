@@ -29,7 +29,7 @@
         },
         {
           "id": "2",
-          "type": "Self-Pickup"
+          "type": "Store-Service"
         }
       ],
       "payments": [
@@ -421,7 +421,7 @@
                 "schedule": {
                   "frequency": "PT1H",
                   "holidays": ["2023-22-13", "2023-22-15"],
-                  "times": ["0930", "1900"]
+                  "times": ["0930", "1130", "1230", "1430", "1900"]
                 }
               },
               "matched": "true",

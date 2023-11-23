@@ -100,3 +100,6 @@ value:
                       code: type
                     value: tax
         ttl: P1D
+  error:
+    code: 90001
+    message: Schedule not available

@@ -1,4 +1,4 @@
-summary: Home Services
+summary: Home Services - Reschedule
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order home services. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
 reference: if any
 steps:
@@ -17,6 +17,18 @@ steps:
   - summary: Buyer adds the service to cart + selects the schedule for the home service
     api: select
     description: Buyer adds the service to cart + selects the schedule for the home service
+    reference: if any
+    example:
+      $ref: "../../Examples/Services_home_service_yaml/select/select_service.yaml"
+  - summary: Seller rejects the schedule and returns the error code, with available schedule
+    api: on_select
+    description: Seller rejects the schedule and returns the error code, with available schedule
+    reference: if any
+    example:
+      $ref: "../../Examples/Services_home_service_yaml/on_select/on_select_service_rejected.yaml"
+  - summary: Buyer selects the updated schedule for the home service
+    api: select
+    description: Buyer selects the updated schedule for the home service
     reference: if any
     example:
       $ref: "../../Examples/Services_home_service_yaml/select/select_service.yaml"

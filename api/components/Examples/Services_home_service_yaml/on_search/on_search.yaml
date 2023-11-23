@@ -20,9 +20,9 @@ value:
     catalog:
       fulfillments:
         - id: '1'
-          type: Delivery
+          type: Home-Service
         - id: '2'
-          type: Self-Pickup
+          type: Store-Service
       payments:
         - id: '1'
           type: PRE-FULFILLMENT

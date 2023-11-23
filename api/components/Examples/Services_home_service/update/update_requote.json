@@ -298,7 +298,7 @@
               "code": "Completed"
             }
           },
-          "type": "Delivery",
+          "type": "Home-Service",
           "tracking": false,
           "stops": [
             {
@@ -316,10 +316,6 @@
                   "end": "2023-11-16T10:30:00Z"
                 },
                 "timestamp": "2023-11-16T09:00:00.000Z"
-              },
-              "instructions": {
-                "name": "Special Instructions",
-                "short_desc": "Customer Special Instructions"
               },
               "contact": {
                 "phone": "9886098860",
@@ -363,6 +359,10 @@
               "person": {
                 "name": "Ramu"
               },
+              "instructions": {
+                "name": "Special Instructions",
+                "short_desc": "Customer Special Instructions"
+              },
               "authorization": {
                 "type": "OTP",
                 "token": "1234",
@@ -381,7 +381,7 @@
               "code": "Pending"
             }
           },
-          "type": "Delivery",
+          "type": "Home-Service",
           "tracking": false,
           "stops": [
             {

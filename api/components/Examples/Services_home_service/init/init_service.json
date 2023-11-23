@@ -64,7 +64,7 @@
       "fulfillments": [
         {
           "id": "F1",
-          "type": "Delivery",
+          "type": "Home-Service",
           "stops": [
             {
               "type": "end",

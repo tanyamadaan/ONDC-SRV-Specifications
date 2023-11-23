@@ -64,7 +64,7 @@
       "fulfillments": [
         {
           "id": "F1",
-          "type": "Delivery",
+          "type": "Home-Service",
           "tracking": false,
           "stops": [
             {
@@ -94,6 +94,19 @@
                 },
                 "days": [
                   "16"
+                ]
+              },
+              "tags": {
+                "descriptor": {
+                  "code": "schedule"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "ttl"
+                    },
+                    "value": "PT1H"
+                  }
                 ]
               }
             }
@@ -325,7 +338,14 @@
             }
           ]
         }
-      ]
+      ],
+      "xinput": {
+        "form": {
+          "url": "https//abc.com/checklist",
+          "mimetype": "text/html"
+        },
+        "required": false
+      }
     }
   }
 }

@@ -41,7 +41,7 @@ value:
         phone: '9886098860'
       fulfillments:
         - id: F1
-          type: Delivery
+          type: Home-Service
           tracking: false
           stops:
             - type: end
@@ -142,3 +142,8 @@ value:
                 - descriptor:
                     code: Buyer_Finder_Fee_Amount
                   value: '3'
+      xinput:
+        form:
+          url: https//abc.com/checklist
+          mimetype: text/html
+        required: false
