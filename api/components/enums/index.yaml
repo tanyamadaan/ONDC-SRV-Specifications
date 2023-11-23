@@ -1,6 +1,7 @@
 search:
   context: &context
-    $ref: "./context.yaml"
+    domain: 
+     $ref: "./context.yaml#/domain"
 on_search:
   context: *context
 select:

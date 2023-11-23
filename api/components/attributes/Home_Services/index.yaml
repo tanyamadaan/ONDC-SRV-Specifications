@@ -1,0 +1,3 @@
+search:
+  parent: true
+  $ref: "./search/search.yaml"
