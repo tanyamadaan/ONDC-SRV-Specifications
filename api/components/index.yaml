@@ -1,5 +1,5 @@
 examples:
-  $ref: "./examples/B2B_Logistics.yaml"
+  $ref: "./examples/Services.yaml"
 enum:
   $ref: "./enums/index.yaml"
 tags:
