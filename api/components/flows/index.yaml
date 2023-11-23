@@ -1,5 +1,5 @@
 - $ref: "./Home_Service/index.yaml"
-- $ref: "./Home_Service/reschedule.yaml"
-- $ref: "./Home_Service/re-otp.yaml"
+- $ref: "./Home_Service_Schedule_Reselection/index.yaml"
+- $ref: "./Services-Re-OTP/index.yaml"
 - $ref: "./Consultation_Service/index.yaml"
-- $ref: "./Consultation_Service/reschedule.yaml"
+- $ref: "./Consultation_Service_Schedule_Reselection/index.yaml"

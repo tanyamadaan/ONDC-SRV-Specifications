@@ -2672,7 +2672,7 @@ x-tags:
             description: Define max value of temperature
             reference: <PR/Issue/Discussion Links md format text>
 x-flows:
-  - summary: Home Services
+  - summary: Booking Home Services
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
       where a buyer would like to order home services. The booking majorly
@@ -4991,7 +4991,7 @@ x-flows:
                     label: INVOICE
                 created_at: '2023-02-03T09:30:00.000Z'
                 updated_at: '2023-02-03T10:00:00.201Z'
-  - summary: Home Services - Reschedule
+  - summary: Home Services - Schedule-Reselection
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
       where a buyer would like to order home services. The booking majorly
@@ -5350,7 +5350,7 @@ x-flows:
         description: Seller app sends order status update when service is completed
         reference: if any
         example: *ref_13
-  - summary: Consultation Services
+  - summary: Booking for Consultation Services + Quotation for Actual Service
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
       where a buyer would like to order consultation services like home painting
@@ -7363,7 +7363,7 @@ x-flows:
                           currency: INR
                           value: '4392'
                   ttl: P5D
-  - summary: Consultation Services - Reschedule
+  - summary: Consultation Services - Schedule-Reselection
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
       where a buyer would like to order consultation services like home painting
