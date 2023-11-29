@@ -1,5 +1,54 @@
 summary: Home Services - OTP Expired/ Regenerate
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order home services. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
+details:
+  - description: Sequence Diagram for Home Services - OTP Expired/ Regenerate
+    mermaidGraph: >-
+      sequenceDiagram
+        title Home Services - OTP Expired/ Regenerate
+        participant SRV BAP
+        participant SRV BPP
+
+        note over SRV BAP, SRV BPP: Service Discovery
+        SRV BAP ->> SRV BPP: **/search** - Search intent sent by the buyer based on<br/>the service required 
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_search** - Seller Returns the catalog specific to<br/> the search intent + available schedule
+        deactivate SRV BPP
+
+        note over SRV BAP, SRV BPP: Order Placement
+        SRV BAP ->> SRV BPP: **/select** - Buyer adds the service to cart and <br/>selects the schedule for Home Service
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_select** - Seller rejects the schedule and returns the error code, with available schedule
+        deactivate SRV BPP
+        SRV BAP ->> SRV BPP: **/select** - Buyer selects the updated schedule for the home service
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
+        deactivate SRV BPP
+
+        SRV BAP ->> SRV BPP: **/init** - Buyer initialises the order and provides billing details
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_init** - Seller provides the final quotation and<br/>creates the draft contract
+        deactivate SRV BPP
+
+        SRV BAP ->> SRV BPP: **/confirm** - Buyer makes the payment and creates the order
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_confirm** - Seller accepts the order
+        deactivate SRV BPP
+
+
+        
+        note over SRV BAP, SRV BPP: Order Fulfillment
+        SRV BAP ->> SRV BPP: **/status** - Buyer requests for a status
+        SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service provider is on the way
+        SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service provider has reached<br/>the buyer location and seller app generates an OTP.
+        rect rgb(247, 226, 225)
+        SRV BPP ->> SRV BAP: **/on_status** -  In case of expired or incorrect OTP, seller app sends new OTP with the error code.
+        end
+        rect rgb(232, 255, 227)
+        SRV BPP ->> SRV BAP: **/on_status** -  Buyer shares the OTP with service provider and<br/>Seller app sends order status as Service started.
+        end
+        SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service is completed
+        
+
 reference: if any
 steps:
   - summary: Search based on the service required

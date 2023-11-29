@@ -1,5 +1,51 @@
 summary: Booking for Consultation Services + Quotation for Actual Service
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order consultation services like home painting which initially requires inspection.
+details:
+  - description: Sequence for the Flow
+    mermaidGraph: >-
+      sequenceDiagram
+        title Booking Home Services
+        participant SRV BAP
+        participant SRV BPP
+
+        note over SRV BAP, SRV BPP: Service Discovery
+        SRV BAP ->> SRV BPP: **/search** - Search intent sent by the buyer based on<br/>the service required 
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_search** - Seller Returns the catalog specific to<br/> the search intent + available schedule
+        deactivate SRV BPP
+
+        note over SRV BAP, SRV BPP: Order Placement
+        SRV BAP ->> SRV BPP: **/select** - Buyer adds the service to cart and <br/>selects the schedule for Home Service
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_select** - Seller rejects the schedule and returns the error code, with available schedule
+        deactivate SRV BPP
+        SRV BAP ->> SRV BPP: **/select** - Buyer selects the updated schedule for the home service
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
+        deactivate SRV BPP
+
+        SRV BAP ->> SRV BPP: **/init** - Buyer initialises the order and provides billing details
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_init** - Seller provides the final quotation and<br/>creates the draft contract
+        deactivate SRV BPP
+
+        SRV BAP ->> SRV BPP: **/confirm** - Buyer makes the payment and creates the order
+        activate SRV BPP
+        SRV BPP ->> SRV BAP: **/on_confirm** - Seller accepts the order
+        deactivate SRV BPP
+
+
+        
+        note over SRV BAP, SRV BPP: Order Fulfillment
+        SRV BAP ->> SRV BPP: **/status** - Buyer requests for a status
+        SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service provider is on the way
+        SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service provider has reached<br/>the buyer location and seller app generates an OTP.
+        SRV BPP ->> SRV BAP: **/on_status** -  Buyer shares the OTP with service provider and<br/>Seller app sends order status as Service started.
+        SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service is completed
+        SRV BPP ->> SRV BAP: **/on_update** -  Seller app sends a quotation of<br/>the home service for which consultation<br/>was taken e.g home painting
+        SRV BAP ->> SRV BPP: **/update** -  Buyer accepts the quotation and makes the partial payment
+        note right of SRV BAP: Futher Communitiction using **/status** and **/on_status** may<br/>take place between Buyer and Seller.
+
 reference: if any
 steps:
   - summary: Search based on the service required

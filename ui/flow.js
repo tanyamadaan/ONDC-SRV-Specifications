@@ -44,18 +44,40 @@ function updateFlow() {
     loadFlow(selectedValue)
 }
 
-function loadFlow(flowName) {
-    const flowSummary = document.getElementById('flow-summary');
-    const flowDescription = document.getElementById('flow-description');
-    flowSummary.innerHTML = '';
-    flowDescription.innerHTML = '';
-    let selectedFlow = flows.find(obj => {
-        if (obj["summary"] === flowName)
-            return obj
+async function loadFlow(flowName) {
+    const flowSummary = document.getElementById("flow-summary");
+    const flowDescription = document.getElementById("flow-description");
+    flowSummary.innerHTML = "";
+    flowDescription.innerHTML = "";
+    let selectedFlow = flows.find((obj) => {
+      if (obj["summary"] === flowName) return obj;
     });
-    flowSummary.textContent = selectedFlow["summary"]
-    flowDescription.textContent = selectedFlow["description"]
-    loadSteps(selectedFlow["steps"])
+    flowSummary.textContent = selectedFlow["summary"];
+    flowDescription.textContent = selectedFlow["description"];
+    var mermaidDiv = document.createElement("description-div");
+    if (selectedFlow["details"]) {
+      var mermaidDiv = document.createElement("mermaid-div");
+      for (const [index, step] of selectedFlow["details"].entries()) {
+        var mermaidPane = document.createElement(`flow-mermaid-${index}`);
+        const { description, mermaidGraph } = step;
+        let svg = "";
+        if (mermaidGraph) {
+          let removeBacktick = mermaidGraph?.replace(/`/g, "");
+          svg = await mermaid.render(`flow-mermaid`, removeBacktick);
+        }
+        mermaidPane.innerHTML =
+          "<p><b>" +
+          `${index + 1}. ${description}` +
+          "</b></p>" +
+          "<p>" +
+          svg.svg +
+          "</p>";
+        mermaidDiv.appendChild(mermaidPane);
+      }
+  
+      flowDescription.appendChild(mermaidDiv);
+    }
+    loadSteps(selectedFlow["steps"]);
 }
 
 function loadFlows(data) {
