@@ -2576,37 +2576,550 @@ components:
           type: boolean
 x-enum:
   search:
-    context: &ref_0
-      domain:
+    context:
+      domain: &ref_0
         - code: ONDC:SRV10
-          description: Home Services
+          description: Home Services - Appliance Repair Services
           reference: <PR/Issue/Discussion Links md format text>
+        - code: ONDC:SRV11
+          description: Home Services - Infra Services
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: ONDC:SRV12
+          description: Home Services - Personal Care Services
+          reference: <PR/Issue/Discussion Links md format text>
+    message:
+      intent:
+        item:
+          category:
+            id:
+              - code: SRV10-1000
+                description: Air Conditioner Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1001
+                description: Air conditioner Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1002
+                description: Air conditioner Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1003
+                description: Air conditioner Uninstallation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1004
+                description: Other Air conditioning Services
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1005
+                description: Air Conditioner Packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1006
+                description: Laptop/Desktop Service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1007
+                description: Laptop/Desktop Inspection
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1008
+                description: Laptop/Desktop Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1009
+                description: Laptop/Desktop Upgrade
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1010
+                description: Laptop/ Desktop Software Clean-up
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1011
+                description: Other Laptop/Desktop Services
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1012
+                description: Laptop Packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1013
+                description: Microwave repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1014
+                description: Other Microwave Service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1015
+                description: Microwave packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1016
+                description: Refrigerator Check up
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1017
+                description: Other Refrigerator Service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1018
+                description: Refrigerator packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1019
+                description: Washing Machine repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1020
+                description: Other Washing Machine service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1021
+                description: Washing machine packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1022
+                description: Water Purifier Service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1023
+                description: Water Purifier Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1024
+                description: Water Purifier Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1025
+                description: Water Purifier Uninstallation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1026
+                description: Water purifier packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1027
+                description: Chimney Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1028
+                description: Chimney Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1029
+                description: Chimney Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1030
+                description: Chimney Uninstallation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1031
+                description: Other Chimney service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1032
+                description: Chimney packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1033
+                description: Geyser Checkup
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1034
+                description: Geyser Services
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1035
+                description: Geyser Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1036
+                description: Geyser Uninstallation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1037
+                description: Geyser packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1038
+                description: Television Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1039
+                description: Television Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1040
+                description: Television Uninstallation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1041
+                description: Other Television service
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1042
+                description: Television packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1043
+                description: Air Purifier Services
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1044
+                description: Air Purifier Filter Replacement
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1045
+                description: Air Purifier Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV10-1046
+                description: Air Purifier packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1000
+                description: Wall Painting
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1001
+                description: Wallpaper application
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1002
+                description: Wallpaper removal
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1003
+                description: Waterproofing
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1004
+                description: Wall Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1005
+                description: Door Painting
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1006
+                description: Window Painting
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1007
+                description: Tile Grouting
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1008
+                description: Wall and Floor packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1009
+                description: Bathroom Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1010
+                description: Home Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1011
+                description: Bedroom Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1012
+                description: Balcony Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1013
+                description: Sofa and cushion Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1014
+                description: Carpet Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1015
+                description: Ceiling fan cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1016
+                description: Exhaust cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1017
+                description: Kitchen Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1018
+                description: Cupboards cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1019
+                description: Wet Wiping
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1020
+                description: Househelp room cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1021
+                description: Cleaning Packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1022
+                description: Home Disinfection
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1023
+                description: Car Disinfection
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1024
+                description: Disinfection packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1025
+                description: Switch and Socket Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1026
+                description: MCB and Fuse Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1027
+                description: Wiring Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1028
+                description: Car Electric Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1029
+                description: Decorative Lights Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1030
+                description: Fan Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1031
+                description: Light Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1032
+                description: Inverter & Stabilizer Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1033
+                description: Door Bell Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1034
+                description: Electrician packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1035
+                description: New Furniture building
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1036
+                description: Old Furniture Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1037
+                description: Furniture Assembly
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1038
+                description: Upholstery
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1039
+                description: Furniture Repolish
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1040
+                description: Furniture drill and Hang
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1041
+                description: Carpentry packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1042
+                description: Basin and Sink repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1043
+                description: Grouting
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1044
+                description: Drainage Pipes Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1045
+                description: Bath Fitting Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1046
+                description: Toilet fixing
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1047
+                description: Tap & Mixer Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1048
+                description: Water Tank Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1049
+                description: Motor fixing
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1050
+                description: Water Pipe Connections
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1051
+                description: Water Filter Repair
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1052
+                description: Plumbing packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1053
+                description: Wall Hangings Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1054
+                description: Lights installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1055
+                description: Storage
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1056
+                description: Key holder Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1057
+                description: Bulbs Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1058
+                description: Smart Lights Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1059
+                description: Fan Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1060
+                description: Decoration Installation
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1061
+                description: Assembly and Installation packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1062
+                description: Home packing
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1063
+                description: Unpacking
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV11-1064
+                description: Packaging packages
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1000
+                description: Waxing
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1001
+                description: Bleach and Detan
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1002
+                description: Facials
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1003
+                description: Face Clean up
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1004
+                description: Manicure
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1005
+                description: Pedicure
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1006
+                description: Nail care
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1007
+                description: Hair Care
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1008
+                description: Hair cut
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1009
+                description: Threading
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1010
+                description: Spa and Massage
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1011
+                description: Makeup
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1012
+                description: Hair Styling
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1013
+                description: Laser hair Treatment
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1014
+                description: Shave and Beard
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: SRV12-1015
+                description: Personal Care Services Combo
+                reference: <PR/Issue/Discussion Links md format text>
+        fulfillments:
+          type: &ref_1
+            - code: Home-Service
+              description: Home Service
+              reference: <PR/Issue/Discussion Links md format text>
   on_search:
-    context: *ref_0
-  select:
-    context: *ref_0
-  on_select:
-    context: *ref_0
+    context:
+      domain: *ref_0
+    message:
+      catalog:
+        fulfillments:
+          type: *ref_1
   init:
-    context: *ref_0
+    context:
+      domain: *ref_0
+    message:
+      catalog:
+        fulfillments:
+          type: *ref_1
   on_init:
-    context: *ref_0
+    context:
+      domain: *ref_0
+    message:
+      order:
+        quote:
+          breakup:
+            title: &ref_2
+              - code: Sofa Cleaning
+                description: Sofa Cleaning
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: tax
+                description: tax
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: discount
+                description: discount
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: convenience_fee
+                description: convenience_fee
+                reference: <PR/Issue/Discussion Links md format text>
+        payments: &ref_3
+          type:
+            - code: PRE-FULFILLMENT
+              description: about the enum
+              reference: <PR/Issue/Discussion Links md format text>
+            - code: ON-FULFILLMENT
+              description: about the enum
+              reference: <PR/Issue/Discussion Links md format text>
+            - code: POST-FULFILLMENT
+              description: about the enum
+              reference: <PR/Issue/Discussion Links md format text>
+          collected_by:
+            - code: BAP
+              description: Collected by BAP
+              reference: <PR/Issue/Discussion Links md format text>
+            - code: BPP
+              description: Collected by BPP
+              reference: <PR/Issue/Discussion Links md format text>
+            - code: SOR
+              description: Collected by Seller on Record
+              reference: <PR/Issue/Discussion Links md format text>
   confirm:
-    context: *ref_0
+    context:
+      domain: *ref_0
+    message:
+      order:
+        fulfillments:
+          type: *ref_1
+        quote:
+          breakup: &ref_4
+            title: *ref_2
+        payments: *ref_3
+        status: &ref_5
+          - code: Created
+            description: about the enum
+            reference: <PR/Issue/Discussion Links md format text>
+          - code: Accepted
+            description: about the enum
+            reference: <PR/Issue/Discussion Links md format text>
+          - code: In-progress
+            description: about the enum
+            reference: <PR/Issue/Discussion Links md format text>
+          - code: Completed
+            description: about the enum
+            reference: <PR/Issue/Discussion Links md format text>
+          - code: Cancelled
+            description: about the enum
+            reference: <PR/Issue/Discussion Links md format text>
   on_confirm:
-    context: *ref_0
+    context:
+      domain: *ref_0
+    message:
+      order:
+        fulfillments:
+          type: *ref_1
+          state: &ref_6
+            descriptor:
+              code:
+                - code: Pending
+                  description: about the enum
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: In-Transit
+                  description: about the enum
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: At-Location
+                  description: about the enum
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: Completed
+                  description: about the enum
+                  reference: <PR/Issue/Discussion Links md format text>
+        quote:
+          breakup: *ref_4
+        payments: *ref_3
+        status: *ref_5
+  update:
+    context:
+      domain: *ref_0
+    message:
+      order:
+        payments: *ref_3
+  on_update:
+    context:
+      domain: *ref_0
+    message:
+      order:
+        fulfillments:
+          state: *ref_6
+        quote:
+          breakup: *ref_4
+        payments: *ref_3
+        status: *ref_5
   status:
-    context: *ref_0
+    context:
+      domain: *ref_0
   on_status:
-    context: *ref_0
-  cancel:
-    context: *ref_0
-  on_cancel:
-    context: *ref_0
-  track:
-    context: *ref_0
-  on_track:
-    context: *ref_0
+    context:
+      domain: *ref_0
+    message:
+      order:
+        fulfillments:
+          state: *ref_6
+        quote:
+          breakup: *ref_4
+        payments: *ref_3
+        status: *ref_5
 x-tags:
   intent:
     tags:
@@ -2726,7 +3239,7 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: &ref_1
+        example: &ref_7
           value:
             context:
               domain: ONDC:SRV10
@@ -2772,7 +3285,7 @@ x-flows:
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: &ref_2
+        example: &ref_8
           value:
             context:
               domain: ONDC:SRV10
@@ -3154,7 +3667,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: &ref_3
+        example: &ref_9
           value:
             context:
               domain: ONDC:SRV10
@@ -3209,7 +3722,7 @@ x-flows:
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: &ref_4
+        example: &ref_10
           value:
             context:
               domain: ONDC:SRV10
@@ -3346,7 +3859,7 @@ x-flows:
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: &ref_5
+        example: &ref_11
           value:
             context:
               domain: ONDC:SRV10
@@ -3424,7 +3937,7 @@ x-flows:
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: &ref_6
+        example: &ref_12
           value:
             context:
               domain: ONDC:SRV10
@@ -3630,7 +4143,7 @@ x-flows:
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: &ref_7
+        example: &ref_13
           value:
             context:
               domain: ONDC:SRV10
@@ -3824,7 +4337,7 @@ x-flows:
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: &ref_8
+        example: &ref_14
           value:
             context:
               domain: ONDC:SRV10
@@ -4069,7 +4582,7 @@ x-flows:
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: &ref_9
+        example: &ref_15
           value:
             context:
               domain: ONDC:SRV10
@@ -4098,7 +4611,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: &ref_10
+        example: &ref_16
           value:
             context:
               domain: ONDC:SRV10
@@ -4338,7 +4851,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
         reference: if any
-        example: &ref_11
+        example: &ref_17
           value:
             context:
               domain: ONDC:SRV10
@@ -4583,7 +5096,7 @@ x-flows:
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
         reference: if any
-        example: &ref_12
+        example: &ref_18
           value:
             context:
               domain: ONDC:SRV10
@@ -4825,7 +5338,7 @@ x-flows:
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: &ref_13
+        example: &ref_19
           value:
             context:
               domain: ONDC:SRV10
@@ -5093,12 +5606,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_1
+        example: *ref_7
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_2
+        example: *ref_8
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -5107,7 +5620,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: *ref_3
+        example: *ref_9
       - summary: >-
           Seller rejects the schedule and returns the error code, with available
           schedule
@@ -5273,37 +5786,37 @@ x-flows:
         api: select
         description: Buyer selects the updated schedule for the home service
         reference: if any
-        example: *ref_3
+        example: *ref_9
       - summary: Seller confirms the schedule and returns the quote
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: *ref_4
+        example: *ref_10
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: *ref_5
+        example: *ref_11
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: *ref_6
+        example: *ref_12
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: *ref_7
+        example: *ref_13
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: *ref_8
+        example: *ref_14
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_9
+        example: *ref_15
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -5312,7 +5825,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_10
+        example: *ref_16
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
@@ -5321,7 +5834,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
         reference: if any
-        example: *ref_11
+        example: *ref_17
       - summary: >-
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
@@ -5330,12 +5843,12 @@ x-flows:
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
         reference: if any
-        example: *ref_12
+        example: *ref_18
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_13
+        example: *ref_19
   - summary: Home Services - OTP Expired/ Regenerate
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
@@ -5399,12 +5912,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_1
+        example: *ref_7
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_2
+        example: *ref_8
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -5413,37 +5926,37 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: *ref_3
+        example: *ref_9
       - summary: Seller confirms the schedule and returns the quote
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: *ref_4
+        example: *ref_10
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: *ref_5
+        example: *ref_11
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: *ref_6
+        example: *ref_12
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: *ref_7
+        example: *ref_13
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: *ref_8
+        example: *ref_14
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_9
+        example: *ref_15
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -5452,7 +5965,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_10
+        example: *ref_16
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
@@ -5461,7 +5974,7 @@ x-flows:
           Seller app sends the OTP from seller app to buyer app and order status
           as reached the buyer location
         reference: if any
-        example: *ref_11
+        example: *ref_17
       - summary: >-
           In case of expired or incorrect OTP, seller app sends new OTP with the
           error code.
@@ -5470,7 +5983,7 @@ x-flows:
           Seller app sends the OTP from seller app to buyer app and order status
           as reached the buyer location
         reference: if any
-        example: *ref_11
+        example: *ref_17
       - summary: >-
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
@@ -5479,12 +5992,12 @@ x-flows:
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
         reference: if any
-        example: *ref_12
+        example: *ref_18
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_13
+        example: *ref_19
   - summary: Booking for Consultation Services + Quotation for Actual Service
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
@@ -5543,12 +6056,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_1
+        example: *ref_7
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_2
+        example: *ref_8
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -5557,7 +6070,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: &ref_14
+        example: &ref_20
           value:
             context:
               domain: ONDC:SRV10
@@ -5606,7 +6119,7 @@ x-flows:
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: &ref_15
+        example: &ref_21
           value:
             context:
               domain: ONDC:SRV10
@@ -5696,7 +6209,7 @@ x-flows:
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: &ref_16
+        example: &ref_22
           value:
             context:
               domain: ONDC:SRV10
@@ -5768,7 +6281,7 @@ x-flows:
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: &ref_17
+        example: &ref_23
           value:
             context:
               domain: ONDC:SRV10
@@ -5921,7 +6434,7 @@ x-flows:
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: &ref_18
+        example: &ref_24
           value:
             context:
               domain: ONDC:SRV10
@@ -6087,7 +6600,7 @@ x-flows:
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: &ref_19
+        example: &ref_25
           value:
             context:
               domain: ONDC:SRV10
@@ -6276,7 +6789,7 @@ x-flows:
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_9
+        example: *ref_15
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -6285,7 +6798,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_10
+        example: *ref_16
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location
@@ -6294,7 +6807,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location
         reference: if any
-        example: *ref_11
+        example: *ref_17
       - summary: >-
           Seller app sends order status update when service provider has started
           the service
@@ -6303,12 +6816,12 @@ x-flows:
           Seller app sends order status update when service provider has started
           the service
         reference: if any
-        example: *ref_12
+        example: *ref_18
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_13
+        example: *ref_19
       - summary: >-
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
@@ -6317,7 +6830,7 @@ x-flows:
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
         reference: if any
-        example: &ref_20
+        example: &ref_26
           value:
             context:
               domain: ONDC:SRV10
@@ -6927,7 +7440,7 @@ x-flows:
         api: update
         description: Buyer accepts the quotation and makes the partial payment
         reference: if any
-        example: &ref_21
+        example: &ref_27
           value:
             context:
               domain: ONDC:SRV10
@@ -7606,12 +8119,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_1
+        example: *ref_7
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_2
+        example: *ref_8
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -7620,7 +8133,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: *ref_14
+        example: *ref_20
       - summary: >-
           Seller rejects the schedule with the error code and returns the
           updated schedule
@@ -7739,37 +8252,37 @@ x-flows:
         api: select
         description: Buyer selects the updated schedule for the home service
         reference: if any
-        example: *ref_14
+        example: *ref_20
       - summary: Seller confirms the schedule and returns the quote
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: *ref_15
+        example: *ref_21
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: *ref_16
+        example: *ref_22
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: *ref_17
+        example: *ref_23
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: *ref_18
+        example: *ref_24
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: *ref_19
+        example: *ref_25
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_9
+        example: *ref_15
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -7778,7 +8291,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_10
+        example: *ref_16
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location
@@ -7787,7 +8300,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location
         reference: if any
-        example: *ref_11
+        example: *ref_17
       - summary: >-
           Seller app sends order status update when service provider has started
           the service
@@ -7796,12 +8309,12 @@ x-flows:
           Seller app sends order status update when service provider has started
           the service
         reference: if any
-        example: *ref_12
+        example: *ref_18
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_13
+        example: *ref_19
       - summary: >-
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
@@ -7810,12 +8323,12 @@ x-flows:
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
         reference: if any
-        example: *ref_20
+        example: *ref_26
       - summary: Buyer accepts the quotation and makes the partial payment
         api: update
         description: Buyer accepts the quotation and makes the partial payment
         reference: if any
-        example: *ref_21
+        example: *ref_27
 x-examples:
   Services - Home Services:
     summary: Booking Home Services
