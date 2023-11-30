@@ -12,10 +12,10 @@ This repository contains the model implementations for Services - Home Services 
 | Home Services - Personal Care Services                  | ONDC:SRV11 |
 
 ## Latest Release
-2.0.0-draft | Nov 02 2023
+draft-2.0.0 | Nov 30 2023
 
 ## Current Working Draft Version: 
-2.0.0-draft
+draft-2.0.0
 
 ## Versioning Scheme
 [Semantic Version Scheme 2.0.0](https://semver.org/)
@@ -27,8 +27,10 @@ This repository contains the model implementations for Services - Home Services 
 | 2.0.0-release                        | release=1.x                                   |
 
 ONDC is an ambitious initiative to democratize digital commerce by creating a decentralized network of buyer apps and seller apps through an interoperable protocol specification. 
-ONDC Protocol is maintained by the Open Source Community to create API specifications, schemas and taxonomy for Retail, Logistics and other domains.
+ONDC Protocol is maintained by the Open Source Community to create API specifications, schemas and taxonomy for Retail, Logistics, Services and other domains.
 
-Please see [documentation](https://github.com/Open-network-for-digital-commerce/ONDC-Protocol/wiki) for understanding purpose, architecture, and the actual APIs. Participate in the [community discussions](https://github.com/ONDC-Official/ONDC-LOG-Specifications/discussions) to leverage ONDC Protocol as well as to contribute towards development of ONDC Protocol by providing ideas, reporting issues, contributing to documentation, and contributing code.
+Please go through the[UI](https://ondc-official.github.io/ONDC-SRV-Specifications/#) to view tags, enums, Attributes (Required/Optional), Flows and swagger specifications.
 
-Please go through the [B2B Logistics BRD document](https://docs.google.com/document/d/1P8qn2h8EFZ0vubNQqJuHhFrNamlKzGfjbm6Ma-Cw6tY/edit#) as well, to understand the business requirements.
+Participate in the [community discussions](https://github.com/ONDC-Official/ONDC-SRV-Specifications/discussions) to leverage ONDC Protocol as well as to contribute towards development of ONDC Protocol by providing ideas, reporting issues, contributing to documentation, and contributing code.
+
+Please go through the [Services - BRD](https://docs.google.com/document/d/1Xo2JOApXlJEht0BMhGHUZwo1ZIQ6bczw/edit) as well, to understand the business requirements.
