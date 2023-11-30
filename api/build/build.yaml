@@ -12889,8 +12889,417 @@ x-attributes:
           parent: true
           domain:
             description: >-
-              updated domain namespace defined here -
-              https://docs.google.com/document/d/brvcltG_DagZ3kGrZZQk4hG4tze3zvcxmGV4NMTzr8/edit#heading=h.w9zlp87xdha1
+              domain code, enums - ONDC:SRV10 ( Home Services - Appliance Repair
+              Services ), ONDC:SRV11 ( Home Services - Infra Services ),
+              ONDC:SRV12 ( Home Services - Personal Care Services )
             required: mandatory
             usage: ONDC:SRV10
             reference: if any
+          city:
+            code:
+              description: >-
+                city code for search where service needs to be provided. List of
+                city codes, with pincode mapping, are here -
+                https://docs.google.com/spreadsheets/d/12A_B-nDtvxyFh_FWDfp85ss2qpb65kZ7/edit#gid=213574534
+              required: mandatory
+              usage: std:080
+              reference: if any
+          country:
+            code:
+              description: >-
+                ISO standard 3 digit country code where service needs to be
+                provided
+              required: mandatory
+              usage: IND
+              reference: if any
+          bap_id:
+            description: subscriber id for buyer app
+            required: mandatory
+            usage: buyerapp.com
+            reference: if any
+          bap_uri:
+            description: subscriber URI for buyer app
+            required: mandatory
+            usage: https://buyerapp.com/ondc
+            reference: if any
+          timestamp:
+            description: RFC3339 compliant timestamp
+            required: mandatory
+            usage: '2023-10-17T21:10:00.000Z'
+            reference: if any
+          ttl:
+            description: validity of message
+            required: mandatory
+            usage: PT30S
+            reference: if any
+        message:
+          parent: true
+          intent:
+            parent: true
+            item:
+              parent: true
+              category:
+                description: Category of the search
+                required: optional
+                usage: SRV10-1000
+                reference: if any
+            fulfillment:
+              parent: true
+              type:
+                description: fulfillment type for the order, enum - "Home-Service"
+                required: required
+                usage: Home-Service
+                reference: if any
+              stops:
+                location:
+                  description: >-
+                    service location gps coordinates where service needs to be
+                    provided, should be atleast 6 digit decimal precision
+                  required: required
+                  usage: 12.4535445,77.9283792
+                  reference: if any
+            payment:
+              parent: true
+              collected_by:
+                description: >-
+                  Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller
+                  App)
+                required: required
+                usage: BPP
+                reference: if any
+      on_search:
+        parent: true
+        message:
+          parent: true
+          catalog:
+            parent: true
+            descriptor:
+              parent: true
+              name:
+                description: name of service provider, as applicable
+                required: required
+                usage: ABC store
+                reference: if any
+              short_desc:
+                description: description of service provider
+                required: required
+                usage: At home Service Providers
+                reference: if any
+            providers:
+              parent: true
+              id:
+                description: service provider id
+                required: required
+                usage: P1
+                reference: if any
+              descriptor:
+                description: details of the service provider
+                required: required
+                usage: ABC store
+                reference: if any
+              locations:
+                description: service provider locations
+                required: optional
+                usage: '-'
+                reference: if any
+              items:
+                descriptor:
+                  name:
+                    description: name of the service provided by the service provider
+                    required: required
+                    usage: Home Painting - Home consultation
+                    reference: if any
+                  price:
+                    value:
+                      description: price of the service
+                      required: required
+                      usage: '149'
+                      reference: if any
+                    currency:
+                      description: currency of the price value
+                      required: required
+                      usage: INR
+                      reference: if any
+              time:
+                days:
+                  description: days on which the service is provided
+                  required: required
+                  usage: 10,11,14,16,17,18,19,20
+                  reference: if any
+                range:
+                  start:
+                    description: start time of the service
+                    required: required
+                    usage: '2022-11-10T00:00:00.000Z'
+                    reference: if any
+                  end:
+                    description: end time of the service
+                    required: required
+                    usage: '2022-11-20T00:00:00.000Z'
+                    reference: if any
+      init:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            billing:
+              description: >-
+                billing details of the marketplace ( service provider ) for
+                invoicing;
+              required: required
+              usage: '-'
+              reference: if any
+            provider:
+              locations:
+                description: >-
+                  mandatory only if provider.locations was returned in
+                  /on_search
+                required: optional
+                usage: '-'
+                reference: if any
+            fulfillments:
+              id:
+                description: >-
+                  fulfillment_id from /on_search corresponding to appropriate
+                  type
+                required: required
+                usage: F1
+                reference: if any
+      on_init:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            quote:
+              parent: true
+              quote:
+                description: quote to be sent by service provider
+                required: required
+                usage: '-'
+                reference: if any
+              breakup:
+                breakup:
+                  description: service provider provides the the breakup of the quote
+                  required: required
+                  usage: '-'
+                  reference: if any
+                title:
+                  description: >-
+                    title of the service charges enum - Sofa Cleaning, tax,
+                    discount, convenience_fee
+                  required: required
+                  usage: Sofa Cleaning
+                  reference: if any
+            payments:
+              parent: true
+              type:
+                description: >-
+                  stage when fulfillment will be done by service provider, enum
+                  - "PRE-FULFILLMENT", "ON-FULFILLMENT", "POST-FULFILLMENT"
+                required: required
+                usage: PRE-FULFILLMENT
+                reference: if any
+              params:
+                amount:
+                  description: amount as per the quote total value
+                  required: required
+                  usage: '6000'
+                  reference: if any
+                currency:
+                  description: currency in which to receive the amount
+                  required: required
+                  usage: INR
+                  reference: if any
+                bank_account_number:
+                  description: service provider bank account number
+                  required: required
+                  usage: '001404845678'
+                  reference: if any
+                virtual_payment_address:
+                  description: service provider payment link address
+                  required: required
+                  usage: '-'
+                  reference: if any
+      confirm:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            fulfillments:
+              parent: true
+              fulfillments:
+                description: contains the fulfillment details
+                required: required
+                usage: '-'
+                reference: if any
+              stops:
+                time:
+                  range:
+                    start:
+                      description: start time of the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
+      on_confirm:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            state:
+              description: >-
+                status of the order, enum - "Created", "Accepted",
+                "In-progress", "Completed", "Cancelled"
+              required: required
+              usage: Created
+              reference: if any
+            fulfillments:
+              parent: true
+              fulfillments:
+                description: contains the fulfillment details
+                required: required
+                usage: '-'
+                reference: if any
+              stops:
+                time:
+                  range:
+                    start:
+                      description: start time of the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
+      update:
+        parent: true
+        message:
+          parent: true
+          update_target:
+            description: name of the component to be updated
+            required: required
+            usage: payments
+            reference: if any
+          order:
+            parent: true
+            fulfillments:
+              parent: true
+              fulfillments:
+                description: contains the fulfillment details
+                required: required
+                usage: '-'
+                reference: if any
+              stops:
+                time:
+                  range:
+                    start:
+                      description: start time of the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
+      on_update:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            provider:
+              parent: true
+              locations:
+                description: locations as listed
+                required: mandatory only if in /confirm
+                usage: '-'
+                reference: if any
+            fulfillments:
+              parent: true
+              fulfillments:
+                description: contains the fulfillment details
+                required: required
+                usage: '-'
+                reference: if any
+              stops:
+                type:
+                  description: Type of the fulfillment; (start or end)
+                  required: mandatory
+                  usage: start
+                  reference: if any
+                instructions:
+                  name:
+                    description: name of the instruction
+                    required: optional
+                    usage: special instructions
+                    reference: if any
+                  short_desc:
+                    description: description of the instruction
+                    required: optional
+                    usage: customer special instructions
+                    reference: if any
+              person:
+                name:
+                  description: name of the person providing the service
+                  required: optional
+                  usage: Ramu
+                  reference: if any
+              contact:
+                phone:
+                  description: phone number of the person providing the service
+                  required: optional
+                  usage: '9886098860'
+                  reference: if any
+      on_status:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            state:
+              description: >-
+                Status of the service; Enum; Values can be
+                "Created","Accepted","In-progress","Completed","Cancelled"
+              required: mandatory
+              usage: if any
+              reference: if any
+            provider:
+              parent: true
+              locations:
+                description: Locations for fulfillments
+                required: required if mentioned in /confirm
+                usage: '-'
+                reference: if any
+            fulfillments:
+              parent: true
+              fulfillments:
+                description: contains the fulfillment details
+                required: required
+                usage: '-'
+                reference: if any
+              state:
+                descriptor:
+                  code:
+                    description: >-
+                      Denotes the state of the fulfillment; Enum; Values can be
+                      - "Pending", "In-Transit", "At-Location", "Completed";
+                    required: mandatory
+                    usage: '-'
+                    reference: if any
+              stops:
+                time:
+                  timestamp:
+                    description: timestamp of the fulfillment
+                    required: required
+                    usage: '2023-11-16T09:00:00.000Z'

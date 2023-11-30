@@ -1,0 +1,70 @@
+message:
+  parent: true
+  catalog:
+    parent: true
+    descriptor:
+      parent: true
+      name:
+        description: name of service provider, as applicable
+        required: required
+        usage: "ABC store"
+        reference: if any
+      short_desc:
+        description: description of service provider
+        required: required
+        usage: "At home Service Providers"
+        reference: if any
+    providers:
+      parent: true
+      id:
+        description: service provider id
+        required: required
+        usage: "P1"
+        reference: if any
+      descriptor:
+        description: details of the service provider
+        required: required
+        usage: "ABC store"
+        reference: if any  
+      locations:
+        description: service provider locations
+        required: optional
+        usage: "-"
+        reference: if any
+      items:
+        descriptor:
+          name: 
+            description: name of the service provided by the service provider
+            required: required
+            usage: "Home Painting - Home consultation"
+            reference: if any
+          price: 
+            value:
+              description: price of the service
+              required: required
+              usage: "149"
+              reference: if any
+            currency:
+              description: currency of the price value
+              required: required
+              usage: "INR"
+              reference: if any  
+      time:
+        days:
+          description: days on which the service is provided
+          required: required
+          usage: "10,11,14,16,17,18,19,20"
+          reference: if any
+        range:
+          start:
+            description: start time of the service
+            required: required
+            usage: "2022-11-10T00:00:00.000Z"
+            reference: if any
+          end:
+            description: end time of the service
+            required: required
+            usage: "2022-11-20T00:00:00.000Z"
+            reference: if any
+          
+
