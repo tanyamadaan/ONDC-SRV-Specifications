@@ -5,10 +5,11 @@
 This repository contains the model implementations for Services - Home Services and Consultation Services.
 
 ## Domains:
-| Category                    | ONDC Domain|
-| ----------------------------|------------|
-| Home Services               | ONDC:SRV10 |
-| Consultation Services       | ONDC:SRV11 |
+| Category                                                | ONDC Domain|
+| --------------------------------------------------------|------------|
+| Home Services - Appliance Repair Services               | ONDC:SRV10 |
+| Home Services - Infra Services                          | ONDC:SRV11 |
+| Home Services - Personal Care Services                  | ONDC:SRV11 |
 
 ## Latest Release
 2.0.0-draft | Nov 02 2023
