@@ -1,7 +1,7 @@
 {
   "context":
   {
-    "domain":"ONDC:SRV10",
+    "domain":"ONDC:SRV11",
     "location": {
       "city": {
         "code": "std:080"
