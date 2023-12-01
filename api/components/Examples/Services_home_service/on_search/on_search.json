@@ -1,6 +1,6 @@
 {
   "context": {
-    "domain": "ONDC:SRV10",
+    "domain": "ONDC:SRV11",
     "location": {
       "city": {
         "code": "std:080"
@@ -116,7 +116,7 @@
                   "descriptor": {
                     "code": "category"
                   },
-                  "value": "SRV10-*"
+                  "value": "SRV11-*"
                 },
                 {
                   "descriptor": {
@@ -180,7 +180,7 @@
                 "maximum_value": "149.00"
               },
               "category_ids": [
-                "SRV10-xxxx"
+                "SRV11-xxxx"
               ],
               "fulfillment_ids": [    
                 "1"
@@ -279,7 +279,7 @@
                 }
               },
               "category_ids": [
-                "SRV10-xxxx"
+                "SRV11-xxxx"
               ],
               "fulfillment_ids": [
                 "1"
@@ -377,7 +377,7 @@
                 }
               },
               "category_ids": [
-                "SRV10-xxxx"
+                "SRV11-xxxx"
               ],
               "fulfillment_ids": [
                 "1"
@@ -475,7 +475,7 @@
                 }
               },
               "category_ids": [
-                "SRV10-xxxx"
+                "SRV11-xxxx"
               ],
               "fulfillment_ids": [
                 "1"

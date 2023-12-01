@@ -1,6 +1,6 @@
 {
     "context": {
-        "domain": "ONDC:SRV10",
+        "domain": "ONDC:SRV11",
         "location": {
             "city": {
                 "code": "std:080"
@@ -39,10 +39,10 @@
                     "id": "PI1",
                     "parent_item_id": "PI1",
                     "quantity": {
-                        "unitized": {
+                        "selected": {
+                            "count": "6",
                             "measure": {
-                                "unit": "rooms",
-                                "value": "6"
+                                "unit": "rooms"
                             }
                         }
                     },

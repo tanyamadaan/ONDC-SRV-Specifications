@@ -3242,7 +3242,7 @@ x-flows:
         example: &ref_7
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -3288,7 +3288,7 @@ x-flows:
         example: &ref_8
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -3361,7 +3361,7 @@ x-flows:
                             value: L1
                           - descriptor:
                               code: category
-                            value: SRV10-*
+                            value: SRV11-*
                           - descriptor:
                               code: type
                             value: '13'
@@ -3404,7 +3404,7 @@ x-flows:
                           offered_value: '99.00'
                           maximum_value: '149.00'
                         category_ids:
-                          - SRV10-xxxx
+                          - SRV11-xxxx
                         fulfillment_ids:
                           - '1'
                         location_ids:
@@ -3471,7 +3471,7 @@ x-flows:
                               unit: seats
                               value: '2'
                         category_ids:
-                          - SRV10-xxxx
+                          - SRV11-xxxx
                         fulfillment_ids:
                           - '1'
                         location_ids:
@@ -3537,7 +3537,7 @@ x-flows:
                               unit: seats
                               value: '3'
                         category_ids:
-                          - SRV10-xxxx
+                          - SRV11-xxxx
                         fulfillment_ids:
                           - '1'
                         location_ids:
@@ -3603,7 +3603,7 @@ x-flows:
                               unit: seats
                               value: '6'
                         category_ids:
-                          - SRV10-xxxx
+                          - SRV11-xxxx
                         fulfillment_ids:
                           - '1'
                         location_ids:
@@ -3670,7 +3670,7 @@ x-flows:
         example: &ref_9
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -3725,7 +3725,7 @@ x-flows:
         example: &ref_10
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -3862,7 +3862,7 @@ x-flows:
         example: &ref_11
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -3940,7 +3940,7 @@ x-flows:
         example: &ref_12
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -4146,7 +4146,7 @@ x-flows:
         example: &ref_13
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -4340,7 +4340,7 @@ x-flows:
         example: &ref_14
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -4585,7 +4585,7 @@ x-flows:
         example: &ref_15
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -4614,7 +4614,7 @@ x-flows:
         example: &ref_16
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -4854,7 +4854,7 @@ x-flows:
         example: &ref_17
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -5099,7 +5099,7 @@ x-flows:
         example: &ref_18
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -5341,7 +5341,7 @@ x-flows:
         example: &ref_19
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -5632,7 +5632,7 @@ x-flows:
         example:
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6073,7 +6073,7 @@ x-flows:
         example: &ref_20
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6122,7 +6122,7 @@ x-flows:
         example: &ref_21
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6212,7 +6212,7 @@ x-flows:
         example: &ref_22
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6284,7 +6284,7 @@ x-flows:
         example: &ref_23
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6437,7 +6437,7 @@ x-flows:
         example: &ref_24
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6603,7 +6603,7 @@ x-flows:
         example: &ref_25
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6833,7 +6833,7 @@ x-flows:
         example: &ref_26
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -6863,10 +6863,10 @@ x-flows:
                   - id: PI1
                     parent_item_id: PI1
                     quantity:
-                      unitized:
+                      selected:
+                        count: 6
                         measure:
                           unit: rooms
-                          value: '6'
                     fulfillment_ids:
                       - F2
                     payment_ids:
@@ -7443,7 +7443,7 @@ x-flows:
         example: &ref_27
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -8145,7 +8145,7 @@ x-flows:
         example:
           value:
             context:
-              domain: ONDC:SRV10
+              domain: ONDC:SRV11
               location:
                 city:
                   code: std:080
@@ -8343,7 +8343,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8361,7 +8361,7 @@ x-examples:
                 intent:
                   item:
                     category:
-                      id: SRV10-*
+                      id: SRV11-*
                   fulfillment:
                     type: Home-Service
                     stops:
@@ -8384,7 +8384,7 @@ x-examples:
                           value: '3'
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8422,7 +8422,7 @@ x-examples:
                           value: '3'
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8465,7 +8465,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8509,7 +8509,7 @@ x-examples:
                     - type: PRE-FULFILLMENT
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8553,7 +8553,7 @@ x-examples:
                     - type: PRE-FULFILLMENT
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8605,7 +8605,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8672,7 +8672,7 @@ x-examples:
                     - type: PRE-FULFILLMENT
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8747,7 +8747,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -8906,7 +8906,7 @@ x-examples:
                       submission_id: xxxxxxxx
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -9095,7 +9095,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -9712,7 +9712,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -9734,7 +9734,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -9807,7 +9807,7 @@ x-examples:
                               value: L1
                             - descriptor:
                                 code: category
-                              value: SRV10-*
+                              value: SRV11-*
                             - descriptor:
                                 code: type
                               value: '13'
@@ -9851,7 +9851,7 @@ x-examples:
                             offered_value: '99.00'
                             maximum_value: '149.00'
                           category_ids:
-                            - SRV10-xxxx
+                            - SRV11-xxxx
                           fulfillment_ids:
                             - '1'
                           location_ids:
@@ -9918,7 +9918,7 @@ x-examples:
                                 unit: seats
                                 value: '2'
                           category_ids:
-                            - SRV10-xxxx
+                            - SRV11-xxxx
                           fulfillment_ids:
                             - '1'
                           location_ids:
@@ -9984,7 +9984,7 @@ x-examples:
                                 unit: seats
                                 value: '3'
                           category_ids:
-                            - SRV10-xxxx
+                            - SRV11-xxxx
                           fulfillment_ids:
                             - '1'
                           location_ids:
@@ -10050,7 +10050,7 @@ x-examples:
                                 unit: seats
                                 value: '6'
                           category_ids:
-                            - SRV10-xxxx
+                            - SRV11-xxxx
                           fulfillment_ids:
                             - '1'
                           location_ids:
@@ -10110,7 +10110,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -10195,7 +10195,7 @@ x-examples:
                     ttl: P1D
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -10300,7 +10300,7 @@ x-examples:
                 message: Schedule not available
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -10432,7 +10432,7 @@ x-examples:
                     ttl: P1D
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -10586,7 +10586,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -10735,7 +10735,7 @@ x-examples:
                     required: false
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -10939,7 +10939,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -11124,7 +11124,7 @@ x-examples:
                       status: SUCCESS
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -11367,7 +11367,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -11571,7 +11571,7 @@ x-examples:
                   updated_at: '2023-02-03T10:00:00.201Z'
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -11802,7 +11802,7 @@ x-examples:
                   updated_at: '2023-02-03T10:00:00.201Z'
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -12038,7 +12038,7 @@ x-examples:
                   updated_at: '2023-02-03T10:00:00.201Z'
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -12277,7 +12277,7 @@ x-examples:
         examples:
           - value:
               context:
-                domain: ONDC:SRV10
+                domain: ONDC:SRV11
                 location:
                   city:
                     code: std:080
@@ -12307,10 +12307,10 @@ x-examples:
                     - id: PI1
                       parent_item_id: PI1
                       quantity:
-                        unitized:
+                        selected:
+                          count: 6
                           measure:
                             unit: rooms
-                            value: '6'
                       fulfillment_ids:
                         - F2
                       payment_ids:
@@ -12893,7 +12893,7 @@ x-attributes:
               Services ), ONDC:SRV11 ( Home Services - Infra Services ),
               ONDC:SRV12 ( Home Services - Personal Care Services )
             required: mandatory
-            usage: ONDC:SRV10
+            usage: ONDC:SRV11
             reference: if any
           city:
             code:
@@ -12930,7 +12930,7 @@ x-attributes:
           ttl:
             description: validity of message
             required: mandatory
-            usage: PT30S
+            usage: ONDC:SRV10
             reference: if any
         message:
           parent: true

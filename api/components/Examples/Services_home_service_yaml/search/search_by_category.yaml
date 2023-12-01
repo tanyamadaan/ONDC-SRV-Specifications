@@ -1,6 +1,6 @@
 value:
   context:
-    domain: ONDC:SRV10
+    domain: ONDC:SRV11
     location:
       city:
         code: std:080
@@ -18,7 +18,7 @@ value:
     intent:
       item:
         category:
-          id: SRV10-*
+          id: SRV11-*
       fulfillment:
         type: Home-Service
         stops:
