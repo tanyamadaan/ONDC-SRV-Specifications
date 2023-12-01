@@ -13132,6 +13132,132 @@ x-attributes:
                       required: optional
                       usage: '9886098860'
                       reference: if any
+      select:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            provider:
+              parent: true
+              id:
+                description: id of the provider chosen for the service
+                required: required
+                usage: P1
+                reference: if any
+            items:
+              parent: true
+              id:
+                description: item id i.e. the id of the service
+                required: required
+                usage: I2
+                reference: if any
+              quantity:
+                selected:
+                  count:
+                    description: >-
+                      number of items selected e.g. number of sofas to be
+                      cleaned
+                    required: required
+                    usage: '1'
+                    reference: if any
+                measure:
+                  unit:
+                    description: name of the unit e.g. sofa seats to be cleaned
+                    required: required
+                    usage: seats
+                    reference: if any
+                  value:
+                    description: value of the unit e.g. number of sofa seats to be cleaned
+                    required: required
+                    usage: '2'
+                    reference: if any
+            fulfillments:
+              parent: true
+              fulfillemnts:
+                description: contains the fulfillment details
+                required: required
+                usage: '-'
+                reference: if any
+              stops:
+                time:
+                  days:
+                    description: day on which the service needs to be provided
+                    required: required
+                    usage: '16'
+                    reference: if any
+                  range:
+                    start:
+                      description: start time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the time slot chose for the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
+      on_select:
+        parent: true
+        message:
+          parent: true
+          order:
+            parent: true
+            provider:
+              parent: true
+              id:
+                description: service provider id
+                required: required
+                usage: P1
+                reference: if any
+            items:
+              parent: true
+              id:
+                description: item id sent in /select call
+                required: required
+                usage: I2
+                reference: if any
+              fulfillment_ids:
+                description: fulfillment id of the service
+                required: required
+                usage: F1
+                reference: if any
+            fulfillments:
+              parent: true
+              id:
+                description: fulfillment id of the service
+                required: required
+                usage: F1
+                reference: if any
+              state:
+                descriptor:
+                  code:
+                    description: >-
+                      provide the servicability status of the service i.e. if
+                      the service can be provided or not
+                    required: required
+                    usage: Serviceable
+                    reference: if any
+            quote:
+              parent: true
+              price:
+                description: total price of the service
+                required: required
+                usage: '499'
+                reference: if any
+              breakup:
+                title:
+                  description: >-
+                    title of the service charges enum - Sofa Cleaning, tax,
+                    discount, convenience_fee
+                  required: required
+                  usage: Sofa Cleaning
+                  reference: if any
+                price:
+                  description: price of the quote breakup type
+                  required: required
+                  usage: '474'
+                  reference: if any
       init:
         parent: true
         message:
