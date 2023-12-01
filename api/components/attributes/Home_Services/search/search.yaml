@@ -51,20 +51,21 @@ message:
     fulfillment:
       parent: true
       type:
-        description: fulfillment type for the order, enum - "Home-Service"
+        description: fulfillment type for the service, enum - "Home-Service, Store-Service"
         required: required
         usage: "Home-Service"
         reference: if any
       stops:
         location:
-          description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision
-          required: required
-          usage: "12.4535445,77.9283792"
-          reference: if any
+          gps:
+            description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision
+            required: required
+            usage: "12.4535445,77.9283792"
+            reference: if any
     payment:
       parent: true
       collected_by:
         description: Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller App)
-        required: required
+        required: optional
         usage: "BPP"
         reference: if any
