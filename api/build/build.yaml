@@ -3121,69 +3121,120 @@ x-enum:
         payments: *ref_3
         status: *ref_5
 x-tags:
-  intent:
-    tags:
-      - code: Package_Weight
-        description: Define package dead weight here
-        reference: <PR/Issue/Discussion Links md format text>
-        list:
-          - code: Unit
-            description: Define unit of package weight
+  search:
+    message:
+      intent:
+        tags:
+          - code: BAP_Terms
+            description: Terms of BAP
             reference: <PR/Issue/Discussion Links md format text>
-          - code: Value
-            description: Define value of package weight
-            reference: <PR/Issue/Discussion Links md format text>
-      - code: Package_Dimensions
-        description: Define package LBH dimensions here
-        reference: <PR/Issue/Discussion Links md format text>
-        list:
-          - code: Unit
-            description: Define unit of package dimensions
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Length
-            description: Define length of package dimensions
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Breadth
-            description: Define breadth of package dimensions
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Height
-            description: Define height of package dimensions
-            reference: <PR/Issue/Discussion Links md format text>
-      - code: Package_Details
-        description: Define further details of package
-        reference: <PR/Issue/Discussion Links md format text>
-        list:
-          - code: Category
-            description: Define category of package
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Dangerous_Goods
-            description: State true if dangerous goods
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Stackable
-            description: State true if goods are stackable
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Shipment_Value
-            description: Define shipment value of package
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Package_Count
-            description: Define count of packages
-            reference: <PR/Issue/Discussion Links md format text>
-      - code: Cold_Logistics
-        description: Define terms if cold logistics is required
-        reference: <PR/Issue/Discussion Links md format text>
-        list:
-          - code: Temp_Control
-            description: State true if require cold logistics
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Temp_Unit
-            description: Define unit of temperature
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Temp_Min
-            description: Define min value of temperature
-            reference: <PR/Issue/Discussion Links md format text>
-          - code: Temp_Max
-            description: Define max value of temperature
-            reference: <PR/Issue/Discussion Links md format text>
+            list:
+              - code: finder_fee_type
+                description: Type of the finder fee. eg. "percent"
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: finder_fee_amount
+                description: Amount for the finder fee
+                reference: <PR/Issue/Discussion Links md format text>
+  on_search:
+    message:
+      catalog:
+        providers:
+          tags:
+            - code: serviceability
+              description: Serviceability Details
+              reference: <PR/Issue/Discussion Links md format text>
+              list:
+                - code: location
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: category
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: type
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: val
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: unit
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+  on_select:
+    message:
+      order:
+        quote:
+          breakup: &ref_7
+            tags: &ref_10
+              - code: title
+                description: title tag
+                reference: <PR/Issue/Discussion Links md format text>
+                list:
+                  - code: type
+                    description: >-
+                      Depending upon the context, it can take the value of the
+                      discount, tax, misc or item type value.
+                    reference: <PR/Issue/Discussion Links md format text>
+  on_init:
+    message: &ref_8
+      order:
+        quote:
+          breakup: *ref_7
+        payments: &ref_9
+          tags:
+            - code: Settlement_Details
+              description: Define Payment Settlement Details here
+              reference: <PR/Issue/Discussion Links md format text>
+              list:
+                - code: Counterparty
+                  description: Counterparty involved; Can be BAP/BPP
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: Mode
+                  description: Mode of Payment. E.g. UPI
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: Beneficiary_Name
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: Bank_Account_No
+                  description: Bank Account of the counterpart
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: Ifsc_Code
+                  description: IFSC Code for the Bank Account of the Counter party.
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: UPI_Address
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+            - code: Buyer_Finder_Fee
+              description: Define Finder's Fee for Buyer
+              reference: <PR/Issue/Discussion Links md format text>
+              list:
+                - code: Buyer_Finder_Fee_Type
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: Buyer_Finder_Fee_Amount
+                  description: Description of the Tag
+                  reference: <PR/Issue/Discussion Links md format text>
+  confirm:
+    message: *ref_8
+  on_status:
+    message: *ref_8
+  update:
+    message: &ref_11
+      order:
+        payments: *ref_9
+        quote:
+          breakup:
+            tags: *ref_10
+          item:
+            tags:
+              - code: attributes
+                description: Update parameter for attributes
+                reference: <PR/Issue/Discussion Links md format text>
+                list:
+                  - code: color
+                    description: Hex Code for color
+                    reference: <PR/Issue/Discussion Links md format text>
+  on_update:
+    message: *ref_11
 x-flows:
   - summary: Booking Home Services
     description: >-
@@ -3239,7 +3290,7 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: &ref_7
+        example: &ref_12
           value:
             context:
               domain: ONDC:SRV11
@@ -3285,7 +3336,7 @@ x-flows:
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: &ref_8
+        example: &ref_13
           value:
             context:
               domain: ONDC:SRV11
@@ -3667,7 +3718,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: &ref_9
+        example: &ref_14
           value:
             context:
               domain: ONDC:SRV11
@@ -3722,7 +3773,7 @@ x-flows:
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: &ref_10
+        example: &ref_15
           value:
             context:
               domain: ONDC:SRV11
@@ -3732,11 +3783,11 @@ x-flows:
                 country:
                   code: IND
               action: on_select
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -3859,7 +3910,7 @@ x-flows:
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: &ref_11
+        example: &ref_16
           value:
             context:
               domain: ONDC:SRV11
@@ -3869,11 +3920,11 @@ x-flows:
                 country:
                   code: IND
               action: init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:35.000Z'
@@ -3937,7 +3988,7 @@ x-flows:
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: &ref_12
+        example: &ref_17
           value:
             context:
               domain: ONDC:SRV11
@@ -3947,11 +3998,11 @@ x-flows:
                 country:
                   code: IND
               action: on_init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:36.000Z'
@@ -4143,7 +4194,7 @@ x-flows:
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: &ref_13
+        example: &ref_18
           value:
             context:
               domain: ONDC:SRV11
@@ -4153,11 +4204,11 @@ x-flows:
                 country:
                   code: IND
               action: confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:38.000Z'
@@ -4337,7 +4388,7 @@ x-flows:
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: &ref_14
+        example: &ref_19
           value:
             context:
               domain: ONDC:SRV11
@@ -4347,11 +4398,11 @@ x-flows:
                 country:
                   code: IND
               action: on_confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:39.000Z'
@@ -4582,7 +4633,7 @@ x-flows:
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: &ref_15
+        example: &ref_20
           value:
             context:
               domain: ONDC:SRV11
@@ -4592,11 +4643,11 @@ x-flows:
                 country:
                   code: IND
               action: status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:39.000Z'
@@ -4611,7 +4662,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: &ref_16
+        example: &ref_21
           value:
             context:
               domain: ONDC:SRV11
@@ -4621,11 +4672,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:40.000Z'
@@ -4851,7 +4902,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
         reference: if any
-        example: &ref_17
+        example: &ref_22
           value:
             context:
               domain: ONDC:SRV11
@@ -4861,11 +4912,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:40.000Z'
@@ -5096,7 +5147,7 @@ x-flows:
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
         reference: if any
-        example: &ref_18
+        example: &ref_23
           value:
             context:
               domain: ONDC:SRV11
@@ -5106,11 +5157,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:40.000Z'
@@ -5338,7 +5389,7 @@ x-flows:
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: &ref_19
+        example: &ref_24
           value:
             context:
               domain: ONDC:SRV11
@@ -5348,11 +5399,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T10:40:00.000Z'
@@ -5606,12 +5657,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_7
+        example: *ref_12
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_8
+        example: *ref_13
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -5620,7 +5671,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: *ref_9
+        example: *ref_14
       - summary: >-
           Seller rejects the schedule and returns the error code, with available
           schedule
@@ -5641,9 +5692,9 @@ x-flows:
               action: on_select
               version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -5786,37 +5837,37 @@ x-flows:
         api: select
         description: Buyer selects the updated schedule for the home service
         reference: if any
-        example: *ref_9
+        example: *ref_14
       - summary: Seller confirms the schedule and returns the quote
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: *ref_10
+        example: *ref_15
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: *ref_11
+        example: *ref_16
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: *ref_12
+        example: *ref_17
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: *ref_13
+        example: *ref_18
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: *ref_14
+        example: *ref_19
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_15
+        example: *ref_20
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -5825,7 +5876,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_16
+        example: *ref_21
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
@@ -5834,7 +5885,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
         reference: if any
-        example: *ref_17
+        example: *ref_22
       - summary: >-
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
@@ -5843,12 +5894,12 @@ x-flows:
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
         reference: if any
-        example: *ref_18
+        example: *ref_23
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_19
+        example: *ref_24
   - summary: Home Services - OTP Expired/ Regenerate
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
@@ -5912,12 +5963,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_7
+        example: *ref_12
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_8
+        example: *ref_13
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -5926,37 +5977,37 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: *ref_9
+        example: *ref_14
       - summary: Seller confirms the schedule and returns the quote
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: *ref_10
+        example: *ref_15
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: *ref_11
+        example: *ref_16
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: *ref_12
+        example: *ref_17
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: *ref_13
+        example: *ref_18
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: *ref_14
+        example: *ref_19
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_15
+        example: *ref_20
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -5965,7 +6016,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_16
+        example: *ref_21
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location and seller app generates an OTP.
@@ -5974,7 +6025,7 @@ x-flows:
           Seller app sends the OTP from seller app to buyer app and order status
           as reached the buyer location
         reference: if any
-        example: *ref_17
+        example: *ref_22
       - summary: >-
           In case of expired or incorrect OTP, seller app sends new OTP with the
           error code.
@@ -5983,7 +6034,7 @@ x-flows:
           Seller app sends the OTP from seller app to buyer app and order status
           as reached the buyer location
         reference: if any
-        example: *ref_17
+        example: *ref_22
       - summary: >-
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
@@ -5992,12 +6043,12 @@ x-flows:
           Buyer shares the OTP with service provider and Seller app sends order
           status as Service started.
         reference: if any
-        example: *ref_18
+        example: *ref_23
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_19
+        example: *ref_24
   - summary: Booking for Consultation Services + Quotation for Actual Service
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
@@ -6056,12 +6107,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_7
+        example: *ref_12
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_8
+        example: *ref_13
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -6070,7 +6121,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: &ref_20
+        example: &ref_25
           value:
             context:
               domain: ONDC:SRV11
@@ -6119,7 +6170,7 @@ x-flows:
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: &ref_21
+        example: &ref_26
           value:
             context:
               domain: ONDC:SRV11
@@ -6129,11 +6180,11 @@ x-flows:
                 country:
                   code: IND
               action: on_select
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -6209,7 +6260,7 @@ x-flows:
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: &ref_22
+        example: &ref_27
           value:
             context:
               domain: ONDC:SRV11
@@ -6219,11 +6270,11 @@ x-flows:
                 country:
                   code: IND
               action: init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:35.000Z'
@@ -6281,7 +6332,7 @@ x-flows:
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: &ref_23
+        example: &ref_28
           value:
             context:
               domain: ONDC:SRV11
@@ -6291,11 +6342,11 @@ x-flows:
                 country:
                   code: IND
               action: on_init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:36.000Z'
@@ -6434,7 +6485,7 @@ x-flows:
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: &ref_24
+        example: &ref_29
           value:
             context:
               domain: ONDC:SRV11
@@ -6444,11 +6495,11 @@ x-flows:
                 country:
                   code: IND
               action: confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:38.000Z'
@@ -6600,7 +6651,7 @@ x-flows:
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: &ref_25
+        example: &ref_30
           value:
             context:
               domain: ONDC:SRV11
@@ -6610,11 +6661,11 @@ x-flows:
                 country:
                   code: IND
               action: on_confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:39.000Z'
@@ -6789,7 +6840,7 @@ x-flows:
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_15
+        example: *ref_20
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -6798,7 +6849,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_16
+        example: *ref_21
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location
@@ -6807,7 +6858,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location
         reference: if any
-        example: *ref_17
+        example: *ref_22
       - summary: >-
           Seller app sends order status update when service provider has started
           the service
@@ -6816,12 +6867,12 @@ x-flows:
           Seller app sends order status update when service provider has started
           the service
         reference: if any
-        example: *ref_18
+        example: *ref_23
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_19
+        example: *ref_24
       - summary: >-
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
@@ -6830,7 +6881,7 @@ x-flows:
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
         reference: if any
-        example: &ref_26
+        example: &ref_31
           value:
             context:
               domain: ONDC:SRV11
@@ -6842,9 +6893,9 @@ x-flows:
               action: on_update
               version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T10:20:00.000Z'
@@ -7440,7 +7491,7 @@ x-flows:
         api: update
         description: Buyer accepts the quotation and makes the partial payment
         reference: if any
-        example: &ref_27
+        example: &ref_32
           value:
             context:
               domain: ONDC:SRV11
@@ -7452,9 +7503,9 @@ x-flows:
               action: update
               version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-17T10:20:00.000Z'
@@ -8119,12 +8170,12 @@ x-flows:
           Search intent sent by the buyer based on the service required - e.g.
           Sofa Cleaning
         reference: if any
-        example: *ref_7
+        example: *ref_12
       - summary: Returns the catalog specific to the search intent + available schedule
         api: on_search
         description: Returns the catalog specific to the search intent + available schedule
         reference: if any
-        example: *ref_8
+        example: *ref_13
       - summary: >-
           Buyer adds the service to cart + selects the schedule for the home
           service
@@ -8133,7 +8184,7 @@ x-flows:
           Buyer adds the service to cart + selects the schedule for the home
           service
         reference: if any
-        example: *ref_20
+        example: *ref_25
       - summary: >-
           Seller rejects the schedule with the error code and returns the
           updated schedule
@@ -8152,11 +8203,11 @@ x-flows:
                 country:
                   code: IND
               action: on_select
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -8252,37 +8303,37 @@ x-flows:
         api: select
         description: Buyer selects the updated schedule for the home service
         reference: if any
-        example: *ref_20
+        example: *ref_25
       - summary: Seller confirms the schedule and returns the quote
         api: on_select
         description: Seller confirms the schedule and returns the quote
         reference: if any
-        example: *ref_21
+        example: *ref_26
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
         reference: if any
-        example: *ref_22
+        example: *ref_27
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
         reference: if any
-        example: *ref_23
+        example: *ref_28
       - summary: Buyer makes the payment and creates the order
         api: confirm
         description: Buyer makes the payment and creates the order
-        example: *ref_24
+        example: *ref_29
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
           Seller app sends an on_confirm call to the buyer app accepting the
           order
         reference: if any
-        example: *ref_25
+        example: *ref_30
       - summary: Buyer requests for the status of the order
         api: status
         description: Buyer requests for the status of the order
-        example: *ref_15
+        example: *ref_20
       - summary: >-
           Seller app sends order status update when service provider is on the
           way
@@ -8291,7 +8342,7 @@ x-flows:
           Seller app sends order status update when service provider is on the
           way
         reference: if any
-        example: *ref_16
+        example: *ref_21
       - summary: >-
           Seller app sends order status update when service provider has reached
           the buyer location
@@ -8300,7 +8351,7 @@ x-flows:
           Seller app sends order status update when service provider has reached
           the buyer location
         reference: if any
-        example: *ref_17
+        example: *ref_22
       - summary: >-
           Seller app sends order status update when service provider has started
           the service
@@ -8309,12 +8360,12 @@ x-flows:
           Seller app sends order status update when service provider has started
           the service
         reference: if any
-        example: *ref_18
+        example: *ref_23
       - summary: Seller app sends order status update when service is completed
         api: on_status
         description: Seller app sends order status update when service is completed
         reference: if any
-        example: *ref_19
+        example: *ref_24
       - summary: >-
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
@@ -8323,12 +8374,12 @@ x-flows:
           Seller app sends a quotation of the home service for which
           consultation was taken e.g home painting
         reference: if any
-        example: *ref_26
+        example: *ref_31
       - summary: Buyer accepts the quotation and makes the partial payment
         api: update
         description: Buyer accepts the quotation and makes the partial payment
         reference: if any
-        example: *ref_27
+        example: *ref_32
 x-examples:
   Services - Home Services:
     summary: Booking Home Services
@@ -8612,11 +8663,11 @@ x-examples:
                   country:
                     code: IND
                 action: init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:35.000Z'
@@ -8679,11 +8730,11 @@ x-examples:
                   country:
                     code: IND
                 action: init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:35.000Z'
@@ -8754,11 +8805,11 @@ x-examples:
                   country:
                     code: IND
                 action: confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:38.000Z'
@@ -8913,11 +8964,11 @@ x-examples:
                   country:
                     code: IND
                 action: confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:38.000Z'
@@ -9104,9 +9155,9 @@ x-examples:
                 action: update
                 version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-17T10:20:00.000Z'
@@ -9719,11 +9770,11 @@ x-examples:
                   country:
                     code: IND
                 action: status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:39.000Z'
@@ -10117,11 +10168,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_select
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10202,11 +10253,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_select
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10307,11 +10358,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_select
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10441,9 +10492,9 @@ x-examples:
                 action: on_select
                 version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10593,11 +10644,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:36.000Z'
@@ -10742,11 +10793,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:36.000Z'
@@ -10946,11 +10997,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:39.000Z'
@@ -11131,11 +11182,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:39.000Z'
@@ -11374,11 +11425,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T10:40:00.000Z'
@@ -11578,11 +11629,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:40.000Z'
@@ -11809,11 +11860,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:40.000Z'
@@ -12045,11 +12096,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:40.000Z'
@@ -12286,9 +12337,9 @@ x-examples:
                 action: on_update
                 version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T10:20:00.000Z'
