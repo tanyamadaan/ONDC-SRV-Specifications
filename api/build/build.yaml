@@ -3783,11 +3783,11 @@ x-flows:
                 country:
                   code: IND
               action: on_select
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -3920,11 +3920,11 @@ x-flows:
                 country:
                   code: IND
               action: init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:35.000Z'
@@ -3998,11 +3998,11 @@ x-flows:
                 country:
                   code: IND
               action: on_init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:36.000Z'
@@ -4204,11 +4204,11 @@ x-flows:
                 country:
                   code: IND
               action: confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:38.000Z'
@@ -4398,11 +4398,11 @@ x-flows:
                 country:
                   code: IND
               action: on_confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:39.000Z'
@@ -4643,11 +4643,11 @@ x-flows:
                 country:
                   code: IND
               action: status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:39.000Z'
@@ -4672,11 +4672,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:40.000Z'
@@ -4912,11 +4912,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:40.000Z'
@@ -5157,11 +5157,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T09:00:40.000Z'
@@ -5399,11 +5399,11 @@ x-flows:
                 country:
                   code: IND
               action: on_status
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T10:40:00.000Z'
@@ -5692,9 +5692,9 @@ x-flows:
               action: on_select
               version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -6180,11 +6180,11 @@ x-flows:
                 country:
                   code: IND
               action: on_select
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -6270,11 +6270,11 @@ x-flows:
                 country:
                   code: IND
               action: init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:35.000Z'
@@ -6342,11 +6342,11 @@ x-flows:
                 country:
                   code: IND
               action: on_init
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:36.000Z'
@@ -6495,11 +6495,11 @@ x-flows:
                 country:
                   code: IND
               action: confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:38.000Z'
@@ -6661,11 +6661,11 @@ x-flows:
                 country:
                   code: IND
               action: on_confirm
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:39.000Z'
@@ -6893,9 +6893,9 @@ x-flows:
               action: on_update
               version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-16T10:20:00.000Z'
@@ -7503,9 +7503,9 @@ x-flows:
               action: update
               version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-17T10:20:00.000Z'
@@ -8203,11 +8203,11 @@ x-flows:
                 country:
                   code: IND
               action: on_select
-              version: 2.0.1
+              version: 2.0.0
               bap_id: buyerapp.com
-              bap_uri: https://buyerapp.com/grocery
+              bap_uri: https://buyerapp.com/services
               bpp_id: sellerapp.com
-              bpp_uri: https://sellerapp.com/grocery
+              bpp_uri: https://sellerapp.com/services
               transaction_id: T1
               message_id: M1
               timestamp: '2023-11-08T22:00:31.000Z'
@@ -8663,11 +8663,11 @@ x-examples:
                   country:
                     code: IND
                 action: init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:35.000Z'
@@ -8730,11 +8730,11 @@ x-examples:
                   country:
                     code: IND
                 action: init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:35.000Z'
@@ -8805,11 +8805,11 @@ x-examples:
                   country:
                     code: IND
                 action: confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:38.000Z'
@@ -8964,11 +8964,11 @@ x-examples:
                   country:
                     code: IND
                 action: confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:38.000Z'
@@ -9155,9 +9155,9 @@ x-examples:
                 action: update
                 version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-17T10:20:00.000Z'
@@ -9770,11 +9770,11 @@ x-examples:
                   country:
                     code: IND
                 action: status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:39.000Z'
@@ -10168,11 +10168,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_select
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10253,11 +10253,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_select
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10358,11 +10358,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_select
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10492,9 +10492,9 @@ x-examples:
                 action: on_select
                 version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:31.000Z'
@@ -10644,11 +10644,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:36.000Z'
@@ -10793,11 +10793,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_init
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:36.000Z'
@@ -10997,11 +10997,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:39.000Z'
@@ -11182,11 +11182,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_confirm
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-08T22:00:39.000Z'
@@ -11425,11 +11425,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T10:40:00.000Z'
@@ -11629,11 +11629,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:40.000Z'
@@ -11860,11 +11860,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:40.000Z'
@@ -12096,11 +12096,11 @@ x-examples:
                   country:
                     code: IND
                 action: on_status
-                version: 2.0.1
+                version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T09:00:40.000Z'
@@ -12337,9 +12337,9 @@ x-examples:
                 action: on_update
                 version: 2.0.0
                 bap_id: buyerapp.com
-                bap_uri: https://buyerapp.com/grocery
+                bap_uri: https://buyerapp.com/services
                 bpp_id: sellerapp.com
-                bpp_uri: https://sellerapp.com/grocery
+                bpp_uri: https://sellerapp.com/services
                 transaction_id: T1
                 message_id: M1
                 timestamp: '2023-11-16T10:20:00.000Z'
