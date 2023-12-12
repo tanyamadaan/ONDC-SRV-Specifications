@@ -10,11 +10,11 @@
       }
     },
     "action": "on_confirm",
-    "version": "2.0.1",
+    "version": "2.0.0",
     "bap_id": "buyerapp.com",
-    "bap_uri": "https://buyerapp.com/grocery",
+    "bap_uri": "https://buyerapp.com/services",
     "bpp_id": "sellerapp.com",
-    "bpp_uri": "https://sellerapp.com/grocery",
+    "bpp_uri": "https://sellerapp.com/services",
     "transaction_id": "T1",
     "message_id": "M1",
     "timestamp": "2023-11-08T22:00:39.000Z",
@@ -76,6 +76,7 @@
           "tracking": false,
           "stops": [
             {
+              "id": "L1",
               "type": "start",
               "location": {
                 "id": "L1",
@@ -99,6 +100,7 @@
               }
             },
             {
+              "id": "L2",
               "type": "end",
               "location": {
                 "gps": "12.974002,77.613458",
