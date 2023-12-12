@@ -25,7 +25,7 @@
       "fulfillments": [
         {
           "id": "1",
-          "type": "Delivery"
+          "type": "Home-Service"
         },
         {
           "id": "2",
@@ -182,10 +182,10 @@
               "category_ids": [
                 "SRV11-xxxx"
               ],
-              "fulfillment_ids": [
+              "fulfillment_ids": [    
                 "1"
               ],
-              "location_ids": [
+              "location_ids": [  
                 "L1"
               ],
               "payment_ids": [
@@ -207,7 +207,7 @@
                 {
                   "fulfillment_state": {
                     "descriptor": {
-                      "code": "Out-For-Delivery"
+                      "code": "In-Transit"
                     }
                   },
                   "cancellation_fee": {
@@ -218,14 +218,14 @@
               "time": {
                 "label": "validity",
                 "range": {
-                  "start": "2022-11-10T00:00:00.000Z",
+                  "start": "2022-11-10T00:00:00.000Z",   
                   "end": "2022-11-20T00:00:00.000Z"
                 },
-                "days": "10,11,14,16,17,18,19,20",
-                "schedule": {
-                  "frequency": "PT1H",
+                "days": "10,11,14,16,17,18,19,20", 
+                "schedule": {   
+                  "frequency": "PT1H",  
                   "holidays": ["2023-11-13", "2023-11-15"],
-                  "times": ["0930", "1900"]
+                  "times": ["0930", "1900"] 
                 }
               },
               "matched": "true",
@@ -543,7 +543,7 @@
               "location_ids": [],
               "category_ids": [],
               "item_ids": ["PI2"],
-              "time": {
+              "time": { 
                 "label": "validity",
                 "range": {
                   "start": "2023-11-12T00:00:00.000Z",
@@ -552,7 +552,7 @@
               }
             }
           ],
-          "fulfillments": [
+          "fulfillments": [ 
             {
               "contact": {
                 "phone": "9886098860",

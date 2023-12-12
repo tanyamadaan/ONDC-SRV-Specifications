@@ -3,7 +3,7 @@ context:
   domain:
     description: domain code, enums - ONDC:SRV10 ( Home Services - Appliance Repair Services ), ONDC:SRV11 ( Home Services - Infra Services ), ONDC:SRV12 ( Home Services - Personal Care Services )
     required: mandatory
-    usage: "ONDC:SRV11"
+    usage: "ONDC:SRV10"
     reference: if any
   city:
     code:
@@ -35,5 +35,37 @@ context:
   ttl:
     description: validity of message
     required: mandatory
-    usage: "ONDC:SRV10"
+    usage: PT30S
     reference: if any
+message:
+  parent: true
+  intent:
+    parent: true
+    item:
+      parent: true
+      category:
+        description: Category of the search
+        required: optional
+        usage: "SRV10-1000"
+        reference: if any
+    fulfillment:
+      parent: true
+      type:
+        description: fulfillment type for the service, enum - "Home-Service, Store-Service"
+        required: required
+        usage: "Home-Service"
+        reference: if any
+      stops:
+        location:
+          gps:
+            description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision
+            required: required
+            usage: "12.4535445,77.9283792"
+            reference: if any
+    payment:
+      parent: true
+      collected_by:
+        description: Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller App)
+        required: optional
+        usage: "BPP"
+        reference: if any
