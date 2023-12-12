@@ -1,3 +1,5 @@
+summary: Seller rejects the schedule and returns the updated schedule for consultation
+description: Seller rejects the schedule with the error code and returns the updated schedule for consultation
 value:
   context:
     domain: ONDC:SRV11

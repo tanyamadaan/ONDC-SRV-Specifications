@@ -1,3 +1,5 @@
+summary: Seller app sends a quotation of the home service for which consultation was taken e.g home painting
+description: Seller app sends a quotation of the home service for which consultation was taken e.g home painting
 value:
   context:
     domain: ONDC:SRV11

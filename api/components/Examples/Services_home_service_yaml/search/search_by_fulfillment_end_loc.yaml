@@ -1,3 +1,5 @@
+summary: Search based on the buyer location
+description: Search intent sent by the buyer based on the buyer's location
 value:
   context:
     domain: ONDC:SRV11

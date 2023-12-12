@@ -1,3 +1,5 @@
+summary: Seller provides the final quotation for the consultation
+description: Seller provides the final quotation and creates the draft contract for the consultation
 value:
   context:
     domain: ONDC:SRV11

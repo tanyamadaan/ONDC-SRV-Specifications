@@ -1,3 +1,5 @@
+summary: Buyer cancels the order
+description: Buyer cancels the order
 value:
   context:
     domain: ONDC:SRV11

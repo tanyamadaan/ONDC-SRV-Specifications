@@ -1,3 +1,5 @@
+summary: Seller accepts the order for consultation
+description: Seller app sends an on_confirm call to the buyer app accepting the order
 value:
   context:
     domain: ONDC:SRV11

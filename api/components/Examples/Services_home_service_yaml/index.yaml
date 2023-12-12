@@ -45,6 +45,14 @@ on_status:
     - $ref: "./on_status/on_status_In_Transit.yaml"
     - $ref: "./on_status/on_status_Reached.yaml"
     - $ref: "./on_status/on_status_Service_Started.yaml"
+    - $ref: "./on_status/on_status_Reached_re-otp.yaml"
 on_update:
   examples:
     - $ref: "./on_update/on_update_requote.yaml"
+cancel:
+  examples:
+    - $ref: "./cancel/cancel.yaml"
+on_cancel:
+  examples:
+    - $ref: "./on_cancel/on_cancel_ack.yaml"
+    - $ref: "./on_cancel/on_cancel_merchant.yaml"

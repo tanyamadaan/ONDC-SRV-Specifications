@@ -1,3 +1,5 @@
+summary: Buyer accepts the quotation and makes the partial payment
+description: Buyer accepts the quotation and makes the partial payment
 value:
   context:
     domain: ONDC:SRV11
