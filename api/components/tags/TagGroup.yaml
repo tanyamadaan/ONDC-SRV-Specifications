@@ -1,22 +1,38 @@
 intent:
   tags:
-    - code: Package_Weight
-      description: Define package dead weight here
+    - code: BAP_Terms
+      description: Terms of BAP
       reference: <PR/Issue/Discussion Links md format text>
       list:
-        $ref: "./Tag.yaml#/Package_Weight"
-    - code: Package_Dimensions
-      description: Define package LBH dimensions here
-      reference: <PR/Issue/Discussion Links md format text>
-      list:
-        $ref: "./Tag.yaml#/Package_Dimensions"
-    - code: Package_Details
-      description: Define further details of package
-      reference: <PR/Issue/Discussion Links md format text>
-      list:
-        $ref: "./Tag.yaml#/Package_Details"
-    - code: Cold_Logistics
-      description: Define terms if cold logistics is required
-      reference: <PR/Issue/Discussion Links md format text>
-      list:
-        $ref: "./Tag.yaml#/Cold_Logistics"
+        $ref: "./Tag.yaml#/BAP_Terms"
+catalog:
+  providers:
+    tags:
+      - code: serviceability
+        description: Serviceability Details
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./Tag.yaml#/serviceability"
+order:
+  quote:
+    breakup:
+      tags: &ref2
+        - code: title
+          description: title tag
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/title"
+  payments: &ref1
+    tags:
+      - code: Settlement_Details
+        description: Define Payment Settlement Details here
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./Tag.yaml#/Settlement_Details"
+      - code: Buyer_Finder_Fee
+        description: Define Finder's Fee for Buyer
+        reference: <PR/Issue/Discussion Links md format text>
+        list:
+          $ref: "./Tag.yaml#/Buyer_Finder_Fee"
+
+      
