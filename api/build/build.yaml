@@ -8380,6 +8380,705 @@ x-flows:
         description: Buyer accepts the quotation and makes the partial payment
         reference: if any
         example: *ref_32
+  - summary: Buyer Cancellation Flow
+    description: >-
+      The following is an illustrative flow to perform a transaction of a nature
+      where a buyer would like to order home services. The booking majorly
+      happens in four phases of order processing flow, i.e. Discovery of
+      available services and service providers based on serviceability, order,
+      fulfillment and post-fulfillment. In this flow buyer cancels the order
+      after confirmation.
+    details:
+      - description: Sequence Diagram for Booking Home Service
+        mermaidGraph: |-
+          sequenceDiagram
+            title Booking Home Services
+            participant SRV BAP
+            participant SRV BPP
+
+            note over SRV BAP, SRV BPP: Service Discovery
+            SRV BAP ->> SRV BPP: **/search** - Search intent sent by the buyer based on<br/>the service required 
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_search** - Seller Returns the catalog specific to<br/> the search intent + available schedule
+            deactivate SRV BPP
+
+            note over SRV BAP, SRV BPP: Order Placement
+            SRV BAP ->> SRV BPP: **/select** - Buyer adds the service to cart and <br/>selects the schedule for Home Service
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
+            deactivate SRV BPP
+
+            SRV BAP ->> SRV BPP: **/init** - Buyer initialises the order and provides billing details
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_init** - Seller provides the final quotation and<br/>creates the draft contract
+            deactivate SRV BPP
+
+            SRV BAP ->> SRV BPP: **/confirm** - Buyer makes the payment and creates the order
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_confirm** - Seller accepts the order
+            deactivate SRV BPP
+
+
+            
+            note over SRV BAP, SRV BPP: buyer cancels the order
+            SRV BAP ->> SRV BPP: **/cancel** - Buyer cancels the order
+            SRV BPP ->> SRV BAP: **/on_cancel** -  Seller app confirms cancellation of the order
+           
+    reference: if any
+    steps:
+      - summary: Search based on the service required
+        api: search
+        description: >-
+          Search intent sent by the buyer based on the service required - e.g.
+          Sofa Cleaning
+        reference: if any
+        example: *ref_12
+      - summary: Returns the catalog specific to the search intent + available schedule
+        api: on_search
+        description: Returns the catalog specific to the search intent + available schedule
+        reference: if any
+        example: *ref_13
+      - summary: >-
+          Buyer adds the service to cart + selects the schedule for the home
+          service
+        api: select
+        description: >-
+          Buyer adds the service to cart + selects the schedule for the home
+          service
+        reference: if any
+        example: *ref_14
+      - summary: Seller confirms the schedule and returns the quote
+        api: on_select
+        description: Seller confirms the schedule and returns the quote
+        reference: if any
+        example: *ref_15
+      - summary: Buyer initialises the order and provides billing details
+        api: init
+        description: Buyer initialises the order and provides billing details
+        reference: if any
+        example: *ref_16
+      - summary: Seller provides the final quotation and creates the draft contract
+        api: on_init
+        description: Seller provides the final quotation and creates the draft contract
+        reference: if any
+        example: *ref_17
+      - summary: Buyer makes the payment and creates the order
+        api: confirm
+        description: Buyer makes the payment and creates the order
+        example: *ref_18
+      - summary: Seller accepts the order
+        api: on_confirm
+        description: >-
+          Seller app sends an on_confirm call to the buyer app accepting the
+          order
+        reference: if any
+        example: *ref_19
+      - summary: Buyer cancels the order
+        api: cancel
+        description: Buyer cancels the order
+        example:
+          value:
+            context:
+              domain: ONDC:SRV11
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: cancel
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/srv
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: 9fdb667c-76c6-456a-9742-ba9caa5eb765
+              message_id: '1755281254864'
+              timestamp: '2023-11-08T22:00:55.000Z'
+              ttl: PT30S
+            message:
+              order_id: '01'
+              cancellation_reason_id: '012'
+      - summary: Seller app acknowledges and cancels the order
+        api: on_cancel
+        description: Seller app acknowledges and cancels the order
+        reference: if any
+        example:
+          value:
+            context:
+              domain: ONDC:SRV11
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_cancel
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/srv
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: 9fdb667c-76c6-456a-9742-ba9caa5eb765
+              message_id: '1755281254860'
+              timestamp: '2023-11-08T22:00:57.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: O1
+                status: Cancelled
+                cancellation:
+                  cancelled_by: CONSUMER
+                  reason:
+                    descriptor:
+                      code: '012'
+                provider:
+                  id: P1
+                  locations:
+                    - id: L1
+                items:
+                  - id: I2
+                    parent_item_id: PI2
+                    fulfillment_ids:
+                      - F1
+                    quantity:
+                      selected:
+                        count: 1
+                      measure:
+                        unit: seats
+                        value: '2'
+                quote:
+                  price:
+                    currency: INR
+                    value: '0.00'
+                  breakup:
+                    - title: Sofa Cleaning
+                      price:
+                        currency: INR
+                        value: '0.00'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: '1'
+                          measure:
+                            unit: seats
+                            value: '2'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '0.00'
+                      item:
+                        id: I1
+                        quantity:
+                          allocated:
+                            count: '1'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: discount
+                      price:
+                        currency: INR
+                        value: '0'
+                      item:
+                        id: I1
+                        quantity:
+                          allocated:
+                            count: '1'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
+                    - title: convenience_fee
+                      price:
+                        currency: INR
+                        value: '0'
+                      item:
+                        id: I1
+                        quantity:
+                          allocated:
+                            count: '1'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
+                  ttl: PT15M
+                fulfillments:
+                  - id: F1
+                    type: Home-Service
+                    state:
+                      descriptor:
+                        code: Cancelled
+                    tracking: false
+                    stops:
+                      - id: L1
+                        type: start
+                        location:
+                          id: L1
+                          descriptor:
+                            name: ABC Store
+                          gps: 12.956399,77.636803
+                        time:
+                          range:
+                            start: '2023-11-16T09:30:00Z'
+                            end: '2023-11-16T10:30:00Z'
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        person:
+                          name: Kishan
+                      - id: L2
+                        type: end
+                        location:
+                          gps: 12.974002,77.613458
+                          address: 'My House #, My buildin'
+                          city:
+                            name: Bengaluru
+                          country:
+                            code: IND
+                          area_code: '560001'
+                          state:
+                            name: Karnataka
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2023-11-16T09:30:00Z'
+                            end: '2023-11-16T10:30:00Z'
+                          days:
+                            - '16'
+                        person:
+                          name: Ramu
+                        instructions:
+                          name: Special Instructions
+                          short_desc: Customer Special Instructions
+                        authorization:
+                          type: OTP
+                          token: '1234'
+                          valid_from: '2023-11-16T09:30:00Z'
+                          valid_to: '2023-11-16T09:35:00Z'
+                          status: valid
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                payment:
+                  - id: P1
+                    collected_by: BAP
+                    params:
+                      amount: '499'
+                      currency: INR
+                      transaction_id: '3937'
+                      bank_account_number: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                updated_at: '2023-11-08T22:00:57.000Z'
+  - summary: Merchant Cancellation Flow
+    description: >-
+      The following is an illustrative flow to perform a transaction of a nature
+      where a buyer would like to order home services. The booking majorly
+      happens in four phases of order processing flow, i.e. Discovery of
+      available services and service providers based on serviceability, order,
+      fulfillment and post-fulfillment. In this flow seller cancels the order
+      after confirmation.
+    details:
+      - description: Sequence Diagram for Booking Home Service
+        mermaidGraph: |-
+          sequenceDiagram
+            title Booking Home Services
+            participant SRV BAP
+            participant SRV BPP
+
+            note over SRV BAP, SRV BPP: Service Discovery
+            SRV BAP ->> SRV BPP: **/search** - Search intent sent by the buyer based on<br/>the service required 
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_search** - Seller Returns the catalog specific to<br/> the search intent + available schedule
+            deactivate SRV BPP
+
+            note over SRV BAP, SRV BPP: Order Placement
+            SRV BAP ->> SRV BPP: **/select** - Buyer adds the service to cart and <br/>selects the schedule for Home Service
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
+            deactivate SRV BPP
+
+            SRV BAP ->> SRV BPP: **/init** - Buyer initialises the order and provides billing details
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_init** - Seller provides the final quotation and<br/>creates the draft contract
+            deactivate SRV BPP
+
+            SRV BAP ->> SRV BPP: **/confirm** - Buyer makes the payment and creates the order
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_confirm** - Seller accepts the order
+            deactivate SRV BPP
+
+
+            
+            note over SRV BAP, SRV BPP: Seller cancels the order
+           
+            SRV BPP ->> SRV BAP: **/on_cancel** -  Seller app cancels of the order
+           
+    reference: if any
+    steps:
+      - summary: Search based on the service required
+        api: search
+        description: >-
+          Search intent sent by the buyer based on the service required - e.g.
+          Sofa Cleaning
+        reference: if any
+        example: *ref_12
+      - summary: Returns the catalog specific to the search intent + available schedule
+        api: on_search
+        description: Returns the catalog specific to the search intent + available schedule
+        reference: if any
+        example: *ref_13
+      - summary: >-
+          Buyer adds the service to cart + selects the schedule for the home
+          service
+        api: select
+        description: >-
+          Buyer adds the service to cart + selects the schedule for the home
+          service
+        reference: if any
+        example: *ref_14
+      - summary: Seller confirms the schedule and returns the quote
+        api: on_select
+        description: Seller confirms the schedule and returns the quote
+        reference: if any
+        example: *ref_15
+      - summary: Buyer initialises the order and provides billing details
+        api: init
+        description: Buyer initialises the order and provides billing details
+        reference: if any
+        example: *ref_16
+      - summary: Seller provides the final quotation and creates the draft contract
+        api: on_init
+        description: Seller provides the final quotation and creates the draft contract
+        reference: if any
+        example: *ref_17
+      - summary: Buyer makes the payment and creates the order
+        api: confirm
+        description: Buyer makes the payment and creates the order
+        example: *ref_18
+      - summary: Seller accepts the order
+        api: on_confirm
+        description: >-
+          Seller app sends an on_confirm call to the buyer app accepting the
+          order
+        reference: if any
+        example: *ref_19
+      - summary: Seller app cancels the order
+        api: on_cancel
+        description: Seller app cancels the order
+        reference: if any
+        example:
+          value:
+            context:
+              domain: ONDC:SRV11
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_cancel
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/srv
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: 9fdb667c-76c6-456a-9742-ba9caa5eb765
+              message_id: '1755281254860'
+              timestamp: '2023-11-09T23:09:00.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: O1
+                status: Cancelled
+                cancellation:
+                  cancelled_by: PRODUCER
+                  reason:
+                    descriptor:
+                      code: '022'
+                provider:
+                  id: P1
+                  locations:
+                    - id: L1
+                items:
+                  - id: I2
+                    parent_item_id: PI2
+                    fulfillment_ids:
+                      - F1
+                    quantity:
+                      selected:
+                        count: 1
+                      measure:
+                        unit: seats
+                        value: '2'
+                quote:
+                  price:
+                    currency: INR
+                    value: '0.00'
+                  breakup:
+                    - title: Sofa Cleaning
+                      price:
+                        currency: INR
+                        value: '0.00'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: '1'
+                          measure:
+                            unit: seats
+                            value: '2'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '0.00'
+                      item:
+                        id: I1
+                        quantity:
+                          allocated:
+                            count: '1'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: discount
+                      price:
+                        currency: INR
+                        value: '0'
+                      item:
+                        id: I1
+                        quantity:
+                          allocated:
+                            count: '1'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
+                    - title: convenience_fee
+                      price:
+                        currency: INR
+                        value: '0'
+                      item:
+                        id: I1
+                        quantity:
+                          allocated:
+                            count: '1'
+                        price:
+                          currency: INR
+                          value: '0.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
+                  ttl: PT15M
+                fulfillments:
+                  - id: F1
+                    type: Home-Service
+                    state:
+                      descriptor:
+                        code: Cancelled
+                    tracking: false
+                    stops:
+                      - id: L1
+                        type: start
+                        location:
+                          id: L1
+                          descriptor:
+                            name: ABC Store
+                          gps: 12.956399,77.636803
+                        time:
+                          range:
+                            start: '2023-11-16T09:30:00Z'
+                            end: '2023-11-16T10:30:00Z'
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        person:
+                          name: Kishan
+                      - id: L2
+                        type: end
+                        location:
+                          gps: 12.974002,77.613458
+                          address: 'My House #, My buildin'
+                          city:
+                            name: Bengaluru
+                          country:
+                            code: IND
+                          area_code: '560001'
+                          state:
+                            name: Karnataka
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2023-11-16T09:30:00Z'
+                            end: '2023-11-16T10:30:00Z'
+                          days:
+                            - '16'
+                        person:
+                          name: Ramu
+                        instructions:
+                          name: Special Instructions
+                          short_desc: Customer Special Instructions
+                        authorization:
+                          type: OTP
+                          token: '1234'
+                          valid_from: '2023-11-16T09:30:00Z'
+                          valid_to: '2023-11-16T09:35:00Z'
+                          status: valid
+                billing:
+                  name: ONDC buyer
+                  address: >-
+                    22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar,
+                    Bengaluru, Karnataka 560001
+                  state:
+                    name: Karnataka
+                  city:
+                    name: Bengaluru
+                  tax_id: XXXXXXXXXXXXXXX
+                  email: nobody@nomail.com
+                  phone: '9886098860'
+                payment:
+                  - id: P1
+                    collected_by: BAP
+                    params:
+                      amount: '499'
+                      currency: INR
+                      transaction_id: '3937'
+                      bank_account_number: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                updated_at: '2023-11-08T22:00:57.000Z'
 x-examples:
   Services - Home Services:
     summary: Booking Home Services
@@ -12944,7 +13643,7 @@ x-attributes:
               Services ), ONDC:SRV11 ( Home Services - Infra Services ),
               ONDC:SRV12 ( Home Services - Personal Care Services )
             required: mandatory
-            usage: ONDC:SRV11
+            usage: ONDC:SRV10
             reference: if any
           city:
             code:
@@ -12981,7 +13680,7 @@ x-attributes:
           ttl:
             description: validity of message
             required: mandatory
-            usage: ONDC:SRV10
+            usage: PT30S
             reference: if any
         message:
           parent: true
