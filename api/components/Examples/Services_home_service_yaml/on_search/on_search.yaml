@@ -1,3 +1,5 @@
+summary: Returns the catalog specific to the search intent + available schedule
+description: Returns the catalog specific to the search intent + available schedule
 value:
   context:
     domain: ONDC:SRV11

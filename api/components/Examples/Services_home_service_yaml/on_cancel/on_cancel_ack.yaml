@@ -1,3 +1,5 @@
+summary: Seller App acknowledges buyer cancellation
+description: Seller App acknowledges buyer cancellation
 value:
   context:
     domain: ONDC:SRV11

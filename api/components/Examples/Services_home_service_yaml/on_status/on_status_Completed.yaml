@@ -1,3 +1,5 @@
+summary: Seller app sends order status update (Completed)
+description: Seller app sends order status update when service is completed
 value:
   context:
     domain: ONDC:SRV11

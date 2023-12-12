@@ -1,3 +1,5 @@
+summary: Merchant cancels the order
+description: Merchant cancels the order
 value:
   context:
     domain: ONDC:SRV11

@@ -1,3 +1,5 @@
+summary: Buyer adds the consulation service to cart + reschedules 
+description: Buyer adds the service to cart + reschedule for the consultation service
 value:
   context:
     domain: ONDC:SRV11

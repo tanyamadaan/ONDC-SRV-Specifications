@@ -1,3 +1,5 @@
+summary: Seller app sends order status update (Service Started)
+description: Buyer shares the OTP with service provider and Seller app sends order status as Service started.
 value:
   context:
     domain: ONDC:SRV11

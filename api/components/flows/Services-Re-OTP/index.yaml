@@ -120,7 +120,7 @@ steps:
     description: Seller app sends the OTP from seller app to buyer app and order status as reached the buyer location
     reference: if any
     example:
-      $ref: "../../Examples/Services_home_service_yaml/on_status/on_status_Reached.yaml"
+      $ref: "../../Examples/Services_home_service_yaml/on_status/on_status_Reached_re-otp.yaml"
   - summary: Buyer shares the OTP with service provider and Seller app sends order status as Service started.
     api: on_status
     description: Buyer shares the OTP with service provider and Seller app sends order status as Service started.

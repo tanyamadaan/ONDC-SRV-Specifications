@@ -1,3 +1,5 @@
+summary: Seller confirms the schedule and returns the quote for consultation
+description: Seller confirms the schedule and returns the quote for consultation
 value:
   context:
     domain: ONDC:SRV11

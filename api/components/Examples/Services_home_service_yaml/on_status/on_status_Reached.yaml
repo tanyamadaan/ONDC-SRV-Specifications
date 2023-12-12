@@ -1,3 +1,5 @@
+summary: Seller app sends order status (Reached)
+description: Seller app sends order status update when service provider has reached the buyer location
 value:
   context:
     domain: ONDC:SRV11
