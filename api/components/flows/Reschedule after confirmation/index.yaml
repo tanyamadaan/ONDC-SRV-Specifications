@@ -1,4 +1,4 @@
-summary: Schedule-Reselection after order confirmation
+summary: Schedule reselection after order confirmation
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order home services. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
 details:
   - description: Sequence diagram for Home Services - Schedule-Reselection
@@ -15,12 +15,11 @@ details:
         deactivate SRV BPP
 
         note over SRV BAP, SRV BPP: Order Placement
-        rect rgb(247, 226, 225)
         SRV BAP ->> SRV BPP: **/select** - Buyer adds the service to cart and <br/>selects the schedule for Home Service
         activate SRV BPP
         SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
         deactivate SRV BPP
-        end
+    
 
         SRV BAP ->> SRV BPP: **/init** - Buyer initialises the order and provides billing details
         activate SRV BPP
@@ -96,15 +95,15 @@ steps:
       $ref: "../../Examples/Services_home_service_yaml/on_confirm/on_confirm_service.yaml"
   - summary: Buyer reschedules the order
     api: update
-    description: Buyer makes the payment and creates the order
+    description: Buyer reschedules the order
     example:
-      $ref: "../../Examples/Services_home_service_yaml/confirm/confirm_service.yaml"
+      $ref: "../../Examples/Services_home_service_yaml/update/update_reschedule.yaml"
   - summary: Seller accepts the new schedule
     api: on_update
-    description: Seller app sends an on_confirm call to the buyer app accepting the order
+    description: Seller accepts the new schedule
     reference: if any
     example:
-      $ref: "../../Examples/Services_home_service_yaml/on_confirm/on_confirm_service.yaml"
+      $ref: "../../Examples/Services_home_service_yaml/on_update/on_update_reschedule.yaml"
   - summary: Buyer requests for the status of the order
     api: status
     description: Buyer requests for the status of the order

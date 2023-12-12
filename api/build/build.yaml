@@ -9413,6 +9413,492 @@ x-flows:
                               code: Buyer_Finder_Fee_Amount
                             value: '3'
                 updated_at: '2023-11-08T22:00:57.000Z'
+  - summary: Schedule reselection after order confirmation
+    description: >-
+      The following is an illustrative flow to perform a transaction of a nature
+      where a buyer would like to order home services. The booking majorly
+      happens in four phases of order processing flow, i.e. Discovery of
+      available services and service providers based on serviceability, order,
+      fulfillment and post-fulfillment.
+    details:
+      - description: Sequence diagram for Home Services - Schedule-Reselection
+        mermaidGraph: |-
+          sequenceDiagram
+            title Home Services - Schedule-Reselection
+            participant SRV BAP
+            participant SRV BPP
+
+            note over SRV BAP, SRV BPP: Service Discovery
+            SRV BAP ->> SRV BPP: **/search** - Search intent sent by the buyer based on<br/>the service required 
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_search** - Seller Returns the catalog specific to<br/> the search intent + available schedule
+            deactivate SRV BPP
+
+            note over SRV BAP, SRV BPP: Order Placement
+            SRV BAP ->> SRV BPP: **/select** - Buyer adds the service to cart and <br/>selects the schedule for Home Service
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
+            deactivate SRV BPP
+
+
+            SRV BAP ->> SRV BPP: **/init** - Buyer initialises the order and provides billing details
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_init** - Seller provides the final quotation and<br/>creates the draft contract
+            deactivate SRV BPP
+
+            SRV BAP ->> SRV BPP: **/confirm** - Buyer makes the payment and creates the order
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_confirm** - Seller accepts the order
+            deactivate SRV BPP
+
+            SRV BAP ->> SRV BPP: **/update** - Buyer reschedules the order
+            activate SRV BPP
+            SRV BPP ->> SRV BAP: **/on_update** - Seller accepts the new schedule
+            deactivate SRV BPP
+            
+            note over SRV BAP, SRV BPP: Order Fulfillment
+            SRV BAP ->> SRV BPP: **/status** - Buyer requests for a status
+            SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service provider is on the way
+            SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service provider has reached<br/>the buyer location and seller app generates an OTP.
+            SRV BPP ->> SRV BAP: **/on_status** -  Buyer shares the OTP with service provider and<br/>Seller app sends order status as Service started.
+            SRV BPP ->> SRV BAP: **/on_status** -  Seller app sends order status update when<br/>service is completed
+            
+    reference: if any
+    steps:
+      - summary: Search based on the service required
+        api: search
+        description: >-
+          Search intent sent by the buyer based on the service required - e.g.
+          Sofa Cleaning
+        reference: if any
+        example: *ref_12
+      - summary: Returns the catalog specific to the search intent + available schedule
+        api: on_search
+        description: Returns the catalog specific to the search intent + available schedule
+        reference: if any
+        example: *ref_13
+      - summary: >-
+          Buyer adds the service to cart + selects the schedule for the home
+          service
+        api: select
+        description: >-
+          Buyer adds the service to cart + selects the schedule for the home
+          service
+        reference: if any
+        example: *ref_14
+      - summary: Seller confirms the schedule and returns the quote
+        api: on_select
+        description: Seller confirms the schedule and returns the quote
+        reference: if any
+        example: *ref_15
+      - summary: Buyer initialises the order and provides billing details
+        api: init
+        description: Buyer initialises the order and provides billing details
+        reference: if any
+        example: *ref_16
+      - summary: Seller provides the final quotation and creates the draft contract
+        api: on_init
+        description: Seller provides the final quotation and creates the draft contract
+        reference: if any
+        example: *ref_17
+      - summary: Buyer makes the payment and creates the order
+        api: confirm
+        description: Buyer makes the payment and creates the order
+        example: *ref_18
+      - summary: Seller accepts the order
+        api: on_confirm
+        description: >-
+          Seller app sends an on_confirm call to the buyer app accepting the
+          order
+        reference: if any
+        example: *ref_19
+      - summary: Buyer reschedules the order
+        api: update
+        description: Buyer reschedules the order
+        example:
+          summary: Buyer reschedules the order
+          description: Buyer reschedules the order
+          value:
+            context:
+              domain: ONDC:SRV11
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: update
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M1
+              timestamp: '2023-11-17T10:20:00.000Z'
+              ttl: PT30S
+            message:
+              update_target: fulfillments
+              order:
+                id: O1
+                state: Accepted
+                provider:
+                  id: P1
+                  locations:
+                    - id: L1
+                items:
+                  - id: I1
+                    parent_item_id: PI1
+                    fulfillment_ids:
+                      - F1
+                    location_ids:
+                      - L1
+                payments:
+                  - id: P1
+                    collected_by: BAP
+                    params:
+                      amount: '99'
+                      currency: INR
+                      transaction_id: '3937'
+                      bank_account_number: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                fulfillments:
+                  - id: F1
+                    state:
+                      descriptor:
+                        code: Pending
+                    type: Home-Service
+                    tracking: false
+                    stops:
+                      - type: start
+                        location:
+                          id: L1
+                          descriptor:
+                            name: ABC Store
+                          gps: 12.956399,77.636803
+                        time:
+                          range:
+                            start: '2023-11-16T09:30:00Z'
+                            end: '2023-11-16T10:30:00Z'
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        person:
+                          name: Kishan
+                      - type: end
+                        location:
+                          gps: 12.974002,77.613458
+                          address: 'My House #, My buildin'
+                          city:
+                            name: Bengaluru
+                          country:
+                            code: IND
+                          area_code: '560001'
+                          state:
+                            name: Karnataka
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        time:
+                          label: selected
+                          range:
+                            start: '2023-11-20T09:30:00Z'
+                            end: '2023-11-20T10:30:00Z'
+                          days:
+                            - '20'
+                        person:
+                          name: Ramu
+                        instructions:
+                          name: Special Instructions
+                          short_desc: Customer Special Instructions
+                        authorization:
+                          type: OTP
+                          token: '1234'
+                          valid_from: '2023-11-16T09:30:00Z'
+                          valid_to: '2023-11-16T09:35:00Z'
+                          status: valid
+                    rateable: true
+                quote:
+                  price:
+                    currency: INR
+                    value: '99'
+                  breakup:
+                    - title: consultation
+                      price:
+                        currency: INR
+                        value: '99'
+                      item:
+                        id: I1
+                        price:
+                          currency: INR
+                          value: '99'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '0'
+                      item:
+                        id: I1
+                        price:
+                          currency: INR
+                          value: '99'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                  ttl: P1D
+      - summary: Seller accepts the new schedule
+        api: on_update
+        description: Seller accepts the new schedule
+        reference: if any
+        example:
+          summary: Seller accepts the rescheduled order
+          description: Seller accepts the rescheduled order
+          value:
+            context:
+              domain: ONDC:SRV11
+              location:
+                city:
+                  code: std:080
+                country:
+                  code: IND
+              action: on_update
+              version: 2.0.0
+              bap_id: buyerapp.com
+              bap_uri: https://buyerapp.com/services
+              bpp_id: sellerapp.com
+              bpp_uri: https://sellerapp.com/services
+              transaction_id: T1
+              message_id: M1
+              timestamp: '2023-11-16T10:20:00.000Z'
+              ttl: PT30S
+            message:
+              order:
+                id: O1
+                state: Accepted
+                provider:
+                  id: P1
+                  locations:
+                    - id: L1
+                items:
+                  - id: I1
+                    parent_item_id: PI1
+                    fulfillment_ids:
+                      - F1
+                    location_ids:
+                      - L1
+                payments:
+                  - id: P1
+                    collected_by: BAP
+                    params:
+                      amount: '99'
+                      currency: INR
+                      bank_account_number: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    status: PAID
+                    type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                fulfillments:
+                  - id: F1
+                    state:
+                      descriptor:
+                        code: Pending
+                    type: Home-Service
+                    tracking: false
+                    stops:
+                      - type: start
+                        location:
+                          id: L1
+                          descriptor:
+                            name: ABC Store
+                          gps: 12.956399,77.636803
+                        time:
+                          range:
+                            start: '2023-11-20T09:30:00Z'
+                            end: '2023-11-20T10:30:00Z'
+                        instructions:
+                          name: Special Instructions
+                          short_desc: Customer Special Instructions
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        person:
+                          name: Kishan
+                      - type: end
+                        location:
+                          gps: 12.974002,77.613458
+                          address: 'My House #, My buildin'
+                          city:
+                            name: Bengaluru
+                          country:
+                            code: IND
+                          area_code: '560001'
+                          state:
+                            name: Karnataka
+                        contact:
+                          phone: '9886098860'
+                          email: nobody@nomail.com
+                        time:
+                          label: confirmed
+                          range:
+                            start: '2023-11-20T09:30:00Z'
+                            end: '2023-11-20T10:30:00Z'
+                          days:
+                            - '20'
+                        person:
+                          name: Ramu
+                        authorization:
+                          type: OTP
+                          token: '1234'
+                          valid_from: '2023-11-16T09:30:00Z'
+                          valid_to: '2023-11-16T09:35:00Z'
+                          status: valid
+                    rateable: true
+                quote:
+                  price:
+                    currency: INR
+                    value: '99'
+                  breakup:
+                    - title: consultation
+                      price:
+                        currency: INR
+                        value: '99'
+                      item:
+                        id: I1
+                        price:
+                          currency: INR
+                          value: '99'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '0'
+                      item:
+                        id: I1
+                        price:
+                          currency: INR
+                          value: '99'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                  ttl: P1D
+      - summary: Buyer requests for the status of the order
+        api: status
+        description: Buyer requests for the status of the order
+        example: *ref_20
+      - summary: >-
+          Seller app sends order status update when service provider is on the
+          way
+        api: on_status
+        description: >-
+          Seller app sends order status update when service provider is on the
+          way
+        reference: if any
+        example: *ref_21
+      - summary: >-
+          Seller app sends order status update when service provider has reached
+          the buyer location and seller app generates an OTP.
+        api: on_status
+        description: >-
+          Seller app sends order status update when service provider has reached
+          the buyer location and seller app generates an OTP.
+        reference: if any
+        example: *ref_22
+      - summary: >-
+          Buyer shares the OTP with service provider and Seller app sends order
+          status as Service started.
+        api: on_status
+        description: >-
+          Buyer shares the OTP with service provider and Seller app sends order
+          status as Service started.
+        reference: if any
+        example: *ref_23
+      - summary: Seller app sends order status update when service is completed
+        api: on_status
+        description: Seller app sends order status update when service is completed
+        reference: if any
+        example: *ref_24
 x-examples:
   Services - Home Services:
     summary: Booking Home Services
