@@ -62,6 +62,23 @@ message:
             required: required
             usage: "12.4535445,77.9283792"
             reference: if any
+        time:
+          days:
+            description: day on which the service is desired
+            required: required
+            usage: "16"
+            reference: if any
+          range:
+            start:
+              description: start time of the time slot desired for the service
+              required: required
+              usage: "2023-11-16T09:30:00Z"
+              reference: if any
+            end:  
+              description: end time of the time slot desired for the service 
+              required: required
+              usage: "2023-11-16T10:30:00Z"
+              reference: if any
     payment:
       parent: true
       collected_by:

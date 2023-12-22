@@ -1,4 +1,4 @@
-summary: Consultation Services - Schedule-Reselection
+summary: Consultation Services - Schedule Not Provided
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order consultation services like home painting which initially requires inspection.
 details:
   - description: 
@@ -16,14 +16,14 @@ details:
 
         note over SRV BAP, SRV BPP: Order Placement
         rect rgb(247, 226, 225)
-        SRV BAP ->> SRV BPP: **/select** - Buyer selects the available schedule for the home service
+        SRV BAP ->> SRV BPP: **/select** - Buyer does not provide the schedule for the home service
         activate SRV BPP
-        SRV BPP ->> SRV BAP: **/on_select** - Seller rejects the schedule and returns the error code, with available schedule
+        SRV BPP ->> SRV BAP: **/on_select** - Seller sends NACK with the error code
         deactivate SRV BPP
         end
 
         rect rgb(232, 255, 227)
-        SRV BAP ->> SRV BPP: **/select** - Buyer selects the updated schedule for the home service
+        SRV BAP ->> SRV BPP: **/select** - Buyer provides the schedule for the home service
         activate SRV BPP
         SRV BPP ->> SRV BAP: **/on_select** - Seller confirms the schedule and returns the quote
         deactivate SRV BPP
@@ -65,21 +65,21 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Services_home_service_yaml/on_search/on_search.yaml"
-  - summary: Buyer adds the service to cart + selects the schedule for the home service
+  - summary: Buyer adds the service to cart but does not provide the schedule for the home service
     api: select
-    description: Buyer adds the service to cart + selects the schedule for the home service
+    description: Buyer adds the service to cart but does not provide the schedule for the home service
     reference: if any
     example:
-      $ref: "../../Examples/Services_home_service_yaml/select/select_consultation.yaml"
-  - summary: Seller rejects the schedule with the error code and returns the updated schedule
+      $ref: "../../Examples/Services_home_service_yaml/select/select_without_schedule.yaml"
+  - summary: Seller sends NACK
     api: on_select
-    description: Seller rejects the schedule with the error code and returns the updated schedule
+    description: Seller sends NACK with the error code 
     reference: if any
     example:
-      $ref: "../../Examples/Services_home_service_yaml/on_select/on_select_consultation_rejected.yaml"
-  - summary: Buyer selects the updated schedule for the home service
+      $ref: "../../Examples/Services_home_service_yaml/on_select/on_select_nack.yaml"
+  - summary: Buyer selects the schedule for the home service
     api: select
-    description: Buyer selects the updated schedule for the home service
+    description: Buyer selects the schedule for the home service
     reference: if any
     example:
       $ref: "../../Examples/Services_home_service_yaml/select/select_consultation.yaml"
