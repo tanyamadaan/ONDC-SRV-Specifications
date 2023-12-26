@@ -1,4 +1,3 @@
 # PRD for ONDC API Mapping
-[![User Flow](https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping.png)](https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping.png)
 
-<!-- <img src="https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping.png" alt="User Flow" style="height:200px;"/> -->
+<img src="https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping.png" alt="User Flow" style="height:500px;"/>
