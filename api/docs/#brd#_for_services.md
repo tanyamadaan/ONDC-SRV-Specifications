@@ -44,6 +44,12 @@ This is not to be confused with MSN/ISN as service providers/aggregators can be 
 | | |
 
 ## III MVP User Journey
+<object data="./brd_pdfs/Services_on_ONDC_API_Mapping" type="application/pdf" width="700px" height="700px">
+    <embed src="./brd_pdfs/Services_on_ONDC_API_Mapping">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./brd_pdfs/Services_on_ONDC_API_Mapping.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 The user flow for a buyer booking a home service using a seller aggregator is envisaged as given:
 
 ### Stage 1: Discovery
@@ -136,6 +142,12 @@ Service Started | OTP verified between buyer and seller |
 29. Payment and Settlement will follow the standard ONDC [RSP](https://docs.google.com/document/d/1ubUPAWpbbUJ4vG2h5TQ74srZBjYjrO0P/edit) mechanism. Payment settlement can be milestone based and will be predefined in the transaction contract.  
 
 30. Review and Rating mechanism will follow the standard ONDC Rating and Scoring Mechanism. As part of the current MVP the rateable object will be the seller - which can be a service provider or service professional.
+
+<object data="./brd_pdfs/Services_on_ONDC_API_Mapping_Reschedule_Cancel.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="./brd_pdfs/Services_on_ONDC_API_Mapping_Reschedule_Cancel.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./brd_pdfs/Services_on_ONDC_API_Mapping_Reschedule_Cancel.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ## IV. Exclusions
 The following flows have been excluded from the MVP at this stage:
