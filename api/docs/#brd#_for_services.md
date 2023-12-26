@@ -44,6 +44,7 @@ This is not to be confused with MSN/ISN as service providers/aggregators can be 
 | | |
 
 ## III MVP User Journey
+
 The user flow for a buyer booking a home service using a seller aggregator is envisaged as given:
 
 ### Stage 1: Discovery
