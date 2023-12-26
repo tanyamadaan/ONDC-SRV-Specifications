@@ -44,11 +44,7 @@ This is not to be confused with MSN/ISN as service providers/aggregators can be 
 | | |
 
 ## III MVP User Journey
-<object data="https://github.com/abhik-wil/ONDC-SRV-Specifications/blob/draft-services/api/docs/brd_pdfs/Services_on_ONDC_API_Mapping.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/abhik-wil/ONDC-SRV-Specifications/blob/draft-services/api/docs/brd_pdfs/Services_on_ONDC_API_Mapping.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/abhik-wil/ONDC-SRV-Specifications/blob/draft-services/api/docs/brd_pdfs/Services_on_ONDC_API_Mapping.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+![User Flow](https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping.png)
 
 The user flow for a buyer booking a home service using a seller aggregator is envisaged as given:
 
@@ -143,11 +139,7 @@ Service Started | OTP verified between buyer and seller |
 
 30. Review and Rating mechanism will follow the standard ONDC Rating and Scoring Mechanism. As part of the current MVP the rateable object will be the seller - which can be a service provider or service professional.
 
-<object data="https://github.com/abhik-wil/ONDC-SRV-Specifications/blob/draft-services/api/docs/brd_pdfs/Services_on_ONDC_API_Mapping_Reschedule_Cancel.pdf" width="700px" height="700px">
-    <embed src="https://github.com/abhik-wil/ONDC-SRV-Specifications/blob/draft-services/api/docs/brd_pdfs/Services_on_ONDC_API_Mapping_Reschedule_Cancel.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/abhik-wil/ONDC-SRV-Specifications/blob/draft-services/api/docs/brd_pdfs/Services_on_ONDC_API_Mapping_Reschedule_Cancel.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+![Reschedule Flow](https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping_Reschedule_Cancel.png)
 
 ## IV. Exclusions
 The following flows have been excluded from the MVP at this stage:
