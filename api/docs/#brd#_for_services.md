@@ -44,7 +44,6 @@ This is not to be confused with MSN/ISN as service providers/aggregators can be 
 | | |
 
 ## III MVP User Journey
-![User Flow](https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping.png)
 
 The user flow for a buyer booking a home service using a seller aggregator is envisaged as given:
 
@@ -138,8 +137,6 @@ Service Started | OTP verified between buyer and seller |
 29. Payment and Settlement will follow the standard ONDC [RSP](https://docs.google.com/document/d/1ubUPAWpbbUJ4vG2h5TQ74srZBjYjrO0P/edit) mechanism. Payment settlement can be milestone based and will be predefined in the transaction contract.  
 
 30. Review and Rating mechanism will follow the standard ONDC Rating and Scoring Mechanism. As part of the current MVP the rateable object will be the seller - which can be a service provider or service professional.
-
-![Reschedule Flow](https://raw.githubusercontent.com/abhik-wil/ONDC-SRV-Specifications/draft-services/api/brd_images/Services_on_ONDC_API_Mapping_Reschedule_Cancel.png)
 
 ## IV. Exclusions
 The following flows have been excluded from the MVP at this stage:
