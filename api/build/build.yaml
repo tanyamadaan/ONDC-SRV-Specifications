@@ -15960,3 +15960,20 @@ x-attributes:
                     description: timestamp of the fulfillment
                     required: required
                     usage: '2023-11-16T09:00:00.000Z'
+x-errorcodes:
+  code:
+    - Code: '90001'
+      Reason: Schedule selected by the buyer is not available
+      Who can use code?: BPP
+      Usage: Used in error object
+      Action: /on_select
+    - Code: '90002'
+      Reason: Incorrect OTP provided by buyer
+      Who can use code?: BPP
+      Usage: Used in error object
+      Action: /on_status
+    - Code: '90003'
+      Reason: Schedule is not provided by the buyer
+      Who can use code?: BPP
+      Usage: Used in NACK
+      Action: NACK on /select
