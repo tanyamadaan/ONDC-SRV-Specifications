@@ -1,14 +1,14 @@
-# ONDC-LOG-Specifications
+# ONDC-SRV-Specifications
 
 # Open Network for Digital Commerce (ONDC) Protocol Open API Specifications
 
-This repository contains the model implementations for Logistic services for B2B Domestic and International.
+This repository contains the model implementations for Services - Home Services and Consultation Services.
 
 ## Domains:
 | Category                    | ONDC Domain|
 | ----------------------------|------------|
-| B2B Domestic Logistics      | ONDC:LOG10 |
-| B2B International Logistics | ONDC:LOG11 |
+| Home Services               | ONDC:SRV10 |
+| Consultation Services       | ONDC:SRV11 |
 
 ## Latest Release
 2.0.0-draft | Nov 02 2023
@@ -28,6 +28,8 @@ This repository contains the model implementations for Logistic services for B2B
 ONDC is an ambitious initiative to democratize digital commerce by creating a decentralized network of buyer apps and seller apps through an interoperable protocol specification. 
 ONDC Protocol is maintained by the Open Source Community to create API specifications, schemas and taxonomy for Retail, Logistics and other domains.
 
-Please see [documentation](https://github.com/Open-network-for-digital-commerce/ONDC-Protocol/wiki) for understanding purpose, architecture, and the actual APIs. Participate in the [community discussions](https://github.com/ONDC-Official/ONDC-LOG-Specifications/discussions) to leverage ONDC Protocol as well as to contribute towards development of ONDC Protocol by providing ideas, reporting issues, contributing to documentation, and contributing code.
+Please go through theUI to view tags, enums, Attributes (Required/Optional), Flows and swagger specifications.
 
-Please go through the [B2B Logistics BRD document](https://docs.google.com/document/d/1P8qn2h8EFZ0vubNQqJuHhFrNamlKzGfjbm6Ma-Cw6tY/edit#) as well, to understand the business requirements.
+Participate in the community discussions to leverage ONDC Protocol as well as to contribute towards development of ONDC Protocol by providing ideas, reporting issues, contributing to documentation, and contributing code.
+
+Please go through the Services - BRD as well, to understand the business requirements.
