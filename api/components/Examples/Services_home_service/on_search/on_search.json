@@ -47,7 +47,7 @@
         }
       ],
       "descriptor": {
-        "name": "ABC store", 
+        "name": "ABC store",
         "short_desc": "At home Service Providers",
         "long_desc": "At home Service Providers",
         "images": [
@@ -72,6 +72,28 @@
           },
           "rating": "4.4",
           "ttl": "PT1D",
+          "time": {
+            "label": "validity",
+            "range": {
+              "start": "2022-11-10T00:00:00.000Z",
+              "end": "2022-11-20T19:30:00.000Z"
+            },
+            "days": "10,11,14,16,17,18,19,20",
+            "schedule": {
+              "frequency": "PT1H",
+              "holidays": [
+                "2023-11-13",
+                "2023-11-15"
+              ],
+              "times": [
+                "2023-11-16T09:30:00Z",
+                "2023-11-16T14:30:00Z",
+                "2023-11-14T19:30:00Z",
+                "2023-11-17T19:30:00Z",
+                "2023-11-17T09:30:00Z"
+              ]
+            }
+          },
           "locations": [
             {
               "id": "L1",
@@ -90,16 +112,14 @@
               "area_code": "560076"
             }
           ],
-          "creds":
-          [
+          "creds": [
             {
-              "id":"ESG-12345678",
+              "id": "ESG-12345678",
               "type": "Certificate",
-              "desc":"Samsung Authorized Service provider",
-              "url":"https://abcd.cdn.com/images/bage-img"
+              "desc": "Samsung Authorized Service provider",
+              "url": "https://abcd.cdn.com/images/bage-img"
             }
           ],
-
           "tags": [
             {
               "descriptor": {
@@ -124,7 +144,7 @@
                   },
                   "value": "13"
                 },
-                  {
+                {
                   "descriptor": {
                     "code": "val"
                   },
@@ -182,10 +202,10 @@
               "category_ids": [
                 "SRV11-xxxx"
               ],
-              "fulfillment_ids": [    
+              "fulfillment_ids": [
                 "1"
               ],
-              "location_ids": [  
+              "location_ids": [
                 "L1"
               ],
               "payment_ids": [
@@ -215,17 +235,49 @@
                   }
                 }
               ],
+              "tags": [
+                {
+                  "code": "reschedule_terms",
+                  "list": [
+                    {
+                      "code": "fulfillment_state",
+                      "value": "Pending"
+                    },
+                    {
+                      "code": "reschedule_eligible",
+                      "value": "true"
+                    },
+                    {
+                      "code": "reschedule_fee",
+                      "value": "0.00"
+                    },
+                    {
+                      "code": "reschedule_within",
+                      "value": "PT1D"
+                    }
+                  ]
+                }
+              ],
               "time": {
                 "label": "validity",
                 "range": {
-                  "start": "2022-11-10T00:00:00.000Z",   
+                  "start": "2022-11-10T00:00:00.000Z",
                   "end": "2022-11-20T00:00:00.000Z"
                 },
-                "days": "10,11,14,16,17,18,19,20", 
-                "schedule": {   
-                  "frequency": "PT1H",  
-                  "holidays": ["2023-11-13", "2023-11-15"],
-                  "times": ["0930", "1900"] 
+                "days": "10,11,14,16,17,18,19,20",
+                "schedule": {
+                  "frequency": "PT1H",
+                  "holidays": [
+                    "2023-11-13",
+                    "2023-11-15"
+                  ],
+                  "times": [
+                    "2023-11-16T09:30:00Z",
+                    "2023-11-16T14:30:00Z",
+                    "2023-11-14T19:30:00Z",
+                    "2023-11-17T19:30:00Z",
+                    "2023-11-17T09:30:00Z"
+                  ]
                 }
               },
               "matched": "true",
@@ -322,8 +374,17 @@
                 },
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": ["2023-22-13", "2023-22-15"],
-                  "times": ["0930", "1900"]
+                  "holidays": [
+                    "2023-22-13",
+                    "2023-22-15"
+                  ],
+                  "times": [
+                    "2023-11-16T09:30:00Z",
+                    "2023-11-16T19:30:00Z",
+                    "2023-11-14T19:30:00Z",
+                    "2023-11-17T19:30:00Z",
+                    "2023-11-17T09:30:00Z"
+                  ]
                 }
               },
               "matched": "true",
@@ -420,8 +481,17 @@
                 },
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": ["2023-22-13", "2023-22-15"],
-                  "times": ["0930", "1130", "1230", "1430", "1900"]
+                  "holidays": [
+                    "2023-22-13",
+                    "2023-22-15"
+                  ],
+                  "times": [
+                    "2023-11-16T09:30:00Z",
+                    "2023-11-16T14:30:00Z",
+                    "2023-11-14T19:30:00Z",
+                    "2023-11-17T19:30:00Z",
+                    "2023-11-17T09:30:00Z"
+                  ]
                 }
               },
               "matched": "true",
@@ -518,8 +588,17 @@
                 },
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": ["2023-22-13", "2023-22-15"],
-                  "times": ["0930", "1900"]
+                  "holidays": [
+                    "2023-22-13",
+                    "2023-22-15"
+                  ],
+                  "times": [
+                    "2023-11-16T09:30:00Z",
+                    "2023-11-16T19:30:00Z",
+                    "2023-11-14T19:30:00Z",
+                    "2023-11-17T19:30:00Z",
+                    "2023-11-17T09:30:00Z"
+                  ]
                 }
               },
               "matched": "true",
@@ -542,8 +621,10 @@
               },
               "location_ids": [],
               "category_ids": [],
-              "item_ids": ["PI2"],
-              "time": { 
+              "item_ids": [
+                "PI2"
+              ],
+              "time": {
                 "label": "validity",
                 "range": {
                   "start": "2023-11-12T00:00:00.000Z",
@@ -552,7 +633,7 @@
               }
             }
           ],
-          "fulfillments": [ 
+          "fulfillments": [
             {
               "contact": {
                 "phone": "9886098860",

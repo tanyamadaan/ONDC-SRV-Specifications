@@ -50,7 +50,7 @@ value:
           - title: Sofa Cleaning
             price:
               currency: INR
-              value: '0.00'
+              value: '474.00'
             item:
               id: I1
               quantity:
@@ -61,7 +61,7 @@ value:
                   value: '2'
               price:
                 currency: INR
-                value: '0.00'
+                value: '474.00'
             tags:
               - descriptor:
                   code: title
@@ -69,6 +69,28 @@ value:
                   - descriptor:
                       code: type
                     value: item
+          - title: Sofa Cleaning
+            price:
+              currency: INR
+              value: '-474.00'
+            item:
+              id: I1
+              quantity:
+                selected:
+                  count: '0'
+                measure:
+                  unit: seats
+                  value: '2'
+              price:
+                currency: INR
+                value: '474.00'
+            tags:
+              - descriptor:
+                  code: title
+                list:
+                  - descriptor:
+                      code: type
+                    value: refund
           - title: tax
             price:
               currency: INR
@@ -88,6 +110,25 @@ value:
                   - descriptor:
                       code: type
                     value: tax
+          - title: tax
+            price:
+              currency: INR
+              value: '-0.00'
+            item:
+              id: I1
+              quantity:
+                allocated:
+                  count: '0'
+              price:
+                currency: INR
+                value: '0.00'
+            tags:
+              - descriptor:
+                  code: title
+                list:
+                  - descriptor:
+                      code: type
+                    value: refund
           - title: discount
             price:
               currency: INR
