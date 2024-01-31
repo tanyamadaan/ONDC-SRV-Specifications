@@ -11,6 +11,7 @@ const addFormats = require("ajv-formats");
 addFormats(ajv);
 require("ajv-errors")(ajv);
 const process = require("process");
+const { buildErrorCodes } = require("./build-error-code");
 const args = process.argv.slice(2);
 // var example_set = args[0]
 // var flow_set = args[1]
@@ -207,6 +208,8 @@ async function getSwaggerYaml(example_set, outputPath) {
         paths[path]?.post?.requestBody?.content?.["application/json"]?.schema;
       schemaMap[path.substring(1)] = pathSchema;
     }
+
+    await buildErrorCodes();
     // console.log('schemaMap', JSON.stringify(schemaMap));
     // return;
     // if (!process.argv.includes(SKIP_VALIDATION.flows)) {
@@ -271,6 +274,7 @@ function addEnumTag(base, layer) {
   base["x-flows"] = layer["flows"];
   base["x-examples"] = layer["examples"];
   base["x-attributes"] = layer["attributes"];
+  base["x-errorcodes"] = layer["error_codes"];
 }
 function GenerateYaml(base, layer, output_yaml) {
   const output = yaml.dump(base);
