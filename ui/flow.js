@@ -2,13 +2,21 @@
 
 var flows;
 
+<<<<<<< HEAD
 async function loadSteps(steps) {
+=======
+function loadSteps(steps) {
+>>>>>>> c7b2f88 (added error ui)
   const stepPane = document.querySelector(".step-pane");
   const contentPane = document.querySelector(".content-pane");
   stepPane.innerHTML = "";
   contentPane.innerHTML = "";
+<<<<<<< HEAD
   for (const [index, step] of steps?.entries()) {
     const { details } = step || [];
+=======
+  steps.forEach(function (step, index) {
+>>>>>>> c7b2f88 (added error ui)
     const link = document.createElement("a");
     link.href = "#" + step.summary;
     link.classList.add(
@@ -19,6 +27,7 @@ async function loadSteps(steps) {
     link.textContent = index + 1 + ". " + step.api;
 
     const content = document.createElement("div");
+<<<<<<< HEAD
     const noteContent = document.createElement("div");
     content.id = step.summary;
     noteContent.id = "test";
@@ -95,6 +104,22 @@ async function loadSteps(steps) {
       noteContent.innerHTML = "<div><h3>Notes</h3></div>";
       noteContent.appendChild(noteDiv);
     }
+=======
+    content.id = step.summary;
+    content.classList.add("step-content", "p-4");
+    content.innerHTML =
+      "<div>" +
+      "<h3>" +
+      step.summary +
+      "</h3>" +
+      "<p>" +
+      step.description +
+      "</p>" +
+      "</div>" +
+      '<pre class="yaml-content">' +
+      JSON.stringify(step.example.value, null, 2) +
+      "</pre>";
+>>>>>>> c7b2f88 (added error ui)
 
     link.addEventListener("click", function (event) {
       event.preventDefault();
@@ -103,6 +128,7 @@ async function loadSteps(steps) {
       });
       document.querySelectorAll(".step-content").forEach(function (content) {
         content.classList.remove("active");
+<<<<<<< HEAD
         noteContent.classList.remove("active");
       });
       link.classList.add("active");
@@ -115,6 +141,15 @@ async function loadSteps(steps) {
       contentPane.appendChild(noteContent);
     }
   }
+=======
+      });
+      link.classList.add("active");
+      content.classList.add("active");
+    });
+    stepPane.appendChild(link);
+    contentPane.appendChild(content);
+  });
+>>>>>>> c7b2f88 (added error ui)
 }
 
 function updateFlow() {
@@ -132,8 +167,13 @@ async function loadFlow(flowName) {
     if (obj["summary"] === flowName) return obj;
   });
   flowSummary.textContent = selectedFlow["summary"];
+<<<<<<< HEAD
   flowDescription.textContent = selectedFlow["description"];
   var mermaidDiv = document.createElement("description-div");
+=======
+  flowDescription.innerHTML ="<p>" + selectedFlow["description"] + "</p> <br />";
+
+>>>>>>> c7b2f88 (added error ui)
   if (selectedFlow["details"]) {
     var mermaidDiv = document.createElement("mermaid-div");
     for (const [index, step] of selectedFlow["details"].entries()) {
@@ -153,8 +193,14 @@ async function loadFlow(flowName) {
         "</p>";
       mermaidDiv.appendChild(mermaidPane);
     }
+<<<<<<< HEAD
   }
   flowDescription.append(mermaidDiv);
+=======
+
+    flowDescription.appendChild(mermaidDiv);
+  }
+>>>>>>> c7b2f88 (added error ui)
   loadSteps(selectedFlow["steps"]);
 }
 
@@ -169,4 +215,8 @@ function loadFlows(data) {
     flowDropdown.add(option);
   });
   loadFlow(flows[0].summary);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c7b2f88 (added error ui)
