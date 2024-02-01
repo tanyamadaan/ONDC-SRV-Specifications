@@ -3396,6 +3396,23 @@ x-flows:
                         - url: https://abc.com/images/1-shop-img
                     rating: '4.4'
                     ttl: PT1D
+                    time:
+                      label: validity
+                      range:
+                        start: '2022-11-10T00:00:00.000Z'
+                        end: '2022-11-20T19:30:00.000Z'
+                      days: 10,11,14,16,17,18,19,20
+                      schedule:
+                        frequency: PT1H
+                        holidays:
+                          - '2023-11-13'
+                          - '2023-11-15'
+                        times:
+                          - '2023-11-16T09:30:00Z'
+                          - '2023-11-16T14:30:00Z'
+                          - '2023-11-14T19:30:00Z'
+                          - '2023-11-17T19:30:00Z'
+                          - '2023-11-17T09:30:00Z'
                     locations:
                       - id: L1
                         gps: 12.967555,77.749666
@@ -3481,9 +3498,20 @@ x-flows:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
-                                code: Out-For-Delivery
+                                code: In-Transit
                             cancellation_fee:
                               percentage: '5'
+                        tags:
+                          - code: reschedule_terms
+                            list:
+                              - code: fulfillment_state
+                                value: Pending
+                              - code: reschedule_eligible
+                                value: 'true'
+                              - code: reschedule_fee
+                                value: '0.00'
+                              - code: reschedule_within
+                                value: PT1D
                         time:
                           label: validity
                           range:
@@ -3496,8 +3524,11 @@ x-flows:
                               - '2023-11-13'
                               - '2023-11-15'
                             times:
-                              - '0930'
-                              - '1900'
+                              - '2023-11-16T09:30:00Z'
+                              - '2023-11-16T14:30:00Z'
+                              - '2023-11-14T19:30:00Z'
+                              - '2023-11-17T19:30:00Z'
+                              - '2023-11-17T09:30:00Z'
                         matched: 'true'
                         recommended: 'true'
                       - id: I2
@@ -3559,11 +3590,14 @@ x-flows:
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-22-13'
-                              - '2023-22-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
-                              - '0930'
-                              - '1900'
+                              - '2023-11-16T09:30:00Z'
+                              - '2023-11-16T19:30:00Z'
+                              - '2023-11-14T19:30:00Z'
+                              - '2023-11-17T19:30:00Z'
+                              - '2023-11-17T09:30:00Z'
                         matched: 'true'
                         recommended: 'true'
                       - id: I3
@@ -3625,11 +3659,14 @@ x-flows:
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-22-13'
-                              - '2023-22-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
-                              - '0930'
-                              - '1900'
+                              - '2023-11-16T09:30:00Z'
+                              - '2023-11-16T14:30:00Z'
+                              - '2023-11-14T19:30:00Z'
+                              - '2023-11-17T19:30:00Z'
+                              - '2023-11-17T09:30:00Z'
                         matched: 'true'
                         recommended: 'true'
                       - id: I4
@@ -3691,11 +3728,14 @@ x-flows:
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-22-13'
-                              - '2023-22-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
-                              - '0930'
-                              - '1900'
+                              - '2023-11-16T09:30:00Z'
+                              - '2023-11-16T19:30:00Z'
+                              - '2023-11-14T19:30:00Z'
+                              - '2023-11-17T19:30:00Z'
+                              - '2023-11-17T09:30:00Z'
                         matched: 'true'
                         recommended: 'true'
                     offers:
@@ -11479,6 +11519,23 @@ x-examples:
                           - url: https://abc.com/images/1-shop-img
                       rating: '4.4'
                       ttl: PT1D
+                      time:
+                        label: validity
+                        range:
+                          start: '2022-11-10T00:00:00.000Z'
+                          end: '2022-11-20T19:30:00.000Z'
+                        days: 10,11,14,16,17,18,19,20
+                        schedule:
+                          frequency: PT1H
+                          holidays:
+                            - '2023-11-13'
+                            - '2023-11-15'
+                          times:
+                            - '2023-11-16T09:30:00Z'
+                            - '2023-11-16T14:30:00Z'
+                            - '2023-11-14T19:30:00Z'
+                            - '2023-11-17T19:30:00Z'
+                            - '2023-11-17T09:30:00Z'
                       locations:
                         - id: L1
                           gps: 12.967555,77.749666
@@ -11565,9 +11622,20 @@ x-examples:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
-                                  code: Out-For-Delivery
+                                  code: In-Transit
                               cancellation_fee:
                                 percentage: '5'
+                          tags:
+                            - code: reschedule_terms
+                              list:
+                                - code: fulfillment_state
+                                  value: Pending
+                                - code: reschedule_eligible
+                                  value: 'true'
+                                - code: reschedule_fee
+                                  value: '0.00'
+                                - code: reschedule_within
+                                  value: PT1D
                           time:
                             label: validity
                             range:
@@ -11580,8 +11648,11 @@ x-examples:
                                 - '2023-11-13'
                                 - '2023-11-15'
                               times:
-                                - '0930'
-                                - '1900'
+                                - '2023-11-16T09:30:00Z'
+                                - '2023-11-16T14:30:00Z'
+                                - '2023-11-14T19:30:00Z'
+                                - '2023-11-17T19:30:00Z'
+                                - '2023-11-17T09:30:00Z'
                           matched: 'true'
                           recommended: 'true'
                         - id: I2
@@ -11643,11 +11714,14 @@ x-examples:
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-22-13'
-                                - '2023-22-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
-                                - '0930'
-                                - '1900'
+                                - '2023-11-16T09:30:00Z'
+                                - '2023-11-16T19:30:00Z'
+                                - '2023-11-14T19:30:00Z'
+                                - '2023-11-17T19:30:00Z'
+                                - '2023-11-17T09:30:00Z'
                           matched: 'true'
                           recommended: 'true'
                         - id: I3
@@ -11709,11 +11783,14 @@ x-examples:
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-22-13'
-                                - '2023-22-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
-                                - '0930'
-                                - '1900'
+                                - '2023-11-16T09:30:00Z'
+                                - '2023-11-16T14:30:00Z'
+                                - '2023-11-14T19:30:00Z'
+                                - '2023-11-17T19:30:00Z'
+                                - '2023-11-17T09:30:00Z'
                           matched: 'true'
                           recommended: 'true'
                         - id: I4
@@ -11775,11 +11852,14 @@ x-examples:
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-22-13'
-                                - '2023-22-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
-                                - '0930'
-                                - '1900'
+                                - '2023-11-16T09:30:00Z'
+                                - '2023-11-16T19:30:00Z'
+                                - '2023-11-14T19:30:00Z'
+                                - '2023-11-17T19:30:00Z'
+                                - '2023-11-17T09:30:00Z'
                           matched: 'true'
                           recommended: 'true'
                       offers:
