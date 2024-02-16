@@ -9,7 +9,7 @@ This repository contains the model implementations for Services - Home Services 
 | --------------------------------------------------------|------------|
 | Home Services - Appliance Repair Services               | ONDC:SRV10 |
 | Home Services - Infra Services                          | ONDC:SRV11 |
-| Home Services - Personal Care Services                  | ONDC:SRV11 |
+| Home Services - Personal Care Services                  | ONDC:SRV12 |
 
 ## Latest Release
 draft-2.0.0 | Nov 30 2023
