@@ -40,6 +40,7 @@
             ],
             "fulfillments": [
                 {
+                    "type": "Home-Service",
                     "stops": [
                         {
                             "type":"end",

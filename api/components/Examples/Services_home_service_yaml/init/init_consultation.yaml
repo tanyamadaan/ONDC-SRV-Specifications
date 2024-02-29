@@ -67,3 +67,4 @@ value:
                   - '16'
       payments:
         - type: PRE-FULFILLMENT
+          collected_by : BAP

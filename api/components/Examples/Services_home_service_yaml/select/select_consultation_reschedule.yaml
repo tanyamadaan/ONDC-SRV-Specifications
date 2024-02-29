@@ -40,7 +40,5 @@ value:
                 range:
                   start: '2023-11-17T09:30:00Z'
                   end: '2023-11-17T10:30:00Z'
-                days:
-                  - '17'
       payments:
         - type: PRE-FULFILLMENT

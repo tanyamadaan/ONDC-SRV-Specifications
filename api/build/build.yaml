@@ -3401,18 +3401,17 @@ x-flows:
                       range:
                         start: '2022-11-10T00:00:00.000Z'
                         end: '2022-11-20T19:30:00.000Z'
-                      days: 10,11,14,16,17,18,19,20
                       schedule:
                         frequency: PT1H
                         holidays:
                           - '2023-11-13'
                           - '2023-11-15'
                         times:
-                          - '2023-11-16T09:30:00Z'
-                          - '2023-11-16T14:30:00Z'
-                          - '2023-11-14T19:30:00Z'
-                          - '2023-11-17T19:30:00Z'
-                          - '2023-11-17T09:30:00Z'
+                          - '2023-11-16T09:30:00.000Z'
+                          - '2023-11-16T19:30:00.000Z'
+                          - '2023-11-14T19:30:00.000Z'
+                          - '2023-11-17T19:30:00.000Z'
+                          - '2023-11-17T09:30:00.000Z'
                     locations:
                       - id: L1
                         gps: 12.967555,77.749666
@@ -3502,35 +3501,39 @@ x-flows:
                             cancellation_fee:
                               percentage: '5'
                         tags:
-                          - code: reschedule_terms
+                          - descriptor:
+                              code: reschedule_terms
                             list:
-                              - code: fulfillment_state
+                              - descriptor:
+                                  code: fulfillment_state
                                 value: Pending
-                              - code: reschedule_eligible
+                              - descriptor:
+                                  code: reschedule_eligible
                                 value: 'true'
-                              - code: reschedule_fee
+                              - descriptor:
+                                  code: reschedule_fee
                                 value: '0.00'
-                              - code: reschedule_within
+                              - descriptor:
+                                  code: reschedule_within
                                 value: PT1D
                         time:
                           label: validity
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T00:00:00.000Z'
-                          days: 10,11,14,16,17,18,19,20
                           schedule:
                             frequency: PT1H
                             holidays:
                               - '2023-11-13'
                               - '2023-11-15'
                             times:
-                              - '2023-11-16T09:30:00Z'
-                              - '2023-11-16T14:30:00Z'
-                              - '2023-11-14T19:30:00Z'
-                              - '2023-11-17T19:30:00Z'
-                              - '2023-11-17T09:30:00Z'
-                        matched: 'true'
-                        recommended: 'true'
+                              - '2023-11-16T09:30:00.000Z'
+                              - '2023-11-16T19:30:00.000Z'
+                              - '2023-11-14T19:30:00.000Z'
+                              - '2023-11-17T19:30:00.000Z'
+                              - '2023-11-17T09:30:00.000Z'
+                        matched: true
+                        recommended: true
                       - id: I2
                         parent_item_id: PI2
                         descriptor:
@@ -3582,24 +3585,40 @@ x-flows:
                                 code: Out-For-Delivery
                             cancellation_fee:
                               percentage: '5'
+                        tags:
+                          - descriptor:
+                              code: reschedule_terms
+                            list:
+                              - descriptor:
+                                  code: fulfillment_state
+                                value: Pending
+                              - descriptor:
+                                  code: reschedule_eligible
+                                value: 'true'
+                              - descriptor:
+                                  code: reschedule_fee
+                                value: '0.00'
+                              - descriptor:
+                                  code: reschedule_within
+                                value: PT1D
                         time:
                           label: validity
                           range:
-                            start: '2022-12-24T00:00:00.000Z'
-                            end: '2022-12-31T00:00:00.000Z'
+                            start: '2022-11-10T00:00:00.000Z'
+                            end: '2022-11-20T19:30:00.000Z'
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - 2024-10-13T00:00:00.000Z
-                              - 2024-10-15T00:00:00.000Z
+                              - '2023-11-13'
+                              - '2023-11-15'
                             times:
-                              - '2023-11-16T09:30:00Z'
-                              - '2023-11-16T19:30:00Z'
-                              - '2023-11-14T19:30:00Z'
-                              - '2023-11-17T19:30:00Z'
-                              - '2023-11-17T09:30:00Z'
-                        matched: 'true'
-                        recommended: 'true'
+                              - '2023-11-16T09:30:00.000Z'
+                              - '2023-11-16T19:30:00.000Z'
+                              - '2023-11-14T19:30:00.000Z'
+                              - '2023-11-17T19:30:00.000Z'
+                              - '2023-11-17T09:30:00.000Z'
+                        matched: true
+                        recommended: true
                       - id: I3
                         parent_item_id: PI2
                         descriptor:
@@ -3651,24 +3670,40 @@ x-flows:
                                 code: Out-For-Delivery
                             cancellation_fee:
                               percentage: '5'
+                        tags:
+                          - descriptor:
+                              code: reschedule_terms
+                            list:
+                              - descriptor:
+                                  code: fulfillment_state
+                                value: Pending
+                              - descriptor:
+                                  code: reschedule_eligible
+                                value: 'true'
+                              - descriptor:
+                                  code: reschedule_fee
+                                value: '0.00'
+                              - descriptor:
+                                  code: reschedule_within
+                                value: PT1D
                         time:
                           label: validity
                           range:
-                            start: '2022-12-24T00:00:00.000Z'
-                            end: '2022-12-31T00:00:00.000Z'
+                            start: '2022-11-10T00:00:00.000Z'
+                            end: '2022-11-20T19:30:00.000Z'
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - 2024-10-13T00:00:00.000Z
-                              - 2024-10-15T00:00:00.000Z
+                              - '2023-11-13'
+                              - '2023-11-15'
                             times:
-                              - '2023-11-16T09:30:00Z'
-                              - '2023-11-16T14:30:00Z'
-                              - '2023-11-14T19:30:00Z'
-                              - '2023-11-17T19:30:00Z'
-                              - '2023-11-17T09:30:00Z'
-                        matched: 'true'
-                        recommended: 'true'
+                              - '2023-11-16T09:30:00.000Z'
+                              - '2023-11-16T19:30:00.000Z'
+                              - '2023-11-14T19:30:00.000Z'
+                              - '2023-11-17T19:30:00.000Z'
+                              - '2023-11-17T09:30:00.000Z'
+                        matched: true
+                        recommended: true
                       - id: I4
                         parent_item_id: PI2
                         descriptor:
@@ -3720,24 +3755,40 @@ x-flows:
                                 code: Out-For-Delivery
                             cancellation_fee:
                               percentage: '5'
+                        tags:
+                          - descriptor:
+                              code: reschedule_terms
+                            list:
+                              - descriptor:
+                                  code: fulfillment_state
+                                value: Pending
+                              - descriptor:
+                                  code: reschedule_eligible
+                                value: 'true'
+                              - descriptor:
+                                  code: reschedule_fee
+                                value: '0.00'
+                              - descriptor:
+                                  code: reschedule_within
+                                value: PT1D
                         time:
                           label: validity
                           range:
-                            start: '2022-12-24T00:00:00.000Z'
-                            end: '2022-12-31T00:00:00.000Z'
+                            start: '2022-11-10T00:00:00.000Z'
+                            end: '2022-11-20T19:30:00.000Z'
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - 2024-10-13T00:00:00.000Z
-                              - 2024-10-15T00:00:00.000Z
+                              - '2023-11-13'
+                              - '2023-11-15'
                             times:
-                              - '2023-11-16T09:30:00Z'
-                              - '2023-11-16T19:30:00Z'
-                              - '2023-11-14T19:30:00Z'
-                              - '2023-11-17T19:30:00Z'
-                              - '2023-11-17T09:30:00Z'
-                        matched: 'true'
-                        recommended: 'true'
+                              - '2023-11-16T09:30:00.000Z'
+                              - '2023-11-16T19:30:00.000Z'
+                              - '2023-11-14T19:30:00.000Z'
+                              - '2023-11-17T19:30:00.000Z'
+                              - '2023-11-17T09:30:00.000Z'
+                        matched: true
+                        recommended: true
                     offers:
                       - id: offer-1
                         descriptor:
@@ -3819,8 +3870,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 payments:
                   - type: PRE-FULFILLMENT
       - summary: Seller confirms the schedule and returns the quote
@@ -3861,6 +3910,7 @@ x-flows:
                       - L1
                 fulfillments:
                   - id: F1
+                    type: Home-Service
                     tracking: false
                     state:
                       descriptor:
@@ -3875,8 +3925,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 quote:
                   price:
                     currency: INR
@@ -3962,6 +4010,9 @@ x-flows:
                                 code: type
                               value: misc
                   ttl: P1D
+                payments:
+                  - type: PRE-FULFILLMENT
+                    collected_by: BAP
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
@@ -4042,6 +4093,7 @@ x-flows:
                             - '16'
                 payments:
                   - type: PRE-FULFILLMENT
+                    collected_by: BAP
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
@@ -5805,20 +5857,20 @@ x-flows:
                       range:
                         start: '2022-17-10T00:00:00.000Z'
                         end: '2022-11-20T00:00:00.000Z'
-                      days: 17,18,20
                       schedule:
                         frequency: PT1H
                         holidays:
                           - '2023-11-13'
                           - '2023-11-15'
                         times:
-                          - '0930'
-                          - '1130'
-                          - '1330'
-                          - '1530'
-                          - '1930'
+                          - '2023-11-16T09:30:00.000Z'
+                          - '2023-11-16T19:30:00.000Z'
+                          - '2023-11-14T19:30:00.000Z'
+                          - '2023-11-17T19:30:00.000Z'
+                          - '2023-11-17T09:30:00.000Z'
                 fulfillments:
                   - id: F1
+                    type: Home-Service
                     tracking: false
                     state:
                       descriptor:
@@ -5833,8 +5885,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 quote:
                   price:
                     currency: INR
@@ -5920,6 +5970,9 @@ x-flows:
                                 code: type
                               value: misc
                   ttl: P1D
+                payments:
+                  - type: PRE-FULFILLMENT
+                    collected_by: BAP
             error:
               code: 90001
               message: Schedule not available
@@ -6502,8 +6555,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 payments:
                   - type: PRE-FULFILLMENT
       - summary: Seller confirms the schedule and returns the quote
@@ -6544,6 +6595,7 @@ x-flows:
                       - L1
                 fulfillments:
                   - id: F1
+                    type: Home-Service
                     tracking: false
                     state:
                       descriptor:
@@ -6558,8 +6610,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '2023-11-16'
                 quote:
                   price:
                     currency: INR
@@ -6598,6 +6648,9 @@ x-flows:
                                 code: type
                               value: tax
                   ttl: P1D
+                payments:
+                  - type: PRE-FULFILLMENT
+                    collected_by: BAP
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
@@ -6672,6 +6725,7 @@ x-flows:
                             - '16'
                 payments:
                   - type: PRE-FULFILLMENT
+                    collected_by: BAP
       - summary: Seller provides the final quotation and creates the draft contract
         api: on_init
         description: Seller provides the final quotation and creates the draft contract
@@ -8596,20 +8650,20 @@ x-flows:
                       range:
                         start: '2022-17-10T00:00:00.000Z'
                         end: '2022-11-20T00:00:00.000Z'
-                      days: 17,18,20
                       schedule:
                         frequency: PT1H
                         holidays:
                           - '2023-11-13'
                           - '2023-11-15'
                         times:
-                          - '0930'
-                          - '1130'
-                          - '1330'
-                          - '1530'
-                          - '1930'
+                          - '2023-11-16T09:30:00.000Z'
+                          - '2023-11-16T19:30:00.000Z'
+                          - '2023-11-14T19:30:00.000Z'
+                          - '2023-11-17T19:30:00.000Z'
+                          - '2023-11-17T09:30:00.000Z'
                 fulfillments:
                   - id: F1
+                    type: Home-Service
                     tracking: false
                     state:
                       descriptor:
@@ -8664,6 +8718,9 @@ x-flows:
                                 code: type
                               value: tax
                   ttl: P1D
+                payments:
+                  - type: PRE-FULFILLMENT
+                    collected_by: BAP
             error:
               code: 90001
               message: Schedule not available
@@ -10215,8 +10272,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   payments:
                     - type: PRE-FULFILLMENT
           - summary: Buyer adds the consulation service to cart + reschedules
@@ -10263,8 +10318,6 @@ x-examples:
                             range:
                               start: '2023-11-17T09:30:00Z'
                               end: '2023-11-17T10:30:00Z'
-                            days:
-                              - '17'
                   payments:
                     - type: PRE-FULFILLMENT
           - summary: Buyer adds the service to cart
@@ -10317,8 +10370,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   payments:
                     - type: PRE-FULFILLMENT
       init:
@@ -10392,6 +10443,7 @@ x-examples:
                               - '16'
                   payments:
                     - type: PRE-FULFILLMENT
+                      collected_by: BAP
           - summary: Buyer initialises the order for service
             description: Buyer initialises the order and provides billing details
             value:
@@ -10467,6 +10519,7 @@ x-examples:
                               - '16'
                   payments:
                     - type: PRE-FULFILLMENT
+                      collected_by: BAP
       confirm:
         examples:
           - summary: Buyer confirm the order for consultation
@@ -11524,18 +11577,17 @@ x-examples:
                         range:
                           start: '2022-11-10T00:00:00.000Z'
                           end: '2022-11-20T19:30:00.000Z'
-                        days: 10,11,14,16,17,18,19,20
                         schedule:
                           frequency: PT1H
                           holidays:
                             - '2023-11-13'
                             - '2023-11-15'
                           times:
-                            - '2023-11-16T09:30:00Z'
-                            - '2023-11-16T14:30:00Z'
-                            - '2023-11-14T19:30:00Z'
-                            - '2023-11-17T19:30:00Z'
-                            - '2023-11-17T09:30:00Z'
+                            - '2023-11-16T09:30:00.000Z'
+                            - '2023-11-16T19:30:00.000Z'
+                            - '2023-11-14T19:30:00.000Z'
+                            - '2023-11-17T19:30:00.000Z'
+                            - '2023-11-17T09:30:00.000Z'
                       locations:
                         - id: L1
                           gps: 12.967555,77.749666
@@ -11626,35 +11678,39 @@ x-examples:
                               cancellation_fee:
                                 percentage: '5'
                           tags:
-                            - code: reschedule_terms
+                            - descriptor:
+                                code: reschedule_terms
                               list:
-                                - code: fulfillment_state
+                                - descriptor:
+                                    code: fulfillment_state
                                   value: Pending
-                                - code: reschedule_eligible
+                                - descriptor:
+                                    code: reschedule_eligible
                                   value: 'true'
-                                - code: reschedule_fee
+                                - descriptor:
+                                    code: reschedule_fee
                                   value: '0.00'
-                                - code: reschedule_within
+                                - descriptor:
+                                    code: reschedule_within
                                   value: PT1D
                           time:
                             label: validity
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T00:00:00.000Z'
-                            days: 10,11,14,16,17,18,19,20
                             schedule:
                               frequency: PT1H
                               holidays:
                                 - '2023-11-13'
                                 - '2023-11-15'
                               times:
-                                - '2023-11-16T09:30:00Z'
-                                - '2023-11-16T14:30:00Z'
-                                - '2023-11-14T19:30:00Z'
-                                - '2023-11-17T19:30:00Z'
-                                - '2023-11-17T09:30:00Z'
-                          matched: 'true'
-                          recommended: 'true'
+                                - '2023-11-16T09:30:00.000Z'
+                                - '2023-11-16T19:30:00.000Z'
+                                - '2023-11-14T19:30:00.000Z'
+                                - '2023-11-17T19:30:00.000Z'
+                                - '2023-11-17T09:30:00.000Z'
+                          matched: true
+                          recommended: true
                         - id: I2
                           parent_item_id: PI2
                           descriptor:
@@ -11706,24 +11762,40 @@ x-examples:
                                   code: Out-For-Delivery
                               cancellation_fee:
                                 percentage: '5'
+                          tags:
+                            - descriptor:
+                                code: reschedule_terms
+                              list:
+                                - descriptor:
+                                    code: fulfillment_state
+                                  value: Pending
+                                - descriptor:
+                                    code: reschedule_eligible
+                                  value: 'true'
+                                - descriptor:
+                                    code: reschedule_fee
+                                  value: '0.00'
+                                - descriptor:
+                                    code: reschedule_within
+                                  value: PT1D
                           time:
                             label: validity
                             range:
-                              start: '2022-12-24T00:00:00.000Z'
-                              end: '2022-12-31T00:00:00.000Z'
+                              start: '2022-11-10T00:00:00.000Z'
+                              end: '2022-11-20T19:30:00.000Z'
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - 2024-10-13T00:00:00.000Z
-                                - 2024-10-15T00:00:00.000Z
+                                - '2023-11-13'
+                                - '2023-11-15'
                               times:
-                                - '2023-11-16T09:30:00Z'
-                                - '2023-11-16T19:30:00Z'
-                                - '2023-11-14T19:30:00Z'
-                                - '2023-11-17T19:30:00Z'
-                                - '2023-11-17T09:30:00Z'
-                          matched: 'true'
-                          recommended: 'true'
+                                - '2023-11-16T09:30:00.000Z'
+                                - '2023-11-16T19:30:00.000Z'
+                                - '2023-11-14T19:30:00.000Z'
+                                - '2023-11-17T19:30:00.000Z'
+                                - '2023-11-17T09:30:00.000Z'
+                          matched: true
+                          recommended: true
                         - id: I3
                           parent_item_id: PI2
                           descriptor:
@@ -11775,24 +11847,40 @@ x-examples:
                                   code: Out-For-Delivery
                               cancellation_fee:
                                 percentage: '5'
+                          tags:
+                            - descriptor:
+                                code: reschedule_terms
+                              list:
+                                - descriptor:
+                                    code: fulfillment_state
+                                  value: Pending
+                                - descriptor:
+                                    code: reschedule_eligible
+                                  value: 'true'
+                                - descriptor:
+                                    code: reschedule_fee
+                                  value: '0.00'
+                                - descriptor:
+                                    code: reschedule_within
+                                  value: PT1D
                           time:
                             label: validity
                             range:
-                              start: '2022-12-24T00:00:00.000Z'
-                              end: '2022-12-31T00:00:00.000Z'
+                              start: '2022-11-10T00:00:00.000Z'
+                              end: '2022-11-20T19:30:00.000Z'
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - 2024-10-13T00:00:00.000Z
-                                - 2024-10-15T00:00:00.000Z
+                                - '2023-11-13'
+                                - '2023-11-15'
                               times:
-                                - '2023-11-16T09:30:00Z'
-                                - '2023-11-16T14:30:00Z'
-                                - '2023-11-14T19:30:00Z'
-                                - '2023-11-17T19:30:00Z'
-                                - '2023-11-17T09:30:00Z'
-                          matched: 'true'
-                          recommended: 'true'
+                                - '2023-11-16T09:30:00.000Z'
+                                - '2023-11-16T19:30:00.000Z'
+                                - '2023-11-14T19:30:00.000Z'
+                                - '2023-11-17T19:30:00.000Z'
+                                - '2023-11-17T09:30:00.000Z'
+                          matched: true
+                          recommended: true
                         - id: I4
                           parent_item_id: PI2
                           descriptor:
@@ -11844,24 +11932,40 @@ x-examples:
                                   code: Out-For-Delivery
                               cancellation_fee:
                                 percentage: '5'
+                          tags:
+                            - descriptor:
+                                code: reschedule_terms
+                              list:
+                                - descriptor:
+                                    code: fulfillment_state
+                                  value: Pending
+                                - descriptor:
+                                    code: reschedule_eligible
+                                  value: 'true'
+                                - descriptor:
+                                    code: reschedule_fee
+                                  value: '0.00'
+                                - descriptor:
+                                    code: reschedule_within
+                                  value: PT1D
                           time:
                             label: validity
                             range:
-                              start: '2022-12-24T00:00:00.000Z'
-                              end: '2022-12-31T00:00:00.000Z'
+                              start: '2022-11-10T00:00:00.000Z'
+                              end: '2022-11-20T19:30:00.000Z'
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - 2024-10-13T00:00:00.000Z
-                                - 2024-10-15T00:00:00.000Z
+                                - '2023-11-13'
+                                - '2023-11-15'
                               times:
-                                - '2023-11-16T09:30:00Z'
-                                - '2023-11-16T19:30:00Z'
-                                - '2023-11-14T19:30:00Z'
-                                - '2023-11-17T19:30:00Z'
-                                - '2023-11-17T09:30:00Z'
-                          matched: 'true'
-                          recommended: 'true'
+                                - '2023-11-16T09:30:00.000Z'
+                                - '2023-11-16T19:30:00.000Z'
+                                - '2023-11-14T19:30:00.000Z'
+                                - '2023-11-17T19:30:00.000Z'
+                                - '2023-11-17T09:30:00.000Z'
+                          matched: true
+                          recommended: true
                       offers:
                         - id: offer-1
                           descriptor:
@@ -11923,6 +12027,7 @@ x-examples:
                         - L1
                   fulfillments:
                     - id: F1
+                      type: Home-Service
                       tracking: false
                       state:
                         descriptor:
@@ -11937,8 +12042,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '2023-11-16'
                   quote:
                     price:
                       currency: INR
@@ -11977,6 +12080,9 @@ x-examples:
                                   code: type
                                 value: tax
                     ttl: P1D
+                  payments:
+                    - type: PRE-FULFILLMENT
+                      collected_by: BAP
           - summary: >-
               Seller rejects the schedule and returns the updated schedule for
               consultation
@@ -12017,20 +12123,20 @@ x-examples:
                         range:
                           start: '2022-17-10T00:00:00.000Z'
                           end: '2022-11-20T00:00:00.000Z'
-                        days: 17,18,20
                         schedule:
                           frequency: PT1H
                           holidays:
                             - '2023-11-13'
                             - '2023-11-15'
                           times:
-                            - '0930'
-                            - '1130'
-                            - '1330'
-                            - '1530'
-                            - '1930'
+                            - '2023-11-16T09:30:00.000Z'
+                            - '2023-11-16T19:30:00.000Z'
+                            - '2023-11-14T19:30:00.000Z'
+                            - '2023-11-17T19:30:00.000Z'
+                            - '2023-11-17T09:30:00.000Z'
                   fulfillments:
                     - id: F1
+                      type: Home-Service
                       tracking: false
                       state:
                         descriptor:
@@ -12085,6 +12191,9 @@ x-examples:
                                   code: type
                                 value: tax
                     ttl: P1D
+                  payments:
+                    - type: PRE-FULFILLMENT
+                      collected_by: BAP
               error:
                 code: 90001
                 message: Schedule not available
@@ -12121,6 +12230,7 @@ x-examples:
                         - L1
                   fulfillments:
                     - id: F1
+                      type: Home-Service
                       tracking: false
                       state:
                         descriptor:
@@ -12135,8 +12245,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   quote:
                     price:
                       currency: INR
@@ -12222,6 +12330,9 @@ x-examples:
                                   code: type
                                 value: misc
                     ttl: P1D
+                  payments:
+                    - type: PRE-FULFILLMENT
+                      collected_by: BAP
           - summary: >-
               Seller rejects the schedule and returns the updated schedule for
               service
@@ -12262,20 +12373,20 @@ x-examples:
                         range:
                           start: '2022-17-10T00:00:00.000Z'
                           end: '2022-11-20T00:00:00.000Z'
-                        days: 17,18,20
                         schedule:
                           frequency: PT1H
                           holidays:
                             - '2023-11-13'
                             - '2023-11-15'
                           times:
-                            - '0930'
-                            - '1130'
-                            - '1330'
-                            - '1530'
-                            - '1930'
+                            - '2023-11-16T09:30:00.000Z'
+                            - '2023-11-16T19:30:00.000Z'
+                            - '2023-11-14T19:30:00.000Z'
+                            - '2023-11-17T19:30:00.000Z'
+                            - '2023-11-17T09:30:00.000Z'
                   fulfillments:
                     - id: F1
+                      type: Home-Service
                       tracking: false
                       state:
                         descriptor:
@@ -12290,8 +12401,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   quote:
                     price:
                       currency: INR
@@ -12377,6 +12486,9 @@ x-examples:
                                   code: type
                                 value: misc
                     ttl: P1D
+                  payments:
+                    - type: PRE-FULFILLMENT
+                      collected_by: BAP
               error:
                 code: 90001
                 message: Schedule not available

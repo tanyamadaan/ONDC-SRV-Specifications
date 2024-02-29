@@ -34,20 +34,20 @@ value:
             range:
               start: '2022-17-10T00:00:00.000Z'
               end: '2022-11-20T00:00:00.000Z'
-            days: 17,18,20
             schedule:
               frequency: PT1H
               holidays:
                 - '2023-11-13'
                 - '2023-11-15'
               times:
-                - '0930'
-                - '1130'
-                - '1330'
-                - '1530'
-                - '1930'
+                - '2023-11-16T09:30:00.000Z'
+                - '2023-11-16T19:30:00.000Z'
+                - '2023-11-14T19:30:00.000Z'
+                - '2023-11-17T19:30:00.000Z'
+                - '2023-11-17T09:30:00.000Z'
       fulfillments:
         - id: F1
+          type: Home-Service
           tracking: false
           state:
             descriptor:
@@ -62,8 +62,6 @@ value:
                 range:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
-                days:
-                  - '16'
       quote:
         price:
           currency: INR
@@ -149,6 +147,9 @@ value:
                       code: type
                     value: misc
         ttl: P1D
+      payments:
+        - type: PRE-FULFILLMENT
+          collected_by : BAP
   error:
     code: 90001
     message: Schedule not available
