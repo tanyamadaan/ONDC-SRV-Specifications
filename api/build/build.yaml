@@ -4803,7 +4803,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: In-progress
+                status: In-progress
                 provider:
                   id: P1
                   locations:
@@ -5045,7 +5045,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: In-progress
+                status: In-progress
                 provider:
                   id: P1
                   locations:
@@ -5292,7 +5292,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: In-progress
+                status: In-progress
                 provider:
                   id: P1
                   locations:
@@ -5534,7 +5534,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: Completed
+                status: Completed
                 provider:
                   id: P1
                   locations:
@@ -6218,7 +6218,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: In-progress
+                status: In-progress
                 provider:
                   id: P1
                   locations:
@@ -13291,7 +13291,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: Completed
+                  status: Completed
                   provider:
                     id: P1
                     locations:
@@ -13525,7 +13525,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: In-progress
+                  status: In-progress
                   provider:
                     id: P1
                     locations:
@@ -13758,7 +13758,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: In-progress
+                  status: In-progress
                   provider:
                     id: P1
                     locations:
@@ -13996,7 +13996,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: In-progress
+                  status: In-progress
                   provider:
                     id: P1
                     locations:
@@ -14237,7 +14237,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: In-progress
+                  status: In-progress
                   provider:
                     id: P1
                     locations:

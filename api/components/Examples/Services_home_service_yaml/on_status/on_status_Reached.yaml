@@ -21,7 +21,7 @@ value:
   message:
     order:
       id: O1
-      state: In-progress
+      status: In-progress
       provider:
         id: P1
         locations:
