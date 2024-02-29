@@ -24,7 +24,7 @@
     "update_target": "payments",
     "order": {
       "id": "O1",
-      "state": "Accepted",
+      "status": "Accepted",
       "provider": {
         "id": "P1"
       },
@@ -351,9 +351,6 @@
                   "start": "2023-11-16T09:30:00Z",
                   "end": "2023-11-16T10:30:00Z"
                 },
-                "days": [
-                  "16"
-                ],
                 "timestamp": "2023-11-16T09:00:00.000Z"
               },
               "person": {

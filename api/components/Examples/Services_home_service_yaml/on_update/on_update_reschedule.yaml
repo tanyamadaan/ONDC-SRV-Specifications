@@ -21,7 +21,7 @@ value:
   message:
     order:
       id: O1
-      state: Accepted
+      status: Accepted
       provider:
         id: P1
         locations:

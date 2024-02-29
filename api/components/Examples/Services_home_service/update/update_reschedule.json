@@ -24,7 +24,7 @@
     "update_target": "fulfillments",
     "order": {
       "id": "O1",
-      "state": "Accepted",
+      "status": "Accepted",
       "provider": {
         "id": "P1",
         "locations": [
@@ -181,8 +181,7 @@
                 "range": {
                   "start": "2023-11-20T09:30:00Z",
                   "end": "2023-11-20T10:30:00Z"
-                },
-                "days": ["20"]
+                }
               },
               "person": {
                 "name": "Ramu"

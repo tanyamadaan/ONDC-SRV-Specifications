@@ -4090,8 +4090,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 payments:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
@@ -4174,8 +4172,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 quote:
                   price:
                     currency: INR
@@ -4333,7 +4329,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: Created
+                status: Created
                 provider:
                   id: P1
                   locations:
@@ -4385,8 +4381,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         customer:
                           person:
                             name: Ramu
@@ -4531,7 +4525,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: Accepted
+                status: Accepted
                 provider:
                   id: P1
                   locations:
@@ -4602,8 +4596,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                         instructions:
@@ -4885,8 +4877,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                 quote:
@@ -5125,8 +5115,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         authorization:
                           type: OTP
                           token: '1234'
@@ -5374,8 +5362,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                         instructions:
@@ -5618,8 +5604,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         person:
                           name: Ramu
@@ -6751,8 +6735,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 payments:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
@@ -6829,8 +6811,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 quote:
                   price:
                     currency: INR
@@ -6941,7 +6921,7 @@ x-flows:
             message:
               order:
                 id: C1
-                state: Created
+                status: Created
                 provider:
                   id: P1
                   locations:
@@ -6987,8 +6967,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         customer:
                           person:
                             name: Ramu
@@ -7111,7 +7089,7 @@ x-flows:
             message:
               order:
                 id: C1
-                state: Accepted
+                status: Accepted
                 provider:
                   id: P1
                   locations:
@@ -7176,8 +7154,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                         authorization:
@@ -7347,7 +7323,7 @@ x-flows:
             message:
               order:
                 id: C1
-                state: Pending
+                status: Pending
                 provider:
                   id: P1
                 items:
@@ -7533,8 +7509,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         person:
                           name: Ramu
@@ -7960,7 +7934,7 @@ x-flows:
               update_target: payments
               order:
                 id: O1
-                state: Accepted
+                status: Accepted
                 provider:
                   id: P1
                 items:
@@ -8148,8 +8122,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         person:
                           name: Ramu
@@ -8708,8 +8680,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                 quote:
                   price:
                     currency: INR
@@ -9133,8 +9103,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                         instructions:
@@ -9513,8 +9481,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                         instructions:
@@ -9708,7 +9674,7 @@ x-flows:
               update_target: fulfillments
               order:
                 id: O1
-                state: Accepted
+                status: Accepted
                 provider:
                   id: P1
                   locations:
@@ -9884,7 +9850,7 @@ x-flows:
             message:
               order:
                 id: O1
-                state: Accepted
+                status: Accepted
                 provider:
                   id: P1
                   locations:
@@ -10470,8 +10436,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   payments:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
@@ -10546,8 +10510,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   payments:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
@@ -10576,7 +10538,7 @@ x-examples:
               message:
                 order:
                   id: C1
-                  state: Created
+                  status: Created
                   provider:
                     id: P1
                     locations:
@@ -10622,8 +10584,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           customer:
                             person:
                               name: Ramu
@@ -10737,7 +10697,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: Created
+                  status: Created
                   provider:
                     id: P1
                     locations:
@@ -10789,8 +10749,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           customer:
                             person:
                               name: Ramu
@@ -10929,7 +10887,7 @@ x-examples:
                 update_target: payments
                 order:
                   id: O1
-                  state: Accepted
+                  status: Accepted
                   provider:
                     id: P1
                   items:
@@ -11117,8 +11075,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           person:
                             name: Ramu
@@ -12182,8 +12138,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   quote:
                     price:
                       currency: INR
@@ -12593,8 +12547,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   quote:
                     price:
                       currency: INR
@@ -12752,8 +12704,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                   quote:
                     price:
                       currency: INR
@@ -12911,7 +12861,7 @@ x-examples:
               message:
                 order:
                   id: C1
-                  state: Accepted
+                  status: Accepted
                   provider:
                     id: P1
                     locations:
@@ -12976,8 +12926,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                           authorization:
@@ -13100,7 +13048,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  state: Accepted
+                  status: Accepted
                   provider:
                     id: P1
                     locations:
@@ -13171,8 +13119,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                           instructions:
@@ -13415,8 +13361,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           person:
                             name: Ramu
@@ -13655,8 +13599,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                   quote:
@@ -13886,8 +13828,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           authorization:
                             type: OTP
                             token: '1234'
@@ -14126,8 +14066,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                           instructions:
@@ -14547,7 +14485,7 @@ x-examples:
               message:
                 order:
                   id: C1
-                  state: Pending
+                  status: Pending
                   provider:
                     id: P1
                   items:
@@ -14733,8 +14671,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           person:
                             name: Ramu
@@ -15331,8 +15267,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                           instructions:
@@ -15613,8 +15547,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                           instructions:

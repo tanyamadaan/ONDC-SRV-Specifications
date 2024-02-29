@@ -21,7 +21,7 @@ value:
   message:
     order:
       id: C1
-      state: Created
+      status: Created
       provider:
         id: P1
         locations:
@@ -67,8 +67,6 @@ value:
                 range:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
-                days:
-                  - '16'
               customer:
                 person:
                   name: Ramu
