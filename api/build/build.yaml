@@ -3860,7 +3860,8 @@ x-flows:
                         unit: seats
                         value: '2'
                 fulfillments:
-                  - stops:
+                  - type: Home-Service
+                    stops:
                       - type: end
                         location:
                           gps: 12.974002,77.613458
@@ -6545,7 +6546,8 @@ x-flows:
                     location_ids:
                       - L1
                 fulfillments:
-                  - stops:
+                  - type: Home-Service
+                    stops:
                       - type: end
                         location:
                           gps: 12.974002,77.613458
@@ -10262,7 +10264,8 @@ x-examples:
                       location_ids:
                         - L1
                   fulfillments:
-                    - stops:
+                    - type: Home-Service
+                      stops:
                         - type: end
                           location:
                             gps: 12.974002,77.613458
@@ -10308,7 +10311,8 @@ x-examples:
                       location_ids:
                         - L1
                   fulfillments:
-                    - stops:
+                    - type: Home-Service
+                      stops:
                         - type: end
                           location:
                             gps: 12.974002,77.613458
@@ -10360,7 +10364,8 @@ x-examples:
                           unit: seats
                           value: '2'
                   fulfillments:
-                    - stops:
+                    - type: Home-Service
+                      stops:
                         - type: end
                           location:
                             gps: 12.974002,77.613458

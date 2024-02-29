@@ -36,7 +36,8 @@ value:
               unit: seats
               value: '2'
       fulfillments:
-        - stops:
+        - type: Home-Service
+          stops:
             - type: end
               location:
                 gps: 12.974002,77.613458

@@ -30,7 +30,8 @@ value:
           location_ids:
             - L1
       fulfillments:
-        - stops:
+        - type: Home-Service
+          stops:
             - type: end
               location:
                 gps: 12.974002,77.613458
