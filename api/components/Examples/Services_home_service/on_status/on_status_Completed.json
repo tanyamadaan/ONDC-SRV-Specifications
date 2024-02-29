@@ -168,7 +168,7 @@
         },
         "breakup": [
           {
-            "title": "item",
+            "title": "Sofa Cleaning",
             "price": {
               "currency": "INR",
               "value": "474"
@@ -188,7 +188,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "item"
+                        }
+                    ]
+                }
+            ]
           },
           {
             "title": "tax",
@@ -207,7 +222,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "tax"
+                        }
+                    ]
+                }
+            ]
           },
           {
             "title": "discount",
@@ -226,7 +256,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "discount"
+                        }
+                    ]
+                }
+            ]
           },
           {
             "title": "convenience_fee",
@@ -245,7 +290,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "misc"
+                        }
+                    ]
+                }
+            ]
           }
         ],
         "ttl": "P1D"

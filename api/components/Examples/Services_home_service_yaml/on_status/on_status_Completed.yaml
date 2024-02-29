@@ -105,7 +105,7 @@ value:
           currency: INR
           value: '499'
         breakup:
-          - title: item
+          - title: Sofa Cleaning
             price:
               currency: INR
               value: '474'
@@ -120,6 +120,13 @@ value:
               price:
                 currency: INR
                 value: '474'
+            tags:
+              - descriptor:
+                  code: title
+                list:
+                  - descriptor:
+                      code: type
+                    value: item
           - title: tax
             price:
               currency: INR
@@ -132,6 +139,13 @@ value:
               price:
                 currency: INR
                 value: '474'
+            tags:
+              - descriptor:
+                  code: title
+                list:
+                  - descriptor:
+                      code: type
+                    value: tax
           - title: discount
             price:
               currency: INR
@@ -144,6 +158,13 @@ value:
               price:
                 currency: INR
                 value: '474'
+            tags:
+              - descriptor:
+                  code: title
+                list:
+                  - descriptor:
+                      code: type
+                    value: discount
           - title: convenience_fee
             price:
               currency: INR
@@ -156,6 +177,13 @@ value:
               price:
                 currency: INR
                 value: '474'
+            tags:
+              - descriptor:
+                  code: title
+                list:
+                  - descriptor:
+                      code: type
+                    value: misc
         ttl: P1D
       payments:
         - id: P1

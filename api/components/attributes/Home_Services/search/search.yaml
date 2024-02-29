@@ -63,11 +63,6 @@ message:
             usage: "12.4535445,77.9283792"
             reference: if any
         time:
-          days:
-            description: day on which the service is desired
-            required: required
-            usage: "16"
-            reference: if any
           range:
             start:
               description: start time of the time slot desired for the service
