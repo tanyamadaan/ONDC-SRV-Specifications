@@ -9126,7 +9126,7 @@ x-flows:
                   tax_id: XXXXXXXXXXXXXXX
                   email: nobody@nomail.com
                   phone: '9886098860'
-                payment:
+                payments:
                   - id: P1
                     collected_by: BAP
                     params:
@@ -9504,7 +9504,7 @@ x-flows:
                   tax_id: XXXXXXXXXXXXXXX
                   email: nobody@nomail.com
                   phone: '9886098860'
-                payment:
+                payments:
                   - id: P1
                     collected_by: BAP
                     params:
@@ -15290,7 +15290,7 @@ x-examples:
                     tax_id: XXXXXXXXXXXXXXX
                     email: nobody@nomail.com
                     phone: '9886098860'
-                  payment:
+                  payments:
                     - id: P1
                       collected_by: BAP
                       params:
@@ -15570,7 +15570,7 @@ x-examples:
                     tax_id: XXXXXXXXXXXXXXX
                     email: nobody@nomail.com
                     phone: '9886098860'
-                  payment:
+                  payments:
                     - id: P1
                       collected_by: BAP
                       params:

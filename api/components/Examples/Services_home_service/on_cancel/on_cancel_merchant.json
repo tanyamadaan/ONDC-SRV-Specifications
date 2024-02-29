@@ -373,7 +373,7 @@
           "email": "nobody@nomail.com",
           "phone": "9886098860"
         },
-        "payment": [
+        "payments": [
           {
             "id": "P1",
             "collected_by": "BAP",
