@@ -6288,8 +6288,6 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
-                          days:
-                            - '16'
                         person:
                           name: Ramu
                         instructions:
@@ -9948,8 +9946,6 @@ x-flows:
                           range:
                             start: '2023-11-20T09:30:00Z'
                             end: '2023-11-20T10:30:00Z'
-                          days:
-                            - '20'
                         person:
                           name: Ramu
                         authorization:
@@ -14307,8 +14303,6 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
-                            days:
-                              - '16'
                           person:
                             name: Ramu
                           instructions:
