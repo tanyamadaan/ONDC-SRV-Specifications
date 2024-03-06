@@ -6064,10 +6064,10 @@ x-flows:
       available services and service providers based on serviceability, order,
       fulfillment and post-fulfillment.
     details:
-      - description: Sequence Diagram for Booking Home Service
+      - description: Sequence Diagram for Booking Home  Cooking Service
         mermaidGraph: |-
           sequenceDiagram
-            title Booking Home Services
+            title Booking Home  Cooking Services
             participant SRV BAP
             participant SRV BPP
 
