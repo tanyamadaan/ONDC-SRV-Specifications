@@ -45,9 +45,6 @@ value:
           quantity:
             selected:
               count: 3
-            measure:
-              unit: people
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -67,9 +64,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -95,9 +89,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -123,9 +114,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
