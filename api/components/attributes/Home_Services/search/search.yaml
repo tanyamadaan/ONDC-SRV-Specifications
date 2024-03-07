@@ -74,6 +74,11 @@ message:
               required: required
               usage: "2023-11-16T10:30:00Z"
               reference: if any
+          days:
+              description: string comma separated values representing days of the week on which the service is required ("1" - Monday, "7" - Sunday)
+              required: required
+              usage: "1,2,3,4,5,6,7"
+              reference: if any
     payment:
       parent: true
       collected_by:
