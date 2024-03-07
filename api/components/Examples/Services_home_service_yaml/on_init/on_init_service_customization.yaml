@@ -158,7 +158,7 @@ value:
                 short_desc: Instuctions by provider
                 long_desc: Instuctions by provider
                 additional_desc:
-                  url: https//abc.com/checklist
+                  url: https//abc.com/instructions
                   content_type: text/html
             - type: end
               location:
