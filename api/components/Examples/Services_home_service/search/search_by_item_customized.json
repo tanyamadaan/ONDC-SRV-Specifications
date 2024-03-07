@@ -22,7 +22,7 @@
     "intent": {
       "item": {
         "descriptor": {
-          "name": "Home Cooking"
+          "name": "Cooking Service"
         }
       },
       "fulfillment": {
@@ -33,6 +33,13 @@
             "location": {
               "gps": "12.974002,77.613458",
               "area_code": "560001"
+            },
+            "time": {
+              "range": {
+                "start": "2023-11-16T09:30:00Z",
+                "end": "2023-11-16T10:30:00Z"
+              },
+              "days": "4"
             }
           }
         ]
