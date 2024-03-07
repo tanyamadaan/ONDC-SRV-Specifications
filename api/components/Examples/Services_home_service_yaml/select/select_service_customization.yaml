@@ -38,9 +38,6 @@ value:
           quantity:
             selected:
               count: 3
-            measure:
-              unit: people
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -58,9 +55,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -84,9 +78,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -110,9 +101,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -138,5 +126,6 @@ value:
                 range:
                   start: '2024-03-04T10:00:00.000Z'
                   end: '2024-03-04T18:00:00.000Z'
+                days: "4"
       payments:
         - type: PRE-FULFILLMENT

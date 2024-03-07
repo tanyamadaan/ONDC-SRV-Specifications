@@ -1,10 +1,10 @@
-summary: Booking Home Cooking Services
-description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order home cooking services. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
+summary: Booking Cook On-Demand Services
+description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to order cook on-demand services. The booking majorly happens in four phases of order processing flow, i.e. Discovery of available services and service providers based on serviceability, order, fulfillment and post-fulfillment.
 details:
-  - description: Sequence Diagram for Booking Home  Cooking Service
+  - description: Sequence Diagram for Booking Cook On-Demand Service
     mermaidGraph: >-
       sequenceDiagram
-        title Booking Home  Cooking Services
+        title Booking Cook On-Demand Services
         participant SRV BAP
         participant SRV BPP
 

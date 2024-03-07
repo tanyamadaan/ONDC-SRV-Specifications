@@ -29,7 +29,7 @@ value:
               gps: 12.974002,77.613458
               area_code: '560001'
       payment:
-        type: ON-FULFILLMENT
+        type: PRE-FULFILLMENT
         collected_by: BAP
       tags:
         - descriptor:

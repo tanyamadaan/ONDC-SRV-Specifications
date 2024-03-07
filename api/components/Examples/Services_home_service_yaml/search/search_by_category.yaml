@@ -30,7 +30,7 @@ value:
               area_code: '560001'
       payment:
         type: ON-FULFILLMENT
-        collected_by: BAP
+        collected_by: BPP
       tags:
         - descriptor:
             code: BAP_Terms

@@ -3324,7 +3324,7 @@ x-flows:
                         gps: 12.974002,77.613458
                         area_code: '560001'
                 payment:
-                  type: ON-FULFILLMENT
+                  type: PRE-FULFILLMENT
                   collected_by: BAP
                 tags:
                   - descriptor:
@@ -3521,6 +3521,7 @@ x-flows:
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T00:00:00.000Z'
+                          days: 04,05
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -3606,6 +3607,7 @@ x-flows:
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T19:30:00.000Z'
+                          days: 04,05
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -3691,6 +3693,7 @@ x-flows:
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T19:30:00.000Z'
+                          days: 04,05
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -3776,6 +3779,7 @@ x-flows:
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T19:30:00.000Z'
+                          days: 04,05
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -3807,6 +3811,7 @@ x-flows:
                           range:
                             start: '2023-11-12T00:00:00.000Z'
                             end: '2023-11-16T00:00:00.000Z'
+                          days: 04,05
                     fulfillments:
                       - contact:
                           phone: '9886098860'
@@ -3871,6 +3876,7 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
+                          days: '4'
                 payments:
                   - type: PRE-FULFILLMENT
       - summary: Seller confirms the schedule and returns the quote
@@ -5870,6 +5876,7 @@ x-flows:
                       range:
                         start: '2022-17-10T00:00:00.000Z'
                         end: '2022-11-20T00:00:00.000Z'
+                      days: '5'
                       schedule:
                         frequency: PT1H
                         holidays:
@@ -5898,6 +5905,7 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
+                          days: '4'
                 quote:
                   price:
                     currency: INR
@@ -6056,18 +6064,18 @@ x-flows:
         description: Seller app sends order status update when service is completed
         reference: if any
         example: *ref_24
-  - summary: Booking Home Cooking Services
+  - summary: Booking Cook On-Demand Services
     description: >-
       The following is an illustrative flow to perform a transaction of a nature
-      where a buyer would like to order home cooking services. The booking
+      where a buyer would like to order cook on-demand services. The booking
       majorly happens in four phases of order processing flow, i.e. Discovery of
       available services and service providers based on serviceability, order,
       fulfillment and post-fulfillment.
     details:
-      - description: Sequence Diagram for Booking Home  Cooking Service
+      - description: Sequence Diagram for Booking Cook On-Demand Service
         mermaidGraph: |-
           sequenceDiagram
-            title Booking Home  Cooking Services
+            title Booking Cook On-Demand Services
             participant SRV BAP
             participant SRV BPP
 
@@ -6135,7 +6143,7 @@ x-flows:
               intent:
                 item:
                   descriptor:
-                    name: Home Cooking
+                    name: Cooking Service
                 fulfillment:
                   type: Home-Service
                   stops:
@@ -6143,6 +6151,11 @@ x-flows:
                       location:
                         gps: 12.974002,77.613458
                         area_code: '560001'
+                      time:
+                        range:
+                          start: '2023-11-16T09:30:00Z'
+                          end: '2023-11-16T10:30:00Z'
+                        days: '4'
                 payment:
                   type: ON-FULFILLMENT
                   collected_by: BAP
@@ -6225,6 +6238,7 @@ x-flows:
                       range:
                         start: '2024-03-04T00:00:00.000Z'
                         end: '2024-03-09T19:00:00.000Z'
+                      days: 4,5
                       schedule:
                         frequency: PT1H
                         holidays:
@@ -6444,21 +6458,27 @@ x-flows:
                               percentage: '25'
                             reason_required: true
                         tags:
-                          - code: reschedule_terms
+                          - descriptor:
+                              code: reschedule_terms
                             list:
-                              - code: fulfillment_state
+                              - descriptor:
+                                  code: fulfillment_state
                                 value: Pending
-                              - code: reschedule_eligible
+                              - descriptor:
+                                  code: reschedule_eligible
                                 value: 'true'
-                              - code: reschedule_fee
+                              - descriptor:
+                                  code: reschedule_fee
                                 value: '0.00'
-                              - code: reschedule_within
+                              - descriptor:
+                                  code: reschedule_within
                                 value: PT1D
                         time:
                           label: validity
                           range:
                             start: '2024-03-04T00:00:00.000Z'
                             end: '2024-03-09T19:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -6700,9 +6720,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 3
-                      measure:
-                        unit: people
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6720,9 +6737,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6746,9 +6760,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6772,9 +6783,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6800,6 +6808,7 @@ x-flows:
                           range:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
+                          days: '4'
                 payments:
                   - type: PRE-FULFILLMENT
       - summary: Seller confirms the schedule and returns the quote
@@ -6853,9 +6862,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 3
-                      measure:
-                        unit: people
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6875,9 +6881,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6903,9 +6906,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6931,9 +6931,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -6964,27 +6961,21 @@ x-flows:
                           range:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
-                        tags:
-                          descriptor:
-                            code: schedule
-                          list:
-                            - descriptor:
-                                code: ttl
-                              value: PT1H
+                          days: '4'
                 quote:
                   price:
                     currency: INR
-                    value: '1518.00'
+                    value: '1021.00'
                   breakup:
                     - title: Cook - On Demand
                       price:
                         currency: INR
-                        value: '199.00'
+                        value: '00.00'
                       item:
                         id: I1
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                       tags:
                         - descriptor:
                             code: title
@@ -6995,15 +6986,12 @@ x-flows:
                     - title: People
                       price:
                         currency: INR
-                        value: '597.00'
+                        value: '299.00'
                       item:
                         id: IC1
                         quantity:
                           selected:
                             count: 3
-                          measure:
-                            unit: people
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7023,9 +7011,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7045,9 +7030,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7067,9 +7049,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7521,6 +7500,14 @@ x-flows:
                     type: Home-Service
                     tracking: false
                     stops:
+                      - type: start
+                        instructions:
+                          name: Instuctions by provider
+                          short_desc: Instuctions by provider
+                          long_desc: Instuctions by provider
+                          additional_desc:
+                            url: https//abc.com/checklist
+                            content_type: text/html
                       - type: end
                         location:
                           gps: 12.974002,77.613458
@@ -7539,6 +7526,7 @@ x-flows:
                           range:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
+                          days: '4'
                         tags:
                           descriptor:
                             code: schedule
@@ -7549,17 +7537,17 @@ x-flows:
                 quote:
                   price:
                     currency: INR
-                    value: '1518.00'
+                    value: '1021.00'
                   breakup:
                     - title: Cook - On Demand
                       price:
                         currency: INR
-                        value: '199.00'
+                        value: '00.00'
                       item:
                         id: I1
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                       tags:
                         - descriptor:
                             code: title
@@ -7570,15 +7558,12 @@ x-flows:
                     - title: People
                       price:
                         currency: INR
-                        value: '597.00'
+                        value: '299.00'
                       item:
                         id: IC1
                         quantity:
                           selected:
                             count: 3
-                          measure:
-                            unit: people
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7598,9 +7583,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7620,9 +7602,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7642,9 +7621,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -7953,6 +7929,14 @@ x-flows:
                     type: Home-Service
                     tracking: false
                     stops:
+                      - type: start
+                        instructions:
+                          name: Instuctions by provider
+                          short_desc: Instuctions by provider
+                          long_desc: Instuctions by provider
+                          additional_desc:
+                            url: https//abc.com/checklist
+                            content_type: text/html
                       - type: end
                         location:
                           gps: 12.974002,77.613458
@@ -7978,17 +7962,17 @@ x-flows:
                 quote:
                   price:
                     currency: INR
-                    value: '1518.00'
+                    value: '1021.00'
                   breakup:
                     - title: Cook - On Demand
                       price:
                         currency: INR
-                        value: '199.00'
+                        value: '00.00'
                       item:
                         id: I1
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                       tags:
                         - descriptor:
                             code: title
@@ -7999,15 +7983,12 @@ x-flows:
                     - title: People
                       price:
                         currency: INR
-                        value: '597.00'
+                        value: '299.00'
                       item:
                         id: IC1
                         quantity:
                           selected:
                             count: 3
-                          measure:
-                            unit: people
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8027,9 +8008,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8049,9 +8027,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8071,9 +8046,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8396,6 +8368,14 @@ x-flows:
                     type: Home-Service
                     tracking: false
                     stops:
+                      - type: start
+                        instructions:
+                          name: Instuctions by provider
+                          short_desc: Instuctions by provider
+                          long_desc: Instuctions by provider
+                          additional_desc:
+                            url: https//abc.com/checklist
+                            content_type: text/html
                       - id: L1
                         type: start
                         location:
@@ -8447,17 +8427,17 @@ x-flows:
                 quote:
                   price:
                     currency: INR
-                    value: '1518.00'
+                    value: '1021.00'
                   breakup:
                     - title: Cook - On Demand
                       price:
                         currency: INR
-                        value: '199.00'
+                        value: '00.00'
                       item:
                         id: I1
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                       tags:
                         - descriptor:
                             code: title
@@ -8468,15 +8448,12 @@ x-flows:
                     - title: People
                       price:
                         currency: INR
-                        value: '597.00'
+                        value: '299.00'
                       item:
                         id: IC1
                         quantity:
                           selected:
                             count: 3
-                          measure:
-                            unit: people
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8496,9 +8473,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8518,9 +8492,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8540,9 +8511,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8921,17 +8889,17 @@ x-flows:
                 quote:
                   price:
                     currency: INR
-                    value: '1518.00'
+                    value: '1021.00'
                   breakup:
                     - title: Cook - On Demand
                       price:
                         currency: INR
-                        value: '199.00'
+                        value: '00.00'
                       item:
                         id: I1
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                       tags:
                         - descriptor:
                             code: title
@@ -8942,15 +8910,12 @@ x-flows:
                     - title: People
                       price:
                         currency: INR
-                        value: '597.00'
+                        value: '299.00'
                       item:
                         id: IC1
                         quantity:
                           selected:
                             count: 3
-                          measure:
-                            unit: people
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8970,9 +8935,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -8992,9 +8954,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -9014,9 +8973,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: unit
-                            value: '1'
                         price:
                           currency: INR
                           value: '199.00'
@@ -9677,6 +9633,7 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
+                          days: '4'
                 payments:
                   - type: PRE-FULFILLMENT
       - summary: Seller confirms the schedule and returns the quote
@@ -13183,7 +13140,7 @@ x-examples:
                           area_code: '560001'
                   payment:
                     type: ON-FULFILLMENT
-                    collected_by: BAP
+                    collected_by: BPP
                   tags:
                     - descriptor:
                         code: BAP_Terms
@@ -13223,7 +13180,7 @@ x-examples:
                           area_code: '560001'
                   payment:
                     type: ON-FULFILLMENT
-                    collected_by: BAP
+                    collected_by: BPP
                   tags:
                     - descriptor:
                         code: BAP_Terms
@@ -13267,7 +13224,7 @@ x-examples:
                           gps: 12.974002,77.613458
                           area_code: '560001'
                   payment:
-                    type: ON-FULFILLMENT
+                    type: PRE-FULFILLMENT
                     collected_by: BAP
                   tags:
                     - descriptor:
@@ -13313,9 +13270,10 @@ x-examples:
                           range:
                             start: '2023-11-16T09:30:00Z'
                             end: '2023-11-16T10:30:00Z'
+                          days: '4'
                   payment:
                     type: ON-FULFILLMENT
-                    collected_by: BAP
+                    collected_by: BPP
                   tags:
                     - descriptor:
                         code: BAP_Terms
@@ -13373,6 +13331,7 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
+                            days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
           - summary: Buyer adds the consulation service to cart + reschedules
@@ -13420,6 +13379,7 @@ x-examples:
                             range:
                               start: '2023-11-17T09:30:00Z'
                               end: '2023-11-17T10:30:00Z'
+                            days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
           - summary: Buyer adds the service to cart
@@ -13473,6 +13433,7 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
+                            days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
           - summary: Buyer adds the service and customizations to cart
@@ -13517,9 +13478,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 3
-                        measure:
-                          unit: people
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -13537,9 +13495,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -13563,9 +13518,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -13589,9 +13541,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -13617,6 +13566,7 @@ x-examples:
                             range:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
+                            days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
       init:
@@ -14445,6 +14395,14 @@ x-examples:
                       type: Home-Service
                       tracking: false
                       stops:
+                        - type: start
+                          instructions:
+                            name: Instuctions by provider
+                            short_desc: Instuctions by provider
+                            long_desc: Instuctions by provider
+                            additional_desc:
+                              url: https//abc.com/checklist
+                              content_type: text/html
                         - type: end
                           location:
                             gps: 12.974002,77.613458
@@ -14470,17 +14428,17 @@ x-examples:
                   quote:
                     price:
                       currency: INR
-                      value: '1518.00'
+                      value: '1021.00'
                     breakup:
                       - title: Cook - On Demand
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                         item:
                           id: I1
                           price:
                             currency: INR
-                            value: '199.00'
+                            value: '00.00'
                         tags:
                           - descriptor:
                               code: title
@@ -14491,15 +14449,12 @@ x-examples:
                       - title: People
                         price:
                           currency: INR
-                          value: '597.00'
+                          value: '299.00'
                         item:
                           id: IC1
                           quantity:
                             selected:
                               count: 3
-                            measure:
-                              unit: people
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -14519,9 +14474,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -14541,9 +14493,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -14563,9 +14512,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -15542,6 +15488,7 @@ x-examples:
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T00:00:00.000Z'
+                            days: 04,05
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -15627,6 +15574,7 @@ x-examples:
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T19:30:00.000Z'
+                            days: 04,05
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -15712,6 +15660,7 @@ x-examples:
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T19:30:00.000Z'
+                            days: 04,05
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -15797,6 +15746,7 @@ x-examples:
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T19:30:00.000Z'
+                            days: 04,05
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -15828,6 +15778,7 @@ x-examples:
                             range:
                               start: '2023-11-12T00:00:00.000Z'
                               end: '2023-11-16T00:00:00.000Z'
+                            days: 04,05
                       fulfillments:
                         - contact:
                             phone: '9886098860'
@@ -15892,6 +15843,7 @@ x-examples:
                         range:
                           start: '2024-03-04T00:00:00.000Z'
                           end: '2024-03-09T19:00:00.000Z'
+                        days: 4,5
                         schedule:
                           frequency: PT1H
                           holidays:
@@ -16112,21 +16064,27 @@ x-examples:
                                 percentage: '25'
                               reason_required: true
                           tags:
-                            - code: reschedule_terms
+                            - descriptor:
+                                code: reschedule_terms
                               list:
-                                - code: fulfillment_state
+                                - descriptor:
+                                    code: fulfillment_state
                                   value: Pending
-                                - code: reschedule_eligible
+                                - descriptor:
+                                    code: reschedule_eligible
                                   value: 'true'
-                                - code: reschedule_fee
+                                - descriptor:
+                                    code: reschedule_fee
                                   value: '0.00'
-                                - code: reschedule_within
+                                - descriptor:
+                                    code: reschedule_within
                                   value: PT1D
                           time:
                             label: validity
                             range:
                               start: '2024-03-04T00:00:00.000Z'
                               end: '2024-03-09T19:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -16706,9 +16664,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 3
-                        measure:
-                          unit: people
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -16728,9 +16683,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -16756,9 +16708,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -16784,9 +16733,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -16817,27 +16763,21 @@ x-examples:
                             range:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
-                          tags:
-                            descriptor:
-                              code: schedule
-                            list:
-                              - descriptor:
-                                  code: ttl
-                                value: PT1H
+                            days: '4'
                   quote:
                     price:
                       currency: INR
-                      value: '1518.00'
+                      value: '1021.00'
                     breakup:
                       - title: Cook - On Demand
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                         item:
                           id: I1
                           price:
                             currency: INR
-                            value: '199.00'
+                            value: '00.00'
                         tags:
                           - descriptor:
                               code: title
@@ -16848,15 +16788,12 @@ x-examples:
                       - title: People
                         price:
                           currency: INR
-                          value: '597.00'
+                          value: '299.00'
                         item:
                           id: IC1
                           quantity:
                             selected:
                               count: 3
-                            measure:
-                              unit: people
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -16876,9 +16813,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -16898,9 +16832,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -16920,9 +16851,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -17068,6 +16996,7 @@ x-examples:
                         range:
                           start: '2022-17-10T00:00:00.000Z'
                           end: '2022-11-20T00:00:00.000Z'
+                        days: '5'
                         schedule:
                           frequency: PT1H
                           holidays:
@@ -17096,6 +17025,7 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00Z'
                               end: '2023-11-16T10:30:00Z'
+                            days: '4'
                   quote:
                     price:
                       currency: INR
@@ -17703,6 +17633,14 @@ x-examples:
                       type: Home-Service
                       tracking: false
                       stops:
+                        - type: start
+                          instructions:
+                            name: Instuctions by provider
+                            short_desc: Instuctions by provider
+                            long_desc: Instuctions by provider
+                            additional_desc:
+                              url: https//abc.com/checklist
+                              content_type: text/html
                         - type: end
                           location:
                             gps: 12.974002,77.613458
@@ -17721,6 +17659,7 @@ x-examples:
                             range:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
+                            days: '4'
                           tags:
                             descriptor:
                               code: schedule
@@ -17731,17 +17670,17 @@ x-examples:
                   quote:
                     price:
                       currency: INR
-                      value: '1518.00'
+                      value: '1021.00'
                     breakup:
                       - title: Cook - On Demand
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                         item:
                           id: I1
                           price:
                             currency: INR
-                            value: '199.00'
+                            value: '00.00'
                         tags:
                           - descriptor:
                               code: title
@@ -17752,15 +17691,12 @@ x-examples:
                       - title: People
                         price:
                           currency: INR
-                          value: '597.00'
+                          value: '299.00'
                         item:
                           id: IC1
                           quantity:
                             selected:
                               count: 3
-                            measure:
-                              unit: people
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -17780,9 +17716,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -17802,9 +17735,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -17824,9 +17754,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -18569,6 +18496,14 @@ x-examples:
                       type: Home-Service
                       tracking: false
                       stops:
+                        - type: start
+                          instructions:
+                            name: Instuctions by provider
+                            short_desc: Instuctions by provider
+                            long_desc: Instuctions by provider
+                            additional_desc:
+                              url: https//abc.com/checklist
+                              content_type: text/html
                         - id: L1
                           type: start
                           location:
@@ -18620,17 +18555,17 @@ x-examples:
                   quote:
                     price:
                       currency: INR
-                      value: '1518.00'
+                      value: '1021.00'
                     breakup:
                       - title: Cook - On Demand
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                         item:
                           id: I1
                           price:
                             currency: INR
-                            value: '199.00'
+                            value: '00.00'
                         tags:
                           - descriptor:
                               code: title
@@ -18641,15 +18576,12 @@ x-examples:
                       - title: People
                         price:
                           currency: INR
-                          value: '597.00'
+                          value: '299.00'
                         item:
                           id: IC1
                           quantity:
                             selected:
                               count: 3
-                            measure:
-                              unit: people
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -18669,9 +18601,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -18691,9 +18620,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -18713,9 +18639,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -19786,17 +19709,17 @@ x-examples:
                   quote:
                     price:
                       currency: INR
-                      value: '1518.00'
+                      value: '1021.00'
                     breakup:
                       - title: Cook - On Demand
                         price:
                           currency: INR
-                          value: '199.00'
+                          value: '00.00'
                         item:
                           id: I1
                           price:
                             currency: INR
-                            value: '199.00'
+                            value: '00.00'
                         tags:
                           - descriptor:
                               code: title
@@ -19807,15 +19730,12 @@ x-examples:
                       - title: People
                         price:
                           currency: INR
-                          value: '597.00'
+                          value: '299.00'
                         item:
                           id: IC1
                           quantity:
                             selected:
                               count: 3
-                            measure:
-                              unit: people
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -19835,9 +19755,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -19857,9 +19774,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'
@@ -19879,9 +19793,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: unit
-                              value: '1'
                           price:
                             currency: INR
                             value: '199.00'

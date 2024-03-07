@@ -40,9 +40,6 @@ value:
           quantity:
             selected:
               count: 3
-            measure:
-              unit: people
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -62,9 +59,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -90,9 +84,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -118,9 +109,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -151,27 +139,21 @@ value:
                 range:
                   start: '2024-03-04T10:00:00.000Z'
                   end: '2024-03-04T18:00:00.000Z'
-              tags:
-                descriptor:
-                  code: schedule
-                list:
-                  - descriptor:
-                      code: ttl
-                    value: PT1H
+                days: "4"
       quote:
         price:
           currency: INR
-          value: "1518.00"
+          value: "1021.00"
         breakup:
           - title: Cook - On Demand
             price:
               currency: INR
-              value: "199.00"
+              value: "00.00"
             item:
               id: I1
               price:
                 currency: INR
-                value: "199.00"
+                value: "00.00"
             tags:
               - descriptor:
                   code: title
@@ -182,15 +164,12 @@ value:
           - title: People
             price:
               currency: INR
-              value: "597.00"
+              value: "299.00"
             item:
               id: IC1
               quantity:
                 selected:
                   count: 3
-                measure:
-                  unit: people
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"
@@ -210,9 +189,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: unit
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"
@@ -232,9 +208,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: unit
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"
@@ -254,9 +227,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: unit
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"

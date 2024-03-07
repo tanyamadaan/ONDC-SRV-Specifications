@@ -9,7 +9,7 @@ value:
       country:
         code: IND
     action: search
-    version: 2.0.0
+    version: '2.0.0'
     bap_id: buyerapp.com
     bap_uri: https://buyerapp.com/ondc
     transaction_id: T1
@@ -20,7 +20,7 @@ value:
     intent:
       item:
         descriptor:
-          name: Home Cooking
+          name: Cooking Service
       fulfillment:
         type: Home-Service
         stops:
@@ -28,6 +28,11 @@ value:
             location:
               gps: 12.974002,77.613458
               area_code: "560001"
+            time:
+              range: 
+                start: '2023-11-16T09:30:00Z'
+                end: '2023-11-16T10:30:00Z'
+              days: "4"
       payment:
         type: ON-FULFILLMENT
         collected_by: BAP

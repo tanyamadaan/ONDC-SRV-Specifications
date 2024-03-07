@@ -34,6 +34,7 @@ value:
             range:
               start: '2022-17-10T00:00:00.000Z'
               end: '2022-11-20T00:00:00.000Z'
+            days: "5"
             schedule:
               frequency: PT1H
               holidays:
@@ -62,6 +63,7 @@ value:
                 range:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
+                days: "4"
       quote:
         price:
           currency: INR

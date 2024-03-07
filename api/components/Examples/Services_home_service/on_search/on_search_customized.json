@@ -471,22 +471,32 @@
               ],
               "tags": [
                 {
-                  "code": "reschedule_terms",
+                  "descriptor": {
+                    "code": "reschedule_terms"
+                  },
                   "list": [
                     {
-                      "code": "fulfillment_state",
+                      "descriptor": {
+                        "code": "fulfillment_state"
+                      },
                       "value": "Pending"
                     },
                     {
-                      "code": "reschedule_eligible",
+                      "descriptor": {
+                        "code": "reschedule_eligible"
+                      },
                       "value": "true"
                     },
                     {
-                      "code": "reschedule_fee",
+                      "descriptor": {
+                        "code": "reschedule_fee"
+                      },
                       "value": "0.00"
                     },
                     {
-                      "code": "reschedule_within",
+                      "descriptor": {
+                        "code": "reschedule_within"
+                      },
                       "value": "PT1D"
                     }
                   ]

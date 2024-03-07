@@ -158,6 +158,14 @@ value:
           type: Home-Service
           tracking: false
           stops:
+            - type: start
+              instructions:
+                name: Instuctions by provider
+                short_desc: Instuctions by provider
+                long_desc: Instuctions by provider
+                additional_desc:
+                  url: https//abc.com/checklist
+                  content_type: text/html
             - id: L1
               type: start
               location:
@@ -209,17 +217,17 @@ value:
       quote:
         price:
           currency: INR
-          value: "1518.00"
+          value: "1021.00"
         breakup:
           - title: Cook - On Demand
             price:
               currency: INR
-              value: "199.00"
+              value: "00.00"
             item:
               id: I1
               price:
                 currency: INR
-                value: "199.00"
+                value: "00.00"
             tags:
               - descriptor:
                   code: title
@@ -230,15 +238,12 @@ value:
           - title: People
             price:
               currency: INR
-              value: "597.00"
+              value: "299.00"
             item:
               id: IC1
               quantity:
                 selected:
                   count: 3
-                measure:
-                  unit: people
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"
@@ -258,9 +263,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: unit
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"
@@ -280,9 +282,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: unit
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"
@@ -302,9 +301,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: unit
-                  value: "1"
               price:
                 currency: INR
                 value: "199.00"

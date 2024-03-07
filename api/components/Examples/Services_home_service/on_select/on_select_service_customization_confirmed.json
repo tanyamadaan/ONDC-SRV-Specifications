@@ -244,13 +244,13 @@
             "title": "Cook - On Demand",
             "price": {
               "currency": "INR",
-              "value": "199.00"
+              "value": "00.00"
             },
             "item": {
               "id": "I1",
               "price": {
                 "currency": "INR",
-                "value": "199.00"
+                "value": "00.00"
               }
             },
             "tags": [
