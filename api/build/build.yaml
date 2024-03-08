@@ -7511,13 +7511,6 @@ x-flows:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
                           days: '4'
-                        tags:
-                          descriptor:
-                            code: schedule
-                          list:
-                            - descriptor:
-                                code: ttl
-                              value: PT1H
                 quote:
                   price:
                     currency: INR
@@ -17576,13 +17569,6 @@ x-examples:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
                             days: '4'
-                          tags:
-                            descriptor:
-                              code: schedule
-                            list:
-                              - descriptor:
-                                  code: ttl
-                                value: PT1H
                   quote:
                     price:
                       currency: INR
