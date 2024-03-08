@@ -28,7 +28,6 @@ value:
           - id: L1
       items:
         - id: I1
-          parent_item_id: ""
           location_ids:
             - L1
           fulfillment_ids:
