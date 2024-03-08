@@ -7385,9 +7385,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 3
-                      measure:
-                        unit: people
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7407,9 +7404,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7435,9 +7429,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7463,9 +7454,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -17462,9 +17450,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 3
-                        measure:
-                          unit: people
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -17484,9 +17469,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -17512,9 +17494,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -17540,9 +17519,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
