@@ -28,28 +28,22 @@
       "items": [
         {
           "id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ]
+          "location_ids": ["L1"],
+          "fulfillment_ids": ["F1"]
         },
         {
           "id": "IC1",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "category_ids": [
-            "C1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C1"],
+          "fulfillment_ids": ["F1"],
           "quantity": {
             "selected": {
               "count": 3
+            },
+            "measure": {
+              "unit": "people",
+              "value": "1"
             }
           },
           "tags": [
@@ -71,19 +65,16 @@
         {
           "id": "IC2",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "category_ids": [
-            "C3",
-            "C21"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C3", "C21"],
+          "fulfillment_ids": ["F1"],
           "quantity": {
             "selected": {
               "count": 1
+            },
+            "measure": {
+              "unit": "unit",
+              "value": "1"
             }
           },
           "tags": [
@@ -117,19 +108,16 @@
         {
           "id": "IC3",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
-          "category_ids": [
-            "C3",
-            "C22"
-          ],
+          "location_ids": ["L1"],
+          "fulfillment_ids": ["F1"],
+          "category_ids": ["C3", "C22"],
           "quantity": {
             "selected": {
               "count": 1
+            },
+            "measure": {
+              "unit": "unit",
+              "value": "1"
             }
           },
           "tags": [
@@ -163,19 +151,16 @@
         {
           "id": "IC4",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
-          "category_ids": [
-            "C3",
-            "C23"
-          ],
+          "location_ids": ["L1"],
+          "fulfillment_ids": ["F1"],
+          "category_ids": ["C3", "C23"],
           "quantity": {
             "selected": {
               "count": 1
+            },
+            "measure": {
+              "unit": "unit",
+              "value": "1"
             }
           },
           "tags": [
@@ -229,8 +214,20 @@
                 "range": {
                   "start": "2024-03-04T10:00:00.000Z",
                   "end": "2024-03-04T18:00:00.000Z"
+                }
+              },
+              "tags": {
+                "descriptor": {
+                  "code": "schedule"
                 },
-                "days": "4"
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "ttl"
+                    },
+                    "value": "PT1H"
+                  }
+                ]
               }
             }
           ]
@@ -239,20 +236,20 @@
       "quote": {
         "price": {
           "currency": "INR",
-          "value": "1021.00"
+          "value": "1518.00"
         },
         "breakup": [
           {
             "title": "Cook - On Demand",
             "price": {
               "currency": "INR",
-              "value": "00.00"
+              "value": "199.00"
             },
             "item": {
               "id": "I1",
               "price": {
                 "currency": "INR",
-                "value": "00.00"
+                "value": "199.00"
               }
             },
             "tags": [
@@ -275,13 +272,17 @@
             "title": "People",
             "price": {
               "currency": "INR",
-              "value": "299.00"
+              "value": "597.00"
             },
             "item": {
               "id": "IC1",
               "quantity": {
                 "selected": {
                   "count": 3
+                },
+                "measure": {
+                  "unit": "people",
+                  "value": "1"
                 }
               },
               "price": {
@@ -316,6 +317,10 @@
               "quantity": {
                 "selected": {
                   "count": 1
+                },
+                "measure": {
+                  "unit": "unit",
+                  "value": "1"
                 }
               },
               "price": {
@@ -350,6 +355,10 @@
               "quantity": {
                 "selected": {
                   "count": 1
+                },
+                "measure": {
+                  "unit": "unit",
+                  "value": "1"
                 }
               },
               "price": {
@@ -384,6 +393,10 @@
               "quantity": {
                 "selected": {
                   "count": 1
+                },
+                "measure": {
+                  "unit": "unit",
+                  "value": "1"
                 }
               },
               "price": {

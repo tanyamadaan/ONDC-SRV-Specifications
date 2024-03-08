@@ -33,25 +33,15 @@
       "items": [
         {
           "id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ]
+          "location_ids": ["L1"],
+          "fulfillment_ids": ["F1"]
         },
         {
           "id": "IC1",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "category_ids": [
-            "C1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C1"],
+          "fulfillment_ids": ["F1"],
           "quantity": {
             "selected": {
               "count": 3
@@ -80,16 +70,9 @@
         {
           "id": "IC2",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "category_ids": [
-            "C3",
-            "C21"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C3", "C21"],
+          "fulfillment_ids": ["F1"],
           "quantity": {
             "selected": {
               "count": 1
@@ -130,16 +113,9 @@
         {
           "id": "IC3",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
-          "category_ids": [
-            "C3",
-            "C22"
-          ],
+          "location_ids": ["L1"],
+          "fulfillment_ids": ["F1"],
+          "category_ids": ["C3", "C22"],
           "quantity": {
             "selected": {
               "count": 1
@@ -180,16 +156,9 @@
         {
           "id": "IC4",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
-          "category_ids": [
-            "C3",
-            "C23"
-          ],
+          "location_ids": ["L1"],
+          "fulfillment_ids": ["F1"],
+          "category_ids": ["C3", "C23"],
           "quantity": {
             "selected": {
               "count": 1
@@ -276,12 +245,10 @@
           ]
         }
       ],
-      "payments": [
-        {
-          "type": "PRE-FULFILLMENT",
-          "collected_by": "BAP"
-        }
-      ]
+      "payments": [{
+        "type": "PRE-FULFILLMENT",
+        "collected_by": "BAP"
+    }]
     }
   }
 }

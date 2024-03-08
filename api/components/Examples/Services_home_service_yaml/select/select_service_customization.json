@@ -9,16 +9,16 @@
         "code": "IND"
       }
     },
-    "action": "init",
+    "action": "select",
     "version": "2.0.0",
     "bap_id": "buyerapp.com",
-    "bap_uri": "https://buyerapp.com/services",
+    "bap_uri": "https://buyerapp.com/ondc",
     "bpp_id": "sellerapp.com",
-    "bpp_uri": "https://sellerapp.com/services",
+    "bpp_uri": "https://sellerapp.com/ondc",
     "transaction_id": "T1",
     "message_id": "M1",
-    "timestamp": "2023-11-08T22:00:35.000Z",
-    "ttl": "P30S"
+    "timestamp": "2024-03-04T22:00:30.000Z",
+    "ttl": "PT30S"
   },
   "message": {
     "order": {
@@ -33,25 +33,13 @@
       "items": [
         {
           "id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ]
+          "location_ids": ["L1"]
         },
         {
           "id": "IC1",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "category_ids": [
-            "C1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C1"],
           "quantity": {
             "selected": {
               "count": 3
@@ -80,16 +68,8 @@
         {
           "id": "IC2",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "category_ids": [
-            "C3",
-            "C21"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C3", "C21"],
           "quantity": {
             "selected": {
               "count": 1
@@ -130,16 +110,8 @@
         {
           "id": "IC3",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
-          "category_ids": [
-            "C3",
-            "C22"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C3", "C22"],
           "quantity": {
             "selected": {
               "count": 1
@@ -180,16 +152,8 @@
         {
           "id": "IC4",
           "parent_item_id": "I1",
-          "location_ids": [
-            "L1"
-          ],
-          "fulfillment_ids": [
-            "F1"
-          ],
-          "category_ids": [
-            "C3",
-            "C23"
-          ],
+          "location_ids": ["L1"],
+          "category_ids": ["C3", "C23"],
           "quantity": {
             "selected": {
               "count": 1
@@ -228,45 +192,18 @@
           ]
         }
       ],
-      "billing": {
-        "name": "ONDC buyer",
-        "address": "22, Mahatma Gandhi Rd, Craig Park Layout, Ashok Nagar, Bengaluru, Karnataka 560001",
-        "state": {
-          "name": "Karnataka"
-        },
-        "city": {
-          "name": "Bengaluru"
-        },
-        "tax_id": "XXXXXXXXXXXXXXX",
-        "email": "nobody@nomail.com",
-        "phone": "9886098860"
-      },
       "fulfillments": [
         {
-          "id": "F1",
           "type": "Home-Service",
           "stops": [
             {
               "type": "end",
               "location": {
                 "gps": "12.974002,77.613458",
-                "address": "My House #, My buildin",
-                "city": {
-                  "name": "Bengaluru"
-                },
-                "country": {
-                  "code": "IND"
-                },
-                "area_code": "560001",
-                "state": {
-                  "name": "Karnataka"
-                }
-              },
-              "contact": {
-                "phone": "9886098860"
+                "area_code": "560001"
               },
               "time": {
-                "label": "confirmed",
+                "label": "selected",
                 "range": {
                   "start": "2024-03-04T10:00:00.000Z",
                   "end": "2024-03-04T18:00:00.000Z"
@@ -278,8 +215,7 @@
       ],
       "payments": [
         {
-          "type": "PRE-FULFILLMENT",
-          "collected_by": "BAP"
+          "type": "PRE-FULFILLMENT"
         }
       ]
     }

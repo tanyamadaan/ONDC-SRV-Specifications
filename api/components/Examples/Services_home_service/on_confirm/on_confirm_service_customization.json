@@ -36,7 +36,6 @@
       "items": [
         {
           "id": "I1",
-          "parent_item_id": "",
           "location_ids": [
             "L1"
           ],

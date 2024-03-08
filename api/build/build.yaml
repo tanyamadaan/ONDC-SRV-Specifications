@@ -6708,7 +6708,6 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                   - id: IC1
@@ -6846,7 +6845,6 @@ x-flows:
                   id: P1
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                     fulfillment_ids:
@@ -7189,7 +7187,6 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                     fulfillment_ids:
@@ -7373,7 +7370,6 @@ x-flows:
                   - id: L1
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                     fulfillment_ids:
@@ -7802,7 +7798,6 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                     fulfillment_ids:
@@ -8226,7 +8221,6 @@ x-flows:
                   rateable: true
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                     fulfillment_ids:
@@ -8686,7 +8680,6 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
-                    parent_item_id: ''
                     location_ids:
                       - L1
                     fulfillment_ids:
@@ -13430,7 +13423,6 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                     - id: IC1
@@ -13707,7 +13699,6 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                       fulfillment_ids:
@@ -14232,7 +14223,6 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                       fulfillment_ids:
@@ -16600,7 +16590,6 @@ x-examples:
                     id: P1
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                       fulfillment_ids:
@@ -17458,7 +17447,6 @@ x-examples:
                     - id: L1
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                       fulfillment_ids:
@@ -18318,7 +18306,6 @@ x-examples:
                     rateable: true
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                       fulfillment_ids:
@@ -19470,7 +19457,6 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
-                      parent_item_id: ''
                       location_ids:
                         - L1
                       fulfillment_ids:
