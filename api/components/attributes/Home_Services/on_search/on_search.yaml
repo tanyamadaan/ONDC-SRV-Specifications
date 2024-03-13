@@ -13,7 +13,19 @@ message:
         description: fulfillment type of the service, enum - "Home-Service, Store-Service"
         required: required
         usage: "Home-Service"
-        reference: if any          
+        reference: if any  
+    payments:
+      parent: true
+      id:
+        description: Payment id for the available payment methods
+        required: required
+        usage: "1"
+        reference: if any 
+      type:
+        description: Type of payment methods available
+        required: required
+        usage: "PRE-FULFILLMENT"
+        reference: if any        
     descriptor:
       parent: true
       name:
@@ -77,11 +89,6 @@ message:
           usage: "L1"
           reference: if any  
         time:
-          days:
-            description: days on which the service provider is available
-            required: required
-            usage: "10,11,14,16,17,18,19,20"
-            reference: if any
           range:
             start:
               description: availability start date of the service provider
@@ -107,7 +114,7 @@ message:
             times:
               description: time slots in which service provide is available
               required: required
-              usage: "[0930, 1900]"
+              usage: "[2022-11-20T00:00:00.000Z]"
               reference: if any
         offers:
           id:

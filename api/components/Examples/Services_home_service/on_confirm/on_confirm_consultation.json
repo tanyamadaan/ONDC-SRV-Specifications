@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "C1",
-      "state": "Accepted",
+      "status": "Accepted",
       "provider": {
         "id": "P1",
         "locations": [
@@ -114,10 +114,7 @@
                 "range": {
                   "start": "2023-11-16T09:30:00Z",
                   "end": "2023-11-16T10:30:00Z"
-                },
-                "days": [
-                  "16"
-                ]
+                }
               },
               "person": {
                 "name": "Ramu"

@@ -26,7 +26,7 @@
     "order":
     {
       "id":"O1",
-      "state":"In-progress",
+      "status":"In-progress",
       "provider":
       {
         "id":"P1",
@@ -148,10 +148,7 @@
                 "range": {
                   "start": "2023-11-16T09:30:00Z",
                   "end": "2023-11-16T10:30:00Z"
-                },
-                "days": [
-                  "16"
-                ]
+                }
               },
               "person": {
                 "name": "Ramu"

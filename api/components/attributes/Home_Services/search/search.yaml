@@ -63,11 +63,6 @@ message:
             usage: "12.4535445,77.9283792"
             reference: if any
         time:
-          days:
-            description: day on which the service is desired
-            required: required
-            usage: "16"
-            reference: if any
           range:
             start:
               description: start time of the time slot desired for the service
@@ -78,6 +73,11 @@ message:
               description: end time of the time slot desired for the service 
               required: required
               usage: "2023-11-16T10:30:00Z"
+              reference: if any
+          days:
+              description: string comma separated values representing days of the week on which the service is required ("1" - Monday, "7" - Sunday)
+              required: required
+              usage: "1,2,3,4,5,6,7"
               reference: if any
     payment:
       parent: true

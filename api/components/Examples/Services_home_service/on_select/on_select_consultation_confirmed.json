@@ -40,6 +40,7 @@
       "fulfillments": [
         {
           "id": "F1",
+          "type": "Home-Service",
           "tracking": false,
           "state": {
             "descriptor": {
@@ -58,10 +59,7 @@
                 "range": {
                   "start": "2023-11-16T09:30:00Z",
                   "end": "2023-11-16T10:30:00Z"
-                },
-                "days": [
-                  "2023-11-16"
-                ]
+                }
               },
               "tags": {
                 "descriptor": {
@@ -146,7 +144,11 @@
           }
         ],
         "ttl": "P1D"
-      }
+      },
+      "payments": [{
+        "type": "PRE-FULFILLMENT",
+        "collected_by": "BAP"
+    }]
     }
   }
 }

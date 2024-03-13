@@ -26,7 +26,7 @@
     "order":
     {
       "id":"O1",
-      "state":"Completed",
+      "status":"Completed",
       "provider":
       {
         "id":"P1",
@@ -143,9 +143,6 @@
                   "start": "2023-11-16T09:30:00Z",
                   "end": "2023-11-16T10:30:00Z"
                 },
-                "days": [
-                  "16"
-                ],
                 "timestamp": "2023-11-16T09:00:00.000Z"
               },
               "person": {
@@ -168,7 +165,7 @@
         },
         "breakup": [
           {
-            "title": "item",
+            "title": "Sofa Cleaning",
             "price": {
               "currency": "INR",
               "value": "474"
@@ -188,7 +185,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "item"
+                        }
+                    ]
+                }
+            ]
           },
           {
             "title": "tax",
@@ -207,7 +219,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "tax"
+                        }
+                    ]
+                }
+            ]
           },
           {
             "title": "discount",
@@ -226,7 +253,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "discount"
+                        }
+                    ]
+                }
+            ]
           },
           {
             "title": "convenience_fee",
@@ -245,7 +287,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+                {
+                    "descriptor": {
+                        "code": "title"
+                    },
+                    "list": [
+                        {
+                            "descriptor": {
+                                "code": "type"
+                            },
+                            "value": "misc"
+                        }
+                    ]
+                }
+            ]
           }
         ],
         "ttl": "P1D"

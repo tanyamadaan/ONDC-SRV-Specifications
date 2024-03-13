@@ -9,7 +9,7 @@ value:
       country:
         code: IND
     action: on_cancel
-    version: 2.0.0
+    version: '2.0.0'
     bap_id: buyerapp.com
     bap_uri: https://buyerapp.com/srv
     bpp_id: sellerapp.com
@@ -171,8 +171,7 @@ value:
                 range:
                   start: '2023-11-16T09:30:00Z'
                   end: '2023-11-16T10:30:00Z'
-                days:
-                  - '16'
+
               person:
                 name: Ramu
               instructions:
@@ -196,7 +195,7 @@ value:
         tax_id: XXXXXXXXXXXXXXX
         email: nobody@nomail.com
         phone: '9886098860'
-      payment:
+      payments:
         - id: P1
           collected_by: BAP
           params:

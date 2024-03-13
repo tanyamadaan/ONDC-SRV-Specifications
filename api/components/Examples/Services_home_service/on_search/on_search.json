@@ -78,19 +78,15 @@
               "start": "2022-11-10T00:00:00.000Z",
               "end": "2022-11-20T19:30:00.000Z"
             },
-            "days": "10,11,14,16,17,18,19,20",
             "schedule": {
               "frequency": "PT1H",
-              "holidays": [
-                "2023-11-13",
-                "2023-11-15"
-              ],
+              "holidays": ["2023-11-13", "2023-11-15"],
               "times": [
-                "2023-11-16T09:30:00Z",
-                "2023-11-16T14:30:00Z",
-                "2023-11-14T19:30:00Z",
-                "2023-11-17T19:30:00Z",
-                "2023-11-17T09:30:00Z"
+                "2023-11-16T09:30:00.000Z",
+                "2023-11-16T19:30:00.000Z",
+                "2023-11-14T19:30:00.000Z",
+                "2023-11-17T19:30:00.000Z",
+                "2023-11-17T09:30:00.000Z"
               ]
             }
           },
@@ -199,18 +195,10 @@
                 "offered_value": "99.00",
                 "maximum_value": "149.00"
               },
-              "category_ids": [
-                "SRV11-xxxx"
-              ],
-              "fulfillment_ids": [
-                "1"
-              ],
-              "location_ids": [
-                "L1"
-              ],
-              "payment_ids": [
-                "1"
-              ],
+              "category_ids": ["SRV11-xxxx"],
+              "fulfillment_ids": ["1"],
+              "location_ids": ["L1"],
+              "payment_ids": ["1"],
               "cancellation_terms": [
                 {
                   "fulfillment_state": {
@@ -237,22 +225,32 @@
               ],
               "tags": [
                 {
-                  "code": "reschedule_terms",
+                  "descriptor": {
+                    "code": "reschedule_terms"
+                  },
                   "list": [
                     {
-                      "code": "fulfillment_state",
+                      "descriptor": {
+                        "code": "fulfillment_state"
+                      },
                       "value": "Pending"
                     },
                     {
-                      "code": "reschedule_eligible",
+                      "descriptor": {
+                        "code": "reschedule_eligible"
+                      },
                       "value": "true"
                     },
                     {
-                      "code": "reschedule_fee",
+                      "descriptor": {
+                        "code": "reschedule_fee"
+                      },
                       "value": "0.00"
                     },
                     {
-                      "code": "reschedule_within",
+                      "descriptor": {
+                        "code": "reschedule_within"
+                      },
                       "value": "PT1D"
                     }
                   ]
@@ -264,24 +262,21 @@
                   "start": "2022-11-10T00:00:00.000Z",
                   "end": "2022-11-20T00:00:00.000Z"
                 },
-                "days": "10,11,14,16,17,18,19,20",
+
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": [
-                    "2023-11-13",
-                    "2023-11-15"
-                  ],
+                  "holidays": ["2023-11-13", "2023-11-15"],
                   "times": [
-                    "2023-11-16T09:30:00Z",
-                    "2023-11-16T14:30:00Z",
-                    "2023-11-14T19:30:00Z",
-                    "2023-11-17T19:30:00Z",
-                    "2023-11-17T09:30:00Z"
+                    "2023-11-16T09:30:00.000Z",
+                    "2023-11-16T19:30:00.000Z",
+                    "2023-11-14T19:30:00.000Z",
+                    "2023-11-17T19:30:00.000Z",
+                    "2023-11-17T09:30:00.000Z"
                   ]
                 }
               },
-              "matched": "true",
-              "recommended": "true"
+              "matched": true,
+              "recommended": true
             },
             {
               "id": "I2",
@@ -330,18 +325,10 @@
                   }
                 }
               },
-              "category_ids": [
-                "SRV11-xxxx"
-              ],
-              "fulfillment_ids": [
-                "1"
-              ],
-              "location_ids": [
-                "L1"
-              ],
-              "payment_ids": [
-                "1"
-              ],
+              "category_ids": ["SRV11-xxxx"],
+              "fulfillment_ids": ["1"],
+              "location_ids": ["L1"],
+              "payment_ids": ["1"],
               "cancellation_terms": [
                 {
                   "fulfillment_state": {
@@ -366,6 +353,39 @@
                   }
                 }
               ],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "reschedule_terms"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "fulfillment_state"
+                      },
+                      "value": "Pending"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_eligible"
+                      },
+                      "value": "true"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_fee"
+                      },
+                      "value": "0.00"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_within"
+                      },
+                      "value": "PT1D"
+                    }
+                  ]
+                }
+              ],
               "time": {
                 "label": "validity",
                 "range": {
@@ -374,21 +394,18 @@
                 },
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": [
-                    "2023-22-13",
-                    "2023-22-15"
-                  ],
+                  "holidays": ["2023-22-13", "2023-22-15"],
                   "times": [
-                    "2023-11-16T09:30:00Z",
-                    "2023-11-16T19:30:00Z",
-                    "2023-11-14T19:30:00Z",
-                    "2023-11-17T19:30:00Z",
-                    "2023-11-17T09:30:00Z"
+                    "2023-11-16T09:30:00.000Z",
+                    "2023-11-16T19:30:00.000Z",
+                    "2023-11-14T19:30:00.000Z",
+                    "2023-11-17T19:30:00.000Z",
+                    "2023-11-17T09:30:00.000Z"
                   ]
                 }
               },
-              "matched": "true",
-              "recommended": "true"
+              "matched": true,
+              "recommended": true
             },
             {
               "id": "I3",
@@ -437,18 +454,10 @@
                   }
                 }
               },
-              "category_ids": [
-                "SRV11-xxxx"
-              ],
-              "fulfillment_ids": [
-                "1"
-              ],
-              "location_ids": [
-                "L1"
-              ],
-              "payment_ids": [
-                "1"
-              ],
+              "category_ids": ["SRV11-xxxx"],
+              "fulfillment_ids": ["1"],
+              "location_ids": ["L1"],
+              "payment_ids": ["1"],
               "cancellation_terms": [
                 {
                   "fulfillment_state": {
@@ -473,6 +482,39 @@
                   }
                 }
               ],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "reschedule_terms"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "fulfillment_state"
+                      },
+                      "value": "Pending"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_eligible"
+                      },
+                      "value": "true"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_fee"
+                      },
+                      "value": "0.00"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_within"
+                      },
+                      "value": "PT1D"
+                    }
+                  ]
+                }
+              ],
               "time": {
                 "label": "validity",
                 "range": {
@@ -481,21 +523,18 @@
                 },
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": [
-                    "2023-22-13",
-                    "2023-22-15"
-                  ],
+                  "holidays": ["2023-22-13", "2023-22-15"],
                   "times": [
-                    "2023-11-16T09:30:00Z",
-                    "2023-11-16T14:30:00Z",
-                    "2023-11-14T19:30:00Z",
-                    "2023-11-17T19:30:00Z",
-                    "2023-11-17T09:30:00Z"
+                    "2023-11-16T09:30:00.000Z",
+                    "2023-11-16T19:30:00.000Z",
+                    "2023-11-14T19:30:00.000Z",
+                    "2023-11-17T19:30:00.000Z",
+                    "2023-11-17T09:30:00.000Z"
                   ]
                 }
               },
-              "matched": "true",
-              "recommended": "true"
+              "matched": true,
+              "recommended": true
             },
             {
               "id": "I4",
@@ -544,18 +583,10 @@
                   }
                 }
               },
-              "category_ids": [
-                "SRV11-xxxx"
-              ],
-              "fulfillment_ids": [
-                "1"
-              ],
-              "location_ids": [
-                "L1"
-              ],
-              "payment_ids": [
-                "1"
-              ],
+              "category_ids": ["SRV11-xxxx"],
+              "fulfillment_ids": ["1"],
+              "location_ids": ["L1"],
+              "payment_ids": ["1"],
               "cancellation_terms": [
                 {
                   "fulfillment_state": {
@@ -580,6 +611,39 @@
                   }
                 }
               ],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "reschedule_terms"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "fulfillment_state"
+                      },
+                      "value": "Pending"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_eligible"
+                      },
+                      "value": "true"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_fee"
+                      },
+                      "value": "0.00"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "reschedule_within"
+                      },
+                      "value": "PT1D"
+                    }
+                  ]
+                }
+              ],
               "time": {
                 "label": "validity",
                 "range": {
@@ -588,21 +652,18 @@
                 },
                 "schedule": {
                   "frequency": "PT1H",
-                  "holidays": [
-                    "2023-22-13",
-                    "2023-22-15"
-                  ],
+                  "holidays": ["2023-22-13", "2023-22-15"],
                   "times": [
-                    "2023-11-16T09:30:00Z",
-                    "2023-11-16T19:30:00Z",
-                    "2023-11-14T19:30:00Z",
-                    "2023-11-17T19:30:00Z",
-                    "2023-11-17T09:30:00Z"
+                    "2023-11-16T09:30:00.000Z",
+                    "2023-11-16T19:30:00.000Z",
+                    "2023-11-14T19:30:00.000Z",
+                    "2023-11-17T19:30:00.000Z",
+                    "2023-11-17T09:30:00.000Z"
                   ]
                 }
               },
-              "matched": "true",
-              "recommended": "true"
+              "matched": true,
+              "recommended": true
             }
           ],
           "offers": [
@@ -621,9 +682,7 @@
               },
               "location_ids": [],
               "category_ids": [],
-              "item_ids": [
-                "PI2"
-              ],
+              "item_ids": ["PI2"],
               "time": {
                 "label": "validity",
                 "range": {
