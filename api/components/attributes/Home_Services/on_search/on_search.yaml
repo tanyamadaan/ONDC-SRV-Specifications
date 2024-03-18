@@ -1,3 +1,51 @@
+context:
+  parent: true
+  domain:
+    description: domain code, enums - ONDC:SRV10 ( Home Services - Appliance Repair Services ), ONDC:SRV11 ( Home Services - Infra Services ), ONDC:SRV12 ( Home Services - Personal Care Services )
+    required: required
+    usage: "ONDC:SRV10"
+    reference: if any
+  city:
+    code:
+      description: city code for search where service needs to be provided. List of city codes, with pincode mapping, are here - https://docs.google.com/spreadsheets/d/12A_B-nDtvxyFh_FWDfp85ss2qpb65kZ7/edit#gid=213574534
+      required: required
+      usage: std:080
+      reference: if any
+  country:
+    code:
+      description: ISO standard 3 digit country code where service needs to be provided
+      required: required
+      usage: IND
+      reference: if any  
+  bap_id:
+    description: subscriber id for buyer app
+    required: required
+    usage: buyerapp.com
+    reference: if any
+  bap_uri:
+    description: subscriber URI for buyer app
+    required: required
+    usage: https://buyerapp.com/ondc
+  bpp_id:
+    description: subscriber id for seller app
+    required: required
+    usage: sellerapp.com
+    reference: if any
+  bpp_uri:
+    description: subscriber URI for seller app
+    required: required
+    usage: https://sellerapp.com/ondc
+    reference: if any
+  timestamp:
+    description: RFC3339 compliant timestamp
+    required: required
+    usage: '2023-10-17T21:10:00.000Z'
+    reference: if any
+  ttl:
+    description: validity of message
+    required: required
+    usage: PT30S
+    reference: if any
 message:
   parent: true
   catalog:
@@ -29,7 +77,7 @@ message:
     descriptor:
       parent: true
       name:
-        description: name of service provider, as applicable
+        description: name of service aggregator, as applicable
         required: required
         usage: "ABC store"
         reference: if any
@@ -58,7 +106,7 @@ message:
       categories:
         parent: true
         categories:
-          description: Customizations (like number of people, meals, etc) may be used to create customized services (e.g. Cook On-Demand), by defining the base product and the mandatory & optional customizations for the service.
+          description: Customizations (like number of people, meals, etc) may be used to create customized services (e.g. Cook On-Demand), by defining the base product and the required & optional customizations for the service.
           required: optional
           usage: "-"
           reference: if any
@@ -73,16 +121,15 @@ message:
           usage: "-"
           reference: if any
         categories.tags:
-          description: Metadata regarding the customization and its application includes details such as whether it's a mandatory selection, the sequence for selection, maximum/minimum number of customizations that can be selected, scheduling, and more.
+          description: Metadata regarding the customization and its application includes details such as whether it's a required selection, the sequence for selection, maximum/minimum number of customizations that can be selected, scheduling, and more.
           required: optional
           usage: "-"
           reference: if any
       items:
         parent: true
         parent_item_id:
-          description: if variant grouping defined for provider above, this matches id for variant_group definition; if not defined or id is invalid, buyer NPs may choose to display as normal SKU item
-          required: required
-          usage: V1
+          description: id of the parent item for a service or customization
+          usage: PI1
           reference: if any
         descriptor.code:
             description: unique code for item which will be in this format - "type:code" where type is 1 - EAN, 2 - ISBN, 3 - GTIN, 4 - HSN, 5 - others
