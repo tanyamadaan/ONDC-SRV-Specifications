@@ -3861,9 +3861,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 fulfillments:
                   - type: Home-Service
                     stops:
@@ -13066,9 +13063,8 @@ x-examples:
                 ttl: PT30S
               message:
                 intent:
-                  item:
-                    category:
-                      id: SRV11-*
+                  category:
+                    id: SRV11-*
                   fulfillment:
                     type: Home-Service
                     stops:
@@ -13356,9 +13352,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   fulfillments:
                     - type: Home-Service
                       stops:
@@ -21514,10 +21507,9 @@ x-attributes:
           parent: true
           intent:
             parent: true
-            item:
-              parent: true
-              category:
-                description: Category of the search
+            category:
+              id:
+                description: Category id of the desired service
                 required: optional
                 usage: SRV10-1000
                 reference: if any
@@ -21540,6 +21532,10 @@ x-attributes:
                     usage: 12.4535445,77.9283792
                     reference: if any
                 time:
+                  description: schedule desired for the service
+                  required: optional
+                  usage: '-'
+                  reference: if any
                   range:
                     start:
                       description: start time of the time slot desired for the service
@@ -21560,7 +21556,6 @@ x-attributes:
                     usage: 1,2,3,4,5,6,7
                     reference: if any
             payment:
-              parent: true
               collected_by:
                 description: >-
                   Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller
@@ -21577,14 +21572,14 @@ x-attributes:
             fulfillments:
               parent: true
               id:
-                description: fulfillment id
+                description: id for the fulfillment modes available
                 required: required
                 usage: '1'
                 reference: if any
               type:
                 description: >-
-                  fulfillment type of the service, enum - "Home-Service,
-                  Store-Service"
+                  type of modes available for fulfilling the service , enum -
+                  "Home-Service, Store-Service"
                 required: required
                 usage: Home-Service
                 reference: if any
@@ -21629,35 +21624,94 @@ x-attributes:
                 required: optional
                 usage: '-'
                 reference: if any
-              items:
-                descriptor:
-                  name:
-                    description: name of the service provided by the service provider
-                    required: required
-                    usage: Home Painting - Home consultation
-                    reference: if any
-                  price:
-                    value:
-                      description: price of the service
-                      required: required
-                      usage: '149'
-                      reference: if any
-                    currency:
-                      description: currency of the price value
-                      required: required
-                      usage: INR
-                      reference: if any
-                category_ids:
+              categories:
+                parent: true
+                categories:
                   description: >-
-                    category id of the service provided by the service provider
-                    which was sent in /search call
+                    Customizations (like number of people, meals, etc) may be
+                    used to create customized services (e.g. Cook On-Demand), by
+                    defining the base product and the mandatory & optional
+                    customizations for the service.
+                  required: optional
+                  usage: '-'
+                  reference: if any
+                categories.id:
+                  description: >-
+                    id of the customization, it will be mapped to an actual item
+                    in items array
+                  required: required
+                  usage: '-'
+                  reference: if any
+                categories.descriptor:
+                  description: description of the customization
+                  required: required
+                  usage: '-'
+                  reference: if any
+                categories.tags:
+                  description: >-
+                    Metadata regarding the customization and its application
+                    includes details such as whether it's a mandatory selection,
+                    the sequence for selection, maximum/minimum number of
+                    customizations that can be selected, scheduling, and more.
+                  required: optional
+                  usage: '-'
+                  reference: if any
+              items:
+                parent: true
+                parent_item_id:
+                  description: >-
+                    if variant grouping defined for provider above, this matches
+                    id for variant_group definition; if not defined or id is
+                    invalid, buyer NPs may choose to display as normal SKU item
+                  required: required
+                  usage: V1
+                  reference: if any
+                descriptor.code:
+                  description: >-
+                    unique code for item which will be in this format -
+                    "type:code" where type is 1 - EAN, 2 - ISBN, 3 - GTIN, 4 -
+                    HSN, 5 - others
+                  required: optional
+                  usage: 2
+                  reference: if any
+                descriptor.images:
+                  description: >-
+                    while item images ensures better discoverability & enhances
+                    user experience, if no image is available, seller NPs
+                    shouldn’t send image (instead of sending placeholder image)
+                  required: required
+                  usage: '-'
+                  reference: if any
+                quantity.unitized.measure.unit:
+                  description: >-
+                    enum - "unit", "dozen", "kilogram", "tonne", "litre",
+                    "millilitre"
+                    (https://github.com/ONDC-Official/protocol-network-extension/blob/main/enums/retail/grocery/RET10-UOM.json)
+                  required: required
+                  usage: unit
+                  reference: if any
+                tags.code:
+                  description: >-
+                    code = 'reschedule_terms', applicable in case service is
+                    rescheduled
+                  required: required
+                  usage: '-'
+                  reference: if any
+                cancellation_terms:
+                  description: cancellation terms applicable on cancellation of the item
+                  required: required
+                  usage: '-'
+                  reference: if any
+                category_ids:
+                  description: category id for the item as per taxonomy
                   required: required
                   usage: SRV10-1000
                   reference: if any
                 fulfillment_ids:
                   description: >-
-                    fulfillment id of the service provided by the service
-                    provider
+                    ids of the different fulfillment modes (provided in
+                    fulfillments array) by which this item (service) can be
+                    fulfilled
                   required: required
                   usage: '1'
                   reference: if any
@@ -21669,12 +21723,12 @@ x-attributes:
                 time:
                   range:
                     start:
-                      description: availability start date of the service provider
+                      description: availability start date of the service
                       required: required
                       usage: '2022-11-10T00:00:00.000Z'
                       reference: if any
                     end:
-                      description: availability end date of the service provider
+                      description: availability end date of the service
                       required: required
                       usage: '2022-11-20T00:00:00.000Z'
                       reference: if any
@@ -21685,51 +21739,130 @@ x-attributes:
                       usage: PT1H
                       reference: if any
                     holidays:
-                      description: days on which service provide is not available
+                      description: days on which service is not available
                       required: required
                       usage: '[2023-11-13, 2023-11-15]'
                       reference: if any
                     times:
-                      description: time slots in which service provide is available
+                      description: available time slots for the service
                       required: required
                       usage: '[2022-11-20T00:00:00.000Z]'
                       reference: if any
+              creds:
+                parent: true
+                creds:
+                  description: credentials of the seller
+                  required: required for exports
+                  usage: '-'
+                  reference: if any
+                id:
+                  required: required
+                  description: Human readable id
+                  reference: if any
+                  usage: ESG-12345678
+                type:
+                  required: required
+                  description: Type of creds
+                  reference: if any
+                  usage: License
+                desc:
+                  required: optional
+                  description: Description of creds
+                  reference: if any
+                  usage: Export License No. ESG-12345678
+                url:
+                  required: optional
+                  description: Physical description
+                  reference: if any
+                  usage: https://abcd.cdn.com/images/license-img
+              offers:
+                parent: true
                 offers:
-                  id:
-                    description: offer id
-                    required: optional
-                    usage: offer-1
-                    reference: if any
-                  descriptor:
-                    code:
-                      description: code of the offer being provided by the service provider
-                      required: optional
-                      usage: FREEBIE
-                      reference: if any
-                    short_desc:
-                      description: >-
-                        description of the offer being provided by the service
-                        provider
-                      required: optional
-                      usage: Cushion Cleaning
-                      reference: if any
-                  item_ids:
-                    description: item ids on which this offer is applicable
-                    required: optional
-                    usage: '[PI2]'
-                    reference: if any
-                  time:
-                    range:
-                      start:
-                        description: start date of the period for which offer is available
-                        required: optional
-                        usage: '2023-11-12T00:00:00.000Z'
-                        reference: if any
-                      end:
-                        description: end date of the offer
-                        required: optional
-                        usage: '2023-11-16T00:00:00.000Z'
-                        reference: if any
+                  description: >-
+                    Offers can be defined for a provider, An offer can be for -
+                    retail, logistics. An offer can be - opt-in, auto-applied.
+                    An offer will include the following info - offer id, offer
+                    type, images - may be used as banners to promote the offer
+                    from a merchant. An offer applicability criteria can include
+                    one or more of the following - location(s), categories,
+                    item(s), time period validity.
+                  required: optional
+                  usage: '-'
+                  reference: if any
+                id:
+                  description: unique offer id from provider;
+                  required: required
+                  usage: 'FLAT150, DISCP60, DISCA150, BUY2GET3, FREEBIE '
+                  reference: if any
+                descriptor:
+                  description: description of the offer.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                descriptor.name:
+                  description: description of the offer.
+                  required: optional
+                  usage: 60% off up to ₹120, for order value above ₹159
+                  reference: if any
+                descriptor.code:
+                  description: >-
+                    offer type - disc_pct  (discount percent or amount applied
+                    to the cart value, with or without a cap, and may be based
+                    on minimum cart value) , disc_amt (flat discount amount
+                    applied to the cart value, and may be based on minimum cart
+                    value), buyXgetY ( for every "X" item count in the cart,
+                    total of "Y" items will be offered (i.e. "Y" - "X"
+                    additional items), at 0 additional value) , freebie (for a
+                    minimum order value, 1 or more free item(s) will be offered
+                    at 0 value)
+                  required: required
+                  usage: disc_pct
+                  reference: if any
+                descriptor.short_desc:
+                  description: short description of the offer.
+                  required: optional
+                  usage: 60% off up to ₹120
+                  reference: if any
+                descriptor.long_desc:
+                  description: long description of the offer.
+                  required: optional
+                  usage: for order value above ₹159
+                  reference: if any
+                descriptor.images:
+                  description: banner image from seller
+                  required: optional
+                  usage: https://sellerNP.com/images/offer2-banner.png
+                  reference: if any
+                location_ids:
+                  description: location ids of the stores where the offer is applicable.
+                  required: required
+                  usage: L1
+                  reference: if any
+                category_ids:
+                  description: category ids for which the offer is applicable.
+                  required: required
+                  usage: RET10-1034
+                  reference: if any
+                item_ids:
+                  description: item ids for which the offer is applicable.
+                  required: required
+                  usage: I1
+                  reference: if any
+                time:
+                  description: validity of the offer.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                time.label:
+                  description: if the offer is valid
+                  required: required
+                  usage: valid
+                  reference: if any
+                time.range:
+                  description: range of the validity of the offer
+                  required: required
+                  usage: '-'
+                  reference: if any
                 fulfillments:
                   contact:
                     phone:
@@ -21737,6 +21870,15 @@ x-attributes:
                       required: optional
                       usage: '9886098860'
                       reference: if any
+              tags:
+                description: >-
+                  serviceability construct for providers is defined here. Refer
+                  to this document
+                  (https://docs.google.com/document/d/1f4QbVstY5m-L_-Jut5jvbeiaBKLR1ttJL_am6GG2Fko/edit)
+                  for serviceability construct.
+                required: required
+                usage: '-'
+                reference: if any
       select:
         parent: true
         message:
@@ -21753,9 +21895,24 @@ x-attributes:
             items:
               parent: true
               id:
-                description: item id i.e. the id of the service
+                description: item id i.e. the id of the service or customization
                 required: required
                 usage: I2
+                reference: if any
+              parent_item_id:
+                description: parent item id of the service or customization
+                required: required for customizations
+                usage: I1
+                reference: if any
+              location_ids:
+                description: location id of the selected service provider
+                required: required
+                usage: L1
+                reference: if any
+              category_ids:
+                description: category ids of the selected service
+                required: required
+                usage: C1
                 reference: if any
               quantity:
                 selected:
@@ -21766,17 +21923,11 @@ x-attributes:
                     required: required
                     usage: '1'
                     reference: if any
-                measure:
-                  unit:
-                    description: name of the unit e.g. sofa seats to be cleaned
-                    required: required
-                    usage: seats
-                    reference: if any
-                  value:
-                    description: value of the unit e.g. number of sofa seats to be cleaned
-                    required: required
-                    usage: '2'
-                    reference: if any
+              tags:
+                description: identifier tag for customizations
+                required: required for customizations
+                usage: '-'
+                reference: if any
             fulfillments:
               parent: true
               fulfillemnts:
@@ -21784,12 +21935,22 @@ x-attributes:
                 required: required
                 usage: '-'
                 reference: if any
+              type:
+                description: type of fulfillment mode selected from the catalog
+                required: required
+                usage: Home-Service
+                reference: if any
               stops:
                 time:
+                  label:
+                    description: indicates the selected time slot
+                    required: required
+                    usage: selected
+                    reference: if any
                   days:
                     description: day on which the service needs to be provided
                     required: required
-                    usage: '16'
+                    usage: '4'
                     reference: if any
                   range:
                     start:
@@ -21809,7 +21970,6 @@ x-attributes:
           order:
             parent: true
             provider:
-              parent: true
               id:
                 description: service provider id
                 required: required
@@ -21818,19 +21978,55 @@ x-attributes:
             items:
               parent: true
               id:
-                description: item id sent in /select call
+                description: item id i.e. the id of the service or customization
                 required: required
                 usage: I2
                 reference: if any
+              parent_item_id:
+                description: parent item id of the service or customization
+                required: required for customizations
+                usage: I1
+                reference: if any
+              location_ids:
+                description: location id of the selected service provider
+                required: required
+                usage: L1
+                reference: if any
+              category_ids:
+                description: category ids of the selected service
+                required: required
+                usage: C1
+                reference: if any
+              quantity:
+                selected:
+                  count:
+                    description: >-
+                      number of items selected e.g. number of sofas to be
+                      cleaned
+                    required: required
+                    usage: '1'
+                    reference: if any
+              tags:
+                description: identifier tag for customizations
+                required: required for customizations
+                usage: '-'
+                reference: if any
               fulfillment_ids:
-                description: fulfillment id of the service
+                description: >-
+                  fulfillment id of the service mapped to the id provided in
+                  fulfillments array
                 required: required
                 usage: F1
                 reference: if any
             fulfillments:
               parent: true
+              type:
+                description: type of fulfillment mode selected from the catalog
+                required: required
+                usage: Home-Service
+                reference: if any
               id:
-                description: fulfillment id of the service
+                description: fulfillment id generated by the seller NP
                 required: required
                 usage: F1
                 reference: if any
@@ -21843,6 +22039,29 @@ x-attributes:
                     required: required
                     usage: Serviceable
                     reference: if any
+              stops:
+                time:
+                  label:
+                    description: indicates the confirmed time slot
+                    required: required
+                    usage: confirmed
+                    reference: if any
+                  days:
+                    description: day on which the service is confirmed
+                    required: required
+                    usage: '4'
+                    reference: if any
+                  range:
+                    start:
+                      description: start time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
             quote:
               parent: true
               price:
@@ -21854,7 +22073,7 @@ x-attributes:
                 title:
                   description: >-
                     title of the service charges enum - Sofa Cleaning, tax,
-                    discount, convenience_fee
+                    discount, convenience_fee, etc
                   required: required
                   usage: Sofa Cleaning
                   reference: if any
@@ -21863,6 +22082,42 @@ x-attributes:
                   required: required
                   usage: '474'
                   reference: if any
+                item:
+                  id:
+                    description: item/fulfillment id for which this charge is applicable
+                    required: required
+                    usage: I1
+                    reference: if any
+                  quantity:
+                    description: selected quantity of the service or customization
+                    required: required
+                    usage: '-'
+                    reference: if any
+                tags:
+                  title:
+                    type:
+                      description: >-
+                        type of charge - item, customization, discount, tax,
+                        misc
+                      required: required
+                      usage: item
+                      reference: if any
+              ttl:
+                description: time duration for which this quote is valid
+                required: required
+                usage: P2D
+                reference: if any
+            payments:
+              type:
+                description: Preferred payment method chosen by the buyer
+                usage: ON-FULFILLMENT
+                reference: if any
+                required: required
+              collected_by:
+                description: Indicates who is collecting the payment
+                usage: BPP
+                reference: if any
+                required: required
       init:
         parent: true
         message:

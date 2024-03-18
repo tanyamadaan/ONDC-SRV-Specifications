@@ -12,9 +12,24 @@ message:
     items:
       parent: true
       id:
-        description: item id i.e. the id of the service
+        description: item id i.e. the id of the service or customization
         required: required
         usage: "I2"
+        reference: if any
+      parent_item_id:
+        description: parent item id of the service or customization
+        required: required for customizations
+        usage: "I1"
+        reference: if any
+      location_ids:
+        description: location id of the selected service provider
+        required: required
+        usage: "L1"
+        reference: if any
+      category_ids:
+        description: category ids of the selected service
+        required: required
+        usage: "C1"
         reference: if any
       quantity:
         selected:
@@ -23,17 +38,11 @@ message:
             required: required
             usage: "1"
             reference: if any
-        measure:
-          unit:
-            description: name of the unit e.g. sofa seats to be cleaned
-            required: required
-            usage: "seats"
-            reference: if any
-          value:
-            description: value of the unit e.g. number of sofa seats to be cleaned
-            required: required
-            usage: "2"
-            reference: if any
+      tags:
+        description: identifier tag for customizations
+        required: required for customizations
+        usage: "-"
+        reference: if any
     fulfillments:
       parent: true
       fulfillemnts:
@@ -41,12 +50,22 @@ message:
         required: required
         usage: "-"
         reference: if any
+      type:
+        description: type of fulfillment mode selected from the catalog
+        required: required
+        usage: "Home-Service"
+        reference: if any
       stops:
         time:
+          label:
+            description: indicates the selected time slot
+            required: required
+            usage: "selected"
+            reference: if any
           days:
             description: day on which the service needs to be provided
             required: required
-            usage: "16"
+            usage: "4"
             reference: if any
           range:
             start:
