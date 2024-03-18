@@ -21716,6 +21716,7 @@ x-attributes:
                 parent: true
                 parent_item_id:
                   description: id of the parent item for a service or customization
+                  required: required
                   usage: PI1
                   reference: if any
                 descriptor.code:
@@ -21724,7 +21725,7 @@ x-attributes:
                     "type:code" where type is 1 - EAN, 2 - ISBN, 3 - GTIN, 4 -
                     HSN, 5 - others
                   required: optional
-                  usage: 2
+                  usage: 5:other code
                   reference: if any
                 descriptor.images:
                   description: >-
