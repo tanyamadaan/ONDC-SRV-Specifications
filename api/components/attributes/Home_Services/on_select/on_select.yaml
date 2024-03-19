@@ -67,6 +67,11 @@ message:
             usage: "Serviceable"
             reference: if any
       stops:
+        type:
+            description: The type of stop - end location
+            required: required
+            usage: "end"
+            reference: if any
         time:
           label:
             description: indicates the time slot is confirmed

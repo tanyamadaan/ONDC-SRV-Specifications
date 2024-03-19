@@ -142,11 +142,11 @@ message:
         reference: if any
       stops:
         parent: true
-        person.name:
-          description: name of the customer or service provider
-          required: required
-          usage: "Ramu"
-          reference: if any
+        type:
+            description: The type of stop - start or end point
+            required: required
+            usage: "end"
+            reference: if any
         location:
           id:
             description: location id of the service provider
@@ -203,6 +203,11 @@ message:
             required: optional
             usage: "abc@xyz.com"
             reference: if any
+        person.name:
+          description: name of the customer or service provider
+          required: required
+          usage: "Ramu"
+          reference: if any
         time:
           label:
             description: indicates the time slot is confirmed

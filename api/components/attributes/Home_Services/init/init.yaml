@@ -104,6 +104,11 @@ message:
         usage: "F1"
         reference: if any
       stops:
+        type:
+            description: The type of stop - end point
+            required: required
+            usage: "end"
+            reference: if any
         location:
           gps:
             description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision, should be same as in search request
