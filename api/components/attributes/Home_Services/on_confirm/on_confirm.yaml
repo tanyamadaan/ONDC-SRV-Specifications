@@ -233,21 +233,50 @@ message:
               reference: if any
     quote:
       parent: true
-      quote:
-        description: quote to be sent by service provider
+      price:
+        description: total price of the service
         required: required
-        usage: "-"
+        usage: "499"
         reference: if any
       breakup:
-        breakup:
-          description: service provider provides the the breakup of the quote
-          required: required
-          usage: "-"
-          reference: if any
         title:
-          description: title of the service charges enum - Sofa Cleaning, tax, discount, convenience_fee
+          description: title of the service charges - Sofa Cleaning, tax, discount, convenience_fee, etc, can be customized
           required: required
           usage: "Sofa Cleaning"
+          reference: if any
+        price:
+          currency:
+            description: currency of the price
+            required: required
+            usage: "INR"
+            reference: if any
+          value:
+            description: price value of the quote breakup type
+            required: required
+            usage: "474.00"
+            reference: if any
+        item:
+          id:
+            description: item/fulfillment id for which this charge is applicable
+            required: required
+            usage: "I1"
+            reference: if any
+          quantity:
+            description: selected quantity of the service or customization
+            required: required
+            usage: "-"
+            reference: if any
+        tags:
+          title:
+            type:
+                description: type of charge - enums (item, customization, discount, tax, misc)
+                required: required
+                usage: "item"
+                reference: if any
+      ttl:
+          description: time duration for which this quote is valid
+          required: required
+          usage: "P2D"
           reference: if any
     payments:
       parent: true

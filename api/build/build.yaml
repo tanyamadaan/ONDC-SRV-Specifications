@@ -22598,24 +22598,55 @@ x-attributes:
                       reference: if any
             quote:
               parent: true
-              quote:
-                description: quote to be sent by service provider
+              price:
+                description: total price of the service
                 required: required
-                usage: '-'
+                usage: '499'
                 reference: if any
               breakup:
-                breakup:
-                  description: service provider provides the the breakup of the quote
-                  required: required
-                  usage: '-'
-                  reference: if any
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
-                    discount, convenience_fee
+                    title of the service charges - Sofa Cleaning, tax, discount,
+                    convenience_fee, etc, can be customized
                   required: required
                   usage: Sofa Cleaning
                   reference: if any
+                price:
+                  currency:
+                    description: currency of the price
+                    required: required
+                    usage: INR
+                    reference: if any
+                  value:
+                    description: price value of the quote breakup type
+                    required: required
+                    usage: '474.00'
+                    reference: if any
+                item:
+                  id:
+                    description: item/fulfillment id for which this charge is applicable
+                    required: required
+                    usage: I1
+                    reference: if any
+                  quantity:
+                    description: selected quantity of the service or customization
+                    required: required
+                    usage: '-'
+                    reference: if any
+                tags:
+                  title:
+                    type:
+                      description: >-
+                        type of charge - enums (item, customization, discount,
+                        tax, misc)
+                      required: required
+                      usage: item
+                      reference: if any
+              ttl:
+                description: time duration for which this quote is valid
+                required: required
+                usage: P2D
+                reference: if any
             payments:
               parent: true
               id:
@@ -22897,24 +22928,55 @@ x-attributes:
                       reference: if any
             quote:
               parent: true
-              quote:
-                description: quote to be sent by service provider
+              price:
+                description: total price of the service
                 required: required
-                usage: '-'
+                usage: '499'
                 reference: if any
               breakup:
-                breakup:
-                  description: service provider provides the the breakup of the quote
-                  required: required
-                  usage: '-'
-                  reference: if any
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
-                    discount, convenience_fee
+                    title of the service charges - Sofa Cleaning, tax, discount,
+                    convenience_fee, etc, can be customized
                   required: required
                   usage: Sofa Cleaning
                   reference: if any
+                price:
+                  currency:
+                    description: currency of the price
+                    required: required
+                    usage: INR
+                    reference: if any
+                  value:
+                    description: price value of the quote breakup type
+                    required: required
+                    usage: '474.00'
+                    reference: if any
+                item:
+                  id:
+                    description: item/fulfillment id for which this charge is applicable
+                    required: required
+                    usage: I1
+                    reference: if any
+                  quantity:
+                    description: selected quantity of the service or customization
+                    required: required
+                    usage: '-'
+                    reference: if any
+                tags:
+                  title:
+                    type:
+                      description: >-
+                        type of charge - enums (item, customization, discount,
+                        tax, misc)
+                      required: required
+                      usage: item
+                      reference: if any
+              ttl:
+                description: time duration for which this quote is valid
+                required: required
+                usage: P2D
+                reference: if any
             payments:
               parent: true
               id:
@@ -23267,24 +23329,55 @@ x-attributes:
                     reference: if any
             quote:
               parent: true
-              quote:
-                description: quote to be sent by service provider
+              price:
+                description: total price of the service
                 required: required
-                usage: '-'
+                usage: '499'
                 reference: if any
               breakup:
-                breakup:
-                  description: service provider provides the the breakup of the quote
-                  required: required
-                  usage: '-'
-                  reference: if any
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
-                    discount, convenience_fee
+                    title of the service charges - Sofa Cleaning, tax, discount,
+                    convenience_fee, etc, can be customized
                   required: required
                   usage: Sofa Cleaning
                   reference: if any
+                price:
+                  currency:
+                    description: currency of the price
+                    required: required
+                    usage: INR
+                    reference: if any
+                  value:
+                    description: price value of the quote breakup type
+                    required: required
+                    usage: '474.00'
+                    reference: if any
+                item:
+                  id:
+                    description: item/fulfillment id for which this charge is applicable
+                    required: required
+                    usage: I1
+                    reference: if any
+                  quantity:
+                    description: selected quantity of the service or customization
+                    required: required
+                    usage: '-'
+                    reference: if any
+                tags:
+                  title:
+                    type:
+                      description: >-
+                        type of charge - enums (item, customization, discount,
+                        tax, misc)
+                      required: required
+                      usage: item
+                      reference: if any
+              ttl:
+                description: time duration for which this quote is valid
+                required: required
+                usage: P2D
+                reference: if any
             payments:
               parent: true
               id:
@@ -23722,24 +23815,55 @@ x-attributes:
                     reference: if any
             quote:
               parent: true
-              quote:
-                description: quote to be sent by service provider
+              price:
+                description: total price of the service
                 required: required
-                usage: '-'
+                usage: '499'
                 reference: if any
               breakup:
-                breakup:
-                  description: service provider provides the the breakup of the quote
-                  required: required
-                  usage: '-'
-                  reference: if any
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
-                    discount, convenience_fee
+                    title of the service charges - Sofa Cleaning, tax, discount,
+                    convenience_fee, etc, can be customized
                   required: required
                   usage: Sofa Cleaning
                   reference: if any
+                price:
+                  currency:
+                    description: currency of the price
+                    required: required
+                    usage: INR
+                    reference: if any
+                  value:
+                    description: price value of the quote breakup type
+                    required: required
+                    usage: '474.00'
+                    reference: if any
+                item:
+                  id:
+                    description: item/fulfillment id for which this charge is applicable
+                    required: required
+                    usage: I1
+                    reference: if any
+                  quantity:
+                    description: selected quantity of the service or customization
+                    required: required
+                    usage: '-'
+                    reference: if any
+                tags:
+                  title:
+                    type:
+                      description: >-
+                        type of charge - enums (item, customization, discount,
+                        tax, misc)
+                      required: required
+                      usage: item
+                      reference: if any
+              ttl:
+                description: time duration for which this quote is valid
+                required: required
+                usage: P2D
+                reference: if any
             payments:
               parent: true
               id:
@@ -23803,42 +23927,23 @@ x-attributes:
                   usage: '-'
                   reference: if any
                   required: required
-            xinput:
+            documents:
               parent: true
-              xinput:
-                description: >-
-                  Contains any additional or extended inputs required to confirm
-                  an order. This is typically a Form Input. This can be utilized
-                  if the service provider wishes to verify any mandatory
-                  requirements checklist at the consumer's end for the service
-                  to be completed.
-                usage: '-'
+              documents:
+                description: Invoice to be shared by the service provider
+                required: required
+                usage: https://invoice_url
                 reference: if any
-                required: required if 'xinput/required' = true in /on_init
-              form:
-                url:
-                  description: Checklist url provided by the service provider
-                  usage: https//abc.com/checklist
-                  reference: if any
-                  required: required
-                mimetype:
-                  description: >-
-                    It is a string identifier that specifies the format of the
-                    data, such as text, image, audio, video, or
-                    application-specific data types.
-                  usage: text/html
-                  reference: if any
-                  required: required
-                submission_id:
-                  description: id generated after submitting the form
-                  usage: '19490302234'
-                  reference: if any
-                  required: required
-                status:
-                  description: Whether the submission is successful or not
-                  usage: SUCCESS
-                  reference: if any
-                  required: required
+              url:
+                description: url of the invoice
+                required: required
+                usage: https://invoice_url
+                reference: if any
+              label:
+                description: label of the invoice
+                required: required
+                usage: INVOICE
+                reference: if any
 x-errorcodes:
   code:
     - Code: '90001'
