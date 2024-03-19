@@ -246,7 +246,7 @@ message:
           usage: "-"
           reference: if any
           required: required
-        'required':
+        "required":
           description: Specifies whether it is mandatory to return the form provided by the provider.
           usage: "true"
           reference: if any
