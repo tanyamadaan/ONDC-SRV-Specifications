@@ -21932,13 +21932,21 @@ x-attributes:
                   required: required
                   usage: '-'
                   reference: if any
-                fulfillments:
-                  contact:
-                    phone:
-                      description: contact number of the service provider
-                      required: optional
-                      usage: '9886098860'
-                      reference: if any
+                tags:
+                  description: >-
+                    Tags can be utilized to specify the minimum order value,
+                    discount value, and other metadata related to the offer and
+                    its application.
+                  required: required
+                  usage: '-'
+                  reference: if any
+              fulfillments:
+                contact:
+                  phone:
+                    description: contact number of the service provider
+                    required: optional
+                    usage: '9886098860'
+                    reference: if any
               tags:
                 description: >-
                   serviceability construct for providers is defined here. Refer

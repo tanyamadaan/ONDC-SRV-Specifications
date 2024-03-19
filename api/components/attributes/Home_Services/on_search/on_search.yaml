@@ -304,7 +304,12 @@ message:
             required: required
             usage: '-'
             reference: if any
-        fulfillments:
+        tags:
+            description: Tags can be utilized to specify the minimum order value, discount value, and other metadata related to the offer and its application. 
+            required: required
+            usage: '-'
+            reference: if any
+      fulfillments:
           contact:
             phone:
               description: contact number of the service provider
