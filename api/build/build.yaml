@@ -23351,6 +23351,45 @@ x-attributes:
                       required: required
                       usage: '2023-11-16T10:30:00Z'
                       reference: if any
+                authorization:
+                  description: >-
+                    Describes an authorization mechanism used to start or end
+                    the fulfillment of an order. For example, in the mobility
+                    sector, the driver may require a one-time password to
+                    initiate the ride. In the healthcare sector, a patient may
+                    need to provide a password to open a video conference link
+                    during a teleconsultation.
+                  required: optional
+                  reference: if any
+                authorization.type:
+                  description: Type of authorization mechanism used. Enum - 'OTP'
+                  required: required
+                  usage: OTP
+                  reference: if any
+                authorization.token:
+                  description: >-
+                    Token used for authorization. This is typically generated at
+                    the BPP. The BAP can send this value to the user via any
+                    channel that it uses to authenticate the user like SMS,
+                    Email, Push notification, or in-app rendering.
+                  required: required
+                  usage: '3214'
+                  reference: if any
+                authorization.valid_from:
+                  description: Timestamp in RFC3339 format from which token is valid.
+                  required: required
+                  usage: '2023-11-08T22:00:39.000Z'
+                  reference: if any
+                authorization.valid_to:
+                  description: Timestamp in RFC3339 format until which token is valid.
+                  required: required
+                  usage: '2023-11-08T22:00:39.000Z'
+                  reference: if any
+                authorization.status:
+                  description: Status of the token.
+                  required: required
+                  usage: valid
+                  reference: if any
                 instructions:
                   name:
                     description: Instructions that need to be followed at the stop
@@ -23832,8 +23871,8 @@ x-attributes:
                     initiate the ride. In the healthcare sector, a patient may
                     need to provide a password to open a video conference link
                     during a teleconsultation.
-                  required: required once the service provider is At-Location
-                  usage: Call before arriving
+                  required: required before starting the service
+                  usage: '-'
                   reference: if any
                 authorization.type:
                   description: Type of authorization mechanism used. Enum - 'OTP'
@@ -23981,8 +24020,10 @@ x-attributes:
             documents:
               parent: true
               documents:
-                description: Invoice to be shared by the service provider
-                required: required
+                description: >-
+                  Invoice to be shared by the service provider once the order is
+                  complete
+                required: required once the order is complete
                 usage: https://invoice_url
                 reference: if any
               url:
