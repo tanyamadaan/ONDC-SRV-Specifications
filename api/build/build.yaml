@@ -21556,12 +21556,19 @@ x-attributes:
                     usage: 1,2,3,4,5,6,7
                     reference: if any
             payment:
+              type:
+                description: >-
+                  payment mode by which buyer would like to pay, enum -
+                  'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+                required: optional
+                usage: PRE-FULFILLMENT
+                reference: if any
               collected_by:
                 description: >-
                   Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller
                   App)
                 required: optional
-                usage: BPP
+                usage: BAP
                 reference: if any
       on_search:
         parent: true
@@ -21654,12 +21661,12 @@ x-attributes:
             descriptor:
               parent: true
               name:
-                description: name of service aggregator, as applicable
+                description: name of seller NP, as applicable
                 required: required
                 usage: ABC store
                 reference: if any
               short_desc:
-                description: description of service provider
+                description: description of seller NP
                 required: required
                 usage: At home Service Providers
                 reference: if any
@@ -21714,6 +21721,11 @@ x-attributes:
                   reference: if any
               items:
                 parent: true
+                id:
+                  description: identifier for a service or customization
+                  required: required
+                  usage: I1
+                  reference: if any
                 parent_item_id:
                   description: id of the parent item for a service or customization
                   required: required
@@ -21751,12 +21763,14 @@ x-attributes:
                   usage: '-'
                   reference: if any
                 cancellation_terms:
-                  description: cancellation terms applicable on cancellation of the item
+                  description: cancellation terms applicable on cancellation of the service
                   required: required
                   usage: '-'
                   reference: if any
                 category_ids:
-                  description: category id for the item as per taxonomy
+                  description: >-
+                    category id for the item as per taxonomy or customization id
+                    (categories/id) for customizations
                   required: required
                   usage: SRV10-1000
                   reference: if any
@@ -21769,7 +21783,9 @@ x-attributes:
                   usage: '1'
                   reference: if any
                 location_ids:
-                  description: location ids of the service provider
+                  description: >-
+                    location ids of the service provider where this service is
+                    available
                   required: required
                   usage: L1
                   reference: if any
@@ -21805,7 +21821,7 @@ x-attributes:
                 parent: true
                 creds:
                   description: credentials of the seller
-                  required: required for exports
+                  required: optional
                   usage: '-'
                   reference: if any
                 id:
@@ -21945,26 +21961,35 @@ x-attributes:
                 required: required
                 usage: P1
                 reference: if any
+              locations:
+                description: >-
+                  mandatory only if provider.locations was returned in
+                  /on_search
+                required: optional
+                usage: '-'
+                reference: if any
             items:
               parent: true
               id:
-                description: item id i.e. the id of the service or customization
+                description: item id i.e. the id of the selected service or customization
                 required: required
                 usage: I2
                 reference: if any
               parent_item_id:
-                description: parent item id of the service or customization
+                description: id of the parent item for selected service or customization
                 required: required for customizations
                 usage: I1
                 reference: if any
               location_ids:
-                description: location id of the selected service provider
+                description: location id of the selected service provider location
                 required: required
                 usage: L1
                 reference: if any
               category_ids:
-                description: category ids of the selected service
-                required: required
+                description: >-
+                  category id for the item as per taxonomy or customization id
+                  (categories/id) for customizations
+                required: required for customizations
                 usage: C1
                 reference: if any
               quantity:
@@ -22016,6 +22041,14 @@ x-attributes:
                       required: required
                       usage: '2023-11-16T10:30:00Z'
                       reference: if any
+            payments:
+              type:
+                description: >-
+                  selected payment mode by which buyer would like to pay, enum -
+                  'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+                required: required
+                usage: PRE-FULFILLMENT
+                reference: if any
       on_select:
         parent: true
         message:
@@ -22031,14 +22064,14 @@ x-attributes:
             items:
               parent: true
               id:
-                description: item id i.e. the id of the service or customization
+                description: item id i.e. the id of the selected service or customization
                 required: required
                 usage: I2
                 reference: if any
               parent_item_id:
-                description: parent item id of the service or customization
+                description: parent item id of the selected service or customization
                 required: required for customizations
-                usage: I1
+                usage: PI1
                 reference: if any
               location_ids:
                 description: location id of the selected service provider
@@ -22095,7 +22128,7 @@ x-attributes:
               stops:
                 time:
                   label:
-                    description: indicates the confirmed time slot
+                    description: indicates the time slot is confirmed
                     required: required
                     usage: confirmed
                     reference: if any
@@ -22125,16 +22158,22 @@ x-attributes:
               breakup:
                 title:
                   description: >-
-                    title of the service charges enum - Sofa Cleaning, tax,
-                    discount, convenience_fee, etc
+                    title of the service charges - Sofa Cleaning, tax, discount,
+                    convenience_fee, etc, can be customized
                   required: required
                   usage: Sofa Cleaning
                   reference: if any
                 price:
-                  description: price of the quote breakup type
-                  required: required
-                  usage: '474'
-                  reference: if any
+                  currency:
+                    description: currency of the price
+                    required: required
+                    usage: INR
+                    reference: if any
+                  value:
+                    description: price value of the quote breakup type
+                    required: required
+                    usage: '474.00'
+                    reference: if any
                 item:
                   id:
                     description: item/fulfillment id for which this charge is applicable
@@ -22150,8 +22189,8 @@ x-attributes:
                   title:
                     type:
                       description: >-
-                        type of charge - item, customization, discount, tax,
-                        misc
+                        type of charge - enums (item, customization, discount,
+                        tax, misc)
                       required: required
                       usage: item
                       reference: if any
@@ -22162,13 +22201,15 @@ x-attributes:
                 reference: if any
             payments:
               type:
-                description: Preferred payment method chosen by the buyer
-                usage: ON-FULFILLMENT
-                reference: if any
+                description: >-
+                  selected payment mode by which buyer would like to pay, enum -
+                  'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
                 required: required
+                usage: PRE-FULFILLMENT
+                reference: if any
               collected_by:
-                description: Indicates who is collecting the payment
-                usage: BPP
+                description: Indicates who is collecting the payment (BAP,BPP)
+                usage: BAP
                 reference: if any
                 required: required
       init:
@@ -22177,14 +22218,96 @@ x-attributes:
           parent: true
           order:
             parent: true
+            items:
+              parent: true
+              id:
+                description: item id i.e. the id of the selected service or customization
+                required: required
+                usage: I2
+                reference: if any
+              parent_item_id:
+                description: parent item id of the selected service or customization
+                required: required for customizations
+                usage: PI1
+                reference: if any
+              location_ids:
+                description: location id of the selected service provider
+                required: required
+                usage: L1
+                reference: if any
+              category_ids:
+                description: category ids of the selected service
+                required: required
+                usage: C1
+                reference: if any
+              quantity:
+                selected:
+                  count:
+                    description: >-
+                      number of items selected e.g. number of sofas to be
+                      cleaned
+                    required: required
+                    usage: '1'
+                    reference: if any
+              tags:
+                description: identifier tag for customizations
+                required: required for customizations
+                usage: '-'
+                reference: if any
+              fulfillment_ids:
+                description: >-
+                  fulfillment id of the service mapped to the id provided in
+                  fulfillments array
+                required: required
+                usage: F1
+                reference: if any
             billing:
-              description: >-
-                billing details of the marketplace ( service provider ) for
-                invoicing;
-              required: required
-              usage: '-'
-              reference: if any
+              parent: true
+              billing:
+                description: >-
+                  billing details of the marketplace ( service provider ) for
+                  invoicing;
+                required: required
+                usage: '-'
+                reference: if any
+              phone:
+                required: required
+                description: Describes the phone information of an entity
+                reference: if any
+                usage: '9886098860'
+              email:
+                required: optional
+                description: Email address of the contact
+                reference: if any
+                usage: nobody@nomail.com
+              name:
+                required: required
+                description: Describes a person name as any individual
+                reference: if any
+                usage: ONDC buyer
+              tax_id:
+                required: required
+                description: Describes tax id
+                reference: if any
+                usage: 22AAAAA0000A1Z5
+              state:
+                name:
+                  required: required
+                  description: Describes the state information of an entity
+                  reference: if any
+                  usage: Karnataka
+              city:
+                name:
+                  required: required
+                  description: Describes the city information of an entity
+                  reference: if any
+                  usage: Bengaluru
             provider:
+              id:
+                description: id of the provider chosen for the service
+                required: required
+                usage: P1
+                reference: if any
               locations:
                 description: >-
                   mandatory only if provider.locations was returned in
@@ -22193,19 +22316,278 @@ x-attributes:
                 usage: '-'
                 reference: if any
             fulfillments:
+              parent: true
+              type:
+                description: type of fulfillment mode selected from the catalog
+                required: required
+                usage: Home-Service
+                reference: if any
               id:
-                description: >-
-                  fulfillment_id from /on_search corresponding to appropriate
-                  type
+                description: fulfillment id generated by the seller NP
                 required: required
                 usage: F1
                 reference: if any
+              stops:
+                location:
+                  gps:
+                    description: >-
+                      service location gps coordinates where service needs to be
+                      provided, should be atleast 6 digit decimal precision,
+                      should be same as in search request
+                    required: required
+                    usage: 12.4535445,77.9283792
+                    reference: if any
+                  address:
+                    description: full address where service needs to be provided
+                    required: required
+                    usage: 'My House #, My buildin'
+                    reference: if any
+                  city:
+                    name:
+                      description: name of the city where service is being availed
+                      required: required
+                      usage: Bengaluru
+                      reference: if any
+                  country:
+                    name:
+                      description: name of the country where service is being availed
+                      required: required
+                      usage: IND
+                      reference: if any
+                  area_code:
+                    description: area code where service is being availed
+                    required: required
+                    usage: '560001'
+                    reference: if any
+                  state:
+                    name:
+                      description: name of the state where service is being availed
+                      required: required
+                      usage: Karnataka
+                      reference: if any
+                contact:
+                  phone:
+                    description: phone number of the customer
+                    required: required
+                    usage: '9886098860'
+                    reference: if any
+                time:
+                  label:
+                    description: indicates the time slot is confirmed
+                    required: required
+                    usage: confirmed
+                    reference: if any
+                  days:
+                    description: day on which the service is confirmed
+                    required: required
+                    usage: '4'
+                    reference: if any
+                  range:
+                    start:
+                      description: start time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
+            payments:
+              type:
+                description: >-
+                  selected payment mode by which buyer would like to pay, enum -
+                  'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+                required: required
+                usage: PRE-FULFILLMENT
+                reference: if any
+              collected_by:
+                description: Indicates who is collecting the payment (BAP,BPP)
+                usage: BAP
+                reference: if any
+                required: required
       on_init:
         parent: true
         message:
           parent: true
           order:
             parent: true
+            items:
+              parent: true
+              id:
+                description: item id i.e. the id of the selected service or customization
+                required: required
+                usage: I2
+                reference: if any
+              parent_item_id:
+                description: parent item id of the selected service or customization
+                required: required for customizations
+                usage: PI1
+                reference: if any
+              location_ids:
+                description: location id of the selected service provider
+                required: required
+                usage: L1
+                reference: if any
+              category_ids:
+                description: category ids of the selected service
+                required: required
+                usage: C1
+                reference: if any
+              quantity:
+                selected:
+                  count:
+                    description: >-
+                      number of items selected e.g. number of sofas to be
+                      cleaned
+                    required: required
+                    usage: '1'
+                    reference: if any
+              tags:
+                description: identifier tag for customizations
+                required: required for customizations
+                usage: '-'
+                reference: if any
+              fulfillment_ids:
+                description: >-
+                  fulfillment id of the service mapped to the id provided in
+                  fulfillments array
+                required: required
+                usage: F1
+                reference: if any
+            billing:
+              parent: true
+              billing:
+                description: >-
+                  billing details of the marketplace ( service provider ) for
+                  invoicing;
+                required: required
+                usage: '-'
+                reference: if any
+              phone:
+                required: required
+                description: Describes the phone information of an entity
+                reference: if any
+                usage: '9886098860'
+              email:
+                required: optional
+                description: Email address of the contact
+                reference: if any
+                usage: nobody@nomail.com
+              name:
+                required: required
+                description: Describes a person name as any individual
+                reference: if any
+                usage: ONDC buyer
+              tax_id:
+                required: required
+                description: Describes tax id
+                reference: if any
+                usage: 22AAAAA0000A1Z5
+              state:
+                name:
+                  required: required
+                  description: Describes the state information of an entity
+                  reference: if any
+                  usage: Karnataka
+              city:
+                name:
+                  required: required
+                  description: Describes the city information of an entity
+                  reference: if any
+                  usage: Bengaluru
+            provider:
+              id:
+                description: id of the provider chosen for the service
+                required: required
+                usage: P1
+                reference: if any
+            locations:
+              id:
+                description: >-
+                  mandatory only if provider.locations was returned in
+                  /on_search
+                required: optional
+                usage: L1
+                reference: if any
+            fulfillments:
+              parent: true
+              type:
+                description: type of fulfillment mode selected from the catalog
+                required: required
+                usage: Home-Service
+                reference: if any
+              id:
+                description: fulfillment id generated by the seller NP
+                required: required
+                usage: F1
+                reference: if any
+              stops:
+                location:
+                  gps:
+                    description: >-
+                      service location gps coordinates where service needs to be
+                      provided, should be atleast 6 digit decimal precision,
+                      should be same as in search request
+                    required: required
+                    usage: 12.4535445,77.9283792
+                    reference: if any
+                  address:
+                    description: full address where service needs to be provided
+                    required: required
+                    usage: 'My House #, My buildin'
+                    reference: if any
+                  city:
+                    name:
+                      description: name of the city where service is being availed
+                      required: required
+                      usage: Bengaluru
+                      reference: if any
+                  country:
+                    name:
+                      description: name of the country where service is being availed
+                      required: required
+                      usage: IND
+                      reference: if any
+                  area_code:
+                    description: area code where service is being availed
+                    required: required
+                    usage: '560001'
+                    reference: if any
+                  state:
+                    name:
+                      description: name of the state where service is being availed
+                      required: required
+                      usage: Karnataka
+                      reference: if any
+                contact:
+                  phone:
+                    description: phone number of the customer
+                    required: required
+                    usage: '9886098860'
+                    reference: if any
+                time:
+                  label:
+                    description: indicates the time slot is confirmed
+                    required: required
+                    usage: confirmed
+                    reference: if any
+                  days:
+                    description: day on which the service is confirmed
+                    required: required
+                    usage: '4'
+                    reference: if any
+                  range:
+                    start:
+                      description: start time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T09:30:00Z'
+                      reference: if any
+                    end:
+                      description: end time of the time slot chosen for the service
+                      required: required
+                      usage: '2023-11-16T10:30:00Z'
+                      reference: if any
             quote:
               parent: true
               quote:
@@ -22228,13 +22610,23 @@ x-attributes:
                   reference: if any
             payments:
               parent: true
+              id:
+                description: payment id
+                required: required
+                usage: P1
+                reference: if any
               type:
                 description: >-
-                  stage when fulfillment will be done by service provider, enum
-                  - "PRE-FULFILLMENT", "ON-FULFILLMENT", "POST-FULFILLMENT"
+                  selected payment mode by which buyer would like to pay, enum -
+                  'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
                 required: required
                 usage: PRE-FULFILLMENT
                 reference: if any
+              collected_by:
+                description: Indicates who is collecting the payment (BAP,BPP)
+                usage: BAP
+                reference: if any
+                required: required
               params:
                 amount:
                   description: amount as per the quote total value
@@ -22256,6 +22648,42 @@ x-attributes:
                   required: required
                   usage: '-'
                   reference: if any
+              tags:
+                parent: true
+                Settlement_Details:
+                  description: >-
+                    tags for settlment details provided to counter party
+                    collecting the payment for settlement
+                  usage: '-'
+                  reference: if any
+                  required: optional
+                Buyer_Finder_Fee:
+                  description: tags for buyer finder fee type and amount
+                  usage: '-'
+                  reference: if any
+                  required: required
+            xinput:
+              parent: true
+              xinput:
+                description: >-
+                  This can be utilized if the service provider wishes to verify
+                  any mandatory requirements checklist at the consumer's end for
+                  the service to be completed.
+                usage: '-'
+                reference: if any
+                required: optional
+              form:
+                description: Form url and mimetype provided by the service provider
+                usage: '-'
+                reference: if any
+                required: required
+              required:
+                description: >-
+                  Specifies whether it is mandatory to return the form provided
+                  by the provider.
+                usage: '-'
+                reference: if any
+                required: required
       confirm:
         parent: true
         message:

@@ -9,26 +9,31 @@ message:
         required: required
         usage: "P1"
         reference: if any
+      locations:
+        description: mandatory only if provider.locations was returned in /on_search
+        required: optional
+        usage: "-"
+        reference: if any
     items:
       parent: true
       id:
-        description: item id i.e. the id of the service or customization
+        description: item id i.e. the id of the selected service or customization
         required: required
         usage: "I2"
         reference: if any
       parent_item_id:
-        description: parent item id of the service or customization
+        description: id of the parent item for selected service or customization
         required: required for customizations
         usage: "I1"
         reference: if any
       location_ids:
-        description: location id of the selected service provider
+        description: location id of the selected service provider location
         required: required
         usage: "L1"
         reference: if any
       category_ids:
-        description: category ids of the selected service
-        required: required
+        description: category id for the item as per taxonomy or customization id (categories/id) for customizations
+        required: required for customizations
         usage: "C1"
         reference: if any
       quantity:
@@ -78,3 +83,9 @@ message:
               required: required
               usage: "2023-11-16T10:30:00Z"
               reference: if any
+    payments:
+      type:
+        description: selected payment mode by which buyer would like to pay, enum - 'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+        required: required
+        usage: "PRE-FULFILLMENT"
+        reference: if any

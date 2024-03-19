@@ -77,12 +77,12 @@ message:
     descriptor:
       parent: true
       name:
-        description: name of service aggregator, as applicable
+        description: name of seller NP, as applicable
         required: required
         usage: "ABC store"
         reference: if any
       short_desc:
-        description: description of service provider
+        description: description of seller NP
         required: required
         usage: "At home Service Providers"
         reference: if any
@@ -127,6 +127,11 @@ message:
           reference: if any
       items:
         parent: true
+        id: 
+          description: identifier for a service or customization
+          required: required
+          usage: I1
+          reference: if any
         parent_item_id:
           description: id of the parent item for a service or customization
           required: required
@@ -153,12 +158,12 @@ message:
           usage: "-"
           reference: if any
         cancellation_terms:
-          description: cancellation terms applicable on cancellation of the item
+          description: cancellation terms applicable on cancellation of the service
           required: required
           usage: "-"
           reference: if any
         category_ids:
-          description: category id for the item as per taxonomy 
+          description: category id for the item as per taxonomy or customization id (categories/id) for customizations
           required: required
           usage: "SRV10-1000"
           reference: if any  
@@ -168,7 +173,7 @@ message:
           usage: "1"
           reference: if any  
         location_ids:
-          description: location ids of the service provider
+          description: location ids of the service provider where this service is available
           required: required
           usage: "L1"
           reference: if any  
@@ -204,7 +209,7 @@ message:
         parent: true
         creds:
           description: credentials of the seller
-          required: required for exports
+          required: optional
           usage: "-"
           reference: if any
         id:

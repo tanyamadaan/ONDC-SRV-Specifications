@@ -83,8 +83,13 @@ message:
               usage: "1,2,3,4,5,6,7"
               reference: if any
     payment:
+      type:
+        description: payment mode by which buyer would like to pay, enum - 'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+        required: optional
+        usage: "PRE-FULFILLMENT"
+        reference: if any
       collected_by:
         description: Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller App)
         required: optional
-        usage: "BPP"
+        usage: "BAP"
         reference: if any

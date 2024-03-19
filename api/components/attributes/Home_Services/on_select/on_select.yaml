@@ -11,14 +11,14 @@ message:
     items:
       parent: true
       id:
-        description: item id i.e. the id of the service or customization
+        description: item id i.e. the id of the selected service or customization
         required: required
         usage: "I2"
         reference: if any
       parent_item_id:
-        description: parent item id of the service or customization
+        description: parent item id of the selected service or customization
         required: required for customizations
-        usage: "I1"
+        usage: "PI1"
         reference: if any
       location_ids:
         description: location id of the selected service provider
@@ -69,7 +69,7 @@ message:
       stops:
         time:
           label:
-            description: indicates the confirmed time slot
+            description: indicates the time slot is confirmed
             required: required
             usage: "confirmed"
             reference: if any
@@ -98,15 +98,21 @@ message:
         reference: if any
       breakup:
         title:
-          description: title of the service charges enum - Sofa Cleaning, tax, discount, convenience_fee, etc
+          description: title of the service charges - Sofa Cleaning, tax, discount, convenience_fee, etc, can be customized
           required: required
           usage: "Sofa Cleaning"
           reference: if any
         price:
-          description: price of the quote breakup type
-          required: required
-          usage: "474"
-          reference: if any
+          currency:
+            description: currency of the price
+            required: required
+            usage: "INR"
+            reference: if any
+          value:
+            description: price value of the quote breakup type
+            required: required
+            usage: "474.00"
+            reference: if any
         item:
           id:
             description: item/fulfillment id for which this charge is applicable
@@ -121,7 +127,7 @@ message:
         tags:
           title:
             type:
-                description: type of charge - item, customization, discount, tax, misc
+                description: type of charge - enums (item, customization, discount, tax, misc)
                 required: required
                 usage: "item"
                 reference: if any
@@ -132,12 +138,12 @@ message:
           reference: if any
     payments:
       type:
-        description: Preferred payment method chosen by the buyer
-        usage: "ON-FULFILLMENT"
-        reference: if any
+        description: selected payment mode by which buyer would like to pay, enum - 'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
         required: required
+        usage: "PRE-FULFILLMENT"
+        reference: if any
       collected_by:
-        description: Indicates who is collecting the payment
-        usage: "BPP"
+        description: Indicates who is collecting the payment (BAP,BPP)
+        usage: "BAP"
         reference: if any
         required: required
