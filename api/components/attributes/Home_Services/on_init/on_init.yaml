@@ -237,7 +237,7 @@ message:
     xinput:
         parent: true
         xinput:
-          description: This can be utilized if the service provider wishes to verify any mandatory requirements checklist at the consumer's end for the service to be completed.
+          description: Contains any additional or extended inputs required to confirm an order. This is typically a Form Input. This can be utilized if the service provider wishes to verify any mandatory requirements checklist at the consumer's end for the service to be completed.
           usage: "-"
           reference: if any
           required: optional
@@ -248,6 +248,6 @@ message:
           required: required
         'required':
           description: Specifies whether it is mandatory to return the form provided by the provider.
-          usage: "-"
+          usage: "true"
           reference: if any
           required: required
