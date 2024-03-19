@@ -22649,7 +22649,6 @@ x-attributes:
                   usage: '-'
                   reference: if any
               tags:
-                parent: true
                 Settlement_Details:
                   description: >-
                     tags for settlment details provided to counter party
