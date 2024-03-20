@@ -79,7 +79,7 @@ async function validateExamples(exampleSets, schemaMap) {
           );
           if (result) {
             console.log("error[Example] :", `${example + "/" + api}`);
-            return (hasTrueResult = true);
+            // return (hasTrueResult = true);
           }
         }
     }
@@ -218,7 +218,7 @@ async function getSwaggerYaml(example_set, outputPath) {
     // if (!process.argv.includes(SKIP_VALIDATION.examples) && !hasTrueResult) {
     //   hasTrueResult = await validateExamples(exampleSets, schemaMap);
     // }
-    // //move to separate files
+    //move to separate files
     // if (!process.argv.includes(SKIP_VALIDATION.enums) && !hasTrueResult) {
     //   hasTrueResult = await validateEnumsTags(enums, schemaMap);
     // }

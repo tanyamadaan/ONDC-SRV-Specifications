@@ -156,7 +156,7 @@ value:
                   - url: https://abc.com/images/207.png
                 media:
                   - mimetype: video/mp4
-                    url: video_url
+                    url: https://video_url.com
               price:
                 currency: INR
                 minimum_value: "2500.00"

@@ -3465,7 +3465,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                           media:
                             - mimetype: video/mp4
-                              url: video_url
+                              url: https://video_url.com
                         creator:
                           descriptor:
                             name: nobroker
@@ -3927,8 +3927,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2022-17-10T00:00:00.000Z'
+                            end: '2022-11-20T00:00:00.000Z'
                 quote:
                   price:
                     currency: INR
@@ -3942,7 +3942,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -3964,7 +3964,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -3983,7 +3983,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4002,7 +4002,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4188,7 +4188,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -4210,7 +4210,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4229,7 +4229,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4248,7 +4248,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4403,7 +4403,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -4418,7 +4418,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4430,7 +4430,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4442,7 +4442,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4493,9 +4493,9 @@ x-flows:
                 updated_at: '2023-02-03T09:30:00.000Z'
                 xinput:
                   form:
-                    url: https//abc.com/checklist
+                    url: https://abc.com/checklist
                     mimetype: text/html
-                    submission_id: xxxxxxxx
+                    submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
@@ -4624,7 +4624,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -4646,7 +4646,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4665,7 +4665,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4684,7 +4684,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4895,7 +4895,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -4917,7 +4917,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4936,7 +4936,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -4955,7 +4955,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5142,7 +5142,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -5164,7 +5164,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5183,7 +5183,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5202,7 +5202,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5390,7 +5390,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -5412,7 +5412,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5431,7 +5431,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5450,7 +5450,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5627,7 +5627,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -5649,7 +5649,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5668,7 +5668,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5687,7 +5687,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5916,7 +5916,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -5938,7 +5938,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5957,7 +5957,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5976,7 +5976,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -5992,7 +5992,7 @@ x-flows:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
             error:
-              code: 90001
+              code: '90001'
               message: Schedule not available
       - summary: Buyer selects the updated schedule for the home service
         api: select
@@ -6422,7 +6422,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                           media:
                             - mimetype: video/mp4
-                              url: video_url
+                              url: https://video_url.com
                         price:
                           currency: INR
                           minimum_value: '199.00'
@@ -8155,9 +8155,9 @@ x-flows:
                 updated_at: '2023-02-03T09:30:00.000Z'
                 xinput:
                   form:
-                    url: https//abc.com/checklist
+                    url: https://abc.com/checklist
                     mimetype: text/html
-                    submission_id: xxxxxxxxxx
+                    submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
                     status: SUCCESS
       - summary: Seller accepts the order
         api: on_confirm
@@ -9314,7 +9314,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -9336,7 +9336,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -9355,7 +9355,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -9374,7 +9374,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -9622,8 +9622,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2022-17-10T00:00:00.000Z'
+                            end: '2022-11-20T00:00:00.000Z'
                 quote:
                   price:
                     currency: INR
@@ -10054,9 +10054,9 @@ x-flows:
                 updated_at: '2023-02-03T09:30:00.000Z'
                 xinput:
                   form:
-                    url: https//abc.com/checklist
+                    url: https://abc.com/checklist
                     mimetype: text/html
-                    submission_id: xxxxxxxx
+                    submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
@@ -10574,7 +10574,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                             measure:
                               type: constant
                               unit: wall
@@ -11194,7 +11194,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                             measure:
                               type: constant
                               unit: wall
@@ -11232,7 +11232,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -11270,7 +11270,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '2'
+                            count: 2
                             measure:
                               type: constant
                               unit: wall
@@ -11308,7 +11308,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -11346,7 +11346,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -11384,7 +11384,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -11678,8 +11678,8 @@ x-flows:
                         time:
                           label: rejected
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                 quote:
                   price:
                     currency: INR
@@ -11722,7 +11722,7 @@ x-flows:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
             error:
-              code: 90001
+              code: '90001'
               message: Schedule not available
       - summary: Buyer selects the updated schedule for the home service
         api: select
@@ -11919,7 +11919,7 @@ x-flows:
               bpp_id: sellerapp.com
               bpp_uri: https://sellerapp.com/services
               transaction_id: 9fdb667c-76c6-456a-9742-ba9caa5eb765
-              message_id: '1755281254864'
+              message_id: ea89883a-57ff-44de-87fa-66b07c8d25d9
               timestamp: '2023-11-08T22:00:55.000Z'
               ttl: PT30S
             message:
@@ -11987,7 +11987,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -12009,7 +12009,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '0.00'
@@ -12028,7 +12028,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '0.00'
@@ -12047,7 +12047,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '0.00'
@@ -12324,7 +12324,7 @@ x-flows:
                         id: I1
                         quantity:
                           selected:
-                            count: '1'
+                            count: 1
                           measure:
                             unit: seats
                             value: '2'
@@ -12368,7 +12368,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '0.00'
@@ -12406,7 +12406,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '0.00'
@@ -12425,7 +12425,7 @@ x-flows:
                         id: I1
                         quantity:
                           allocated:
-                            count: '1'
+                            count: 1
                         price:
                           currency: INR
                           value: '0.00'
@@ -13977,9 +13977,9 @@ x-examples:
                   updated_at: '2023-02-03T09:30:00.000Z'
                   xinput:
                     form:
-                      url: https//abc.com/checklist
+                      url: https://abc.com/checklist
                       mimetype: text/html
-                      submission_id: xxxxxxxx
+                      submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
           - summary: Buyer confirm the order for the service
             description: Buyer makes the payment and creates the order
             value:
@@ -14074,7 +14074,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -14089,7 +14089,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -14101,7 +14101,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -14113,7 +14113,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -14164,9 +14164,9 @@ x-examples:
                   updated_at: '2023-02-03T09:30:00.000Z'
                   xinput:
                     form:
-                      url: https//abc.com/checklist
+                      url: https://abc.com/checklist
                       mimetype: text/html
-                      submission_id: xxxxxxxx
+                      submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
           - summary: Buyer confirm the order for the service and customizations
             description: Buyer makes the payment and creates the order and customizations
             value:
@@ -14576,9 +14576,9 @@ x-examples:
                   updated_at: '2023-02-03T09:30:00.000Z'
                   xinput:
                     form:
-                      url: https//abc.com/checklist
+                      url: https://abc.com/checklist
                       mimetype: text/html
-                      submission_id: xxxxxxxxxx
+                      submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
                       status: SUCCESS
       update:
         examples:
@@ -14866,7 +14866,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                               measure:
                                 type: constant
                                 unit: wall
@@ -14904,7 +14904,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -14942,7 +14942,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '2'
+                              count: 2
                               measure:
                                 type: constant
                                 unit: wall
@@ -14980,7 +14980,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -15018,7 +15018,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -15056,7 +15056,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -15348,7 +15348,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                             media:
                               - mimetype: video/mp4
-                                url: video_url
+                                url: https://video_url.com
                           creator:
                             descriptor:
                               name: nobroker
@@ -15947,7 +15947,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                             media:
                               - mimetype: video/mp4
-                                url: video_url
+                                url: https://video_url.com
                           price:
                             currency: INR
                             minimum_value: '199.00'
@@ -16243,8 +16243,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2022-17-10T00:00:00.000Z'
+                              end: '2022-11-20T00:00:00.000Z'
                   quote:
                     price:
                       currency: INR
@@ -16352,8 +16352,8 @@ x-examples:
                           time:
                             label: rejected
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                   quote:
                     price:
                       currency: INR
@@ -16396,7 +16396,7 @@ x-examples:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
               error:
-                code: 90001
+                code: '90001'
                 message: Schedule not available
           - summary: Seller confirms the schedule and returns the quote for service
             description: Seller confirms the schedule and returns the quote for service
@@ -16444,8 +16444,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2022-17-10T00:00:00.000Z'
+                              end: '2022-11-20T00:00:00.000Z'
                   quote:
                     price:
                       currency: INR
@@ -16459,7 +16459,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -16481,7 +16481,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -16500,7 +16500,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -16519,7 +16519,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -16954,7 +16954,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -16976,7 +16976,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -16995,7 +16995,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -17014,7 +17014,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -17030,7 +17030,7 @@ x-examples:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
               error:
-                code: 90001
+                code: '90001'
                 message: Schedule not available
       on_init:
         examples:
@@ -17272,7 +17272,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -17294,7 +17294,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -17313,7 +17313,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -17332,7 +17332,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18106,7 +18106,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -18128,7 +18128,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18147,7 +18147,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18166,7 +18166,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18788,7 +18788,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -18810,7 +18810,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18829,7 +18829,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18848,7 +18848,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19021,7 +19021,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -19043,7 +19043,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19062,7 +19062,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19081,7 +19081,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19259,7 +19259,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -19281,7 +19281,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19300,7 +19300,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19319,7 +19319,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19931,7 +19931,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -19953,7 +19953,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19972,7 +19972,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -19991,7 +19991,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -20172,7 +20172,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -20194,7 +20194,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -20213,7 +20213,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -20232,7 +20232,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -20574,7 +20574,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                               measure:
                                 type: constant
                                 unit: wall
@@ -20924,7 +20924,7 @@ x-examples:
                 bpp_id: sellerapp.com
                 bpp_uri: https://sellerapp.com/services
                 transaction_id: 9fdb667c-76c6-456a-9742-ba9caa5eb765
-                message_id: '1755281254864'
+                message_id: ea89883a-57ff-44de-87fa-66b07c8d25d9
                 timestamp: '2023-11-08T22:00:55.000Z'
                 ttl: PT30S
               message:
@@ -20989,7 +20989,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -21011,7 +21011,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '0.00'
@@ -21030,7 +21030,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '0.00'
@@ -21049,7 +21049,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '0.00'
@@ -21228,7 +21228,7 @@ x-examples:
                           id: I1
                           quantity:
                             selected:
-                              count: '1'
+                              count: 1
                             measure:
                               unit: seats
                               value: '2'
@@ -21272,7 +21272,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '0.00'
@@ -21310,7 +21310,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '0.00'
@@ -21329,7 +21329,7 @@ x-examples:
                           id: I1
                           quantity:
                             allocated:
-                              count: '1'
+                              count: 1
                           price:
                             currency: INR
                             value: '0.00'
@@ -23097,8 +23097,8 @@ x-attributes:
                   reference: if any
                   required: required
                 submission_id:
-                  description: id generated after submitting the form
-                  usage: '19490302234'
+                  description: unique id generated after submitting the form (UUID format)
+                  usage: 65fe13c2-d306-4ef1-8c25-fa126c134b67
                   reference: if any
                   required: required
                 status:
@@ -23542,8 +23542,8 @@ x-attributes:
                   reference: if any
                   required: required
                 submission_id:
-                  description: id generated after submitting the form
-                  usage: '19490302234'
+                  description: unique id generated after submitting the form (UUID format)
+                  usage: 65fe13c2-d306-4ef1-8c25-fa126c134b67
                   reference: if any
                   required: required
                 status:
