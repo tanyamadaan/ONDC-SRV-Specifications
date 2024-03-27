@@ -60,9 +60,8 @@ value:
               time:
                 label: rejected
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
-
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
       quote:
         price:
           currency: INR
@@ -105,5 +104,5 @@ value:
         - type: PRE-FULFILLMENT
           collected_by : BAP
   error:
-    code: 90001
+    code: '90001'
     message: Schedule not available

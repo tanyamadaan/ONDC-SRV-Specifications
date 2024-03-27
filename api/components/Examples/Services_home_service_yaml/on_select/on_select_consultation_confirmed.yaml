@@ -44,8 +44,8 @@ value:
               time:
                 label: confirmed
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                    start: '2022-17-10T00:00:00.000Z'
+                    end: '2022-11-20T00:00:00.000Z'
       quote:
         price:
           currency: INR

@@ -111,7 +111,7 @@ value:
               id: I1
               quantity:
                 selected:
-                  count: '1'
+                  count: 1
                 measure:
                   unit: seats
                   value: '2'
@@ -133,7 +133,7 @@ value:
               id: I1
               quantity:
                 allocated:
-                  count: '1'
+                  count: 1
               price:
                 currency: INR
                 value: '474'
@@ -152,7 +152,7 @@ value:
               id: I1
               quantity:
                 allocated:
-                  count: '1'
+                  count: 1
               price:
                 currency: INR
                 value: '474'
@@ -171,7 +171,7 @@ value:
               id: I1
               quantity:
                 allocated:
-                  count: '1'
+                  count: 1
               price:
                 currency: INR
                 value: '474'

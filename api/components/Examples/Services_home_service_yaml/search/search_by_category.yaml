@@ -18,9 +18,8 @@ value:
     ttl: PT30S
   message:
     intent:
-      item:
-        category:
-          id: SRV11-*
+      category:
+        id: SRV11-*
       fulfillment:
         type: Home-Service
         stops:

@@ -1,6 +1,6 @@
-summary: Returns the catalog + customizations (Home cooking services)  + available schedule 
-description: Returns the catalog + customizations (Home cooking services) + available schedule 
-value:
+summary: Returns the catalog + customizations (Cleaning Services)  + available schedule 
+description: Returns the catalog + customizations (Cleaning Services) + available schedule 
+value:  
   context:
     domain: ONDC:SRV11
     location:
@@ -14,8 +14,8 @@ value:
     bap_uri: https://buyerapp.com/ondc
     bpp_id: sellerapp.com
     bpp_uri: https://sellerapp.com/ondc
-    transaction_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
-    message_id: ea89883a-57ff-44de-87fa-66b07c8d25d9
+    transaction_id: T1
+    message_id: M1
     timestamp: '2024-03-04T22:00:30.000Z'
     ttl: PT30S
   message:
@@ -48,13 +48,13 @@ value:
             images:
               - url: https://abc.com/images/1-shop-img
           rating: "4.4"
-          ttl: PT1D
+          ttl: P1D
           time:
             label: validity
             range:
               start: '2024-03-04T00:00:00.000Z'
               end: '2024-03-09T19:00:00.000Z'
-            days: "4,5"
+            days: 4,5
             schedule:
               frequency: PT1H
               holidays:
@@ -85,7 +85,7 @@ value:
           creds:
             - id: ESG-12345678
               type: Certificate
-              desc: Authorized 5 star cook
+              desc: Authorized 5 star Maid on demand service
               url: https://abcd.cdn.com/images/bage-img
           tags:
             - descriptor:
@@ -112,12 +112,15 @@ value:
           categories:
             - id: C1
               descriptor:
-                name: People
-                code: PEOPLE
+                name: BHK
+                code: BHK
               tags:
                 - descriptor:
                     code: Selection
                   list:
+                    - descriptor:
+                        code: max_selection
+                      value: "1"
                     - descriptor:
                         code: seq
                       value: "1"
@@ -126,115 +129,29 @@ value:
                       value: "true"
             - id: C2
               descriptor:
-                name: Meal
-                code: MEAL
+                name: Floors
+                code: FLOORS
               tags:
                 - descriptor:
-                    code: selection
+                    code: Selection
                   list:
                     - descriptor:
-                        code: seq
-                      value: "2"
-                    - descriptor:
-                        code: mandatory_selection
-                      value: "true"
-                    - descriptor:
-                        code: min_selection
+                        code: max_selection
                       value: "1"
                     - descriptor:
-                        code: max_selection
-                      value: "3"
-            - id: C21
-              parent_category_id: C2
-              descriptor:
-                name: Breakfast
-                code: BREAKFAST
-              tags:
-                - descriptor:
-                    code: schedule
-                  list:
-                    - descriptor:
-                        code: start_time
-                      value: 09:00
-                    - descriptor:
-                        code: end_time
-                      value: '11:00'
-                    - descriptor:
-                        code: frequency
-                      value: PT1H
-                    - descriptor:
-                        code: mandatory_selection
-                      value: "true"
-            - id: C22
-              parent_category_id: C2
-              descriptor:
-                name: Lunch
-                code: LUNCH
-              tags:
-                - descriptor:
-                    code: schedule
-                  list:
-                    - descriptor:
-                        code: start_time
-                      value: '12:00'
-                    - descriptor:
-                        code: end_time
-                      value: '15:00'
-                    - descriptor:
-                        code: frequency
-                      value: PT1H
-                    - descriptor:
-                        code: mandatory_selection
-                      value: "true"
-            - id: C23
-              parent_category_id: C2
-              descriptor:
-                name: Dinner
-                code: DINNER
-              tags:
-                - descriptor:
-                    code: schedule
-                  list:
-                    - descriptor:
-                        code: start_time
-                      value: '18:00'
-                    - descriptor:
-                        code: end_time
-                      value: '22:00'
-                    - descriptor:
-                        code: frequency
-                      value: PT1H
-                    - descriptor:
-                        code: mandatory_selection
-                      value: "true"
-            - id: C3
-              descriptor:
-                name: Dishes
-                code: CUISINES
-              tags:
-                - descriptor:
-                    code: selection
-                  list:
-                    - descriptor:
-                        code: mandatory_selection
-                      value: "true"
-                    - descriptor:
-                        code: min_selection
+                        code: seq
                       value: "2"
                     - descriptor:
-                        code: max_selection
-                      value: "12"
-                    - descriptor:
-                        code: seq
-                      value: "3"
+                        code: mandatory_selection
+                      value: "true"
           items:
             - id: I1
               parent_item_id: ""
               descriptor:
-                name: Cook - On Demand
+                name: Maid on Demand (Brooming, Mopping)
                 code: 5:other code
-                short_desc: Cook - On Demand
-                long_desc: Cook - On Demand
+                short_desc: Complete floor cleaning and sanitization
+                long_desc: Complete floor cleaning and sanitization
                 images:
                   - url: https://abc.com/images/207.png
                 media:
@@ -242,9 +159,9 @@ value:
                     url: https://video_url.com
               price:
                 currency: INR
-                minimum_value: "199.00"
+                minimum_value: "2500.00"
               category_ids:
-                - SRV11-xxxx
+                - SRV11-1010
               fulfillment_ids:
                 - "1"
               location_ids:
@@ -286,13 +203,13 @@ value:
                       value: "0.00"
                     - descriptor:
                         code: reschedule_within
-                      value: PT1D
+                      value: P1D
               time:
                 label: validity
                 range:
                   start: '2024-03-04T00:00:00.000Z'
-                  end: '2024-03-09T19:00:00.000Z'
-                days: "4,5"
+                  end: '2024-04-03T19:00:00.000Z'
+                days: 1,2,3,4,5,6,7
                 schedule:
                   frequency: PT1H
                   holidays:
@@ -313,24 +230,24 @@ value:
             - id: IC1
               parent_item_id: I1
               descriptor:
-                name: People
+                name: 1 BHK
                 code: "5: other code"
-                short_desc: No. of People
-                long_desc: No. of People
+                short_desc: 1 BHK
+                long_desc: 1 BHK
                 images:
                   - url: https://abc.com/images/207.png
               price:
                 currency: INR
-                minimum_value: "299.00"
+                minimum_value: "0.00"
               quantity:
                 unitized:
                   measure:
-                    unit: people
+                    unit: unit
                     value: "1"
-                minimum:
-                  value: "1"
                 maximum:
-                  value: "8"
+                  value: "1"
+              time:
+                duration: PT30M
               category_ids:
                 - C1
               tags:
@@ -343,15 +260,15 @@ value:
             - id: IC2
               parent_item_id: I1
               descriptor:
-                name: Sandwich
+                name: 2 BHK
                 code: "5: other code"
-                short_desc: Sandwich
-                long_desc: Sandwich
+                short_desc: 2 BHK
+                long_desc: 2 BHK
                 images:
                   - url: https://abc.com/images/207.png
               price:
                 currency: INR
-                minimum_value: "199"
+                minimum_value: "500.00"
               quantity:
                 unitized:
                   measure:
@@ -359,9 +276,10 @@ value:
                     value: "1"
                 maximum:
                   value: "1"
+              time:
+                duration: PT45M
               category_ids:
-                - C3
-                - C21
+                - C1
               tags:
                 - descriptor:
                     code: attribute
@@ -369,24 +287,18 @@ value:
                     - descriptor:
                         code: type
                       value: customization
-                    - descriptor:
-                        code: dish_type
-                      value: breakfast
-                    - descriptor:
-                        code: cuisine
-                      value: North_Indian
             - id: IC3
               parent_item_id: I1
               descriptor:
-                name: Dahi Ke Kebab
+                name: 3 BHK
                 code: "5: other code"
-                short_desc: Dahi Ke Kebab
-                long_desc: Dahi Ke Kebab
+                short_desc: 3 BHK
+                long_desc: 3 BHK
                 images:
                   - url: https://abc.com/images/207.png
               price:
                 currency: INR
-                minimum_value: "199"
+                minimum_value: "1000.00"
               quantity:
                 unitized:
                   measure:
@@ -394,9 +306,10 @@ value:
                     value: "1"
                 maximum:
                   value: "1"
+              time:
+                duration: PT1H
               category_ids:
-                - C3
-                - C22
+                - C1
               tags:
                 - descriptor:
                     code: attribute
@@ -404,24 +317,18 @@ value:
                     - descriptor:
                         code: type
                       value: customization
-                    - descriptor:
-                        code: dish_type
-                      value: Appetizers
-                    - descriptor:
-                        code: cuisine
-                      value: North_Indian
             - id: IC4
               parent_item_id: I1
               descriptor:
-                name: Dal Makhni
+                name: 1 Floor
                 code: "5: other code"
-                short_desc: Dal Makhni
-                long_desc: Dal Makhni
+                short_desc: 1 Floor
+                long_desc: 1 Floor
                 images:
                   - url: https://abc.com/images/207.png
               price:
                 currency: INR
-                minimum_value: "199"
+                minimum_value: "100.00"
               quantity:
                 unitized:
                   measure:
@@ -429,9 +336,10 @@ value:
                     value: "1"
                 maximum:
                   value: "1"
+              time:
+                duration: PT0M
               category_ids:
-                - C3
-                - C22
+                - C2
               tags:
                 - descriptor:
                     code: attribute
@@ -439,12 +347,6 @@ value:
                     - descriptor:
                         code: type
                       value: customization
-                    - descriptor:
-                        code: dish_type
-                      value: Main Course
-                    - descriptor:
-                        code: cuisine
-                      value: North_Indian
           offers:
             - id: offer-1
               descriptor:

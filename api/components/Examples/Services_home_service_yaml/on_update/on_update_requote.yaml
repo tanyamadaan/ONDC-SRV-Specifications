@@ -273,7 +273,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '1'
+                  count: 1
                   measure:
                     type: constant
                     unit: wall
