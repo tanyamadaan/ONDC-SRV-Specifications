@@ -3050,8 +3050,8 @@ x-enum:
         quote:
           breakup:
             title: &ref_2
-              - code: item
-                description: Sofa Cleaning
+              - code: service name
+                description: service name e.g. Sofa Cleaning, can be customized
                 reference: <PR/Issue/Discussion Links md format text>
               - code: tax
                 description: tax
@@ -3126,16 +3126,16 @@ x-enum:
             descriptor:
               code:
                 - code: Pending
-                  description: about the enum
+                  description: The initial state of the fulfillment.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: In-Transit
-                  description: about the enum
+                  description: The service provider is on the way.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: At-Location
-                  description: about the enum
+                  description: The service provider has reached the location.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: Completed
-                  description: about the enum
+                  description: The service has been completed.
                   reference: <PR/Issue/Discussion Links md format text>
         quote:
           breakup: *ref_4
@@ -3232,21 +3232,53 @@ x-tags:
                     The unit of measurement for the serviceability value, e.g.
                     km.
                   reference: <PR/Issue/Discussion Links md format text>
+        offers:
+          tags:
+            - code: offers_details
+              description: >-
+                This can be utilized to specify the minimum order value,
+                discount value, and other metadata related to the offer and its
+                application.
+              reference: <PR/Issue/Discussion Links md format text>
+              list:
+                - code: qualifier_min_value
+                  description: Minimum order value for the order to be applicable
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: max_benefit
+                  description: Maximum discount value applicable
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: discount_unit
+                  description: Unit of discount e.g. percent , amount
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: discount_value
+                  description: Discount value applicable
+                  reference: <PR/Issue/Discussion Links md format text>
   on_select:
     message:
       order:
         quote:
           breakup: &ref_7
             tags: &ref_10
-              - code: title
-                description: title tag
-                reference: <PR/Issue/Discussion Links md format text>
-                list:
-                  - code: type
-                    description: >-
-                      Depending upon the context, it can take the value of the
-                      discount, tax, misc or item type value.
-                    reference: <PR/Issue/Discussion Links md format text>
+              title:
+                - code: type
+                  description: the type of charge in the breakup
+                  reference: <PR/Issue/Discussion Links md format text>
+                  list:
+                    - code: item
+                      description: item/service level
+                      reference: <PR/Issue/Discussion Links md format text>
+                    - code: tax
+                      description: tax
+                      reference: <PR/Issue/Discussion Links md format text>
+                    - code: discount
+                      description: discount
+                      reference: <PR/Issue/Discussion Links md format text>
+                    - code: convenience_fee
+                      description: convenience_fee (fulfillment level)
+                      reference: <PR/Issue/Discussion Links md format text>
+                    - code: refund
+                      description: refund in case of cancellation
+                      reference: <PR/Issue/Discussion Links md format text>
   on_init:
     message: &ref_8
       order:

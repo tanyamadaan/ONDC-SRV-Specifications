@@ -1,7 +1,20 @@
 title:
-  - code: type
-    description: Depending upon the context, it can take the value of the discount, tax, misc or item type value.
-    reference: <PR/Issue/Discussion Links md format text>
+  type:
+      - code: item
+        description: item/service level 
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: tax
+        description: tax
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: discount
+        description: discount
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: convenience_fee
+        description: convenience_fee (fulfillment level)
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: refund
+        description: refund in case of cancellation
+        reference: <PR/Issue/Discussion Links md format text>
 Settlement_Details:
   - code: Counterparty
     description: Counterparty involved; Can be BAP/BPP
@@ -59,3 +72,17 @@ BAP_Terms:
   - code: finder_fee_amount
     description: The amount of the Buyer App’s fee, to be interpreted in conjunction with the “type” field. If the “type” is set to “Amount”, this value represents the fixed fee in INR. If the “type” is set to “percent”, this value represents the percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
+offers_details:
+  - code: qualifier_min_value
+    description: Minimum order value for the order to be applicable
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: max_benefit
+    description: Maximum discount value applicable
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: discount_unit
+    description: Unit of discount e.g. percent , amount
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: discount_value
+    description: Discount value applicable
+    reference: <PR/Issue/Discussion Links md format text>
+

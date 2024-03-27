@@ -1,7 +1,7 @@
 breakup:
   title:
-      - code: item
-        description: Sofa Cleaning
+      - code: service name
+        description: service name e.g. Sofa Cleaning, can be customized
         reference: <PR/Issue/Discussion Links md format text>
       - code: tax
         description: tax
