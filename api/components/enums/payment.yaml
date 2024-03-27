@@ -1,13 +1,13 @@
 payment:
   type:
-    - code: PRE-FULFILLMENT
-      description: about the enum
-      reference: <PR/Issue/Discussion Links md format text>
     - code: ON-FULFILLMENT
-      description: about the enum
+      description: Payment will be done on delivery.
+      reference: <PR/Issue/Discussion Links md format text>
+    - code: PRE-FULFILLMENT
+      description: Prepaid payment, i.e payment will be done during order confirmation.
       reference: <PR/Issue/Discussion Links md format text>
     - code: POST-FULFILLMENT
-      description: about the enum
+      description: Payment will be done after the delivery.
       reference: <PR/Issue/Discussion Links md format text>
   collected_by:
     - code: BAP

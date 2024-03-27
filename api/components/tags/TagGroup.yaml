@@ -1,7 +1,7 @@
 intent:
   tags:
     - code: BAP_Terms
-      description: Terms of BAP
+      description: The buyer terms, including the type and amount of the buyer finder fee, are communicated.
       reference: <PR/Issue/Discussion Links md format text>
       list:
         $ref: "./Tag.yaml#/BAP_Terms"
@@ -9,7 +9,7 @@ catalog:
   providers:
     tags:
       - code: serviceability
-        description: Serviceability Details
+        description: The provider's serviceability, indicating where and for which category they are able to provide their services, is specified here.
         reference: <PR/Issue/Discussion Links md format text>
         list:
           $ref: "./Tag.yaml#/serviceability"

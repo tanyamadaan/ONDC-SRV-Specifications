@@ -2986,6 +2986,53 @@ x-enum:
       domain: *ref_0
     message:
       catalog:
+        providers:
+          tags:
+            serviceability:
+              type:
+                - code: 10
+                  description: Hyperlocal
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: 11
+                  description: Intercity
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: 12
+                  description: Pan-India
+                  reference: <PR/Issue/Discussion Links md format text>
+              unit:
+                - code: km
+                  description: If type is 10 - Hyperlocal
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: pincode
+                  description: If type is 11 - Intercity
+                  reference: <PR/Issue/Discussion Links md format text>
+                - code: country
+                  description: If type is 12 - Pan-India
+                  reference: <PR/Issue/Discussion Links md format text>
+        offers:
+          descriptor:
+            code:
+              - code: Disc_Pct
+                description: >-
+                  Discount percent or amount applied to the cart value, with or
+                  without a cap, and may be based on minimum cart value.
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: Disc_Amt
+                description: >-
+                  Flat discount amount applied to the cart value, and may be
+                  based on minimum cart value).
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: BuyXGetY
+                description: >-
+                  For every "X" item count in the cart, total of "Y" items will
+                  be offered (i.e. "Y" - "X" additional items), at 0 additional
+                  value.
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: Freebie
+                description: >-
+                  for a minimum order value, 1 or more free item(s) will be
+                  offered at 0 value.
+                reference: <PR/Issue/Discussion Links md format text>
         fulfillments:
           type: *ref_1
   init:
@@ -3003,7 +3050,7 @@ x-enum:
         quote:
           breakup:
             title: &ref_2
-              - code: Sofa Cleaning
+              - code: item
                 description: Sofa Cleaning
                 reference: <PR/Issue/Discussion Links md format text>
               - code: tax
@@ -3013,18 +3060,23 @@ x-enum:
                 description: discount
                 reference: <PR/Issue/Discussion Links md format text>
               - code: convenience_fee
-                description: convenience_fee
+                description: convenience_fee (fulfillment level)
+                reference: <PR/Issue/Discussion Links md format text>
+              - code: refund
+                description: refund in case of cancellation
                 reference: <PR/Issue/Discussion Links md format text>
         payments: &ref_3
           type:
-            - code: PRE-FULFILLMENT
-              description: about the enum
-              reference: <PR/Issue/Discussion Links md format text>
             - code: ON-FULFILLMENT
-              description: about the enum
+              description: Payment will be done on delivery.
+              reference: <PR/Issue/Discussion Links md format text>
+            - code: PRE-FULFILLMENT
+              description: >-
+                Prepaid payment, i.e payment will be done during order
+                confirmation.
               reference: <PR/Issue/Discussion Links md format text>
             - code: POST-FULFILLMENT
-              description: about the enum
+              description: Payment will be done after the delivery.
               reference: <PR/Issue/Discussion Links md format text>
           collected_by:
             - code: BAP
@@ -3049,19 +3101,19 @@ x-enum:
         payments: *ref_3
         status: &ref_5
           - code: Created
-            description: about the enum
+            description: The order has been created by the buyer app.
             reference: <PR/Issue/Discussion Links md format text>
           - code: Accepted
-            description: about the enum
+            description: The order has been accepted by the seller app.
             reference: <PR/Issue/Discussion Links md format text>
           - code: In-progress
-            description: about the enum
+            description: The order is in progress.
             reference: <PR/Issue/Discussion Links md format text>
           - code: Completed
-            description: about the enum
+            description: The service has been completed.
             reference: <PR/Issue/Discussion Links md format text>
           - code: Cancelled
-            description: about the enum
+            description: The order has been cancelled.
             reference: <PR/Issue/Discussion Links md format text>
   on_confirm:
     context:
@@ -3126,14 +3178,24 @@ x-tags:
       intent:
         tags:
           - code: BAP_Terms
-            description: Terms of BAP
+            description: >-
+              The buyer terms, including the type and amount of the buyer finder
+              fee, are communicated.
             reference: <PR/Issue/Discussion Links md format text>
             list:
               - code: finder_fee_type
-                description: Type of the finder fee. eg. "percent"
+                description: >-
+                  If set to “amount” it means Buyer App’s fee is a flat amount
+                  in INR. If set to “percent” it means the Buyer App’s fee is
+                  set as a percentage of the Total Order Value.
                 reference: <PR/Issue/Discussion Links md format text>
               - code: finder_fee_amount
-                description: Amount for the finder fee
+                description: >-
+                  The amount of the Buyer App’s fee, to be interpreted in
+                  conjunction with the “type” field. If the “type” is set to
+                  “Amount”, this value represents the fixed fee in INR. If the
+                  “type” is set to “percent”, this value represents the
+                  percentage of the Total Order Value.
                 reference: <PR/Issue/Discussion Links md format text>
   on_search:
     message:
@@ -3141,23 +3203,34 @@ x-tags:
         providers:
           tags:
             - code: serviceability
-              description: Serviceability Details
+              description: >-
+                The provider's serviceability, indicating where and for which
+                category they are able to provide their services, is specified
+                here.
               reference: <PR/Issue/Discussion Links md format text>
               list:
                 - code: location
-                  description: Description of the Tag
+                  description: The location at which this provider is serviceable.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: category
-                  description: Description of the Tag
+                  description: The category serviceable by the provider.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: type
-                  description: Description of the Tag
+                  description: >-
+                    The type of serviceability, with values representing
+                    Hyperlocal (code: 10), Intercity (code: 11), and Pan-India
+                    (code: 12).
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: val
-                  description: Description of the Tag
+                  description: >-
+                    The value associated with the serviceability type, i.e in
+                    how much radius it is serviceable, eg. for hyperlocal -
+                    within 60 km raidus from the store location.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: unit
-                  description: Description of the Tag
+                  description: >-
+                    The unit of measurement for the serviceability value, e.g.
+                    km.
                   reference: <PR/Issue/Discussion Links md format text>
   on_select:
     message:
@@ -3208,10 +3281,18 @@ x-tags:
               reference: <PR/Issue/Discussion Links md format text>
               list:
                 - code: Buyer_Finder_Fee_Type
-                  description: Description of the Tag
+                  description: >-
+                    If set to “amount” it means Buyer App’s fee is a flat amount
+                    in INR. If set to “percent” it means the Buyer App’s fee is
+                    set as a percentage of the Total Order Value.
                   reference: <PR/Issue/Discussion Links md format text>
                 - code: Buyer_Finder_Fee_Amount
-                  description: Description of the Tag
+                  description: >-
+                    The amount of the Buyer App’s fee, to be interpreted in
+                    conjunction with the “type” field. If the “type” is set to
+                    “Amount”, this value represents the fixed fee in INR. If the
+                    “type” is set to “percent”, this value represents the
+                    percentage of the Total Order Value.
                   reference: <PR/Issue/Discussion Links md format text>
   confirm:
     message: *ref_8

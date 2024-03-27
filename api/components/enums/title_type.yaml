@@ -1,6 +1,6 @@
 breakup:
   title:
-      - code: Sofa Cleaning
+      - code: item
         description: Sofa Cleaning
         reference: <PR/Issue/Discussion Links md format text>
       - code: tax
@@ -10,5 +10,8 @@ breakup:
         description: discount
         reference: <PR/Issue/Discussion Links md format text>
       - code: convenience_fee
-        description: convenience_fee
+        description: convenience_fee (fulfillment level)
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: refund
+        description: refund in case of cancellation
         reference: <PR/Issue/Discussion Links md format text>

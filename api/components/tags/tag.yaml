@@ -23,10 +23,10 @@ Settlement_Details:
     reference: <PR/Issue/Discussion Links md format text>
 Buyer_Finder_Fee:
   - code: Buyer_Finder_Fee_Type
-    description: Description of the Tag
+    description: If set to “amount” it means Buyer App’s fee is a flat amount in INR. If set to “percent” it means the Buyer App’s fee is set as a percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
   - code: Buyer_Finder_Fee_Amount
-    description: Description of the Tag
+    description: The amount of the Buyer App’s fee, to be interpreted in conjunction with the “type” field. If the “type” is set to “Amount”, this value represents the fixed fee in INR. If the “type” is set to “percent”, this value represents the percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
 schedule:
   - code: ttl
@@ -34,19 +34,19 @@ schedule:
     reference: <PR/Issue/Discussion Links md format text>
 serviceability:
   - code: location
-    description: Description of the Tag
+    description: The location at which this provider is serviceable.
     reference: <PR/Issue/Discussion Links md format text>
   - code: category
-    description: Description of the Tag
+    description: The category serviceable by the provider.
     reference: <PR/Issue/Discussion Links md format text>
   - code: type
-    description: Description of the Tag
+    description: 'The type of serviceability, with values representing Hyperlocal (code: 10), Intercity (code: 11), and Pan-India (code: 12).'
     reference: <PR/Issue/Discussion Links md format text>
   - code: val
-    description: Description of the Tag
+    description: The value associated with the serviceability type, i.e in how much radius it is serviceable, eg. for hyperlocal - within 60 km raidus from the store location.
     reference: <PR/Issue/Discussion Links md format text>
   - code: unit
-    description: Description of the Tag
+    description: The unit of measurement for the serviceability value, e.g. km.
     reference: <PR/Issue/Discussion Links md format text>
 attributes:
   - code: color
@@ -54,8 +54,8 @@ attributes:
     reference: <PR/Issue/Discussion Links md format text>
 BAP_Terms:
   - code: finder_fee_type
-    description: Type of the finder fee. eg. "percent"
+    description: If set to “amount” it means Buyer App’s fee is a flat amount in INR. If set to “percent” it means the Buyer App’s fee is set as a percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
   - code: finder_fee_amount
-    description: Amount for the finder fee
+    description: The amount of the Buyer App’s fee, to be interpreted in conjunction with the “type” field. If the “type” is set to “Amount”, this value represents the fixed fee in INR. If the “type” is set to “percent”, this value represents the percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
