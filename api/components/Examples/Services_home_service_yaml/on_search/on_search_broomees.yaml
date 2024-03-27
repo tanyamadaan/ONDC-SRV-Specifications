@@ -85,7 +85,7 @@ value:
           creds:
             - id: ESG-12345678
               type: Certificate
-              desc: Authorized 5 star cook
+              desc: Authorized 5 star Maid on demand service
               url: https://abcd.cdn.com/images/bage-img
           tags:
             - descriptor:
@@ -112,8 +112,8 @@ value:
           categories:
             - id: C1
               descriptor:
-                name: House Size
-                code: HOUSE SIZE
+                name: BHK
+                code: BHK
               tags:
                 - descriptor:
                     code: Selection
@@ -148,7 +148,7 @@ value:
             - id: I1
               parent_item_id: ""
               descriptor:
-                name: Brooming, Mopping
+                name: Maid on Demand (Brooming, Mopping)
                 code: 5:other code
                 short_desc: Complete floor cleaning and sanitization
                 long_desc: Complete floor cleaning and sanitization
@@ -161,7 +161,7 @@ value:
                 currency: INR
                 minimum_value: "2500.00"
               category_ids:
-                - SRV11-xxxx
+                - SRV11-1010
               fulfillment_ids:
                 - "1"
               location_ids:
@@ -328,7 +328,7 @@ value:
                   - url: https://abc.com/images/207.png
               price:
                 currency: INR
-                minimum_value: "0.00"
+                minimum_value: "100.00"
               quantity:
                 unitized:
                   measure:
@@ -338,66 +338,6 @@ value:
                   value: "1"
               time:
                 duration: PT0M
-              category_ids:
-                - C2
-              tags:
-                - descriptor:
-                    code: attribute
-                  list:
-                    - descriptor:
-                        code: type
-                      value: customization
-            - id: IC5
-              parent_item_id: I1
-              descriptor:
-                name: 2 Floors
-                code: "5: other code"
-                short_desc: 2 Floors
-                long_desc: 2 Floors
-                images:
-                  - url: https://abc.com/images/207.png
-              price:
-                currency: INR
-                minimum_value: "500.00"
-              quantity:
-                unitized:
-                  measure:
-                    unit: unit
-                    value: "1"
-                maximum:
-                  value: "1"
-              time:
-                duration: PT20M
-              category_ids:
-                - C2
-              tags:
-                - descriptor:
-                    code: attribute
-                  list:
-                    - descriptor:
-                        code: type
-                      value: customization
-            - id: IC6
-              parent_item_id: I1
-              descriptor:
-                name: 3 Floors
-                code: "5: other code"
-                short_desc: 3 Floors
-                long_desc: 3 Floors
-                images:
-                  - url: https://abc.com/images/207.png
-              price:
-                currency: INR
-                minimum_value: "1000.00"
-              quantity:
-                unitized:
-                  measure:
-                    unit: unit
-                    value: "1"
-                maximum:
-                  value: "1"
-              time:
-                duration: PT40M
               category_ids:
                 - C2
               tags:
