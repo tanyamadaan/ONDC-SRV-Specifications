@@ -1,4 +1,4 @@
-# ONDC Mock & Sandbox
+# [ONDC Mock & Sandbox](https://mock.ondc.org/sandbox/services)
 This is the monorepo for the ONDC Mock & Sandbox. It features an ExpressJS Web Server, a Vite ReactJS App. This README specifies the instructions on how to use it.
 
 # Mock Server
@@ -8,13 +8,13 @@ You'll either get an ACK or NACK as a sync response based on schema validations 
 If you receive a NACK as sync response, it indicates there are schema errors in your payload that you need to address.
 
 <div style="text-align:center">
-<img src="./docs/images/Sync_rsponse_nack.png" alt="Asyn response" width="300" height="300">
+<img src="https://github.com/abhinavv245/b2b_mock_server/blob/draft-mock_server/docs/images/Sync_rsponse_nack.png" alt="Asyn response" width="300" height="300">
 </div>
 
 - If you receive an ACK sync response, you'll then get the subsequent async response. For example, if you provided a payload for the /action API, you'll receive an async response for the subsequent /on_action API. A notable feature of this service is the ability to select from various scenarios like location not serviceable, item out of stock, etc.
 
 <div style="text-align:center">
-<img src="./docs/images/async_response.png" alt="Asyn response" width="300" height="300">
+<img src="https://github.com/abhinavv245/b2b_mock_server/blob/draft-mock_server/docs/images/async_response.png" alt="Asyn response" width="300" height="300">
 </div>
 
 - If you are a seller app (BPP), you can provide /on_action APIs payload and you will receive the subsequent sync and async request. Once you receive ACK as a sync response, you will receive the subsequent async request. For e.g. if you have provided the payload for /on_action API, then you will receive an async request for next /action API. 
@@ -30,7 +30,7 @@ If you receive a NACK as sync response, it indicates there are schema errors in 
 - If you are a seller NP and wants to initiate a search request from the mock server, you can do it from the 'Initiate Search Request' section in the Sandbox UI.
 
 <div style="text-align:center">
-<img src="./docs/images/Initiate_request.png" alt="Asyn response" width="300" height="300">
+<img src="https://github.com/abhinavv245/b2b_mock_server/blob/draft-mock_server/docs/images/Initiate_request.png" alt="Asyn response" width="300" height="300">
 </div>
 
 - The sandbox will also generate a cURL command or you can create yourself that you can execute directly from the command line interface (CLI) to sandbox environments.
@@ -90,7 +90,7 @@ There are two type of NPs one is BPP (Seller app) and BAP (Buyer app).
 - All the **on_actions** calls are hosted on the BAP server. So if you want make mock requests to BAP or the buyer app, then select _/b2b/bap_ from the servers dropdown.
 
 <div style="text-align:center">
-<img src="./docs/images/swagger_server.png" alt="Asyn response" width="500" height="70">
+<img src="https://github.com/abhinavv245/b2b_mock_server/blob/draft-mock_server/docs/images/swagger_server.png" alt="Asyn response" width="500" height="70">
 </div>
 
 **Make a request**
@@ -103,11 +103,11 @@ Since you have selected the desired server, now you can make the requests to tha
 You can select service from `mode` dropdown.
 
 <div style="text-align:center">
-<img src="./docs/images/Swagger_1.png" alt="Asyn response" width="500" height="300">
+<img src="https://github.com/abhinavv245/b2b_mock_server/blob/draft-mock_server/docs/images/Swagger_1.png" alt="Asyn response" width="500" height="300">
 </div>
 
 <div style="text-align:center">
-<img src="./docs/images/swagger_2.png" alt="Asyn response" width="500" height="300">
+<img src="https://github.com/abhinavv245/b2b_mock_server/blob/draft-mock_server/docs/images/swagger_2.png" alt="Asyn response" width="500" height="300">
 </div>
 
 **Sandbox**
