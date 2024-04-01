@@ -53,7 +53,7 @@ serviceability:
     description: The category serviceable by the provider.
     reference: <PR/Issue/Discussion Links md format text>
   - code: type
-    description: 'The type of serviceability, with values representing Hyperlocal (code: 10), Intercity (code: 11), and Pan-India (code: 12).'
+    description: 'The type of serviceability, with values representing Hyperlocal (code: 10), Intercity (code: 11), Pan-India (code: 12) and and Geojson (code: 13).'
     reference: <PR/Issue/Discussion Links md format text>
   - code: val
     description: The value associated with the serviceability type, i.e in how much radius it is serviceable, eg. for hyperlocal - within 60 km raidus from the store location.
