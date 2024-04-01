@@ -75,7 +75,8 @@ __Note__: All the requests must pass the schema validation based on the examples
       "ack": {
         "status": "ACK"
       }
-  },
+  }
+}
  ```
 
 ## Other Services
