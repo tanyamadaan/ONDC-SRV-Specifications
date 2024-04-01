@@ -10731,7 +10731,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -10769,7 +10769,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '2'
+                            count: 2
                             measure:
                               type: constant
                               unit: wall
@@ -10807,7 +10807,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -10845,7 +10845,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -10883,7 +10883,7 @@ x-flows:
                           long_desc: Tractor Uno Double Coat Without Primer
                         quantity:
                           selected:
-                            count: '4'
+                            count: 4
                             measure:
                               type: constant
                               unit: wall
@@ -20731,7 +20731,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -20769,7 +20769,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '2'
+                              count: 2
                               measure:
                                 type: constant
                                 unit: wall
@@ -20807,7 +20807,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -20845,7 +20845,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
@@ -20883,7 +20883,7 @@ x-examples:
                             long_desc: Tractor Uno Double Coat Without Primer
                           quantity:
                             selected:
-                              count: '4'
+                              count: 4
                               measure:
                                 type: constant
                                 unit: wall
