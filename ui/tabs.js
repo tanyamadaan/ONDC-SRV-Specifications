@@ -39,7 +39,7 @@ function onFirstLoad(build_spec, features) {
     console.trace(error);
   }
   try {
-    loadErrors(data["x-errorcodes"]);
+    loadErrors(data["x-errors"]);
   } catch (error) {
     console.trace(error);
   }
