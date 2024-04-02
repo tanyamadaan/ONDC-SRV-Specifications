@@ -40,7 +40,7 @@
                     "parent_item_id": "PI1",
                     "quantity": {
                         "selected": {
-                            "count": "6",
+                            "count": 6,
                             "measure": {
                                 "unit": "rooms"
                             }
@@ -443,7 +443,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "1",
+                                    "count": 1,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -508,7 +508,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -573,7 +573,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "2",
+                                    "count": 2,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -638,7 +638,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -703,7 +703,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -768,7 +768,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
