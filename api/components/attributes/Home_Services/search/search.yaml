@@ -41,10 +41,9 @@ message:
   parent: true
   intent:
     parent: true
-    item:
-      parent: true
-      category:
-        description: Category of the search
+    category:
+      id:
+        description: Category id of the desired service
         required: optional
         usage: "SRV10-1000"
         reference: if any
@@ -56,6 +55,11 @@ message:
         usage: "Home-Service"
         reference: if any
       stops:
+        type:
+            description: The type of stop - end location
+            required: required
+            usage: "end"
+            reference: if any
         location:
           gps:
             description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision
@@ -63,16 +67,20 @@ message:
             usage: "12.4535445,77.9283792"
             reference: if any
         time:
+          description: schedule desired for the service
+          required: optional
+          usage: "-"
+          reference: if any
           range:
             start:
               description: start time of the time slot desired for the service
               required: required
-              usage: "2023-11-16T09:30:00Z"
+              usage: "2023-11-16T09:30:00.000Z"
               reference: if any
             end:  
               description: end time of the time slot desired for the service 
               required: required
-              usage: "2023-11-16T10:30:00Z"
+              usage: "2023-11-16T10:30:00.000Z"
               reference: if any
           days:
               description: string comma separated values representing days of the week on which the service is required ("1" - Monday, "7" - Sunday)
@@ -80,9 +88,13 @@ message:
               usage: "1,2,3,4,5,6,7"
               reference: if any
     payment:
-      parent: true
+      type:
+        description: payment mode by which buyer would like to pay, enum - 'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+        required: optional
+        usage: "PRE-FULFILLMENT"
+        reference: if any
       collected_by:
         description: Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller App)
         required: optional
-        usage: "BPP"
+        usage: "BAP"
         reference: if any

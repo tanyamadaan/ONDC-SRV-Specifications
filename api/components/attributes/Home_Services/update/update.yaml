@@ -20,11 +20,11 @@ message:
             start:
               description: start time of the service
               required: required
-              usage: "2023-11-16T09:30:00Z"
+              usage: "2023-11-16T09:30:00.000Z"
               reference: if any
             end:
               description: end time of the service
               required: required
-              usage: "2023-11-16T10:30:00Z"
+              usage: "2023-11-16T10:30:00.000Z"
               reference: if any  
     

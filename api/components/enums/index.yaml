@@ -17,6 +17,11 @@ on_search:
       $ref: "./context.yaml#/domain"
   message:
     catalog:
+      providers:
+        tags:
+          $ref: "./provider.yaml#/tags"
+      offers:
+        $ref: "./offers.yaml#/offers"
       fulfillments: &fulfillments
         type: 
           $ref: "./fulfillments.yaml#/fulfillments/type"

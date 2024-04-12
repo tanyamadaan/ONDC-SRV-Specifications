@@ -40,7 +40,7 @@
                     "parent_item_id": "PI1",
                     "quantity": {
                         "selected": {
-                            "count": "6",
+                            "count": 6,
                             "measure": {
                                 "unit": "rooms"
                             }
@@ -309,8 +309,8 @@
                             },
                             "time": {
                                 "range": {
-                                    "start": "2023-11-16T09:30:00Z",
-                                    "end": "2023-11-16T10:30:00Z"
+                                    "start": "2023-11-16T09:30:00.000Z",
+                                    "end": "2023-11-16T10:30:00.000Z"
                                 },
                                 "timestamp": "2023-11-16T09:00:00.000Z"
                             },
@@ -349,8 +349,8 @@
                             "time": {
                                 "label": "confirmed",
                                 "range": {
-                                    "start": "2023-11-16T09:30:00Z",
-                                    "end": "2023-11-16T10:30:00Z"
+                                    "start": "2023-11-16T09:30:00.000Z",
+                                    "end": "2023-11-16T10:30:00.000Z"
                                 },
                                 "timestamp": "2023-11-16T09:00:00.000Z"
                             },
@@ -360,8 +360,8 @@
                             "authorization": {
                                 "type": "OTP",
                                 "token": "1234",
-                                "valid_from": "2023-11-16T09:30:00Z",
-                                "valid_to": "2023-11-16T09:35:00Z",
+                                "valid_from": "2023-11-16T09:30:00.000Z",
+                                "valid_to": "2023-11-16T09:35:00.000Z",
                                 "status": "valid"
                             }
                         }
@@ -443,7 +443,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "1",
+                                    "count": 1,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -508,7 +508,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -573,7 +573,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "2",
+                                    "count": 2,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -638,7 +638,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -703,7 +703,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"
@@ -768,7 +768,7 @@
                             },
                             "quantity": {
                                 "selected": {
-                                    "count": "4",
+                                    "count": 4,
                                     "measure": {
                                         "type": "constant",
                                         "unit": "wall"

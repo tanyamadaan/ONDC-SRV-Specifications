@@ -7,14 +7,14 @@ fulfillments:
     descriptor:
       code:
       - code: Pending
-        description: about the enum
+        description: The initial state of the fulfillment.
         reference: <PR/Issue/Discussion Links md format text>
       - code: In-Transit
-        description: about the enum
+        description: The service provider is on the way.
         reference: <PR/Issue/Discussion Links md format text>  
       - code: At-Location
-        description: about the enum
+        description: The service provider has reached the location.
         reference: <PR/Issue/Discussion Links md format text>
       - code: Completed
-        description: about the enum
+        description: The service has been completed.
         reference: <PR/Issue/Discussion Links md format text>

@@ -64,8 +64,8 @@ value:
                 gps: 12.956399,77.636803
               time:
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
                 timestamp: '2023-11-16T09:00:00.000Z'
               contact:
                 phone: '9886098860'
@@ -89,8 +89,8 @@ value:
               time:
                 label: confirmed
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
 
                 timestamp: '2023-11-16T09:00:00.000Z'
               person:
@@ -112,7 +112,7 @@ value:
               id: I1
               quantity:
                 selected:
-                  count: '1'
+                  count: 1
                 measure:
                   unit: seats
                   value: '2'
@@ -134,7 +134,7 @@ value:
               id: I1
               quantity:
                 allocated:
-                  count: '1'
+                  count: 1
               price:
                 currency: INR
                 value: '474'
@@ -153,7 +153,7 @@ value:
               id: I1
               quantity:
                 allocated:
-                  count: '1'
+                  count: 1
               price:
                 currency: INR
                 value: '474'
@@ -172,7 +172,7 @@ value:
               id: I1
               quantity:
                 allocated:
-                  count: '1'
+                  count: 1
               price:
                 currency: INR
                 value: '474'

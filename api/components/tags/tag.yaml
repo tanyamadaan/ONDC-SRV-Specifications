@@ -1,7 +1,20 @@
 title:
-  - code: type
-    description: Depending upon the context, it can take the value of the discount, tax, misc or item type value.
-    reference: <PR/Issue/Discussion Links md format text>
+  type:
+      - code: item
+        description: item/service level 
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: tax
+        description: tax
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: discount
+        description: discount
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: convenience_fee
+        description: convenience_fee (fulfillment level)
+        reference: <PR/Issue/Discussion Links md format text>
+      - code: refund
+        description: refund in case of cancellation
+        reference: <PR/Issue/Discussion Links md format text>
 Settlement_Details:
   - code: Counterparty
     description: Counterparty involved; Can be BAP/BPP
@@ -23,10 +36,10 @@ Settlement_Details:
     reference: <PR/Issue/Discussion Links md format text>
 Buyer_Finder_Fee:
   - code: Buyer_Finder_Fee_Type
-    description: Description of the Tag
+    description: If set to “amount” it means Buyer App’s fee is a flat amount in INR. If set to “percent” it means the Buyer App’s fee is set as a percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
   - code: Buyer_Finder_Fee_Amount
-    description: Description of the Tag
+    description: The amount of the Buyer App’s fee, to be interpreted in conjunction with the “type” field. If the “type” is set to “Amount”, this value represents the fixed fee in INR. If the “type” is set to “percent”, this value represents the percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
 schedule:
   - code: ttl
@@ -34,19 +47,19 @@ schedule:
     reference: <PR/Issue/Discussion Links md format text>
 serviceability:
   - code: location
-    description: Description of the Tag
+    description: The location at which this provider is serviceable.
     reference: <PR/Issue/Discussion Links md format text>
   - code: category
-    description: Description of the Tag
+    description: The category serviceable by the provider.
     reference: <PR/Issue/Discussion Links md format text>
   - code: type
-    description: Description of the Tag
+    description: 'The type of serviceability, with values representing Hyperlocal (code: 10), Intercity (code: 11), Pan-India (code: 12) and and Geojson (code: 13).'
     reference: <PR/Issue/Discussion Links md format text>
   - code: val
-    description: Description of the Tag
+    description: The value associated with the serviceability type, i.e in how much radius it is serviceable, eg. for hyperlocal - within 60 km raidus from the store location.
     reference: <PR/Issue/Discussion Links md format text>
   - code: unit
-    description: Description of the Tag
+    description: The unit of measurement for the serviceability value, e.g. km.
     reference: <PR/Issue/Discussion Links md format text>
 attributes:
   - code: color
@@ -54,8 +67,22 @@ attributes:
     reference: <PR/Issue/Discussion Links md format text>
 BAP_Terms:
   - code: finder_fee_type
-    description: Type of the finder fee. eg. "percent"
+    description: If set to “amount” it means Buyer App’s fee is a flat amount in INR. If set to “percent” it means the Buyer App’s fee is set as a percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
   - code: finder_fee_amount
-    description: Amount for the finder fee
+    description: The amount of the Buyer App’s fee, to be interpreted in conjunction with the “type” field. If the “type” is set to “Amount”, this value represents the fixed fee in INR. If the “type” is set to “percent”, this value represents the percentage of the Total Order Value.
     reference: <PR/Issue/Discussion Links md format text>
+offers_details:
+  - code: qualifier_min_value
+    description: Minimum order value for the order to be applicable
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: max_benefit
+    description: Maximum discount value applicable
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: discount_unit
+    description: Unit of discount e.g. percent , amount
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: discount_value
+    description: Discount value applicable
+    reference: <PR/Issue/Discussion Links md format text>
+

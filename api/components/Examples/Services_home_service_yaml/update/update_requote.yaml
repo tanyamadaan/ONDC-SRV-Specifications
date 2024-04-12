@@ -183,8 +183,8 @@ value:
                 gps: 12.956399,77.636803
               time:
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
                 timestamp: '2023-11-16T09:00:00.000Z'
               contact:
                 phone: '9886098860'
@@ -208,8 +208,8 @@ value:
               time:
                 label: confirmed
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
 
                 timestamp: '2023-11-16T09:00:00.000Z'
               person:
@@ -220,8 +220,8 @@ value:
               authorization:
                 type: OTP
                 token: '1234'
-                valid_from: '2023-11-16T09:30:00Z'
-                valid_to: '2023-11-16T09:35:00Z'
+                valid_from: '2023-11-16T09:30:00.000Z'
+                valid_to: '2023-11-16T09:35:00.000Z'
                 status: valid
           rateable: true
         - id: F2
@@ -255,8 +255,8 @@ value:
                   name: Karnataka
               time:
                 range:
-                  start: '2023-11-18T09:30:00Z'
-                  end: '2023-11-21T16:30:00Z'
+                  start: '2023-11-18T09:30:00.000Z'
+                  end: '2023-11-21T16:30:00.000Z'
               contact:
                 phone: '9886098860'
                 email: nobody@nomail.com
@@ -283,7 +283,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '1'
+                  count: 1
                   measure:
                     type: constant
                     unit: wall
@@ -321,7 +321,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '4'
+                  count: 4
                   measure:
                     type: constant
                     unit: wall
@@ -359,7 +359,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '2'
+                  count: 2
                   measure:
                     type: constant
                     unit: wall
@@ -397,7 +397,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '4'
+                  count: 4
                   measure:
                     type: constant
                     unit: wall
@@ -435,7 +435,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '4'
+                  count: 4
                   measure:
                     type: constant
                     unit: wall
@@ -473,7 +473,7 @@ value:
                 long_desc: Tractor Uno Double Coat Without Primer
               quantity:
                 selected:
-                  count: '4'
+                  count: 4
                   measure:
                     type: constant
                     unit: wall

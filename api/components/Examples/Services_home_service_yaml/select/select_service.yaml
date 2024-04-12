@@ -32,9 +32,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: seats
-              value: '2'
       fulfillments:
         - type: Home-Service
           stops:
@@ -45,8 +42,8 @@ value:
               time:
                 label: selected
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
                 days: "4"
       payments:
         - type: PRE-FULFILLMENT

@@ -187,8 +187,8 @@ value:
               authorization:
                 type: OTP
                 token: "1234"
-                valid_from: '2023-11-16T09:30:00Z'
-                valid_to: '2023-11-16T09:35:00Z'
+                valid_from: '2023-11-16T09:30:00.000Z'
+                valid_to: '2023-11-16T09:35:00.000Z'
                 status: valid
           rateable: true
       quote:

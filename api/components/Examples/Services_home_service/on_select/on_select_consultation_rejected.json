@@ -15,8 +15,8 @@
     "bap_uri": "https://buyerapp.com/services",
     "bpp_id": "sellerapp.com",
     "bpp_uri": "https://sellerapp.com/services",
-    "transaction_id": "T1",
-    "message_id": "M1",
+    "transaction_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67",
+    "message_id": "ea89883a-57ff-44de-87fa-66b07c8d25d9",
     "timestamp": "2023-11-08T22:00:31.000Z",
     "ttl": "PT30S"
   },
@@ -78,8 +78,8 @@
               "time": {
                 "label": "rejected",
                 "range": {
-                  "start": "2023-11-16T09:30:00Z",
-                  "end": "2023-11-16T10:30:00Z"
+                  "start": "2023-11-16T09:30:00.000Z",
+                  "end": "2023-11-16T10:30:00.000Z"
                 }
               }
             }
