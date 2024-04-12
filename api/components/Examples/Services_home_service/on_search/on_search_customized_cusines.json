@@ -78,23 +78,18 @@
               "start": "2024-03-04T00:00:00.000Z",
               "end": "2024-03-09T19:00:00.000Z"
             },
-            "days": "4,5",
+            "days": "2,3,4,5",
             "schedule": {
-              "frequency": "PT1H",
+              "frequency": "PT12H",
               "holidays": [
                 "2024-03-06",
                 "2024-03-08"
               ],
               "times": [
                 "2024-03-04T09:00:00.000Z",
-                "2024-03-04T10:00:00.000Z",
-                "2024-03-04T11:00:00.000Z",
-                "2024-03-04T13:00:00.000Z",
-                "2024-03-04T14:00:00.000Z",
-                "2024-03-04T15:00:00.000Z",
-                "2024-03-04T16:00:00.000Z",
-                "2024-03-04T17:00:00.000Z",
-                "2024-03-04T18:00:00.000Z"
+                "2024-03-05T09:00:00.000Z",
+                "2024-03-07T09:00:00.000Z",
+                "2024-03-09T09:00:00.000Z"
               ]
             }
           },
@@ -458,7 +453,7 @@
               "parent_item_id": "",
               "descriptor": {
                 "name": "Cook - On Demand",
-                "code": "5:other code",
+                "code": "OTHER:other code",
                 "short_desc": "Cook - On Demand",
                 "long_desc": "Cook - On Demand",
                 "images": [
@@ -488,6 +483,22 @@
               ],
               "payment_ids": [
                 "1"
+              ],
+              "add_ons": [
+                {
+                  "id": "A1",
+                  "descriptor": {
+                    "name": "Pro-chef",
+                    "code": "OTHER:xxxx",
+                    "short_desc": "Get pro-chef"
+                  },
+                  "price": {
+                    "currency": "INR",
+                    "value": "1000.00",
+                    "maximum_value": "1200.00",
+                    "offered_value": "1000.00"
+                  }
+                }
               ],
               "cancellation_terms": [
                 {
@@ -572,23 +583,18 @@
                   "start": "2024-03-04T00:00:00.000Z",
                   "end": "2024-03-09T19:00:00.000Z"
                 },
-                "days": "4,5",
+                "days": "2,3,4,5",
                 "schedule": {
-                  "frequency": "PT1H",
+                  "frequency": "PT12H",
                   "holidays": [
                     "2024-03-06",
                     "2024-03-08"
                   ],
                   "times": [
                     "2024-03-04T09:00:00.000Z",
-                    "2024-03-04T10:00:00.000Z",
-                    "2024-03-04T11:00:00.000Z",
-                    "2024-03-04T13:00:00.000Z",
-                    "2024-03-04T14:00:00.000Z",
-                    "2024-03-04T15:00:00.000Z",
-                    "2024-03-04T16:00:00.000Z",
-                    "2024-03-04T17:00:00.000Z",
-                    "2024-03-04T18:00:00.000Z"
+                    "2024-03-05T09:00:00.000Z",
+                    "2024-03-07T09:00:00.000Z",
+                    "2024-03-09T09:00:00.000Z"
                   ]
                 }
               },
@@ -600,7 +606,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "People",
-                "code": "5: other code",
+                "code": "CUSTOM: other code",
                 "short_desc": "No. of People",
                 "long_desc": "No. of People",
                 "images": [
@@ -651,7 +657,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Sandwich",
-                "code": "5: other code",
+                "code": "CUSTOM: other code",
                 "short_desc": "Sandwich",
                 "long_desc": "Sandwich",
                 "images": [
@@ -707,7 +713,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Dahi Ke Kebab",
-                "code": "5: other code",
+                "code": "CUSTOM: other code",
                 "short_desc": "Dahi Ke Kebab",
                 "long_desc": "Dahi Ke Kebab",
                 "images": [
@@ -763,7 +769,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Dal Makhni",
-                "code": "5: other code",
+                "code": "CUSTOM: other code",
                 "short_desc": "Dal Makhni",
                 "long_desc": "Dal Makhni",
                 "images": [

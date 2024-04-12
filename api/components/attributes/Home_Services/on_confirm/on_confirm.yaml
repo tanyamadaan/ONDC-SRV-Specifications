@@ -218,13 +218,14 @@ message:
             start:
               description: The timeframe during which the service provider will depart from its starting point and the range within which it will arrive at the customer's location.
               required: required
-              usage: "2023-11-16T09:30:00Z"
+              usage: "2023-11-16T09:30:00.000Z"
               reference: if any
             end:  
               description: The timeframe during which the service provider will depart from its starting point and the range within which it will arrive at the customer's location.
               required: required
-              usage: "2023-11-16T10:30:00Z"
+              usage: "2023-11-16T10:30:00.000Z"
               reference: if any
+
         authorization:
           description: Describes an authorization mechanism used to start or end the fulfillment of an order. For example, in the mobility sector, the driver may require a one-time password to initiate the ride. In the healthcare sector, a patient may need to provide a password to open a video conference link during a teleconsultation.
           required: optional
