@@ -394,6 +394,62 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "C31",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "North Indian",
+                "code": "North_Indian"
+              }
+            },
+            {
+              "id": "C32",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Chinese",
+                "code": "CHINESE"
+              }
+            },
+            {
+              "id": "C33",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Italian-American",
+                "code": "ITALIAN_AMERICAN"
+              }
+            },
+            {
+              "id": "C34",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Continental",
+                "code": "CONTINENTAL"
+              }
+            },
+            {
+              "id": "C35",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Thai",
+                "code": "THAI"
+              }
+            },
+            {
+              "id": "C36",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Mexican",
+                "code": "MEXICAN"
+              }
+            },
+            {
+              "id": "C37",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "South Indian",
+                "code": "SOUTH_INDIAN"
+              }
             }
           ],
           "items": [
@@ -621,7 +677,8 @@
               },
               "category_ids": [
                 "C3",
-                "C21"
+                "C21",
+                "C31"
               ],
               "tags": [
                 {
@@ -640,12 +697,6 @@
                         "code": "dish_type"
                       },
                       "value": "breakfast"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "cuisine"
-                      },
-                      "value": "North_Indian"
                     }
                   ]
                 }
@@ -682,7 +733,8 @@
               },
               "category_ids": [
                 "C3",
-                "C22"
+                "C22",
+                "C31"
               ],
               "tags": [
                 {
@@ -701,12 +753,6 @@
                         "code": "dish_type"
                       },
                       "value": "Appetizers"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "cuisine"
-                      },
-                      "value": "North_Indian"
                     }
                   ]
                 }
@@ -743,7 +789,8 @@
               },
               "category_ids": [
                 "C3",
-                "C22"
+                "C22",
+                "C31"
               ],
               "tags": [
                 {
@@ -762,12 +809,6 @@
                         "code": "dish_type"
                       },
                       "value": "Main Course"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "cuisine"
-                      },
-                      "value": "North_Indian"
                     }
                   ]
                 }
