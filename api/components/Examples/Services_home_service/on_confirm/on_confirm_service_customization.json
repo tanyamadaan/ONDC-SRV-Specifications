@@ -322,6 +322,52 @@
           "rateable": true
         }
       ],
+      "cancellation_terms": [
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "Pending"
+            }
+          },
+          "cancel_by": {
+            "duration": "P1D"
+          },
+          "cancellation_fee": {
+            "amount": {
+              "value": "0"
+            }
+          },
+          "reason_required": false
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "In-Transit"
+            }
+          },
+          "cancel_by": {
+            "duration": "P1D"
+          },
+          "cancellation_fee": {
+            "percentage": "5"
+          },
+          "reason_required": true
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "At-Location"
+            }
+          },
+          "cancel_by": {
+            "duration": "P1D"
+          },
+          "cancellation_fee": {
+            "percentage": "25"
+          },
+          "reason_required": true
+        }
+      ],
       "quote": {
         "price": {
           "currency": "INR",
@@ -687,7 +733,7 @@
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Details"
+                "code": "Settlement_Counterparty"
               },
               "list": [
                 {
@@ -725,6 +771,37 @@
                     "code": "UPI_Address"
                   },
                   "value": "xxxxxxx"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Window"
+                  },
+                  "value": "P1D"
+                },
+                {
+                  "descriptor": {
+                    "code": "Basis"
+                  },
+                  "value": "Completed"
+                },
+                {
+                  "descriptor": {
+                    "code": "Witholding_Amount"
+                  },
+                  "value": "0.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "Phase"
+                  },
+                  "value": "sale-amount"
                 }
               ]
             },

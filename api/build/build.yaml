@@ -3520,6 +3520,7 @@ x-flows:
                       range:
                         start: '2022-11-10T00:00:00.000Z'
                         end: '2022-11-20T19:30:00.000Z'
+                      days: 4,5
                       schedule:
                         frequency: PT1H
                         holidays:
@@ -3584,7 +3585,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                           media:
                             - mimetype: video/mp4
-                              url: https://video_url.com
+                              url: video_url
                         creator:
                           descriptor:
                             name: nobroker
@@ -3611,12 +3612,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: In-Transit
+                            reason_required: true
+                            cancel_by:
+                              duration: P0D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3640,7 +3647,7 @@ x-flows:
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T00:00:00.000Z'
-                          days: 04,05
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -3697,12 +3704,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: Out-For-Delivery
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3724,14 +3737,14 @@ x-flows:
                         time:
                           label: validity
                           range:
-                            start: '2022-11-10T00:00:00.000Z'
-                            end: '2022-11-20T19:30:00.000Z'
-                          days: 04,05
+                            start: '2022-12-24T00:00:00.000Z'
+                            end: '2022-12-31T00:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-11-13'
-                              - '2023-11-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
                               - '2023-11-16T09:30:00.000Z'
                               - '2023-11-16T19:30:00.000Z'
@@ -3783,12 +3796,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: Out-For-Delivery
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3810,14 +3829,14 @@ x-flows:
                         time:
                           label: validity
                           range:
-                            start: '2022-11-10T00:00:00.000Z'
-                            end: '2022-11-20T19:30:00.000Z'
-                          days: 04,05
+                            start: '2022-12-24T00:00:00.000Z'
+                            end: '2022-12-31T00:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-11-13'
-                              - '2023-11-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
                               - '2023-11-16T09:30:00.000Z'
                               - '2023-11-16T19:30:00.000Z'
@@ -3869,12 +3888,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: Out-For-Delivery
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3896,14 +3921,14 @@ x-flows:
                         time:
                           label: validity
                           range:
-                            start: '2022-11-10T00:00:00.000Z'
-                            end: '2022-11-20T19:30:00.000Z'
-                          days: 04,05
+                            start: '2022-12-24T00:00:00.000Z'
+                            end: '2022-12-31T00:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-11-13'
-                              - '2023-11-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
                               - '2023-11-16T09:30:00.000Z'
                               - '2023-11-16T19:30:00.000Z'
@@ -3930,7 +3955,6 @@ x-flows:
                           range:
                             start: '2023-11-12T00:00:00.000Z'
                             end: '2023-11-16T00:00:00.000Z'
-                          days: 04,05
                     fulfillments:
                       - contact:
                           phone: '9886098860'
@@ -4294,6 +4318,32 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00.000Z'
                             end: '2023-11-16T10:30:00.000Z'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -4509,6 +4559,32 @@ x-flows:
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -4730,6 +4806,32 @@ x-flows:
                           valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -4828,7 +4930,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -4848,6 +4950,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -6295,11 +6412,11 @@ x-flows:
         reference: if any
         example:
           summary: >-
-            Returns the catalog + customizations (Home cooking services)  +
-            available schedule
+            Returns the catalog specific to the search intent + available
+            schedule
           description: >-
-            Returns the catalog + customizations (Home cooking services) +
-            available schedule
+            Returns the catalog specific to the search intent + available
+            schedule
           value:
             context:
               domain: ONDC:SRV11
@@ -6541,7 +6658,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                           media:
                             - mimetype: video/mp4
-                              url: https://video_url.com
+                              url: video_url
                         price:
                           currency: INR
                           minimum_value: '199.00'
@@ -6557,6 +6674,8 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
@@ -6564,15 +6683,24 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: In-Transit
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                             reason_required: true
                           - fulfillment_state:
                               descriptor:
                                 code: At-Location
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '25'
                             reason_required: true
+                        xinput:
+                          form:
+                            url: https://abc.com/form
+                            mimetype: text/html
+                          required: true
                         tags:
                           - descriptor:
                               code: reschedule_terms
@@ -7627,6 +7755,32 @@ x-flows:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
                           days: '4'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -8039,6 +8193,32 @@ x-flows:
                         customer:
                           person:
                             name: Ramu
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -8241,7 +8421,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -8261,6 +8441,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -8491,6 +8686,32 @@ x-flows:
                           valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -8693,7 +8914,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -8713,6 +8934,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -9930,6 +10166,32 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00.000Z'
                             end: '2023-11-16T10:30:00.000Z'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -10089,6 +10351,32 @@ x-flows:
                         customer:
                           person:
                             name: Ramu
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -10140,7 +10428,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -10160,6 +10448,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -10275,6 +10578,9 @@ x-flows:
                             end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
+                        instructions:
+                          name: Special Instructions
+                          short_desc: Customer Special Instructions
                         authorization:
                           type: OTP
                           token: '1234'
@@ -10282,6 +10588,32 @@ x-flows:
                           valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -10333,7 +10665,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -10353,6 +10685,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -14012,6 +14359,32 @@ x-examples:
                           customer:
                             person:
                               name: Ramu
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -14063,7 +14436,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -14083,6 +14456,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -14180,6 +14568,32 @@ x-examples:
                           instructions:
                             name: Special Instructions
                             short_desc: Customer Special Instructions
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -14460,6 +14874,32 @@ x-examples:
                           customer:
                             person:
                               name: Ramu
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -14662,7 +15102,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -14682,6 +15122,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -15402,6 +15857,7 @@ x-examples:
                         range:
                           start: '2022-11-10T00:00:00.000Z'
                           end: '2022-11-20T19:30:00.000Z'
+                        days: 4,5
                         schedule:
                           frequency: PT1H
                           holidays:
@@ -15467,7 +15923,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                             media:
                               - mimetype: video/mp4
-                                url: https://video_url.com
+                                url: video_url
                           creator:
                             descriptor:
                               name: nobroker
@@ -15494,12 +15950,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: In-Transit
+                              reason_required: true
+                              cancel_by:
+                                duration: P0D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15523,7 +15985,7 @@ x-examples:
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T00:00:00.000Z'
-                            days: 04,05
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -15580,12 +16042,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: Out-For-Delivery
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15607,14 +16075,14 @@ x-examples:
                           time:
                             label: validity
                             range:
-                              start: '2022-11-10T00:00:00.000Z'
-                              end: '2022-11-20T19:30:00.000Z'
-                            days: 04,05
+                              start: '2022-12-24T00:00:00.000Z'
+                              end: '2022-12-31T00:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-11-13'
-                                - '2023-11-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
                                 - '2023-11-16T09:30:00.000Z'
                                 - '2023-11-16T19:30:00.000Z'
@@ -15666,12 +16134,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: Out-For-Delivery
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15693,14 +16167,14 @@ x-examples:
                           time:
                             label: validity
                             range:
-                              start: '2022-11-10T00:00:00.000Z'
-                              end: '2022-11-20T19:30:00.000Z'
-                            days: 04,05
+                              start: '2022-12-24T00:00:00.000Z'
+                              end: '2022-12-31T00:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-11-13'
-                                - '2023-11-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
                                 - '2023-11-16T09:30:00.000Z'
                                 - '2023-11-16T19:30:00.000Z'
@@ -15752,12 +16226,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: Out-For-Delivery
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15779,14 +16259,14 @@ x-examples:
                           time:
                             label: validity
                             range:
-                              start: '2022-11-10T00:00:00.000Z'
-                              end: '2022-11-20T19:30:00.000Z'
-                            days: 04,05
+                              start: '2022-12-24T00:00:00.000Z'
+                              end: '2022-12-31T00:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-11-13'
-                                - '2023-11-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
                                 - '2023-11-16T09:30:00.000Z'
                                 - '2023-11-16T19:30:00.000Z'
@@ -15813,17 +16293,16 @@ x-examples:
                             range:
                               start: '2023-11-12T00:00:00.000Z'
                               end: '2023-11-16T00:00:00.000Z'
-                            days: 04,05
                       fulfillments:
                         - contact:
                             phone: '9886098860'
                             email: abc@xyz.com
           - summary: >-
-              Returns the catalog + customizations (Home cooking services)  +
-              available schedule
+              Returns the catalog specific to the search intent + available
+              schedule
             description: >-
-              Returns the catalog + customizations (Home cooking services) +
-              available schedule
+              Returns the catalog specific to the search intent + available
+              schedule
             value:
               context:
                 domain: ONDC:SRV11
@@ -16066,7 +16545,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                             media:
                               - mimetype: video/mp4
-                                url: https://video_url.com
+                                url: video_url
                           price:
                             currency: INR
                             minimum_value: '199.00'
@@ -16082,6 +16561,8 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
@@ -16089,15 +16570,24 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: In-Transit
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                               reason_required: true
                             - fulfillment_state:
                                 descriptor:
                                   code: At-Location
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '25'
                               reason_required: true
+                          xinput:
+                            form:
+                              url: https://abc.com/form
+                              mimetype: text/html
+                            required: true
                           tags:
                             - descriptor:
                                 code: reschedule_terms
@@ -17221,6 +17711,32 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00.000Z'
                               end: '2023-11-16T10:30:00.000Z'
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -17378,6 +17894,32 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00.000Z'
                               end: '2023-11-16T10:30:00.000Z'
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -17681,6 +18223,32 @@ x-examples:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
                             days: '4'
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18009,6 +18577,9 @@ x-examples:
                               end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
+                          instructions:
+                            name: Special Instructions
+                            short_desc: Customer Special Instructions
                           authorization:
                             type: OTP
                             token: '1234'
@@ -18016,6 +18587,32 @@ x-examples:
                             valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18067,7 +18664,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -18087,6 +18684,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -18212,6 +18824,32 @@ x-examples:
                             valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18310,7 +18948,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -18330,6 +18968,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -18553,6 +19206,32 @@ x-examples:
                             valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18755,7 +19434,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -18775,6 +19454,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:

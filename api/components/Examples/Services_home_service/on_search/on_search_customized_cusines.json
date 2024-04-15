@@ -507,6 +507,9 @@
                       "code": "Pending"
                     }
                   },
+                  "cancel_by": {
+                    "duration": "P1D"
+                  },
                   "cancellation_fee": {
                     "amount": {
                       "value": "0"
@@ -520,6 +523,9 @@
                       "code": "In-Transit"
                     }
                   },
+                  "cancel_by": {
+                    "duration": "P1D"
+                  },
                   "cancellation_fee": {
                     "percentage": "5"
                   },
@@ -530,6 +536,9 @@
                     "descriptor": {
                       "code": "At-Location"
                     }
+                  },
+                  "cancel_by": {
+                    "duration": "P1D"
                   },
                   "cancellation_fee": {
                     "percentage": "25"
