@@ -3520,6 +3520,7 @@ x-flows:
                       range:
                         start: '2022-11-10T00:00:00.000Z'
                         end: '2022-11-20T19:30:00.000Z'
+                      days: 4,5
                       schedule:
                         frequency: PT1H
                         holidays:
@@ -3584,7 +3585,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                           media:
                             - mimetype: video/mp4
-                              url: https://video_url.com
+                              url: video_url
                         creator:
                           descriptor:
                             name: nobroker
@@ -3611,12 +3612,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: In-Transit
+                            reason_required: true
+                            cancel_by:
+                              duration: P0D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3640,7 +3647,7 @@ x-flows:
                           range:
                             start: '2022-11-10T00:00:00.000Z'
                             end: '2022-11-20T00:00:00.000Z'
-                          days: 04,05
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
@@ -3697,12 +3704,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: Out-For-Delivery
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3724,14 +3737,14 @@ x-flows:
                         time:
                           label: validity
                           range:
-                            start: '2022-11-10T00:00:00.000Z'
-                            end: '2022-11-20T19:30:00.000Z'
-                          days: 04,05
+                            start: '2022-12-24T00:00:00.000Z'
+                            end: '2022-12-31T00:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-11-13'
-                              - '2023-11-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
                               - '2023-11-16T09:30:00.000Z'
                               - '2023-11-16T19:30:00.000Z'
@@ -3783,12 +3796,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: Out-For-Delivery
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3810,14 +3829,14 @@ x-flows:
                         time:
                           label: validity
                           range:
-                            start: '2022-11-10T00:00:00.000Z'
-                            end: '2022-11-20T19:30:00.000Z'
-                          days: 04,05
+                            start: '2022-12-24T00:00:00.000Z'
+                            end: '2022-12-31T00:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-11-13'
-                              - '2023-11-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
                               - '2023-11-16T09:30:00.000Z'
                               - '2023-11-16T19:30:00.000Z'
@@ -3869,12 +3888,18 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
                           - fulfillment_state:
                               descriptor:
                                 code: Out-For-Delivery
+                            reason_required: true
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                         tags:
@@ -3896,14 +3921,14 @@ x-flows:
                         time:
                           label: validity
                           range:
-                            start: '2022-11-10T00:00:00.000Z'
-                            end: '2022-11-20T19:30:00.000Z'
-                          days: 04,05
+                            start: '2022-12-24T00:00:00.000Z'
+                            end: '2022-12-31T00:00:00.000Z'
+                          days: 4,5
                           schedule:
                             frequency: PT1H
                             holidays:
-                              - '2023-11-13'
-                              - '2023-11-15'
+                              - 2024-10-13T00:00:00.000Z
+                              - 2024-10-15T00:00:00.000Z
                             times:
                               - '2023-11-16T09:30:00.000Z'
                               - '2023-11-16T19:30:00.000Z'
@@ -4005,8 +4030,8 @@ x-flows:
                         time:
                           label: selected
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           days: '4'
                 payments:
                   - type: PRE-FULFILLMENT
@@ -4225,8 +4250,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                 payments:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
@@ -4307,8 +4332,34 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -4516,14 +4567,40 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         customer:
                           person:
                             name: Ramu
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -4707,8 +4784,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         contact:
                           phone: '9886098860'
                           email: nobody@nomail.com
@@ -4731,8 +4808,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
                         instructions:
@@ -4741,10 +4818,36 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -4843,7 +4946,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -4863,6 +4966,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -4983,8 +5101,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         instructions:
                           name: Special Instructions
@@ -5012,8 +5130,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
                 quote:
@@ -5225,8 +5343,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         contact:
                           phone: '9886098860'
@@ -5250,13 +5368,13 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                         person:
                           name: Ramu
                         instructions:
@@ -5472,8 +5590,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         contact:
                           phone: '9886098860'
@@ -5497,8 +5615,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
                         instructions:
@@ -5508,8 +5626,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                 quote:
                   price:
@@ -5714,8 +5832,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         contact:
                           phone: '9886098860'
@@ -5739,8 +5857,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         person:
                           name: Ramu
@@ -6034,8 +6152,8 @@ x-flows:
                         time:
                           label: rejected
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           days: '4'
                 quote:
                   price:
@@ -6284,8 +6402,8 @@ x-flows:
                         area_code: '560001'
                       time:
                         range:
-                          start: '2023-11-16T09:30:00Z'
-                          end: '2023-11-16T10:30:00Z'
+                          start: '2023-11-16T09:30:00.000Z'
+                          end: '2023-11-16T10:30:00.000Z'
                         days: '4'
                 payment:
                   type: ON-FULFILLMENT
@@ -6310,11 +6428,11 @@ x-flows:
         reference: if any
         example:
           summary: >-
-            Returns the catalog + customizations (Home cooking services)  +
-            available schedule
+            Returns the catalog specific to the search intent + available
+            schedule
           description: >-
-            Returns the catalog + customizations (Home cooking services) +
-            available schedule
+            Returns the catalog specific to the search intent + available
+            schedule
           value:
             context:
               domain: ONDC:SRV11
@@ -6556,7 +6674,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                           media:
                             - mimetype: video/mp4
-                              url: https://video_url.com
+                              url: video_url
                         price:
                           currency: INR
                           minimum_value: '199.00'
@@ -6572,6 +6690,8 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: Pending
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               amount:
                                 value: '0'
@@ -6579,15 +6699,24 @@ x-flows:
                           - fulfillment_state:
                               descriptor:
                                 code: In-Transit
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '5'
                             reason_required: true
                           - fulfillment_state:
                               descriptor:
                                 code: At-Location
+                            cancel_by:
+                              duration: P1D
                             cancellation_fee:
                               percentage: '25'
                             reason_required: true
+                        xinput:
+                          form:
+                            url: https://abc.com/form
+                            mimetype: text/html
+                          required: true
                         tags:
                           - descriptor:
                               code: reschedule_terms
@@ -6631,7 +6760,7 @@ x-flows:
                         parent_item_id: I1
                         descriptor:
                           name: People
-                          code: '5: other code'
+                          code: 'CUSTOM: other code'
                           short_desc: No. of People
                           long_desc: No. of People
                           images:
@@ -6661,7 +6790,7 @@ x-flows:
                         parent_item_id: I1
                         descriptor:
                           name: Sandwich
-                          code: '5: other code'
+                          code: 'CUSTOM: other code'
                           short_desc: Sandwich
                           long_desc: Sandwich
                           images:
@@ -6696,7 +6825,7 @@ x-flows:
                         parent_item_id: I1
                         descriptor:
                           name: Dahi Ke Kebab
-                          code: '5: other code'
+                          code: 'CUSTOM: other code'
                           short_desc: Dahi Ke Kebab
                           long_desc: Dahi Ke Kebab
                           images:
@@ -6731,7 +6860,7 @@ x-flows:
                         parent_item_id: I1
                         descriptor:
                           name: Dal Makhni
-                          code: '5: other code'
+                          code: 'CUSTOM: other code'
                           short_desc: Dal Makhni
                           long_desc: Dal Makhni
                           images:
@@ -7642,6 +7771,32 @@ x-flows:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
                           days: '4'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -8054,6 +8209,32 @@ x-flows:
                         customer:
                           person:
                             name: Ramu
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -8256,7 +8437,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -8276,6 +8457,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -8502,10 +8698,36 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -8708,7 +8930,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -8728,6 +8950,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -8951,8 +9188,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
                 quote:
@@ -9396,8 +9633,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         contact:
                           phone: '9886098860'
@@ -9421,8 +9658,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
                         instructions:
@@ -9432,8 +9669,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '5678'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                 quote:
                   price:
@@ -9700,8 +9937,8 @@ x-flows:
                         time:
                           label: selected
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           days: '4'
                 payments:
                   - type: PRE-FULFILLMENT
@@ -9867,8 +10104,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                 payments:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
@@ -9943,8 +10180,34 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -10099,11 +10362,37 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         customer:
                           person:
                             name: Ramu
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -10155,7 +10444,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -10175,6 +10464,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -10262,8 +10566,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         contact:
                           phone: '9886098860'
                           email: nobody@nomail.com
@@ -10286,17 +10590,46 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
+                        instructions:
+                          name: Special Instructions
+                          short_desc: Customer Special Instructions
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
+                cancellation_terms:
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
+                  - fulfillment_state:
+                      descriptor:
+                        code: In-Transit
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '5'
+                    reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: At-Location
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      percentage: '25'
+                    reason_required: true
                 quote:
                   price:
                     currency: INR
@@ -10348,7 +10681,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -10368,6 +10701,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -10616,8 +10964,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         contact:
                           phone: '9886098860'
@@ -10641,8 +10989,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         person:
                           name: Ramu
@@ -10652,8 +11000,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
                   - id: F2
@@ -11229,8 +11577,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         contact:
                           phone: '9886098860'
@@ -11254,8 +11602,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           timestamp: '2023-11-16T09:00:00.000Z'
                         person:
                           name: Ramu
@@ -11265,8 +11613,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
                   - id: F2
@@ -11300,8 +11648,8 @@ x-flows:
                             name: Karnataka
                         time:
                           range:
-                            start: '2023-11-18T09:30:00Z'
-                            end: '2023-11-21T16:30:00Z'
+                            start: '2023-11-18T09:30:00.000Z'
+                            end: '2023-11-21T16:30:00.000Z'
                         contact:
                           phone: '9886098860'
                           email: nobody@nomail.com
@@ -12210,8 +12558,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         contact:
                           phone: '9886098860'
                           email: nobody@nomail.com
@@ -12235,8 +12583,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
                         instructions:
@@ -12245,8 +12593,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                 billing:
                   name: ONDC buyer
@@ -12588,8 +12936,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         contact:
                           phone: '9886098860'
                           email: nobody@nomail.com
@@ -12613,8 +12961,8 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         person:
                           name: Ramu
                         instructions:
@@ -12623,8 +12971,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                 billing:
                   name: ONDC buyer
@@ -12878,8 +13226,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                         contact:
                           phone: '9886098860'
                           email: nobody@nomail.com
@@ -12902,8 +13250,8 @@ x-flows:
                         time:
                           label: selected
                           range:
-                            start: '2023-11-20T09:30:00Z'
-                            end: '2023-11-20T10:30:00Z'
+                            start: '2023-11-20T09:30:00.000Z'
+                            end: '2023-11-20T10:30:00.000Z'
                           days:
                             - '20'
                         person:
@@ -12914,8 +13262,8 @@ x-flows:
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
                 quote:
@@ -13053,8 +13401,8 @@ x-flows:
                           gps: 12.956399,77.636803
                         time:
                           range:
-                            start: '2023-11-20T09:30:00Z'
-                            end: '2023-11-20T10:30:00Z'
+                            start: '2023-11-20T09:30:00.000Z'
+                            end: '2023-11-20T10:30:00.000Z'
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
@@ -13080,15 +13428,15 @@ x-flows:
                         time:
                           label: confirmed
                           range:
-                            start: '2023-11-20T09:30:00Z'
-                            end: '2023-11-20T10:30:00Z'
+                            start: '2023-11-20T09:30:00.000Z'
+                            end: '2023-11-20T10:30:00.000Z'
                         person:
                           name: Ramu
                         authorization:
                           type: OTP
                           token: '1234'
-                          valid_from: '2023-11-16T09:30:00Z'
-                          valid_to: '2023-11-16T09:35:00Z'
+                          valid_from: '2023-11-16T09:30:00.000Z'
+                          valid_to: '2023-11-16T09:35:00.000Z'
                           status: valid
                     rateable: true
                 quote:
@@ -13336,8 +13684,8 @@ x-examples:
                           area_code: '560001'
                         time:
                           range:
-                            start: '2023-11-16T09:30:00Z'
-                            end: '2023-11-16T10:30:00Z'
+                            start: '2023-11-16T09:30:00.000Z'
+                            end: '2023-11-16T10:30:00.000Z'
                           days: '4'
                   payment:
                     type: ON-FULFILLMENT
@@ -13397,8 +13745,8 @@ x-examples:
                           time:
                             label: selected
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
@@ -13445,8 +13793,8 @@ x-examples:
                           time:
                             label: selected
                             range:
-                              start: '2023-11-17T09:30:00Z'
-                              end: '2023-11-17T10:30:00Z'
+                              start: '2023-11-17T09:30:00.000Z'
+                              end: '2023-11-17T10:30:00.000Z'
                             days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
@@ -13496,8 +13844,8 @@ x-examples:
                           time:
                             label: selected
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             days: '4'
                   payments:
                     - type: PRE-FULFILLMENT
@@ -13698,8 +14046,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                   payments:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
@@ -13772,8 +14120,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                   payments:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
@@ -14022,11 +14370,37 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           customer:
                             person:
                               name: Ramu
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -14078,7 +14452,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -14098,6 +14472,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -14187,14 +14576,40 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           customer:
                             person:
                               name: Ramu
                           instructions:
                             name: Special Instructions
                             short_desc: Customer Special Instructions
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -14475,6 +14890,32 @@ x-examples:
                           customer:
                             person:
                               name: Ramu
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -14677,7 +15118,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -14697,6 +15138,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -14901,8 +15357,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           contact:
                             phone: '9886098860'
@@ -14926,8 +15382,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           person:
                             name: Ramu
@@ -14937,8 +15393,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
                     - id: F2
@@ -14972,8 +15428,8 @@ x-examples:
                               name: Karnataka
                           time:
                             range:
-                              start: '2023-11-18T09:30:00Z'
-                              end: '2023-11-21T16:30:00Z'
+                              start: '2023-11-18T09:30:00.000Z'
+                              end: '2023-11-21T16:30:00.000Z'
                           contact:
                             phone: '9886098860'
                             email: nobody@nomail.com
@@ -15417,6 +15873,7 @@ x-examples:
                         range:
                           start: '2022-11-10T00:00:00.000Z'
                           end: '2022-11-20T19:30:00.000Z'
+                        days: 4,5
                         schedule:
                           frequency: PT1H
                           holidays:
@@ -15482,7 +15939,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                             media:
                               - mimetype: video/mp4
-                                url: https://video_url.com
+                                url: video_url
                           creator:
                             descriptor:
                               name: nobroker
@@ -15509,12 +15966,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: In-Transit
+                              reason_required: true
+                              cancel_by:
+                                duration: P0D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15538,7 +16001,7 @@ x-examples:
                             range:
                               start: '2022-11-10T00:00:00.000Z'
                               end: '2022-11-20T00:00:00.000Z'
-                            days: 04,05
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
@@ -15595,12 +16058,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: Out-For-Delivery
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15622,14 +16091,14 @@ x-examples:
                           time:
                             label: validity
                             range:
-                              start: '2022-11-10T00:00:00.000Z'
-                              end: '2022-11-20T19:30:00.000Z'
-                            days: 04,05
+                              start: '2022-12-24T00:00:00.000Z'
+                              end: '2022-12-31T00:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-11-13'
-                                - '2023-11-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
                                 - '2023-11-16T09:30:00.000Z'
                                 - '2023-11-16T19:30:00.000Z'
@@ -15681,12 +16150,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: Out-For-Delivery
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15708,14 +16183,14 @@ x-examples:
                           time:
                             label: validity
                             range:
-                              start: '2022-11-10T00:00:00.000Z'
-                              end: '2022-11-20T19:30:00.000Z'
-                            days: 04,05
+                              start: '2022-12-24T00:00:00.000Z'
+                              end: '2022-12-31T00:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-11-13'
-                                - '2023-11-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
                                 - '2023-11-16T09:30:00.000Z'
                                 - '2023-11-16T19:30:00.000Z'
@@ -15767,12 +16242,18 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
                             - fulfillment_state:
                                 descriptor:
                                   code: Out-For-Delivery
+                              reason_required: true
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                           tags:
@@ -15794,14 +16275,14 @@ x-examples:
                           time:
                             label: validity
                             range:
-                              start: '2022-11-10T00:00:00.000Z'
-                              end: '2022-11-20T19:30:00.000Z'
-                            days: 04,05
+                              start: '2022-12-24T00:00:00.000Z'
+                              end: '2022-12-31T00:00:00.000Z'
+                            days: 4,5
                             schedule:
                               frequency: PT1H
                               holidays:
-                                - '2023-11-13'
-                                - '2023-11-15'
+                                - 2024-10-13T00:00:00.000Z
+                                - 2024-10-15T00:00:00.000Z
                               times:
                                 - '2023-11-16T09:30:00.000Z'
                                 - '2023-11-16T19:30:00.000Z'
@@ -15849,11 +16330,11 @@ x-examples:
                             phone: '9886098860'
                             email: abc@xyz.com
           - summary: >-
-              Returns the catalog + customizations (Home cooking services)  +
-              available schedule
+              Returns the catalog specific to the search intent + available
+              schedule
             description: >-
-              Returns the catalog + customizations (Home cooking services) +
-              available schedule
+              Returns the catalog specific to the search intent + available
+              schedule
             value:
               context:
                 domain: ONDC:SRV11
@@ -16096,7 +16577,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                             media:
                               - mimetype: video/mp4
-                                url: https://video_url.com
+                                url: video_url
                           price:
                             currency: INR
                             minimum_value: '199.00'
@@ -16112,6 +16593,8 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: Pending
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 amount:
                                   value: '0'
@@ -16119,15 +16602,24 @@ x-examples:
                             - fulfillment_state:
                                 descriptor:
                                   code: In-Transit
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '5'
                               reason_required: true
                             - fulfillment_state:
                                 descriptor:
                                   code: At-Location
+                              cancel_by:
+                                duration: P1D
                               cancellation_fee:
                                 percentage: '25'
                               reason_required: true
+                          xinput:
+                            form:
+                              url: https://abc.com/form
+                              mimetype: text/html
+                            required: true
                           tags:
                             - descriptor:
                                 code: reschedule_terms
@@ -16171,7 +16663,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: People
-                            code: '5: other code'
+                            code: 'CUSTOM: other code'
                             short_desc: No. of People
                             long_desc: No. of People
                             images:
@@ -16201,7 +16693,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: Sandwich
-                            code: '5: other code'
+                            code: 'CUSTOM: other code'
                             short_desc: Sandwich
                             long_desc: Sandwich
                             images:
@@ -16236,7 +16728,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: Dahi Ke Kebab
-                            code: '5: other code'
+                            code: 'CUSTOM: other code'
                             short_desc: Dahi Ke Kebab
                             long_desc: Dahi Ke Kebab
                             images:
@@ -16271,7 +16763,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: Dal Makhni
-                            code: '5: other code'
+                            code: 'CUSTOM: other code'
                             short_desc: Dal Makhni
                             long_desc: Dal Makhni
                             images:
@@ -17087,8 +17579,8 @@ x-examples:
                           time:
                             label: rejected
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             days: '4'
                   quote:
                     price:
@@ -17249,8 +17741,34 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -17406,8 +17924,34 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -17711,6 +18255,32 @@ x-examples:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
                             days: '4'
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18011,8 +18581,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           contact:
                             phone: '9886098860'
                             email: nobody@nomail.com
@@ -18035,17 +18605,46 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
+                          instructions:
+                            name: Special Instructions
+                            short_desc: Customer Special Instructions
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18097,7 +18696,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -18117,6 +18716,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -18204,8 +18818,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           contact:
                             phone: '9886098860'
                             email: nobody@nomail.com
@@ -18228,8 +18842,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
                           instructions:
@@ -18238,10 +18852,36 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18340,7 +18980,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -18360,6 +19000,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -18579,10 +19234,36 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
+                  cancellation_terms:
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
+                    - fulfillment_state:
+                        descriptor:
+                          code: In-Transit
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '5'
+                      reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: At-Location
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        percentage: '25'
+                      reason_required: true
                   quote:
                     price:
                       currency: INR
@@ -18785,7 +19466,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -18805,6 +19486,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -18890,8 +19586,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           contact:
                             phone: '9886098860'
@@ -18915,8 +19611,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           person:
                             name: Ramu
@@ -19124,8 +19820,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           instructions:
                             name: Special Instructions
@@ -19153,8 +19849,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
                   quote:
@@ -19357,8 +20053,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           contact:
                             phone: '9886098860'
@@ -19382,13 +20078,13 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                           person:
                             name: Ramu
                           instructions:
@@ -19720,8 +20416,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
                   quote:
@@ -20028,8 +20724,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           contact:
                             phone: '9886098860'
@@ -20053,8 +20749,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
                           instructions:
@@ -20064,8 +20760,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                   quote:
                     price:
@@ -20269,8 +20965,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           contact:
                             phone: '9886098860'
@@ -20294,8 +20990,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
                           instructions:
@@ -20305,8 +21001,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '5678'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                   quote:
                     price:
@@ -20631,8 +21327,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           contact:
                             phone: '9886098860'
@@ -20656,8 +21352,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                             timestamp: '2023-11-16T09:00:00.000Z'
                           person:
                             name: Ramu
@@ -20667,8 +21363,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                       rateable: true
                     - id: F2
@@ -21227,8 +21923,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           contact:
                             phone: '9886098860'
                             email: nobody@nomail.com
@@ -21252,8 +21948,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
                           instructions:
@@ -21262,8 +21958,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                   billing:
                     name: ONDC buyer
@@ -21507,8 +22203,8 @@ x-examples:
                             gps: 12.956399,77.636803
                           time:
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           contact:
                             phone: '9886098860'
                             email: nobody@nomail.com
@@ -21532,8 +22228,8 @@ x-examples:
                           time:
                             label: confirmed
                             range:
-                              start: '2023-11-16T09:30:00Z'
-                              end: '2023-11-16T10:30:00Z'
+                              start: '2023-11-16T09:30:00.000Z'
+                              end: '2023-11-16T10:30:00.000Z'
                           person:
                             name: Ramu
                           instructions:
@@ -21542,8 +22238,8 @@ x-examples:
                           authorization:
                             type: OTP
                             token: '1234'
-                            valid_from: '2023-11-16T09:30:00Z'
-                            valid_to: '2023-11-16T09:35:00Z'
+                            valid_from: '2023-11-16T09:30:00.000Z'
+                            valid_to: '2023-11-16T09:35:00.000Z'
                             status: valid
                   billing:
                     name: ONDC buyer
@@ -21694,12 +22390,12 @@ x-attributes:
                     start:
                       description: start time of the time slot desired for the service
                       required: required
-                      usage: '2023-11-16T09:30:00Z'
+                      usage: '2023-11-16T09:30:00.000Z'
                       reference: if any
                     end:
                       description: end time of the time slot desired for the service
                       required: required
-                      usage: '2023-11-16T10:30:00Z'
+                      usage: '2023-11-16T10:30:00.000Z'
                       reference: if any
                   days:
                     description: >-
@@ -22201,12 +22897,12 @@ x-attributes:
                     start:
                       description: start time of the time slot chosen for the service
                       required: required
-                      usage: '2023-11-16T09:30:00Z'
+                      usage: '2023-11-16T09:30:00.000Z'
                       reference: if any
                     end:
                       description: end time of the time slot chosen for the service
                       required: required
-                      usage: '2023-11-16T10:30:00Z'
+                      usage: '2023-11-16T10:30:00.000Z'
                       reference: if any
             payments:
               type:
@@ -23098,12 +23794,12 @@ x-attributes:
                     start:
                       description: start time of the time slot chosen for the service
                       required: required
-                      usage: '2023-11-16T09:30:00Z'
+                      usage: '2023-11-16T09:30:00.000Z'
                       reference: if any
                     end:
                       description: end time of the time slot chosen for the service
                       required: required
-                      usage: '2023-11-16T10:30:00Z'
+                      usage: '2023-11-16T10:30:00.000Z'
                       reference: if any
             quote:
               parent: true
@@ -23490,7 +24186,7 @@ x-attributes:
                         depart from its starting point and the range within
                         which it will arrive at the customer's location.
                       required: required
-                      usage: '2023-11-16T09:30:00Z'
+                      usage: '2023-11-16T09:30:00.000Z'
                       reference: if any
                     end:
                       description: >-
@@ -23498,7 +24194,7 @@ x-attributes:
                         depart from its starting point and the range within
                         which it will arrive at the customer's location.
                       required: required
-                      usage: '2023-11-16T10:30:00Z'
+                      usage: '2023-11-16T10:30:00.000Z'
                       reference: if any
                 authorization:
                   description: >-
@@ -23724,12 +24420,12 @@ x-attributes:
                     start:
                       description: start time of the service
                       required: required
-                      usage: '2023-11-16T09:30:00Z'
+                      usage: '2023-11-16T09:30:00.000Z'
                       reference: if any
                     end:
                       description: end time of the service
                       required: required
-                      usage: '2023-11-16T10:30:00Z'
+                      usage: '2023-11-16T10:30:00.000Z'
                       reference: if any
       on_update:
         parent: true

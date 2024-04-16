@@ -89,8 +89,8 @@
               "time": {
                 "label": "confirmed",
                 "range": {
-                  "start": "2023-11-16T09:30:00Z",
-                  "end": "2023-11-16T10:30:00Z"
+                  "start": "2023-11-16T09:30:00.000Z",
+                  "end": "2023-11-16T10:30:00.000Z"
                 }
               },
               "tags": {
@@ -108,6 +108,52 @@
               }
             }
           ]
+        }
+      ],
+      "cancellation_terms": [
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "Pending"
+            }
+          },
+          "cancel_by": {
+            "duration": "P1D"
+          },
+          "cancellation_fee": {
+            "amount": {
+              "value": "0"
+            }
+          },
+          "reason_required": false
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "In-Transit"
+            }
+          },
+          "cancel_by": {
+            "duration": "P1D"
+          },
+          "cancellation_fee": {
+            "percentage": "5"
+          },
+          "reason_required": true
+        },
+        {
+          "fulfillment_state": {
+            "descriptor": {
+              "code": "At-Location"
+            }
+          },
+          "cancel_by": {
+            "duration": "P1D"
+          },
+          "cancellation_fee": {
+            "percentage": "25"
+          },
+          "reason_required": true
         }
       ],
       "quote": {
@@ -164,7 +210,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -198,7 +244,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -232,7 +278,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {

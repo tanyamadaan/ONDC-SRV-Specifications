@@ -78,6 +78,7 @@
               "start": "2022-11-10T00:00:00.000Z",
               "end": "2022-11-20T19:30:00.000Z"
             },
+            "days": "4,5",
             "schedule": {
               "frequency": "PT1H",
               "holidays": ["2023-11-13", "2023-11-15"],
@@ -206,6 +207,10 @@
                       "code": "Pending"
                     }
                   },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
+                  },
                   "cancellation_fee": {
                     "amount": {
                       "value": "0"
@@ -217,6 +222,10 @@
                     "descriptor": {
                       "code": "In-Transit"
                     }
+                  },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P0D"
                   },
                   "cancellation_fee": {
                     "percentage": "5"
@@ -262,7 +271,7 @@
                   "start": "2022-11-10T00:00:00.000Z",
                   "end": "2022-11-20T00:00:00.000Z"
                 },
-
+                "days": "4,5",
                 "schedule": {
                   "frequency": "PT1H",
                   "holidays": ["2023-11-13", "2023-11-15"],
@@ -336,6 +345,10 @@
                       "code": "Pending"
                     }
                   },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
+                  },
                   "cancellation_fee": {
                     "amount": {
                       "value": "0"
@@ -347,6 +360,10 @@
                     "descriptor": {
                       "code": "Out-For-Delivery"
                     }
+                  },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
                   },
                   "cancellation_fee": {
                     "percentage": "5"
@@ -392,6 +409,7 @@
                   "start": "2022-12-24T00:00:00.000Z",
                   "end": "2022-12-31T00:00:00.000Z"
                 },
+                "days": "4,5",
                 "schedule": {
                   "frequency": "PT1H",
                   "holidays": ["2023-22-13", "2023-22-15"],
@@ -465,6 +483,10 @@
                       "code": "Pending"
                     }
                   },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
+                  },
                   "cancellation_fee": {
                     "amount": {
                       "value": "0"
@@ -476,6 +498,10 @@
                     "descriptor": {
                       "code": "Out-For-Delivery"
                     }
+                  },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
                   },
                   "cancellation_fee": {
                     "percentage": "5"
@@ -521,6 +547,7 @@
                   "start": "2022-12-24T00:00:00.000Z",
                   "end": "2022-12-31T00:00:00.000Z"
                 },
+                "days": "4,5",
                 "schedule": {
                   "frequency": "PT1H",
                   "holidays": ["2023-22-13", "2023-22-15"],
@@ -594,6 +621,10 @@
                       "code": "Pending"
                     }
                   },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
+                  },
                   "cancellation_fee": {
                     "amount": {
                       "value": "0"
@@ -605,6 +636,10 @@
                     "descriptor": {
                       "code": "Out-For-Delivery"
                     }
+                  },
+                  "reason_required": true,
+                  "cancel_by": {
+                    "duration": "P1D"
                   },
                   "cancellation_fee": {
                     "percentage": "5"
@@ -650,6 +685,7 @@
                   "start": "2022-12-24T00:00:00.000Z",
                   "end": "2022-12-31T00:00:00.000Z"
                 },
+                "days": "4,5",
                 "schedule": {
                   "frequency": "PT1H",
                   "holidays": ["2023-22-13", "2023-22-15"],

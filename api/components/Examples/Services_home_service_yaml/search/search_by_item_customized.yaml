@@ -30,8 +30,8 @@ value:
               area_code: "560001"
             time:
               range: 
-                start: '2023-11-16T09:30:00Z'
-                end: '2023-11-16T10:30:00Z'
+                start: '2023-11-16T09:30:00.000Z'
+                end: '2023-11-16T10:30:00.000Z'
               days: "4"
       payment:
         type: ON-FULFILLMENT

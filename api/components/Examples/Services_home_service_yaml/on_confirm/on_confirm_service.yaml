@@ -66,8 +66,8 @@ value:
                 gps: 12.956399,77.636803
               time:
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
               contact:
                 phone: '9886098860'
                 email: nobody@nomail.com
@@ -90,8 +90,8 @@ value:
               time:
                 label: confirmed
                 range:
-                  start: '2023-11-16T09:30:00Z'
-                  end: '2023-11-16T10:30:00Z'
+                  start: '2023-11-16T09:30:00.000Z'
+                  end: '2023-11-16T10:30:00.000Z'
 
               person:
                 name: Ramu
@@ -101,10 +101,36 @@ value:
               authorization:
                 type: OTP
                 token: '1234'
-                valid_from: '2023-11-16T09:30:00Z'
-                valid_to: '2023-11-16T09:35:00Z'
+                valid_from: '2023-11-16T09:30:00.000Z'
+                valid_to: '2023-11-16T09:35:00.000Z'
                 status: valid
           rateable: true
+      cancellation_terms:
+      - fulfillment_state:
+          descriptor:
+            code: Pending
+        cancel_by:
+          duration: P1D
+        cancellation_fee:
+          amount:
+            value: '0'
+        reason_required: false
+      - fulfillment_state:
+          descriptor:
+            code: In-Transit
+        cancel_by:
+          duration: P1D
+        cancellation_fee:
+          percentage: '5'
+        reason_required: true
+      - fulfillment_state:
+          descriptor:
+            code: At-Location
+        cancel_by:
+          duration: P1D
+        cancellation_fee:
+          percentage: '25'
+        reason_required: true
       quote:
         price:
           currency: INR
@@ -203,7 +229,7 @@ value:
           type: PRE-FULFILLMENT
           tags:
             - descriptor:
-                code: Settlement_Details
+                code: Settlement_Counterparty
               list:
                 - descriptor:
                     code: Counterparty
@@ -223,6 +249,21 @@ value:
                 - descriptor:
                     code: UPI_Address
                   value: xxxxxxx
+            - descriptor:
+                code: Settlement_Details
+              list:
+              - descriptor:
+                  code: Window
+                value: P1D
+              - descriptor:
+                  code: Basis
+                value: Completed
+              - descriptor:
+                  code: Witholding_Amount
+                value: '0.00'
+              - descriptor:
+                  code: Phase
+                value: sale-amount
             - descriptor:
                 code: Buyer_Finder_Fee
               list:
