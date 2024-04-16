@@ -671,9 +671,9 @@
               "id": "offer-1",
               "descriptor": {
                 "name": "",
-                "code": "FREEBIE",
-                "short_desc": "Cushion Cleaning",
-                "long_desc": "Cushion Cleaning",
+                "code": "Discount_Percent",
+                "short_desc": "",
+                "long_desc": "",
                 "images": [
                   {
                     "url": "https://abc.com/images/207.png"
@@ -682,14 +682,49 @@
               },
               "location_ids": [],
               "category_ids": [],
-              "item_ids": ["PI2"],
+              "item_ids": [
+                "I1"
+              ],
               "time": {
                 "label": "validity",
                 "range": {
                   "start": "2023-11-12T00:00:00.000Z",
                   "end": "2023-11-16T00:00:00.000Z"
                 }
-              }
+              },
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "offers_details"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "qualifier_min_value"
+                      },
+                      "value": "499.0"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "max_benefit"
+                      },
+                      "value": "150"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "discount_unit"
+                      },
+                      "value": "percentage"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "discount_value"
+                      },
+                      "value": "15"
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "fulfillments": [
