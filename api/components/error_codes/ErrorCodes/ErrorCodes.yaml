@@ -1,0 +1,13 @@
+ErrorCodes:
+  - Code: 90001
+    Type: Seller App
+    Message: Schedule selected by the buyer is not available
+    Description: Used in error object in /on_select
+  - Code: 90002
+    Type: Seller App
+    Message: Incorrect OTP provided by buyer
+    Description: Used in error object in /on_status
+  - Code: 90003
+    Type: Seller App
+    Message: Schedule is not provided by the buyer
+    Description: Used in NACK on /select
