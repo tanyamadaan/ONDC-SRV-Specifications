@@ -242,6 +242,7 @@ value:
               url: video_url
           price:
             currency: INR
+            value: '199.00'
             minimum_value: '199.00'
           category_ids:
           - SRV11-xxxx
@@ -332,6 +333,7 @@ value:
             - url: https://abc.com/images/207.png
           price:
             currency: INR
+            value: '199.00'
             minimum_value: '299.00'
           quantity:
             unitized:
@@ -362,6 +364,7 @@ value:
             - url: https://abc.com/images/207.png
           price:
             currency: INR
+            value: '199.00'
             minimum_value: '199'
           quantity:
             unitized:
@@ -397,6 +400,7 @@ value:
             - url: https://abc.com/images/207.png
           price:
             currency: INR
+            value: '199.00'
             minimum_value: '199'
           quantity:
             unitized:
@@ -432,6 +436,7 @@ value:
             - url: https://abc.com/images/207.png
           price:
             currency: INR
+            value: '199.00'
             minimum_value: '199'
           quantity:
             unitized:

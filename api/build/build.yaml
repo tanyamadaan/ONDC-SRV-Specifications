@@ -6677,6 +6677,7 @@ x-flows:
                               url: video_url
                         price:
                           currency: INR
+                          value: '199.00'
                           minimum_value: '199.00'
                         category_ids:
                           - SRV11-xxxx
@@ -6767,6 +6768,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                         price:
                           currency: INR
+                          value: '199.00'
                           minimum_value: '299.00'
                         quantity:
                           unitized:
@@ -6797,6 +6799,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                         price:
                           currency: INR
+                          value: '199.00'
                           minimum_value: '199'
                         quantity:
                           unitized:
@@ -6832,6 +6835,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                         price:
                           currency: INR
+                          value: '199.00'
                           minimum_value: '199'
                         quantity:
                           unitized:
@@ -6867,6 +6871,7 @@ x-flows:
                             - url: https://abc.com/images/207.png
                         price:
                           currency: INR
+                          value: '199.00'
                           minimum_value: '199'
                         quantity:
                           unitized:
@@ -16580,6 +16585,7 @@ x-examples:
                                 url: video_url
                           price:
                             currency: INR
+                            value: '199.00'
                             minimum_value: '199.00'
                           category_ids:
                             - SRV11-xxxx
@@ -16670,6 +16676,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                           price:
                             currency: INR
+                            value: '199.00'
                             minimum_value: '299.00'
                           quantity:
                             unitized:
@@ -16700,6 +16707,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                           price:
                             currency: INR
+                            value: '199.00'
                             minimum_value: '199'
                           quantity:
                             unitized:
@@ -16735,6 +16743,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                           price:
                             currency: INR
+                            value: '199.00'
                             minimum_value: '199'
                           quantity:
                             unitized:
@@ -16770,6 +16779,7 @@ x-examples:
                               - url: https://abc.com/images/207.png
                           price:
                             currency: INR
+                            value: '199.00'
                             minimum_value: '199'
                           quantity:
                             unitized:
