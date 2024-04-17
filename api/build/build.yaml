@@ -24892,7 +24892,15 @@ x-attributes:
                 usage: INVOICE
                 reference: if any
 x-errorcodes:
-  - Cancellation: []
+  - Cancellation:
+      - Code: '001'
+        Reason: >-
+          Price of one or more items have changed due to which buyer was asked
+          to make additional payment
+        Triggers RTO?: 'No'
+        Who can use code?: Buyer NP (BNP)
+        Cause of cancellation & hence cost attributed to: Seller NP (SNP)
+        Applicable for part cancel: 'No'
   - ErrorCodes:
       - Code: 90001
         Type: Seller App
