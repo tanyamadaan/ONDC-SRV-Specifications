@@ -58,7 +58,7 @@ message:
         usage: "1"
         reference: if any
       type:
-        description: type of modes available for fulfilling the service , enum - "Home-Service, Store-Service"
+        description: type of modes available for fulfilling the service , enum - "Home-Service"
         required: required
         usage: "Home-Service"
         reference: if any  
@@ -201,8 +201,8 @@ message:
               usage: "[2023-11-13, 2023-11-15]"
               reference: if any
             times:
-              description: available time slots for the service
-              required: required
+              description: Available time slots for the service. If time slots for the service are not specified within the items, the schedule of the service provider will be prioritized.
+              required: optional
               usage: "[2022-11-20T00:00:00.000Z]"
               reference: if any
       creds:

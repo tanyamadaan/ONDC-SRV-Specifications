@@ -27,14 +27,10 @@
       },
       "items": [
         {
-          "fulfillment_ids": [
-            "F1"
-          ],
+          "fulfillment_ids": ["F1"],
           "id": "I2",
           "parent_item_id": "PI2",
-          "location_ids": [
-            "L1"
-          ]
+          "location_ids": ["L1"]
         }
       ],
       "fulfillments": [
@@ -107,19 +103,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "item"
-                        }
-                    ]
-                }
+                    "value": "item"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -141,19 +137,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "tax"
-                        }
-                    ]
-                }
+                    "value": "tax"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -175,19 +171,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "discount"
-                        }
-                    ]
-                }
+                    "value": "discount"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -209,28 +205,177 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "misc"
-                        }
-                    ]
-                }
+                    "value": "misc"
+                  }
+                ]
+              }
             ]
           }
         ],
         "ttl": "P1D"
       },
-      "payments": [{
-        "type": "PRE-FULFILLMENT",
-        "collected_by": "BAP"
-    }]
+      "payments": [
+        {
+          "id": "P1",
+          "collected_by": "BAP",
+          "params": {
+            "amount": "99",
+            "currency": "INR",
+            "bank_account_number": "xxxxxxxx",
+            "virtual_payment_address": "xxx@xxxx"
+          },
+          "type": "PRE-FULFILLMENT",
+          "tags": [
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Counterparty"
+                  },
+                  "value": "BPP"
+                },
+                {
+                  "descriptor": {
+                    "code": "Mode"
+                  },
+                  "value": "UPI"
+                },
+                {
+                  "descriptor": {
+                    "code": "Beneficiary_Name"
+                  },
+                  "value": "xxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "Bank_Account_No"
+                  },
+                  "value": "xxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "Ifsc_Code"
+                  },
+                  "value": "xxxxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "UPI_Address"
+                  },
+                  "value": "xxxxxxx"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Buyer_Finder_Fee"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Buyer_Finder_Fee_Type"
+                  },
+                  "value": "percentage"
+                },
+                {
+                  "descriptor": {
+                    "code": "Buyer_Finder_Fee_Amount"
+                  },
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P2",
+          "collected_by": "BPP",
+          "params": {
+            "amount": "5231",
+            "currency": "INR",
+            "bank_account_number": "xxxxxxxx",
+            "bank_code": "xxxxxxx",
+            "virtual_payment_address": "xxx@xxxx"
+          },
+          "type": "ON-FULFILLMENT",
+          "tags": [
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Counterparty"
+                  },
+                  "value": "BAP"
+                },
+                {
+                  "descriptor": {
+                    "code": "Mode"
+                  },
+                  "value": "UPI"
+                },
+                {
+                  "descriptor": {
+                    "code": "Beneficiary_Name"
+                  },
+                  "value": "xxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "Bank_Account_No"
+                  },
+                  "value": "xxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "Ifsc_Code"
+                  },
+                  "value": "xxxxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "UPI_Address"
+                  },
+                  "value": "xxxxxxx"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Buyer_Finder_Fee"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Buyer_Finder_Fee_Type"
+                  },
+                  "value": "percentage"
+                },
+                {
+                  "descriptor": {
+                    "code": "Buyer_Finder_Fee_Amount"
+                  },
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }
