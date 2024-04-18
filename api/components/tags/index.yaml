@@ -6,7 +6,6 @@ on_search:
   message:
     catalog:
       $ref: "./TagGroup.yaml#/catalog"
-
 on_select:
   message:
     order:
