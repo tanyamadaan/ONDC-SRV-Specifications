@@ -33,7 +33,12 @@
           ],
           "fulfillment_ids": [
             "F1"
-          ]
+          ],
+          "quantity": {
+            "selected": {
+              "count": 1
+            }
+          }
         },
         {
           "id": "IC1",
@@ -587,8 +592,8 @@
       },
       "payments": [
         {
-          "type": "PRE-FULFILLMENT",
-          "collected_by": "BAP"
+          "collected_by": "BAP",
+          "type": "PRE-FULFILLMENT"
         }
       ]
     }

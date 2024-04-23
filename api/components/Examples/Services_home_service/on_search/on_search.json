@@ -177,19 +177,6 @@
                   }
                 ]
               },
-              "creator": {
-                "descriptor": {
-                  "name": "nobroker",
-                  "contact": {
-                    "name": "Raj Kumar",
-                    "address": {
-                      "full": "Sector-1, Noida,Uttar Pradesh-201301"
-                    },
-                    "phone": "18001801018",
-                    "email": "consumer.services@nobroker.com"
-                  }
-                }
-              },
               "price": {
                 "currency": "INR",
                 "value": "149.00",

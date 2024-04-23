@@ -29,6 +29,9 @@ value:
           parent_item_id: PI1
           location_ids:
             - L1
+          quantity:
+            selected:
+              count: 1
       fulfillments:
         - type: Home-Service
           stops:
