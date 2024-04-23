@@ -93,7 +93,6 @@
         }
       ],
       "payments": [{
-        "id":"P1",
         "type": "PRE-FULFILLMENT",
         "collected_by": "BAP"
     }]

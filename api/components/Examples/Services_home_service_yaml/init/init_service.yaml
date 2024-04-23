@@ -69,5 +69,4 @@ value:
 
       payments:
         - type: PRE-FULFILLMENT
-          id: P1
           collected_by : BAP
