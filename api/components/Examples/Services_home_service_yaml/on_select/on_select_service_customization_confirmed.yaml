@@ -28,6 +28,9 @@ value:
             - L1
           fulfillment_ids:
             - F1
+          quantity:
+            selected:
+              count: 1
         - id: IC1
           parent_item_id: I1
           location_ids:

@@ -29,6 +29,9 @@ value:
           parent_item_id: PI2
           location_ids:
             - L1
+          quantity:
+            selected:
+              count: 1
       fulfillments:
         - id: F1
           type: Home-Service
@@ -60,9 +63,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: seats
-                  value: '2'
               price:
                 currency: INR
                 value: '474'

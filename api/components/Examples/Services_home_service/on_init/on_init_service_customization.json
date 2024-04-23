@@ -38,7 +38,12 @@
           ],
           "fulfillment_ids": [
             "F1"
-          ]
+          ],
+          "quantity": {
+            "selected": {
+              "count": 1
+            }
+          }
         },
         {
           "id": "IC1",

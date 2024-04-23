@@ -30,6 +30,9 @@ value:
             - L1
           fulfillment_ids:
             - F1
+          quantity:
+            selected:
+              count: 1
         - id: IC1
           parent_item_id: I1
           location_ids:
@@ -41,9 +44,6 @@ value:
           quantity:
             selected:
               count: 3
-            measure:
-              unit: people
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -63,9 +63,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -91,9 +88,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -119,9 +113,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: unit
-              value: "1"
           tags:
             - descriptor:
                 code: attribute
@@ -170,4 +161,5 @@ value:
                   end: '2024-03-04T18:00:00.000Z'
       payments:
         - type: PRE-FULFILLMENT
+          id: P1
           collected_by: BAP

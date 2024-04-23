@@ -36,7 +36,12 @@
           "parent_item_id": "PI1",
           "fulfillment_ids": [
             "F1"
-          ]
+          ],
+          "quantity": {
+            "selected": {
+              "count": 1
+            }
+          }
         }
       ],
       "billing": {
@@ -88,6 +93,7 @@
         }
       ],
       "payments": [{
+        "id":"P1",
         "type": "PRE-FULFILLMENT",
         "collected_by": "BAP"
     }]

@@ -35,9 +35,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: seats
-              value: '2'
       billing:
         name: ONDC buyer
         address: >-
@@ -145,9 +142,6 @@ value:
               quantity:
                 selected:
                   count: 1
-                measure:
-                  unit: seats
-                  value: '2'
               price:
                 currency: INR
                 value: '474'

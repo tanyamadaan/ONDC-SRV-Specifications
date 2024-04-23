@@ -32,9 +32,6 @@ value:
           quantity:
             selected:
               count: 1
-            measure:
-              unit: seats
-              value: '2'
       billing:
         name: ONDC buyer
         address: >-
@@ -72,4 +69,5 @@ value:
 
       payments:
         - type: PRE-FULFILLMENT
+          id: P1
           collected_by : BAP

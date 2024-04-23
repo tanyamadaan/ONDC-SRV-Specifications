@@ -40,10 +40,6 @@
           "quantity": {
             "selected": {
               "count": 1
-            },
-            "measure": {
-              "unit": "seats",
-              "value": "2"
             }
           }
         }
@@ -97,6 +93,7 @@
         }
       ],
       "payments": [{
+        "id":"P1",
         "type": "PRE-FULFILLMENT",
         "collected_by": "BAP"
     }]

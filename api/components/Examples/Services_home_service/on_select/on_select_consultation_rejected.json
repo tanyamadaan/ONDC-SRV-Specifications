@@ -35,6 +35,11 @@
           "location_ids": [
             "L1"
           ],
+          "quantity": {
+            "selected": {
+              "count": 1
+            }
+          },
           "time": {
             "label": "validity",
             "range": {
