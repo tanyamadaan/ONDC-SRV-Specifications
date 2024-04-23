@@ -29,6 +29,9 @@ value:
           parent_item_id: PI1
           location_ids:
             - L1
+          quantity:
+            selected:
+              count: 1
           time:
             label: validity
             range:
@@ -101,8 +104,8 @@ value:
                     value: tax
         ttl: P1D
       payments:
-        - type: PRE-FULFILLMENT
-          collected_by : BAP
+       - collected_by: BAP
+         type: PRE-FULFILLMENT
   error:
     code: '90001'
     message: Schedule not available

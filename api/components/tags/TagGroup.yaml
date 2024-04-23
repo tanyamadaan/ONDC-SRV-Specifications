@@ -3,6 +3,7 @@ intent:
     - code: BAP_Terms
       description: The buyer terms, including the type and amount of the buyer finder fee, are communicated.
       reference: <PR/Issue/Discussion Links md format text>
+      required: required
       list:
         $ref: "./Tag.yaml#/BAP_Terms"
 catalog:
@@ -11,6 +12,7 @@ catalog:
       - code: serviceability
         description: The provider's serviceability, indicating where and for which category they are able to provide their services, is specified here.
         reference: <PR/Issue/Discussion Links md format text>
+        required: required
         list:
           $ref: "./Tag.yaml#/serviceability"
   offers:
@@ -18,6 +20,7 @@ catalog:
       - code: offers_details
         description: This can be utilized to specify the minimum order value, discount value, and other metadata related to the offer and its application. 
         reference: <PR/Issue/Discussion Links md format text>
+        required: optional
         list:
           $ref: "./Tag.yaml#/offers_details"
 order:
@@ -28,6 +31,7 @@ order:
         - code: type
           description: the type of charge in the breakup
           reference: <PR/Issue/Discussion Links md format text>
+          required: required
           list:
             $ref: "./Tag.yaml#/title/type"
   payments: &ref1
@@ -35,11 +39,13 @@ order:
       - code: Settlement_Details
         description: Define Payment Settlement Details here
         reference: <PR/Issue/Discussion Links md format text>
+        required: required
         list:
           $ref: "./Tag.yaml#/Settlement_Details"
       - code: Buyer_Finder_Fee
         description: Define Finder's Fee for Buyer
         reference: <PR/Issue/Discussion Links md format text>
+        required: required
         list:
           $ref: "./Tag.yaml#/Buyer_Finder_Fee"
 

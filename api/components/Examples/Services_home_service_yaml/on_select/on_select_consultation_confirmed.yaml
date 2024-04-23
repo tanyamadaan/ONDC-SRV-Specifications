@@ -29,6 +29,9 @@ value:
           parent_item_id: PI1
           location_ids:
             - L1
+          quantity:
+            selected:
+              count: 1
       fulfillments:
         - id: F1
           type: Home-Service
@@ -85,5 +88,5 @@ value:
                     value: tax
         ttl: P1D
       payments:
-        - type: PRE-FULFILLMENT
-          collected_by : BAP
+      - collected_by: BAP
+        type: PRE-FULFILLMENT

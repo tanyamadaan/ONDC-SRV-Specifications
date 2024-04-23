@@ -35,6 +35,11 @@
           "location_ids": [
             "L1"
           ],
+          "quantity": {
+            "selected": {
+              "count": 1
+            }
+          },
           "time": {
             "label": "validity",
             "range": {
@@ -153,10 +158,12 @@
         ],
         "ttl": "P1D"
       },
-      "payments": [{
-        "type": "PRE-FULFILLMENT",
-        "collected_by": "BAP"
-    }]
+      "payments": [
+        {
+          "collected_by": "BAP",
+          "type": "PRE-FULFILLMENT"
+        }
+      ]
     }
   },
   "error": {

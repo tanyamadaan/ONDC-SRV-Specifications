@@ -38,7 +38,12 @@
           ],
           "fulfillment_ids": [
             "F1"
-          ]
+          ],
+          "quantity": {
+            "selected": {
+              "count": 1
+            }
+          }
         },
         {
           "id": "IC1",
@@ -55,10 +60,6 @@
           "quantity": {
             "selected": {
               "count": 3
-            },
-            "measure": {
-              "unit": "people",
-              "value": "1"
             }
           },
           "tags": [
@@ -93,10 +94,6 @@
           "quantity": {
             "selected": {
               "count": 1
-            },
-            "measure": {
-              "unit": "unit",
-              "value": "1"
             }
           },
           "tags": [
@@ -143,10 +140,6 @@
           "quantity": {
             "selected": {
               "count": 1
-            },
-            "measure": {
-              "unit": "unit",
-              "value": "1"
             }
           },
           "tags": [
@@ -193,10 +186,6 @@
           "quantity": {
             "selected": {
               "count": 1
-            },
-            "measure": {
-              "unit": "unit",
-              "value": "1"
             }
           },
           "tags": [

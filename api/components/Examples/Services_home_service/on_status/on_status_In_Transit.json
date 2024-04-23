@@ -48,10 +48,6 @@
           "quantity": {
             "selected": {
               "count": 1
-            },
-            "measure": {
-              "unit": "seats",
-              "value": "2"
             }
           }
         }
@@ -174,10 +170,6 @@
               "quantity": {
                 "selected": {
                   "count": 1
-                },
-                "measure": {
-                  "unit": "seats",
-                  "value": "2"
                 }
               },
               "price": {

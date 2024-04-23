@@ -28,6 +28,9 @@ value:
         - id: I1
           location_ids:
             - L1
+          quantity:
+            selected:
+              count: 1
         - id: IC1
           parent_item_id: I1
           location_ids:
