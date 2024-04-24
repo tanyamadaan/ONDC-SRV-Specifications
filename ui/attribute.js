@@ -71,9 +71,11 @@ function updateSets(value, option) {
   const paths = generatePaths(object);
 
   paths.forEach(function (key) {
+if (key.split(".").length < 5) {
     var option = document.createElement("option");
     option.text = key;
     l1DropDown.add(option);
+}
   });
 
   const firstKey = paths[0];
@@ -110,9 +112,11 @@ function addAttributeSets(option) {
   );
 
   paths.forEach(function (key) {
+if (key.split(".").length < 4) {
     var option = document.createElement("option");
     option.text = key;
     l1DropDown.add(option);
+}
   });
 
   const firstKey = paths[0];
