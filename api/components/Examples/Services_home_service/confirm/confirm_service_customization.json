@@ -686,7 +686,7 @@
           "id": "P1",
           "collected_by": "BAP",
           "params": {
-            "amount": "1518.00",
+            "amount": "499.00",
             "currency": "INR",
             "transaction_id": "3937",
             "bank_account_number": "xxxxxxxx",
@@ -766,6 +766,82 @@
                     "code": "Phase"
                   },
                   "value": "sale-amount"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Buyer_Finder_Fee"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Buyer_Finder_Fee_Type"
+                  },
+                  "value": "percentage"
+                },
+                {
+                  "descriptor": {
+                    "code": "Buyer_Finder_Fee_Amount"
+                  },
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "P2",
+          "collected_by": "BPP",
+          "params": {
+            "amount": "522",
+            "currency": "INR",
+            "bank_account_number": "xxxxxxxx",
+            "bank_code": "xxxxxxx",
+            "virtual_payment_address": "xxx@xxxx"
+          },
+          "type": "ON-FULFILLMENT",
+          "tags": [
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Counterparty"
+                  },
+                  "value": "BPP"
+                },
+                {
+                  "descriptor": {
+                    "code": "Mode"
+                  },
+                  "value": "UPI"
+                },
+                {
+                  "descriptor": {
+                    "code": "Beneficiary_Name"
+                  },
+                  "value": "xxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "Bank_Account_No"
+                  },
+                  "value": "xxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "Ifsc_Code"
+                  },
+                  "value": "xxxxxxx"
+                },
+                {
+                  "descriptor": {
+                    "code": "UPI_Address"
+                  },
+                  "value": "xxxxxxx"
                 }
               ]
             },
