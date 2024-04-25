@@ -6464,13 +6464,16 @@ x-flows:
                       label: validity
                       range:
                         start: '2024-03-04T00:00:00.000Z'
-                        end: '2024-03-09T19:00:00.000Z'
-                      days: 4,5
+                        end: '2024-04-04T00:00:00.000Z'
+                      days: 1,2,3,4,5,6
                       schedule:
-                        frequency: PT1H
+                        frequency: PT12H
                         holidays:
                           - '2024-03-06'
                           - '2024-03-08'
+                          - '2024-03-18'
+                          - '2024-04-08'
+                          - '2024-04-20'
                         times:
                           - '2024-03-04T09:00:00.000Z'
                           - '2024-03-04T10:00:00.000Z'
@@ -7976,8 +7979,49 @@ x-flows:
                       amount: '499'
                       currency: INR
                       bank_account_number: xxxxxxxx
+                      bank_code: xxxxxxxx
                       virtual_payment_address: xxx@xxxx
                     type: PRE-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                  - id: P2
+                    collected_by: BPP
+                    params:
+                      amount: '522'
+                      currency: INR
+                      bank_account_number: xxxxxxxx
+                      bank_code: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    type: ON-FULFILLMENT
                     tags:
                       - descriptor:
                           code: Settlement_Details
@@ -8414,7 +8458,7 @@ x-flows:
                   - id: P1
                     collected_by: BAP
                     params:
-                      amount: '1518.00'
+                      amount: '499.00'
                       currency: INR
                       transaction_id: '3937'
                       bank_account_number: xxxxxxxx
@@ -8458,6 +8502,46 @@ x-flows:
                           - descriptor:
                               code: Phase
                             value: sale-amount
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                  - id: P2
+                    collected_by: BPP
+                    params:
+                      amount: '522'
+                      currency: INR
+                      bank_account_number: xxxxxxxx
+                      bank_code: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    type: ON-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -8954,6 +9038,46 @@ x-flows:
                           - descriptor:
                               code: Phase
                             value: sale-amount
+                      - descriptor:
+                          code: Buyer_Finder_Fee
+                        list:
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Type
+                            value: percentage
+                          - descriptor:
+                              code: Buyer_Finder_Fee_Amount
+                            value: '3'
+                  - id: P2
+                    collected_by: BPP
+                    params:
+                      amount: '522'
+                      currency: INR
+                      bank_account_number: xxxxxxxx
+                      bank_code: xxxxxxxx
+                      virtual_payment_address: xxx@xxxx
+                    type: ON-FULFILLMENT
+                    tags:
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Counterparty
+                            value: BPP
+                          - descriptor:
+                              code: Mode
+                            value: UPI
+                          - descriptor:
+                              code: Beneficiary_Name
+                            value: xxxxx
+                          - descriptor:
+                              code: Bank_Account_No
+                            value: xxxxx
+                          - descriptor:
+                              code: Ifsc_Code
+                            value: xxxxxxx
+                          - descriptor:
+                              code: UPI_Address
+                            value: xxxxxxx
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -15116,7 +15240,7 @@ x-examples:
                     - id: P1
                       collected_by: BAP
                       params:
-                        amount: '1518.00'
+                        amount: '499.00'
                         currency: INR
                         transaction_id: '3937'
                         bank_account_number: xxxxxxxx
@@ -15160,6 +15284,46 @@ x-examples:
                             - descriptor:
                                 code: Phase
                               value: sale-amount
+                        - descriptor:
+                            code: Buyer_Finder_Fee
+                          list:
+                            - descriptor:
+                                code: Buyer_Finder_Fee_Type
+                              value: percentage
+                            - descriptor:
+                                code: Buyer_Finder_Fee_Amount
+                              value: '3'
+                    - id: P2
+                      collected_by: BPP
+                      params:
+                        amount: '522'
+                        currency: INR
+                        bank_account_number: xxxxxxxx
+                        bank_code: xxxxxxxx
+                        virtual_payment_address: xxx@xxxx
+                      type: ON-FULFILLMENT
+                      tags:
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Counterparty
+                              value: BPP
+                            - descriptor:
+                                code: Mode
+                              value: UPI
+                            - descriptor:
+                                code: Beneficiary_Name
+                              value: xxxxx
+                            - descriptor:
+                                code: Bank_Account_No
+                              value: xxxxx
+                            - descriptor:
+                                code: Ifsc_Code
+                              value: xxxxxxx
+                            - descriptor:
+                                code: UPI_Address
+                              value: xxxxxxx
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -16386,13 +16550,16 @@ x-examples:
                         label: validity
                         range:
                           start: '2024-03-04T00:00:00.000Z'
-                          end: '2024-03-09T19:00:00.000Z'
-                        days: 4,5
+                          end: '2024-04-04T00:00:00.000Z'
+                        days: 1,2,3,4,5,6
                         schedule:
-                          frequency: PT1H
+                          frequency: PT12H
                           holidays:
                             - '2024-03-06'
                             - '2024-03-08'
+                            - '2024-03-18'
+                            - '2024-04-08'
+                            - '2024-04-20'
                           times:
                             - '2024-03-04T09:00:00.000Z'
                             - '2024-03-04T10:00:00.000Z'
@@ -18489,8 +18656,49 @@ x-examples:
                         amount: '499'
                         currency: INR
                         bank_account_number: xxxxxxxx
+                        bank_code: xxxxxxxx
                         virtual_payment_address: xxx@xxxx
                       type: PRE-FULFILLMENT
+                      tags:
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Counterparty
+                              value: BPP
+                            - descriptor:
+                                code: Mode
+                              value: UPI
+                            - descriptor:
+                                code: Beneficiary_Name
+                              value: xxxxx
+                            - descriptor:
+                                code: Bank_Account_No
+                              value: xxxxx
+                            - descriptor:
+                                code: Ifsc_Code
+                              value: xxxxxxx
+                            - descriptor:
+                                code: UPI_Address
+                              value: xxxxxxx
+                        - descriptor:
+                            code: Buyer_Finder_Fee
+                          list:
+                            - descriptor:
+                                code: Buyer_Finder_Fee_Type
+                              value: percentage
+                            - descriptor:
+                                code: Buyer_Finder_Fee_Amount
+                              value: '3'
+                    - id: P2
+                      collected_by: BPP
+                      params:
+                        amount: '522'
+                        currency: INR
+                        bank_account_number: xxxxxxxx
+                        bank_code: xxxxxxxx
+                        virtual_payment_address: xxx@xxxx
+                      type: ON-FULFILLMENT
                       tags:
                         - descriptor:
                             code: Settlement_Details
@@ -19513,6 +19721,46 @@ x-examples:
                             - descriptor:
                                 code: Phase
                               value: sale-amount
+                        - descriptor:
+                            code: Buyer_Finder_Fee
+                          list:
+                            - descriptor:
+                                code: Buyer_Finder_Fee_Type
+                              value: percentage
+                            - descriptor:
+                                code: Buyer_Finder_Fee_Amount
+                              value: '3'
+                    - id: P2
+                      collected_by: BPP
+                      params:
+                        amount: '522'
+                        currency: INR
+                        bank_account_number: xxxxxxxx
+                        bank_code: xxxxxxxx
+                        virtual_payment_address: xxx@xxxx
+                      type: ON-FULFILLMENT
+                      tags:
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Counterparty
+                              value: BPP
+                            - descriptor:
+                                code: Mode
+                              value: UPI
+                            - descriptor:
+                                code: Beneficiary_Name
+                              value: xxxxx
+                            - descriptor:
+                                code: Bank_Account_No
+                              value: xxxxx
+                            - descriptor:
+                                code: Ifsc_Code
+                              value: xxxxxxx
+                            - descriptor:
+                                code: UPI_Address
+                              value: xxxxxxx
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
