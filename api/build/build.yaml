@@ -22771,70 +22771,72 @@ x-attributes:
                 usage: '-'
                 reference: if any
               time:
-                description: >-
-                  To define schedule at provider level, if same schedule is
-                  available for all items. If time is defined at item level,
-                  item level time will take precedence.
-                required: required
-                usage: '-'
-                reference: if any
-              time.label:
-                description: >-
-                  This is used to indicate the validity of the provider's
-                  schedule.
-                required: required
-                usage: validity
-                reference: if any
-              time.range:
-                description: >-
-                  It specifies the time range (start and end) within which the
-                  provider is providing the schedule for.
-                required: required
-                usage: '-'
-                reference: if any
-              time.range.start:
-                description: availability start date of the provider schedule
-                required: required
-                usage: '2022-11-10T00:00:00.000Z'
-                reference: if any
-              time.range.end:
-                description: availability end date of the provider schedule
-                required: required
-                usage: '2022-11-20T00:00:00.000Z'
-                reference: if any
-              time.days:
-                description: >-
-                  Comma separated values representing days of the week when the
-                  provider is available, 1 - Monday, 7 - Sunday
-                required: optional
-                usage: 1,2,3,4,5
-                reference: if any
-              time.schedule:
-                description: >-
-                  It is the timeframe and availability during which the provider
-                  offers the services or operates.
-                required: required
-                usage: '-'
-                reference: if any
-              time.schedule.times:
-                description: >-
-                  These timestamps indicate the slots during which the provider
-                  chooses to offer available slots exclusively.
-                required: optional
-                usage: '[2022-11-20T00:00:00.000Z]'
-                reference: if any
-              time.schedule.frequency:
-                description: >-
-                  The service slot frequency, for example, if the provider is
-                  available every 2 hours, would be represented as 'PT2H'.
-                required: required
-                usage: PT2H
-                reference: if any
-              time.schedule.holidays:
-                description: future dated days on which service is not available
-                required: optional
-                usage: '[2024-11-13, 2024-11-15]'
-                reference: if any
+                parent: true
+                time:
+                  description: >-
+                    To define schedule at provider level, if same schedule is
+                    available for all items. If time is defined at item level,
+                    item level time will take precedence.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                label:
+                  description: >-
+                    This is used to indicate the validity of the provider's
+                    schedule.
+                  required: required
+                  usage: validity
+                  reference: if any
+                range:
+                  description: >-
+                    It specifies the time range (start and end) within which the
+                    provider is providing the schedule for.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                range.start:
+                  description: availability start date of the provider schedule
+                  required: required
+                  usage: '2022-11-10T00:00:00.000Z'
+                  reference: if any
+                range.end:
+                  description: availability end date of the provider schedule
+                  required: required
+                  usage: '2022-11-20T00:00:00.000Z'
+                  reference: if any
+                days:
+                  description: >-
+                    Comma separated values representing days of the week when
+                    the provider is available, 1 - Monday, 7 - Sunday
+                  required: optional
+                  usage: 1,2,3,4,5
+                  reference: if any
+                schedule:
+                  description: >-
+                    It is the timeframe and availability during which the
+                    provider offers the services or operates.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                schedule.times:
+                  description: >-
+                    These timestamps indicate the slots during which the
+                    provider chooses to offer available slots exclusively.
+                  required: optional
+                  usage: '[2022-11-20T00:00:00.000Z]'
+                  reference: if any
+                schedule.frequency:
+                  description: >-
+                    The service slot frequency, for example, if the provider is
+                    available every 2 hours, would be represented as 'PT2H'.
+                  required: required
+                  usage: PT2H
+                  reference: if any
+                schedule.holidays:
+                  description: future dated days on which service is not available
+                  required: optional
+                  usage: '[2024-11-13, 2024-11-15]'
+                  reference: if any
               categories:
                 parent: true
                 categories:
