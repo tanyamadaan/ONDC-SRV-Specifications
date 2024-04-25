@@ -4094,6 +4094,9 @@ x-flows:
                     parent_item_id: PI2
                     location_ids:
                       - L1
+                    quantity:
+                      selected:
+                        count: 1
                 fulfillments:
                   - id: F1
                     type: Home-Service
@@ -4125,9 +4128,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -4197,85 +4197,8 @@ x-flows:
                               value: misc
                   ttl: P1D
                 payments:
-                  - id: P1
-                    collected_by: BAP
-                    params:
-                      amount: '99'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      virtual_payment_address: xxx@xxxx
+                  - collected_by: BAP
                     type: PRE-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BPP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
-                  - id: P2
-                    collected_by: BPP
-                    params:
-                      amount: '5231'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      bank_code: xxxxxxx
-                      virtual_payment_address: xxx@xxxx
-                    type: ON-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BAP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
@@ -4315,9 +4238,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -4396,9 +4316,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -4474,9 +4391,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -4630,9 +4544,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -4715,9 +4626,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -4853,9 +4761,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -4962,9 +4867,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -5171,9 +5073,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -5248,9 +5147,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -5413,9 +5309,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -5495,9 +5388,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -5660,9 +5550,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -5743,9 +5630,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -5902,9 +5786,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -5980,9 +5861,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -6341,85 +6219,8 @@ x-flows:
                               value: misc
                   ttl: P1D
                 payments:
-                  - id: P1
-                    collected_by: BAP
-                    params:
-                      amount: '99'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      virtual_payment_address: xxx@xxxx
+                  - collected_by: BAP
                     type: PRE-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BPP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
-                  - id: P2
-                    collected_by: BPP
-                    params:
-                      amount: '5231'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      bank_code: xxxxxxx
-                      virtual_payment_address: xxx@xxxx
-                    type: ON-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BAP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
             error:
               code: '90001'
               message: Schedule not available
@@ -6605,11 +6406,11 @@ x-flows:
         reference: if any
         example:
           summary: >-
-            Returns the catalog specific to the search intent + available
-            schedule
+            Returns the catalog specific to the search intent, customizations
+            and available schedule
           description: >-
-            Returns the catalog specific to the search intent + available
-            schedule
+            Returns the catalog specific to the search intent + customization +
+            available schedule
           value:
             context:
               domain: ONDC:SRV11
@@ -7152,6 +6953,9 @@ x-flows:
                   - id: I1
                     location_ids:
                       - L1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -7291,6 +7095,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -7592,85 +7399,8 @@ x-flows:
                               value: misc
                   ttl: P1D
                 payments:
-                  - id: P1
-                    collected_by: BAP
-                    params:
-                      amount: '99'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      virtual_payment_address: xxx@xxxx
+                  - collected_by: BAP
                     type: PRE-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BPP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
-                  - id: P2
-                    collected_by: BPP
-                    params:
-                      amount: '5231'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      bank_code: xxxxxxx
-                      virtual_payment_address: xxx@xxxx
-                    type: ON-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BAP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
@@ -7710,6 +7440,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -7721,9 +7454,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 3
-                      measure:
-                        unit: people
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7743,9 +7473,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7771,9 +7498,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7799,9 +7523,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: unit
-                        value: '1'
                     tags:
                       - descriptor:
                           code: attribute
@@ -7893,6 +7614,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -8328,6 +8052,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -8792,6 +8519,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -9292,6 +9022,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -9862,9 +9595,6 @@ x-flows:
                     quantity:
                       selected:
                         count: 1
-                      measure:
-                        unit: seats
-                        value: '2'
                 billing:
                   name: ONDC buyer
                   address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -9945,9 +9675,6 @@ x-flows:
                         quantity:
                           selected:
                             count: 1
-                          measure:
-                            unit: seats
-                            value: '2'
                         price:
                           currency: INR
                           value: '474'
@@ -10181,6 +9908,9 @@ x-flows:
                   id: P1
                   locations:
                     - id: L1
+                  quantity:
+                    selected:
+                      count: 1
                 items:
                   - id: I1
                     parent_item_id: PI1
@@ -10237,6 +9967,9 @@ x-flows:
                     parent_item_id: PI1
                     location_ids:
                       - L1
+                    quantity:
+                      selected:
+                        count: 1
                 fulfillments:
                   - id: F1
                     type: Home-Service
@@ -10293,85 +10026,8 @@ x-flows:
                               value: tax
                   ttl: P1D
                 payments:
-                  - id: P1
-                    collected_by: BAP
-                    params:
-                      amount: '99'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      virtual_payment_address: xxx@xxxx
+                  - collected_by: BAP
                     type: PRE-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BPP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
-                  - id: P2
-                    collected_by: BPP
-                    params:
-                      amount: '5231'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      bank_code: xxxxxxx
-                      virtual_payment_address: xxx@xxxx
-                    type: ON-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BAP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
       - summary: Buyer initialises the order and provides billing details
         api: init
         description: Buyer initialises the order and provides billing details
@@ -10408,6 +10064,9 @@ x-flows:
                     parent_item_id: PI1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -10483,6 +10142,9 @@ x-flows:
                     parent_item_id: PI1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -10664,6 +10326,9 @@ x-flows:
                     parent_item_id: PI1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -10874,6 +10539,9 @@ x-flows:
                     parent_item_id: PI1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -12465,6 +12133,9 @@ x-flows:
                     parent_item_id: PI1
                     location_ids:
                       - L1
+                    quantity:
+                      selected:
+                        count: 1
                     time:
                       label: validity
                       range:
@@ -12537,85 +12208,8 @@ x-flows:
                               value: tax
                   ttl: P1D
                 payments:
-                  - id: P1
-                    collected_by: BAP
-                    params:
-                      amount: '99'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      virtual_payment_address: xxx@xxxx
+                  - collected_by: BAP
                     type: PRE-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BPP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
-                  - id: P2
-                    collected_by: BPP
-                    params:
-                      amount: '5231'
-                      currency: INR
-                      bank_account_number: xxxxxxxx
-                      bank_code: xxxxxxx
-                      virtual_payment_address: xxx@xxxx
-                    type: ON-FULFILLMENT
-                    tags:
-                      - descriptor:
-                          code: Settlement_Details
-                        list:
-                          - descriptor:
-                              code: Counterparty
-                            value: BAP
-                          - descriptor:
-                              code: Mode
-                            value: UPI
-                          - descriptor:
-                              code: Beneficiary_Name
-                            value: xxxxx
-                          - descriptor:
-                              code: Bank_Account_No
-                            value: xxxxx
-                          - descriptor:
-                              code: Ifsc_Code
-                            value: xxxxxxx
-                          - descriptor:
-                              code: UPI_Address
-                            value: xxxxxxx
-                      - descriptor:
-                          code: Buyer_Finder_Fee
-                        list:
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Type
-                            value: percentage
-                          - descriptor:
-                              code: Buyer_Finder_Fee_Amount
-                            value: '3'
             error:
               code: '90001'
               message: Schedule not available
@@ -14143,6 +13737,9 @@ x-examples:
                     id: P1
                     locations:
                       - id: L1
+                    quantity:
+                      selected:
+                        count: 1
                   items:
                     - id: I1
                       parent_item_id: PI1
@@ -14196,6 +13793,9 @@ x-examples:
                       parent_item_id: PI1
                       location_ids:
                         - L1
+                      quantity:
+                        selected:
+                          count: 1
                   fulfillments:
                     - type: Home-Service
                       stops:
@@ -14294,6 +13894,9 @@ x-examples:
                     - id: I1
                       location_ids:
                         - L1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -14427,6 +14030,9 @@ x-examples:
                       parent_item_id: PI1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -14498,9 +14104,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -14572,6 +14175,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -14583,9 +14189,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 3
-                        measure:
-                          unit: people
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -14605,9 +14208,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -14633,9 +14233,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -14661,9 +14258,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: unit
-                          value: '1'
                       tags:
                         - descriptor:
                             code: attribute
@@ -14749,6 +14343,9 @@ x-examples:
                       parent_item_id: PI1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -14952,9 +14549,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -15037,9 +14631,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -15163,6 +14754,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -16734,11 +16328,11 @@ x-examples:
                             phone: '9886098860'
                             email: abc@xyz.com
           - summary: >-
-              Returns the catalog specific to the search intent + available
-              schedule
+              Returns the catalog specific to the search intent, customizations
+              and available schedule
             description: >-
-              Returns the catalog specific to the search intent + available
-              schedule
+              Returns the catalog specific to the search intent + customization
+              + available schedule
             value:
               context:
                 domain: ONDC:SRV11
@@ -17278,6 +16872,9 @@ x-examples:
                       parent_item_id: PI1
                       location_ids:
                         - L1
+                      quantity:
+                        selected:
+                          count: 1
                   fulfillments:
                     - id: F1
                       type: Home-Service
@@ -17334,85 +16931,8 @@ x-examples:
                                 value: tax
                     ttl: P1D
                   payments:
-                    - id: P1
-                      collected_by: BAP
-                      params:
-                        amount: '99'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        virtual_payment_address: xxx@xxxx
+                    - collected_by: BAP
                       type: PRE-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BPP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
-                    - id: P2
-                      collected_by: BPP
-                      params:
-                        amount: '5231'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        bank_code: xxxxxxx
-                        virtual_payment_address: xxx@xxxx
-                      type: ON-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BAP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
           - summary: >-
               Seller rejects the schedule and returns the updated schedule for
               consultation
@@ -17448,6 +16968,9 @@ x-examples:
                       parent_item_id: PI1
                       location_ids:
                         - L1
+                      quantity:
+                        selected:
+                          count: 1
                       time:
                         label: validity
                         range:
@@ -17520,85 +17043,8 @@ x-examples:
                                 value: tax
                     ttl: P1D
                   payments:
-                    - id: P1
-                      collected_by: BAP
-                      params:
-                        amount: '99'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        virtual_payment_address: xxx@xxxx
+                    - collected_by: BAP
                       type: PRE-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BPP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
-                    - id: P2
-                      collected_by: BPP
-                      params:
-                        amount: '5231'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        bank_code: xxxxxxx
-                        virtual_payment_address: xxx@xxxx
-                      type: ON-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BAP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
               error:
                 code: '90001'
                 message: Schedule not available
@@ -17633,6 +17079,9 @@ x-examples:
                       parent_item_id: PI2
                       location_ids:
                         - L1
+                      quantity:
+                        selected:
+                          count: 1
                   fulfillments:
                     - id: F1
                       type: Home-Service
@@ -17664,9 +17113,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -17736,85 +17182,8 @@ x-examples:
                                 value: misc
                     ttl: P1D
                   payments:
-                    - id: P1
-                      collected_by: BAP
-                      params:
-                        amount: '99'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        virtual_payment_address: xxx@xxxx
+                    - collected_by: BAP
                       type: PRE-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BPP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
-                    - id: P2
-                      collected_by: BPP
-                      params:
-                        amount: '5231'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        bank_code: xxxxxxx
-                        virtual_payment_address: xxx@xxxx
-                      type: ON-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BAP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
           - summary: >-
               Seller confirms the schedule and returns the quote for service and
               customizations
@@ -17849,6 +17218,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -18150,85 +17522,8 @@ x-examples:
                                 value: misc
                     ttl: P1D
                   payments:
-                    - id: P1
-                      collected_by: BAP
-                      params:
-                        amount: '99'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        virtual_payment_address: xxx@xxxx
+                    - collected_by: BAP
                       type: PRE-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BPP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
-                    - id: P2
-                      collected_by: BPP
-                      params:
-                        amount: '5231'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        bank_code: xxxxxxx
-                        virtual_payment_address: xxx@xxxx
-                      type: ON-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BAP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
           - summary: >-
               Seller rejects the schedule and returns the updated schedule for
               service
@@ -18385,85 +17680,8 @@ x-examples:
                                 value: misc
                     ttl: P1D
                   payments:
-                    - id: P1
-                      collected_by: BAP
-                      params:
-                        amount: '99'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        virtual_payment_address: xxx@xxxx
+                    - collected_by: BAP
                       type: PRE-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BPP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
-                    - id: P2
-                      collected_by: BPP
-                      params:
-                        amount: '5231'
-                        currency: INR
-                        bank_account_number: xxxxxxxx
-                        bank_code: xxxxxxx
-                        virtual_payment_address: xxx@xxxx
-                      type: ON-FULFILLMENT
-                      tags:
-                        - descriptor:
-                            code: Settlement_Details
-                          list:
-                            - descriptor:
-                                code: Counterparty
-                              value: BAP
-                            - descriptor:
-                                code: Mode
-                              value: UPI
-                            - descriptor:
-                                code: Beneficiary_Name
-                              value: xxxxx
-                            - descriptor:
-                                code: Bank_Account_No
-                              value: xxxxx
-                            - descriptor:
-                                code: Ifsc_Code
-                              value: xxxxxxx
-                            - descriptor:
-                                code: UPI_Address
-                              value: xxxxxxx
-                        - descriptor:
-                            code: Buyer_Finder_Fee
-                          list:
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Type
-                              value: percentage
-                            - descriptor:
-                                code: Buyer_Finder_Fee_Amount
-                              value: '3'
               error:
                 code: '90001'
                 message: Schedule not available
@@ -18502,6 +17720,9 @@ x-examples:
                       parent_item_id: PI1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -18682,9 +17903,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -18760,9 +17978,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -18912,6 +18127,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -19347,6 +18565,9 @@ x-examples:
                       parent_item_id: PI1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -19581,9 +18802,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -19690,9 +18908,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -19863,6 +19078,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -20350,9 +19568,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -20428,9 +19643,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -20584,9 +19796,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -20661,9 +19870,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -20817,9 +20023,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -20899,9 +20102,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -21055,6 +20255,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -21488,9 +20691,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -21571,9 +20771,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -21729,9 +20926,6 @@ x-examples:
                       quantity:
                         selected:
                           count: 1
-                        measure:
-                          unit: seats
-                          value: '2'
                   billing:
                     name: ONDC buyer
                     address: B005 aaspire heights, Jurong East, SGP, 680230
@@ -21812,9 +21006,6 @@ x-examples:
                           quantity:
                             selected:
                               count: 1
-                            measure:
-                              unit: seats
-                              value: '2'
                           price:
                             currency: INR
                             value: '474'
@@ -23330,6 +22521,71 @@ x-attributes:
                 description: service provider locations
                 required: optional
                 usage: '-'
+                reference: if any
+              time:
+                description: >-
+                  To define schedule at provider level, if same schedule is
+                  available for all items. If time is defined at item level,
+                  item level time will take precedence.
+                required: required
+                usage: '-'
+                reference: if any
+              time.label:
+                description: >-
+                  This is used to indicate the validity of the provider's
+                  schedule.
+                required: required
+                usage: validity
+                reference: if any
+              time.range:
+                description: >-
+                  It specifies the time range (start and end) within which the
+                  provider is providing the schedule for.
+                required: required
+                usage: '-'
+                reference: if any
+              time.range.start:
+                description: availability start date of the provider schedule
+                required: required
+                usage: '2022-11-10T00:00:00.000Z'
+                reference: if any
+              time.range.end:
+                description: availability end date of the provider schedule
+                required: required
+                usage: '2022-11-20T00:00:00.000Z'
+                reference: if any
+              time.days:
+                description: >-
+                  Comma separated values representing days of the week when the
+                  provider is available, 1 - Monday, 7 - Sunday
+                required: optional
+                usage: 1,2,3,4,5
+                reference: if any
+              time.schedule:
+                description: >-
+                  It is the timeframe and availability during which the provider
+                  offers the services or operates.
+                required: required
+                usage: '-'
+                reference: if any
+              time.schedule.times:
+                description: >-
+                  These timestamps indicate the slots during which the provider
+                  chooses to offer available slots exclusively.
+                required: optional
+                usage: '[2022-11-20T00:00:00.000Z]'
+                reference: if any
+              time.schedule.frequency:
+                description: >-
+                  The service slot frequency, for example, if the provider is
+                  available every 2 hours, would be represented as 'PT2H'.
+                required: required
+                usage: PT2H
+                reference: if any
+              time.schedule.holidays:
+                description: future dated days on which service is not available
+                required: optional
+                usage: '[2024-11-13, 2024-11-15]'
                 reference: if any
               categories:
                 parent: true
@@ -25693,3 +24949,335 @@ x-errorcodes:
         Type: Seller App
         Message: Schedule is not provided by the buyer
         Description: Used in NACK on /select
+      - Code: 10000
+        Type: Gateway
+        Message: Bad or Invalid request error
+        Description: Generic bad or invalid request error
+      - Code: 10001
+        Type: Gateway
+        Message: Invalid Signature
+        Description: Cannot verify signature for request
+      - Code: 10002
+        Type: Gateway
+        Message: Invalid City Code
+        Description: Valid city code needs to be passed for search
+      - Code: 20000
+        Type: Buyer App
+        Message: Invalid catalog
+        Description: Catalog refresh is invalid
+      - Code: 20001
+        Type: Buyer App
+        Message: Invalid Signature
+        Description: Cannot verify signature for response
+      - Code: 20002
+        Type: Buyer App
+        Message: Stale Request
+        Description: Cannot process stale request
+      - Code: 20005
+        Type: Buyer App
+        Message: Item not found
+        Description: Item not found
+      - Code: 20006
+        Type: Buyer App
+        Message: Invalid response
+        Description: Invalid response does not meet API contract specifications
+      - Code: 20007
+        Type: Buyer App
+        Message: Invalid order state
+        Description: Order/fulfillment state is stale or not valid
+      - Code: 20008
+        Type: Buyer App
+        Message: Response out of sequence
+        Description: Callback received prior to ACK for request or out of sequence
+      - Code: 20009
+        Type: Buyer App
+        Message: Timeout
+        Description: Callback received late, session timed out
+      - Code: 21001
+        Type: Buyer App
+        Message: Feature not supported
+        Description: Feature not supported
+      - Code: 21002
+        Type: Buyer App
+        Message: Increase in item quantity
+        Description: Increase in item quantity
+      - Code: 21003
+        Type: Buyer App
+        Message: Change in item quote
+        Description: Change in item quote without change in quantity
+      - Code: 22501
+        Type: Buyer App
+        Message: Part Fill Unacceptable
+        Description: >-
+          Buyer doesn't accept part fill for the order, wants to cancel the
+          order
+      - Code: 22502
+        Type: Buyer App
+        Message: Cancellation unacceptable
+        Description: Invalid cancellation reason
+      - Code: 22503
+        Type: Buyer App
+        Message: Cancellation unacceptable
+        Description: >-
+          Updated quote does not match original order value and cancellation
+          terms
+      - Code: 22504
+        Type: Buyer App
+        Message: Invalid Fulfillment TAT
+        Description: Fulfillment TAT is different from what was quoted earlier
+      - Code: 22505
+        Type: Buyer App
+        Message: Invalid Cancellation Terms
+        Description: Cancellation terms are different from what was quoted earlier
+      - Code: 22506
+        Type: Buyer App
+        Message: Invalid Terms of Reference
+        Description: Terms of Reference are different from what was quoted earlier
+      - Code: 22507
+        Type: Buyer App
+        Message: Invalid Quote
+        Description: Quote is invalid as it does not meet the API contract specifications
+      - Code: 22508
+        Type: Buyer App
+        Message: Invalid Part Cancel Request
+        Description: Part cancel request is invalid
+      - Code: 23001
+        Type: Buyer App
+        Message: Internal Error
+        Description: Cannot process response due to internal error, please retry
+      - Code: 23002
+        Type: Buyer App
+        Message: Order validation failure
+        Description: Order validation failure
+      - Code: 25001
+        Type: Buyer App
+        Message: Order Confirm Failure
+        Description: Buyer App cannot confirm order as no response from Seller App
+      - Code: 27501
+        Type: Buyer App
+        Message: Terms and Conditions unacceptable
+        Description: Seller App terms and conditions not acceptable to Buyer App
+      - Code: 27502
+        Type: Buyer App
+        Message: Order terminated
+        Description: >-
+          Order terminated as Seller App did not accept terms and conditions
+          proposed by Buyer App
+      - Code: 30000
+        Type: Seller App
+        Message: Invalid request
+        Description: Invalid request does not meet API contract specifications
+      - Code: 30001
+        Type: Seller App
+        Message: Provider not found
+        Description: >-
+          When Seller App is unable to find the provider id sent by the Buyer
+          App
+      - Code: 30002
+        Type: Seller App
+        Message: Provider location not found
+        Description: >-
+          When Seller App is unable to find the provider location id sent by the
+          Buyer App
+      - Code: 30003
+        Type: Seller App
+        Message: Provider category not found
+        Description: >-
+          When Seller App is unable to find the provider category id sent by the
+          Buyer App
+      - Code: 30004
+        Type: Seller App
+        Message: Item not found
+        Description: Unable to find details for item, may have been deleted
+      - Code: 30005
+        Type: Seller App
+        Message: Invalid return request
+        Description: Return reason is invalid
+      - Code: 30006
+        Type: Seller App
+        Message: Offer code invalid
+        Description: Offer code is not valid anymore
+      - Code: 30007
+        Type: Seller App
+        Message: Offer fulfillment error
+        Description: Offer cannot be fulfilled at this time
+      - Code: 30008
+        Type: Seller App
+        Message: Location Serviceability error
+        Description: Pickup location not serviceable by Logistics Provider
+      - Code: 30009
+        Type: Seller App
+        Message: Location Serviceability error
+        Description: Dropoff location not serviceable by Logistics Provider
+      - Code: 30010
+        Type: Seller App
+        Message: Location Serviceability error
+        Description: Delivery distance exceeds the maximum serviceability distance
+      - Code: 30011
+        Type: Seller App
+        Message: Order Serviceability error
+        Description: Delivery Partners not available
+      - Code: 30012
+        Type: Seller App
+        Message: Invalid cancellation reason
+        Description: Cancellation reason is invalid
+      - Code: 30013
+        Type: Seller App
+        Message: Invalid Fulfillment TAT
+        Description: Fulfillment TAT is different from what was quoted earlier
+      - Code: 30014
+        Type: Seller App
+        Message: Cancellation unacceptable
+        Description: Cancellation request is rejected as fulfillment TAT is not breached
+      - Code: 30015
+        Type: Seller App
+        Message: Invalid rating value
+        Description: >-
+          When the Seller App receives an invalid value as the rating value in
+          value
+      - Code: 30016
+        Type: Seller App
+        Message: Invalid Signature
+        Description: Cannot verify signature for request
+      - Code: 30017
+        Type: Seller App
+        Message: Merchant unavailable
+        Description: Merchant is currently not taking orders
+      - Code: 30018
+        Type: Seller App
+        Message: Invalid Order
+        Description: Order not found
+      - Code: 30019
+        Type: Seller App
+        Message: Order Confirm Error
+        Description: Seller App is unable to confirm the order
+      - Code: 30020
+        Type: Seller App
+        Message: Order Confirm Failure
+        Description: Seller App cannot confirm order as no response from Buyer App
+      - Code: 30021
+        Type: Seller App
+        Message: Merchant Inactive
+        Description: Merchant is inactive
+      - Code: 30022
+        Type: Seller App
+        Message: Stale Request
+        Description: Cannot process stale request
+      - Code: 30023
+        Type: Seller App
+        Message: Minimum order value error
+        Description: Cart value is less than minimum order value
+      - Code: 31001
+        Type: Seller App
+        Message: Internal Error
+        Description: Cannot process request due to internal error, please retry
+      - Code: 31002
+        Type: Seller App
+        Message: Order validation failure
+        Description: Order validation failure
+      - Code: 31003
+        Type: Seller App
+        Message: Order processing in progress
+        Description: Order processing in progress
+      - Code: 31004
+        Type: Seller App
+        Message: Payment Failed
+        Description: Payment fails
+      - Code: 40000
+        Type: Seller App
+        Message: Business Error
+        Description: Generic business error
+      - Code: 40001
+        Type: Seller App
+        Message: Feature not supported
+        Description: Feature not supported
+      - Code: 40002
+        Type: Seller App
+        Message: Item quantity unavailable
+        Description: >-
+          When the Seller App is unable to fulfill the required quantity for
+          items in the order
+      - Code: 40003
+        Type: Seller App
+        Message: Quote unavailable
+        Description: Quote no longer available
+      - Code: 40004
+        Type: Seller App
+        Message: Payment type not supported
+        Description: Payment type not supported
+      - Code: 40005
+        Type: Seller App
+        Message: Tracking not enabled
+        Description: Tracking not enabled for any fulfillment in the order
+      - Code: 40006
+        Type: Seller App
+        Message: Fulfilment agent unavailable
+        Description: When an agent for fulfilment is not available
+      - Code: 40007
+        Type: Seller App
+        Message: Change in item quantity
+        Description: Change in item quantity
+      - Code: 40008
+        Type: Seller App
+        Message: Change in quote
+        Description: Change in quote
+      - Code: 40009
+        Type: Seller App
+        Message: Maximum order qty exceeded
+        Description: Maximum order qty exceeded
+      - Code: 40010
+        Type: Seller App
+        Message: Expired authorization
+        Description: Authorization code has expired
+      - Code: 40011
+        Type: Seller App
+        Message: Invalid authorization
+        Description: Authorization code is invalid
+      - Code: 41001
+        Type: Seller App
+        Message: Finder fee not acceptable
+        Description: Buyer finder fee is not acceptable
+      - Code: 50000
+        Type: Seller App
+        Message: Policy Error
+        Description: Generic Policy Error
+      - Code: 50001
+        Type: Seller App
+        Message: Cancellation not possible
+        Description: >-
+          When the Seller App is unable to cancel the order due to it's
+          cancellation policy
+      - Code: 50002
+        Type: Seller App
+        Message: Updation not possible
+        Description: >-
+          When the Seller App is unable to update the order due to it's updation
+          policy
+      - Code: 50003
+        Type: Seller App
+        Message: Unsupported rating category
+        Description: When the Seller App receives an entity to rate which is not supported
+      - Code: 50004
+        Type: Seller App
+        Message: Support unavailable
+        Description: >-
+          When the Seller App receives an object if for which it does not
+          provide support
+      - Code: 50005
+        Type: Seller App
+        Message: Terms and Conditions unacceptable
+        Description: Buyer App terms and conditions not acceptable to Seller App
+      - Code: 50006
+        Type: Seller App
+        Message: Order terminated
+        Description: >-
+          Order terminated as Buyer App did not accept terms proposed by Seller
+          App
+      - Code: 50007
+        Type: Seller App
+        Message: Fulfillment not found
+        Description: Fulfillment not found
+      - Code: 50008
+        Type: Seller App
+        Message: Fulfillment cannot be updated
+        Description: Fulfillment has reached terminal state, cannot be updated
