@@ -22590,11 +22590,15 @@ x-attributes:
           intent:
             parent: true
             category:
-              id:
-                description: Category id of the desired service
-                required: optional
-                usage: SRV10-1000
-                reference: if any
+              description: Category of the desired service
+              required: optional
+              usage: '-'
+              reference: if any
+            category.id:
+              description: Category id of the desired service
+              required: optional
+              usage: SRV10-1000
+              reference: if any
             fulfillment:
               parent: true
               type:
@@ -22643,20 +22647,24 @@ x-attributes:
                     usage: 1,2,3,4,5,6,7
                     reference: if any
             payment:
-              type:
-                description: >-
-                  payment mode by which buyer would like to pay, enum -
-                  'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
-                required: optional
-                usage: PRE-FULFILLMENT
-                reference: if any
-              collected_by:
-                description: >-
-                  Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller
-                  App)
-                required: optional
-                usage: BAP
-                reference: if any
+              description: payment method desired by the buyer
+              required: optional
+              usage: '-'
+              reference: if any
+            payment.type:
+              description: >-
+                payment mode by which buyer would like to pay, enum -
+                'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+              required: optional
+              usage: PRE-FULFILLMENT
+              reference: if any
+            payment.collected_by:
+              description: >-
+                Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller
+                App)
+              required: optional
+              usage: BAP
+              reference: if any
       on_search:
         parent: true
         context:
