@@ -22589,6 +22589,11 @@ x-attributes:
           parent: true
           intent:
             parent: true
+            item:
+              description: item name of the desired service
+              required: optional
+              usage: Home-Cook
+              reference: if any
             category:
               description: Category of the desired service
               required: optional
@@ -22627,25 +22632,25 @@ x-attributes:
                   required: optional
                   usage: '-'
                   reference: if any
-                  range:
-                    start:
-                      description: start time of the time slot desired for the service
-                      required: required
-                      usage: '2023-11-16T09:30:00.000Z'
-                      reference: if any
-                    end:
-                      description: end time of the time slot desired for the service
-                      required: required
-                      usage: '2023-11-16T10:30:00.000Z'
-                      reference: if any
-                  days:
-                    description: >-
-                      string comma separated values representing days of the
-                      week on which the service is required ("1" - Monday, "7" -
-                      Sunday)
+                time.range:
+                  start:
+                    description: start time of the time slot desired for the service
                     required: required
-                    usage: 1,2,3,4,5,6,7
+                    usage: '2023-11-16T09:30:00.000Z'
                     reference: if any
+                  end:
+                    description: end time of the time slot desired for the service
+                    required: required
+                    usage: '2023-11-16T10:30:00.000Z'
+                    reference: if any
+                time.days:
+                  description: >-
+                    string comma separated values representing days of the week
+                    on which the service is required ("1" - Monday, "7" -
+                    Sunday)
+                  required: required
+                  usage: 1,2,3,4,5,6,7
+                  reference: if any
             payment:
               description: payment method desired by the buyer
               required: optional

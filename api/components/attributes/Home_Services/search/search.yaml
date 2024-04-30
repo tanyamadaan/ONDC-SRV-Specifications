@@ -41,6 +41,11 @@ message:
   parent: true
   intent:
     parent: true
+    item:
+        description: item name of the desired service
+        required: optional
+        usage: "Home-Cook"
+        reference: if any
     category:
         description: Category of the desired service
         required: optional
@@ -75,7 +80,7 @@ message:
           required: optional
           usage: "-"
           reference: if any
-          range:
+        time.range:
             start:
               description: start time of the time slot desired for the service
               required: required
@@ -86,7 +91,7 @@ message:
               required: required
               usage: "2023-11-16T10:30:00.000Z"
               reference: if any
-          days:
+        time.days:
               description: string comma separated values representing days of the week on which the service is required ("1" - Monday, "7" - Sunday)
               required: required
               usage: "1,2,3,4,5,6,7"
