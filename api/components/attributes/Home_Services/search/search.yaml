@@ -56,30 +56,32 @@ message:
         required: optional
         usage: "SRV10-1000"
         reference: if any
-    fulfillment:
-      parent: true
-      type:
+    fulfillment.type:
         description: fulfillment type for the service, enum - "Home-Service, Store-Service"
         required: required
         usage: "Home-Service"
         reference: if any
-      stops:
-        type:
-            description: The type of stop - end location
-            required: required
-            usage: "end"
-            reference: if any
-        location:
+    fulfillment.stops:
+        description: Details of the location where service is required
+        required: required
+        usage: "-"
+        reference: if any
+    fulfillment.stops.type:
+        description: The type of stop - end location
+        required: required
+        usage: "end"
+        reference: if any
+    fulfillment.stops.location:
           gps:
             description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision
             required: required
             usage: "12.4535445,77.9283792"
             reference: if any
-        time:
-          description: schedule desired for the service
-          required: optional
-          usage: "-"
-          reference: if any
+    fulfillment.stops.time:
+        description: schedule desired for the service
+        required: optional
+        usage: "-"
+        reference: if any
         time.range:
             start:
               description: start time of the time slot desired for the service
