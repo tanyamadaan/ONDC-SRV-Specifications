@@ -146,12 +146,12 @@ message:
           usage: "[2022-11-20T00:00:00.000Z]"
           reference: if any
         schedule.frequency:
-          description: The service slot frequency, for example, if the provider is available every 2 hours, would be represented as 'PT2H'.
+          description: The available slot frequency, for example, if the provider is available every 2 hours, would be represented as 'PT2H'.
           required: required
           usage: "PT2H"
           reference: if any
         schedule.holidays:
-          description: future dated days on which service is not available
+          description: future dated days within the range provided on which service is not available
           required: optional
           usage: "[2024-11-13, 2024-11-15]"
           reference: if any
