@@ -88,7 +88,7 @@ message:
         reference: if any
     locations:
       id:
-        description: mandatory only if provider.locations was returned in /on_search
+        description: required if provider.locations was returned in /on_search
         required: optional
         usage: "L1"
         reference: if any

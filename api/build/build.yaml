@@ -23127,9 +23127,7 @@ x-attributes:
                 usage: P1
                 reference: if any
               locations:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: '-'
                 reference: if any
@@ -23484,9 +23482,7 @@ x-attributes:
                 usage: P1
                 reference: if any
               locations:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: '-'
                 reference: if any
@@ -23684,9 +23680,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
@@ -24027,9 +24021,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
@@ -24392,9 +24384,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
@@ -24768,7 +24758,7 @@ x-attributes:
               parent: true
               locations:
                 description: locations as listed
-                required: mandatory only if in /confirm
+                required: required if in /confirm
                 usage: '-'
                 reference: if any
             fulfillments:
@@ -24925,9 +24915,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
