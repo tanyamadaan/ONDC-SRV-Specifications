@@ -41,25 +41,37 @@ message:
   parent: true
   intent:
     parent: true
+    item:
+      description: item name of the desired service
+      required: optional
+      usage: "Home-Cook"
+      reference: if any
     category:
-      id:
-        description: Category id of the desired service
+        description: Category of the desired service
         required: optional
-        usage: "SRV10-1000"
+        usage: "-"
         reference: if any
+        id:
+          description: Category id of the desired service
+          required: optional
+          usage: "SRV10-1000"
+          reference: if any
     fulfillment:
-      parent: true
       type:
-        description: fulfillment type for the service, enum - "Home-Service, Store-Service"
-        required: required
-        usage: "Home-Service"
-        reference: if any
+          description: fulfillment type for the service, enum - "Home-Service, Store-Service"
+          required: required
+          usage: "Home-Service"
+          reference: if any
       stops:
+        description: Details of the location where service is required
+        required: required
+        usage: "-"
+        reference: if any
         type:
-            description: The type of stop - end location
-            required: required
-            usage: "end"
-            reference: if any
+          description: The type of stop - end location
+          required: required
+          usage: "end"
+          reference: if any
         location:
           gps:
             description: service location gps coordinates where service needs to be provided, should be atleast 6 digit decimal precision
@@ -71,30 +83,29 @@ message:
           required: optional
           usage: "-"
           reference: if any
-          range:
-            start:
-              description: start time of the time slot desired for the service
-              required: required
-              usage: "2023-11-16T09:30:00.000Z"
-              reference: if any
-            end:  
-              description: end time of the time slot desired for the service 
-              required: required
-              usage: "2023-11-16T10:30:00.000Z"
-              reference: if any
-          days:
-              description: string comma separated values representing days of the week on which the service is required ("1" - Monday, "7" - Sunday)
-              required: required
-              usage: "1,2,3,4,5,6,7"
-              reference: if any
+        time.days:
+          description: string comma separated values representing days of the week on which the service is required ("1" - Monday, "7" - Sunday)
+          required: required
+          usage: "1,2,3,4,5,6,7"
+          reference: if any
+        time.range.start:
+          description: start time of the time slot desired for the service
+          required: required
+          usage: "2023-11-16T09:30:00.000Z"
+          reference: if any
+        time.range.end:  
+          description: end time of the time slot desired for the service 
+          required: required
+          usage: "2023-11-16T10:30:00.000Z"
+          reference: if any
     payment:
-      type:
-        description: payment mode by which buyer would like to pay, enum - 'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
-        required: optional
-        usage: "PRE-FULFILLMENT"
-        reference: if any
-      collected_by:
-        description: Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller App)
-        required: optional
-        usage: "BAP"
-        reference: if any
+        type:
+          description: payment mode by which buyer would like to pay, enum - 'PRE-FULFILLMENT',"ON-FULFILLMENT","POST-FULFILLMENT"
+          required: optional
+          usage: "PRE-FULFILLMENT"
+          reference: if any
+        collected_by:
+          description: Payment collected by, enum - "BAP" (Buyer App), "BPP" (Seller App)
+          required: optional
+          usage: "BAP"
+          reference: if any

@@ -6406,11 +6406,11 @@ x-flows:
         reference: if any
         example:
           summary: >-
-            Returns the catalog specific to the search intent + available
-            schedule
+            Returns the catalog specific to the search intent, customizations
+            and available schedule
           description: >-
-            Returns the catalog specific to the search intent + available
-            schedule
+            Returns the catalog specific to the search intent + customization +
+            available schedule
           value:
             context:
               domain: ONDC:SRV11
@@ -8520,6 +8520,7 @@ x-flows:
                       bank_code: xxxxxxxx
                       virtual_payment_address: xxx@xxxx
                     type: ON-FULFILLMENT
+                    status: NOT-PAID
                     tags:
                       - descriptor:
                           code: Settlement_Details
@@ -9056,6 +9057,7 @@ x-flows:
                       bank_code: xxxxxxxx
                       virtual_payment_address: xxx@xxxx
                     type: ON-FULFILLMENT
+                    status: NOT-PAID
                     tags:
                       - descriptor:
                           code: Settlement_Details
@@ -9146,6 +9148,9 @@ x-flows:
                       - L1
                     fulfillment_ids:
                       - F1
+                    quantity:
+                      selected:
+                        count: 1
                   - id: IC1
                     parent_item_id: I1
                     location_ids:
@@ -15299,6 +15304,7 @@ x-examples:
                         bank_code: xxxxxxxx
                         virtual_payment_address: xxx@xxxx
                       type: ON-FULFILLMENT
+                      status: NOT-PAID
                       tags:
                         - descriptor:
                             code: Settlement_Details
@@ -16489,11 +16495,11 @@ x-examples:
                             phone: '9886098860'
                             email: abc@xyz.com
           - summary: >-
-              Returns the catalog specific to the search intent + available
-              schedule
+              Returns the catalog specific to the search intent, customizations
+              and available schedule
             description: >-
-              Returns the catalog specific to the search intent + available
-              schedule
+              Returns the catalog specific to the search intent + customization
+              + available schedule
             value:
               context:
                 domain: ONDC:SRV11
@@ -19736,6 +19742,7 @@ x-examples:
                         bank_code: xxxxxxxx
                         virtual_payment_address: xxx@xxxx
                       type: ON-FULFILLMENT
+                      status: NOT-PAID
                       tags:
                         - descriptor:
                             code: Settlement_Details
@@ -20500,6 +20507,9 @@ x-examples:
                         - L1
                       fulfillment_ids:
                         - F1
+                      quantity:
+                        selected:
+                          count: 1
                     - id: IC1
                       parent_item_id: I1
                       location_ids:
@@ -22579,14 +22589,22 @@ x-attributes:
           parent: true
           intent:
             parent: true
+            item:
+              description: item name of the desired service
+              required: optional
+              usage: Home-Cook
+              reference: if any
             category:
+              description: Category of the desired service
+              required: optional
+              usage: '-'
+              reference: if any
               id:
                 description: Category id of the desired service
                 required: optional
                 usage: SRV10-1000
                 reference: if any
             fulfillment:
-              parent: true
               type:
                 description: >-
                   fulfillment type for the service, enum - "Home-Service,
@@ -22595,6 +22613,10 @@ x-attributes:
                 usage: Home-Service
                 reference: if any
               stops:
+                description: Details of the location where service is required
+                required: required
+                usage: '-'
+                reference: if any
                 type:
                   description: The type of stop - end location
                   required: required
@@ -22613,25 +22635,24 @@ x-attributes:
                   required: optional
                   usage: '-'
                   reference: if any
-                  range:
-                    start:
-                      description: start time of the time slot desired for the service
-                      required: required
-                      usage: '2023-11-16T09:30:00.000Z'
-                      reference: if any
-                    end:
-                      description: end time of the time slot desired for the service
-                      required: required
-                      usage: '2023-11-16T10:30:00.000Z'
-                      reference: if any
-                  days:
-                    description: >-
-                      string comma separated values representing days of the
-                      week on which the service is required ("1" - Monday, "7" -
-                      Sunday)
-                    required: required
-                    usage: 1,2,3,4,5,6,7
-                    reference: if any
+                time.days:
+                  description: >-
+                    string comma separated values representing days of the week
+                    on which the service is required ("1" - Monday, "7" -
+                    Sunday)
+                  required: required
+                  usage: 1,2,3,4,5,6,7
+                  reference: if any
+                time.range.start:
+                  description: start time of the time slot desired for the service
+                  required: required
+                  usage: '2023-11-16T09:30:00.000Z'
+                  reference: if any
+                time.range.end:
+                  description: end time of the time slot desired for the service
+                  required: required
+                  usage: '2023-11-16T10:30:00.000Z'
+                  reference: if any
             payment:
               type:
                 description: >-
@@ -22764,6 +22785,75 @@ x-attributes:
                 required: optional
                 usage: '-'
                 reference: if any
+              time:
+                parent: true
+                time:
+                  description: >-
+                    To define schedule at provider level, if same schedule is
+                    available for all items. If time is defined at item level,
+                    item level time will take precedence.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                label:
+                  description: >-
+                    This is used to indicate the validity of the provider's
+                    schedule.
+                  required: required
+                  usage: validity
+                  reference: if any
+                range:
+                  description: >-
+                    It specifies the time range (start and end) within which the
+                    provider is providing the schedule for.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                range.start:
+                  description: availability start date of the provider schedule
+                  required: required
+                  usage: '2022-11-10T00:00:00.000Z'
+                  reference: if any
+                range.end:
+                  description: availability end date of the provider schedule
+                  required: required
+                  usage: '2022-11-20T00:00:00.000Z'
+                  reference: if any
+                days:
+                  description: >-
+                    Comma separated values representing days of the week when
+                    the provider is available, 1 - Monday, 7 - Sunday
+                  required: optional
+                  usage: 1,2,3,4,5
+                  reference: if any
+                schedule:
+                  description: >-
+                    It is the timeframe and availability during which the
+                    provider offers the services or operates.
+                  required: required
+                  usage: '-'
+                  reference: if any
+                schedule.times:
+                  description: >-
+                    These timestamps indicate the slots during which the
+                    provider chooses to offer available slots exclusively.
+                  required: optional
+                  usage: '[2022-11-20T00:00:00.000Z]'
+                  reference: if any
+                schedule.frequency:
+                  description: >-
+                    The available slot frequency, for example, if the provider
+                    is available every 2 hours, would be represented as 'PT2H'.
+                  required: required
+                  usage: PT2H
+                  reference: if any
+                schedule.holidays:
+                  description: >-
+                    future dated days within the range provided on which service
+                    is not available
+                  required: optional
+                  usage: '[2024-11-13, 2024-11-15]'
+                  reference: if any
               categories:
                 parent: true
                 categories:
@@ -23050,9 +23140,7 @@ x-attributes:
                 usage: P1
                 reference: if any
               locations:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: '-'
                 reference: if any
@@ -23407,9 +23495,7 @@ x-attributes:
                 usage: P1
                 reference: if any
               locations:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: '-'
                 reference: if any
@@ -23607,9 +23693,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
@@ -23749,6 +23833,14 @@ x-attributes:
                 reference: if any
             payments:
               parent: true
+              payments:
+                description: >-
+                  Payment details such as id, type, who will collect the
+                  payment, settlement details are communicated. In case of
+                  partial payments, multiple payment objects can be provided.
+                required: required
+                usage: P1
+                reference: if any
               id:
                 description: payment id
                 required: required
@@ -23942,9 +24034,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
@@ -24084,6 +24174,14 @@ x-attributes:
                 reference: if any
             payments:
               parent: true
+              payments:
+                description: >-
+                  Payment details such as id, type, who will collect the
+                  payment, settlement details are communicated. In case of
+                  partial payments, multiple payment objects can be provided.
+                required: required
+                usage: P1
+                reference: if any
               id:
                 description: payment id
                 required: required
@@ -24299,9 +24397,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any
@@ -24529,6 +24625,14 @@ x-attributes:
                 reference: if any
             payments:
               parent: true
+              payments:
+                description: >-
+                  Payment details such as id, type, who will collect the
+                  payment, settlement details are communicated. In case of
+                  partial payments, multiple payment objects can be provided.
+                required: required
+                usage: P1
+                reference: if any
               id:
                 description: payment id
                 required: required
@@ -24667,7 +24771,7 @@ x-attributes:
               parent: true
               locations:
                 description: locations as listed
-                required: mandatory only if in /confirm
+                required: required if in /confirm
                 usage: '-'
                 reference: if any
             fulfillments:
@@ -24824,9 +24928,7 @@ x-attributes:
                 reference: if any
             locations:
               id:
-                description: >-
-                  mandatory only if provider.locations was returned in
-                  /on_search
+                description: required if provider.locations was returned in /on_search
                 required: optional
                 usage: L1
                 reference: if any

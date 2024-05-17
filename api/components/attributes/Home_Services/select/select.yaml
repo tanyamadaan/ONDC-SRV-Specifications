@@ -10,7 +10,7 @@ message:
         usage: "P1"
         reference: if any
       locations:
-        description: mandatory only if provider.locations was returned in /on_search
+        description: required if provider.locations was returned in /on_search
         required: optional
         usage: "-"
         reference: if any
