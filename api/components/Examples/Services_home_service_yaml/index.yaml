@@ -30,6 +30,7 @@ on_search:
   examples:
     - $ref: "./on_search/on_search.yaml"
     - $ref: "./on_search/on_search_customized.yaml"
+    - $ref: "./on_search/on_search_cleaning.yaml"
 on_select:
   examples:
     - $ref: "./on_select/on_select_consultation_confirmed.yaml"
