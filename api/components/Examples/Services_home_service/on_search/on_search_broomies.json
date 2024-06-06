@@ -270,7 +270,7 @@
               "parent_item_id": "",
               "descriptor": {
                 "name": "Brooming, Mopping",
-                "code": "5:other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "Complete floor cleaning and sanitization",
                 "long_desc": "Complete floor cleaning and sanitization",
                 "images": [
@@ -394,7 +394,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "House size",
-                "code": "5: other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "House size",
                 "long_desc": "House size",
                 "images": [
@@ -483,7 +483,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "No. of Floors",
-                "code": "5: other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "No. of Floors",
                 "long_desc": "No. of Floors",
                 "images": [
@@ -534,7 +534,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Bathroom Cleaning",
-                "code": "5: other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "Thorough bathroom cleaning for a hygienic space ",
                 "long_desc": "Floor, slab and basin cleaning only. Pots will NOT be cleaned by Broomees , Cleaning chemicals, agents etc have to be provided by client",
                 "images": [
@@ -583,7 +583,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Dish Washing",
-                "code": "5: other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "Expert dishwashing service ensuring spotless and sanitized dishes",
                 "long_desc": "Expert dishwashing service ensuring spotless and sanitized dishes",
                 "images": [
@@ -627,7 +627,7 @@
               "parent_item_id": "IC4",
               "descriptor": {
                 "name": "No. of people",
-                "code": "5: other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "How many people are there at home?",
                 "long_desc": "How many people are there at home?",
                 "images": [
@@ -678,7 +678,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Dusting",
-                "code": "5: other code",
+                "code": "CUSTOM : other code",
                 "short_desc": "Professional dusting service for a spotless dust-free home",
                 "long_desc": "Professional dusting service for a spotless dust-free home",
                 "images": [

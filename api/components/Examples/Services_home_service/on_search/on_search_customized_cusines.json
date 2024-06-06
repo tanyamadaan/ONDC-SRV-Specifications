@@ -453,7 +453,7 @@
               "parent_item_id": "",
               "descriptor": {
                 "name": "Cook - On Demand",
-                "code": "OTHER:other code",
+                "code": "CUSTOM:other code",
                 "short_desc": "Cook - On Demand",
                 "long_desc": "Cook - On Demand",
                 "images": [
