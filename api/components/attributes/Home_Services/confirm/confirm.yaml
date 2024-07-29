@@ -108,7 +108,7 @@ message:
         reference: if any
     locations:
       id:
-        description: mandatory only if provider.locations was returned in /on_search
+        description: required if provider.locations was returned in /on_search
         required: optional
         usage: "L1"
         reference: if any
@@ -241,6 +241,11 @@ message:
           reference: if any
     payments:
       parent: true
+      payments:
+        description: Payment details such as id, type, who will collect the payment, settlement details are communicated. In case of partial payments, multiple payment objects can be provided.
+        required: required
+        usage: "P1"
+        reference: if any
       id: 
         description: payment id
         required: required

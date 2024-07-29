@@ -6,7 +6,7 @@ message:
       parent: true
       locations:
         description: locations as listed
-        required: mandatory only if in /confirm
+        required: required if in /confirm
         usage: "-"
         reference: if any
     fulfillments:

@@ -71,25 +71,27 @@
             ]
           },
           "rating": "4.4",
-          "ttl": "PT1D",
+          "ttl": "P1D",
           "time": {
             "label": "validity",
             "range": {
               "start": "2024-03-04T00:00:00.000Z",
               "end": "2024-03-09T19:00:00.000Z"
             },
-            "days": "2,3,4,5",
+            "days": "4,5",
             "schedule": {
-              "frequency": "PT12H",
-              "holidays": [
-                "2024-03-06",
-                "2024-03-08"
-              ],
+              "frequency": "PT1H",
+              "holidays": ["2024-03-06", "2024-03-08"],
               "times": [
                 "2024-03-04T09:00:00.000Z",
-                "2024-03-05T09:00:00.000Z",
-                "2024-03-07T09:00:00.000Z",
-                "2024-03-09T09:00:00.000Z"
+                "2024-03-04T10:00:00.000Z",
+                "2024-03-04T11:00:00.000Z",
+                "2024-03-04T13:00:00.000Z",
+                "2024-03-04T14:00:00.000Z",
+                "2024-03-04T15:00:00.000Z",
+                "2024-03-04T16:00:00.000Z",
+                "2024-03-04T17:00:00.000Z",
+                "2024-03-04T18:00:00.000Z"
               ]
             }
           },
@@ -162,8 +164,8 @@
             {
               "id": "C1",
               "descriptor": {
-                "name": "People",
-                "code": "PEOPLE"
+                "name": "House Size",
+                "code": "HOUSE SIZE"
               },
               "tags": [
                 {
@@ -171,6 +173,12 @@
                     "code": "Selection"
                   },
                   "list": [
+                    {
+                      "descriptor": {
+                        "code": "max_selection"
+                      },
+                      "value": "1"
+                    },
                     {
                       "descriptor": {
                         "code": "seq"
@@ -190,155 +198,26 @@
             {
               "id": "C2",
               "descriptor": {
-                "name": "Meal",
-                "code": "MEAL"
+                "name": "No. of Floors",
+                "code": "FLOORS"
               },
               "tags": [
                 {
                   "descriptor": {
-                    "code": "selection"
+                    "code": "Selection"
                   },
                   "list": [
                     {
                       "descriptor": {
-                        "code": "seq"
-                      },
-                      "value": "2"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "mandatory_selection"
-                      },
-                      "value": "true"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "min_selection"
+                        "code": "max_selection"
                       },
                       "value": "1"
                     },
                     {
                       "descriptor": {
-                        "code": "max_selection"
+                        "code": "seq"
                       },
-                      "value": "3"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "C21",
-              "parent_category_id": "C2",
-              "descriptor": {
-                "name": "Breakfast",
-                "code": "BREAKFAST"
-              },
-              "tags": [
-                {
-                  "descriptor": {
-                    "code": "schedule"
-                  },
-                  "list": [
-                    {
-                      "descriptor": {
-                        "code": "start_time"
-                      },
-                      "value": "09:00"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "end_time"
-                      },
-                      "value": "11:00"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "frequency"
-                      },
-                      "value": "PT1H"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "mandatory_selection"
-                      },
-                      "value": "true"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "C22",
-              "parent_category_id": "C2",
-              "descriptor": {
-                "name": "Lunch",
-                "code": "LUNCH"
-              },
-              "tags": [
-                {
-                  "descriptor": {
-                    "code": "schedule"
-                  },
-                  "list": [
-                    {
-                      "descriptor": {
-                        "code": "start_time"
-                      },
-                      "value": "12:00"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "end_time"
-                      },
-                      "value": "15:00"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "frequency"
-                      },
-                      "value": "PT1H"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "mandatory_selection"
-                      },
-                      "value": "true"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "C23",
-              "parent_category_id": "C2",
-              "descriptor": {
-                "name": "Dinner",
-                "code": "DINNER"
-              },
-              "tags": [
-                {
-                  "descriptor": {
-                    "code": "schedule"
-                  },
-                  "list": [
-                    {
-                      "descriptor": {
-                        "code": "start_time"
-                      },
-                      "value": "18:00"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "end_time"
-                      },
-                      "value": "22:00"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "frequency"
-                      },
-                      "value": "PT1H"
+                      "value": "2"
                     },
                     {
                       "descriptor": {
@@ -353,98 +232,36 @@
             {
               "id": "C3",
               "descriptor": {
-                "name": "Dishes",
-                "code": "CUISINES"
+                "name": "No. of people at home",
+                "code": "PEOPLE"
               },
               "tags": [
                 {
                   "descriptor": {
-                    "code": "selection"
+                    "code": "Selection"
                   },
                   "list": [
                     {
                       "descriptor": {
-                        "code": "mandatory_selection"
-                      },
-                      "value": "true"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "min_selection"
-                      },
-                      "value": "2"
-                    },
-                    {
-                      "descriptor": {
                         "code": "max_selection"
                       },
-                      "value": "12"
+                      "value": "1"
                     },
                     {
                       "descriptor": {
                         "code": "seq"
                       },
-                      "value": "3"
+                      "value": "1"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "mandatory_selection"
+                      },
+                      "value": "true"
                     }
                   ]
                 }
               ]
-            },
-            {
-              "id": "C31",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "North Indian",
-                "code": "North_Indian"
-              }
-            },
-            {
-              "id": "C32",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "Chinese",
-                "code": "CHINESE"
-              }
-            },
-            {
-              "id": "C33",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "Italian-American",
-                "code": "ITALIAN_AMERICAN"
-              }
-            },
-            {
-              "id": "C34",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "Continental",
-                "code": "CONTINENTAL"
-              }
-            },
-            {
-              "id": "C35",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "Thai",
-                "code": "THAI"
-              }
-            },
-            {
-              "id": "C36",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "Mexican",
-                "code": "MEXICAN"
-              }
-            },
-            {
-              "id": "C37",
-              "parent_category_id": "C3",
-              "descriptor": {
-                "name": "South Indian",
-                "code": "SOUTH_INDIAN"
-              }
             }
           ],
           "items": [
@@ -452,10 +269,10 @@
               "id": "I1",
               "parent_item_id": "",
               "descriptor": {
-                "name": "Cook - On Demand",
-                "code": "OTHER:other code",
-                "short_desc": "Cook - On Demand",
-                "long_desc": "Cook - On Demand",
+                "name": "Brooming, Mopping",
+                "code": "5:other code",
+                "short_desc": "Complete floor cleaning and sanitization",
+                "long_desc": "Complete floor cleaning and sanitization",
                 "images": [
                   {
                     "url": "https://abc.com/images/207.png"
@@ -470,46 +287,18 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
-                "minimum_value": "199.00"
+                "minimum_value": "2500.00"
               },
-              "category_ids": [
-                "SRV11-xxxx"
-              ],
-              "fulfillment_ids": [
-                "1"
-              ],
-              "location_ids": [
-                "L1"
-              ],
-              "payment_ids": [
-                "1"
-              ],
-              "add_ons": [
-                {
-                  "id": "A1",
-                  "descriptor": {
-                    "name": "Pro-chef",
-                    "code": "OTHER:xxxx",
-                    "short_desc": "Get pro-chef"
-                  },
-                  "price": {
-                    "currency": "INR",
-                    "value": "1000.00",
-                    "maximum_value": "1200.00",
-                    "offered_value": "1000.00"
-                  }
-                }
-              ],
+              "category_ids": ["SRV11-xxxx"],
+              "fulfillment_ids": ["1"],
+              "location_ids": ["L1"],
+              "payment_ids": ["1"],
               "cancellation_terms": [
                 {
                   "fulfillment_state": {
                     "descriptor": {
                       "code": "Pending"
                     }
-                  },
-                  "cancel_by": {
-                    "duration": "P1D"
                   },
                   "cancellation_fee": {
                     "amount": {
@@ -524,9 +313,6 @@
                       "code": "In-Transit"
                     }
                   },
-                  "cancel_by": {
-                    "duration": "P1D"
-                  },
                   "cancellation_fee": {
                     "percentage": "5"
                   },
@@ -538,22 +324,12 @@
                       "code": "At-Location"
                     }
                   },
-                  "cancel_by": {
-                    "duration": "P1D"
-                  },
                   "cancellation_fee": {
                     "percentage": "25"
                   },
                   "reason_required": true
                 }
               ],
-              "xinput": {
-                "form": {
-                  "url": "https://abc.com/form",
-                  "mimetype": "text/html"
-                },
-                "required": true
-              },
               "tags": [
                 {
                   "descriptor": {
@@ -582,7 +358,7 @@
                       "descriptor": {
                         "code": "reschedule_within"
                       },
-                      "value": "PT1D"
+                      "value": "P1D"
                     }
                   ]
                 }
@@ -593,18 +369,20 @@
                   "start": "2024-03-04T00:00:00.000Z",
                   "end": "2024-03-09T19:00:00.000Z"
                 },
-                "days": "2,3,4,5",
+                "days": "4,5",
                 "schedule": {
-                  "frequency": "PT12H",
-                  "holidays": [
-                    "2024-03-06",
-                    "2024-03-08"
-                  ],
+                  "frequency": "PT1H",
+                  "holidays": ["2024-03-06", "2024-03-08"],
                   "times": [
                     "2024-03-04T09:00:00.000Z",
-                    "2024-03-05T09:00:00.000Z",
-                    "2024-03-07T09:00:00.000Z",
-                    "2024-03-09T09:00:00.000Z"
+                    "2024-03-04T10:00:00.000Z",
+                    "2024-03-04T11:00:00.000Z",
+                    "2024-03-04T13:00:00.000Z",
+                    "2024-03-04T14:00:00.000Z",
+                    "2024-03-04T15:00:00.000Z",
+                    "2024-03-04T16:00:00.000Z",
+                    "2024-03-04T17:00:00.000Z",
+                    "2024-03-04T18:00:00.000Z"
                   ]
                 }
               },
@@ -615,10 +393,10 @@
               "id": "IC1",
               "parent_item_id": "I1",
               "descriptor": {
-                "name": "People",
-                "code": "CUSTOM: other code",
-                "short_desc": "No. of People",
-                "long_desc": "No. of People",
+                "name": "House size",
+                "code": "5: other code",
+                "short_desc": "House size",
+                "long_desc": "House size",
                 "images": [
                   {
                     "url": "https://abc.com/images/207.png"
@@ -627,26 +405,32 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"299",
-                "minimum_value": "299.00"
+                "minimum_value": "3000.00"
               },
               "quantity": {
+                "available": {
+                  "measure": {
+                    "type": "constant",
+                    "range": {
+                      "min": "1",
+                      "max": "6"
+                    },
+                    "unit": "BHK"
+                  },
+                  "count": 6
+                },
                 "unitized": {
                   "measure": {
-                    "unit": "people",
-                    "value": "1"
+                    "type": "variable",
+                    "range": {
+                      "min": "1000",
+                      "max": "4000"
+                    },
+                    "unit": "sqft"
                   }
-                },
-                "minimum": {
-                  "value": "1"
-                },
-                "maximum": {
-                  "value": "8"
                 }
               },
-              "category_ids": [
-                "C1"
-              ],
+              "category_ids": ["C1"],
               "tags": [
                 {
                   "descriptor": {
@@ -658,6 +442,37 @@
                         "code": "type"
                       },
                       "value": "customization"
+                    }
+                  ]
+                },
+                {
+                  "descriptor": {
+                    "code": "quantity_selection"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "Size 1"
+                      },
+                      "value": "1 BHK"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Size 2"
+                      },
+                      "value": "2 BHK"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Size 3"
+                      },
+                      "value": "3 BHK (less than 2000 sqft)"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Size 4"
+                      },
+                      "value": "3 BHK (more than 2000 sqft)"
                     }
                   ]
                 }
@@ -667,10 +482,10 @@
               "id": "IC2",
               "parent_item_id": "I1",
               "descriptor": {
-                "name": "Sandwich",
-                "code": "CUSTOM: other code",
-                "short_desc": "Sandwich",
-                "long_desc": "Sandwich",
+                "name": "No. of Floors",
+                "code": "5: other code",
+                "short_desc": "No. of Floors",
+                "long_desc": "No. of Floors",
                 "images": [
                   {
                     "url": "https://abc.com/images/207.png"
@@ -679,25 +494,25 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
-                "minimum_value": "199"
+                "minimum_value": "2000.00"
               },
               "quantity": {
+                "available": {
+                  "count": 4
+                },
                 "unitized": {
                   "measure": {
-                    "unit": "unit",
-                    "value": "1"
+                    "type": "constant",
+                    "range": {
+                      "min": "1",
+                      "max": "4"
+                    },
+                    "unit": "Floor"
                   }
-                },
-                "maximum": {
-                  "value": "1"
                 }
               },
-              "category_ids": [
-                "C3",
-                "C21",
-                "C31"
-              ],
+
+              "category_ids": ["C2"],
               "tags": [
                 {
                   "descriptor": {
@@ -709,18 +524,6 @@
                         "code": "type"
                       },
                       "value": "customization"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "dish_type"
-                      },
-                      "value": "breakfast"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "Mandatory_Appliance"
-                      },
-                      "value": "Microwave"
                     }
                   ]
                 }
@@ -730,10 +533,10 @@
               "id": "IC3",
               "parent_item_id": "I1",
               "descriptor": {
-                "name": "Dahi Ke Kebab",
-                "code": "CUSTOM: other code",
-                "short_desc": "Dahi Ke Kebab",
-                "long_desc": "Dahi Ke Kebab",
+                "name": "Bathroom Cleaning",
+                "code": "5: other code",
+                "short_desc": "Thorough bathroom cleaning for a hygienic space ",
+                "long_desc": "Floor, slab and basin cleaning only. Pots will NOT be cleaned by Broomees , Cleaning chemicals, agents etc have to be provided by client",
                 "images": [
                   {
                     "url": "https://abc.com/images/207.png"
@@ -742,26 +545,23 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
-                "minimum_value": "199"
+                "minimum_value": "500.00"
               },
               "quantity": {
+                "available": {
+                  "count": 6
+                },
                 "unitized": {
                   "measure": {
-                    "unit": "unit",
-                    "value": "1"
+                    "type": "constant",
+                    "range": {
+                      "min": "1",
+                      "max": "6"
+                    },
+                    "unit": "Bathroom"
                   }
-                },
-                "maximum": {
-                  "value": "1"
                 }
               },
-              "category_ids": [
-                "C3",
-                "C21",
-                "C22",
-                "C31"
-              ],
               "tags": [
                 {
                   "descriptor": {
@@ -772,19 +572,7 @@
                       "descriptor": {
                         "code": "type"
                       },
-                      "value": "customization"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "dish_type"
-                      },
-                      "value": "Appetizers"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "Mandatory_Appliance"
-                      },
-                      "value": "Non-stick"
+                      "value": "add_on"
                     }
                   ]
                 }
@@ -794,10 +582,10 @@
               "id": "IC4",
               "parent_item_id": "I1",
               "descriptor": {
-                "name": "Dal Makhni",
-                "code": "CUSTOM: other code",
-                "short_desc": "Dal Makhni",
-                "long_desc": "Dal Makhni",
+                "name": "Dish Washing",
+                "code": "5: other code",
+                "short_desc": "Expert dishwashing service ensuring spotless and sanitized dishes",
+                "long_desc": "Expert dishwashing service ensuring spotless and sanitized dishes",
                 "images": [
                   {
                     "url": "https://abc.com/images/207.png"
@@ -806,25 +594,69 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
-                "minimum_value": "199"
+                "minimum_value": "500.00"
               },
               "quantity": {
+                "available": {
+                  "count": 1
+                },
                 "unitized": {
                   "measure": {
-                    "unit": "unit",
-                    "value": "1"
+                    "unit": "unit"
                   }
-                },
-                "maximum": {
-                  "value": "1"
                 }
               },
-              "category_ids": [
-                "C3",
-                "C22",
-                "C31"
-              ],
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "attribute"
+                  },
+                  "list": [
+                    {
+                      "descriptor": {
+                        "code": "type"
+                      },
+                      "value": "add_on"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "IC5",
+              "parent_item_id": "IC4",
+              "descriptor": {
+                "name": "No. of people",
+                "code": "5: other code",
+                "short_desc": "How many people are there at home?",
+                "long_desc": "How many people are there at home?",
+                "images": [
+                  {
+                    "url": "https://abc.com/images/207.png"
+                  }
+                ]
+              },
+              "price": {
+                "currency": "INR",
+                "minimum_value": "500.00"
+              },
+              "quantity": {
+                "available": {
+                  "count": 7
+                },
+                "unitized": {
+                  "measure": {
+                    "type": "constant",
+                    "range": {
+                      "min": "1",
+                      "max": "7"
+                    },
+                    "unit": "People"
+                  }
+                }
+              },
+
+              "category_ids": ["C3"],
               "tags": [
                 {
                   "descriptor": {
@@ -836,18 +668,55 @@
                         "code": "type"
                       },
                       "value": "customization"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "IC6",
+              "parent_item_id": "I1",
+              "descriptor": {
+                "name": "Dusting",
+                "code": "5: other code",
+                "short_desc": "Professional dusting service for a spotless dust-free home",
+                "long_desc": "Professional dusting service for a spotless dust-free home",
+                "images": [
+                  {
+                    "url": "https://abc.com/images/207.png"
+                  }
+                ]
+              },
+              "price": {
+                "currency": "INR",
+                "minimum_value": "500.00"
+              },
+              "quantity": {
+                "available": {
+                  "count": 120
+                },
+                "unitized": {
+                  "measure": {
+                    "type": "constant",
+                    "range": {
+                      "min": "30",
+                      "max": "120"
                     },
+                    "unit": "Minutes"
+                  }
+                }
+              },
+              "tags": [
+                {
+                  "descriptor": {
+                    "code": "attribute"
+                  },
+                  "list": [
                     {
                       "descriptor": {
-                        "code": "dish_type"
+                        "code": "type"
                       },
-                      "value": "Main Course"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "Mandatory_Appliance"
-                      },
-                      "value": "Microwave"
+                      "value": "add_on"
                     }
                   ]
                 }
@@ -870,9 +739,7 @@
               },
               "location_ids": [],
               "category_ids": [],
-              "item_ids": [
-                "I1"
-              ],
+              "item_ids": ["I1"],
               "time": {
                 "label": "validity",
                 "range": {
