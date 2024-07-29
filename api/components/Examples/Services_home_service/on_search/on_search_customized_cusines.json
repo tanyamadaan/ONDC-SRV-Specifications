@@ -715,6 +715,12 @@
                         "code": "dish_type"
                       },
                       "value": "breakfast"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Mandatory_Appliance"
+                      },
+                      "value": "Microwave"
                     }
                   ]
                 }
@@ -773,6 +779,12 @@
                         "code": "dish_type"
                       },
                       "value": "Appetizers"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Mandatory_Appliance"
+                      },
+                      "value": "Non-stick"
                     }
                   ]
                 }
@@ -830,6 +842,12 @@
                         "code": "dish_type"
                       },
                       "value": "Main Course"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Mandatory_Appliance"
+                      },
+                      "value": "Microwave"
                     }
                   ]
                 }
