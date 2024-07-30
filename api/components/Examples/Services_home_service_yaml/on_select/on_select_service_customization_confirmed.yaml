@@ -22,6 +22,12 @@ value:
     order:
       provider:
         id: P1
+        categories: 
+          - id: C1
+          - id: C21
+            parent_category_id: C2
+          - id: C31
+            parent_category_id: C3
       items:
         - id: I1
           location_ids:
@@ -56,6 +62,7 @@ value:
           category_ids:
             - C3
             - C21
+            - C31
           fulfillment_ids:
             - F1
           quantity:
@@ -71,9 +78,6 @@ value:
                 - descriptor:
                     code: dish_type
                   value: breakfast
-                - descriptor:
-                    code: cuisine
-                  value: North_Indian
         - id: IC3
           parent_item_id: I1
           location_ids:
@@ -82,7 +86,8 @@ value:
             - F1
           category_ids:
             - C3
-            - C22
+            - C21
+            - C31
           quantity:
             selected:
               count: 1
@@ -96,34 +101,6 @@ value:
                 - descriptor:
                     code: dish_type
                   value: Appetizers
-                - descriptor:
-                    code: cuisine
-                  value: North_Indian
-        - id: IC4
-          parent_item_id: I1
-          location_ids:
-            - L1
-          fulfillment_ids:
-            - F1
-          category_ids:
-            - C3
-            - C23
-          quantity:
-            selected:
-              count: 1
-          tags:
-            - descriptor:
-                code: attribute
-              list:
-                - descriptor:
-                    code: type
-                  value: customization
-                - descriptor:
-                    code: dish_type
-                  value: Main Course
-                - descriptor:
-                    code: cuisine
-                  value: North_Indian
       fulfillments:
         - id: F1
           type: Home-Service
@@ -220,25 +197,6 @@ value:
                   - descriptor:
                       code: type
                     value: customization
-          - title: Dal Makhni
-            price:
-              currency: INR
-              value: "199.00"
-            item:
-              id: IC4
-              quantity:
-                selected:
-                  count: 1
-              price:
-                currency: INR
-                value: "199.00"
-            tags:
-              - descriptor:
-                  code: title
-                list:
-                  - descriptor:
-                      code: type
-                    value: customization
           - title: tax
             price:
               currency: INR
@@ -284,19 +242,6 @@ value:
               value: "25"
             item:
               id: IC3
-            tags:
-              - descriptor:
-                  code: title
-                list:
-                  - descriptor:
-                      code: type
-                    value: tax
-          - title: tax
-            price:
-              currency: INR
-              value: "25"
-            item:
-              id: IC4
             tags:
               - descriptor:
                   code: title
