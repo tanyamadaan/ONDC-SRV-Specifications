@@ -27,7 +27,7 @@ value:
         locations:
           - id: L1
         rateable: true
-        categories:
+        categories: 
           - id: C1
           - id: C21
             parent_category_id: C2
