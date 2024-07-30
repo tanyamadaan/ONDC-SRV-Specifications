@@ -170,15 +170,14 @@ value:
               time:
                 label: confirmed
                 range:
-                  start: "2024-03-04T10:00:00.000Z"
-                  end: "2024-03-04T18:00:00.000Z"
-              customer:
-                person:
-                  name: Ramu
+                  start: '2024-03-04T10:00:00.000Z'
+                  end: '2024-03-04T18:00:00.000Z'
+              person:
+                name: Ramu
               instructions:
-                name: ""
-                short_desc: "Specific Instructions - Optional"
-                long_desc: ""
+                  name: ""
+                  short_desc: "Specific Instructions - Optional"
+                  long_desc: ""
       cancellation_terms:
         - fulfillment_state:
             descriptor:
