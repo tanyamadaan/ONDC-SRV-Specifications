@@ -88,19 +88,6 @@
                   "start": "2023-11-16T09:30:00.000Z",
                   "end": "2023-11-16T10:30:00.000Z"
                 }
-              },
-              "tags": {
-                "descriptor": {
-                  "code": "schedule"
-                },
-                "list": [
-                  {
-                    "descriptor": {
-                      "code": "ttl"
-                    },
-                    "value": "PT1H"
-                  }
-                ]
               }
             }
           ]
@@ -177,19 +164,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "item"
-                        }
-                    ]
-                }
+                    "value": "item"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -211,19 +198,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "tax"
-                        }
-                    ]
-                }
+                    "value": "tax"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -245,19 +232,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "discount"
-                        }
-                    ]
-                }
+                    "value": "discount"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -279,19 +266,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "misc"
-                        }
-                    ]
-                }
+                    "value": "misc"
+                  }
+                ]
+              }
             ]
           }
         ],

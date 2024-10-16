@@ -390,10 +390,6 @@
                 },
                 "gps": "12.956399,77.636803"
               },
-              "instructions": {
-                "name": "Special Instructions",
-                "short_desc": "Customer Special Instructions"
-              },
               "contact": {
                 "phone": "9886098860",
                 "email": "nobody@nomail.com"
@@ -430,6 +426,10 @@
               },
               "person": {
                 "name": "Ramu"
+              },
+              "instructions": {
+                "name": "Special Instructions",
+                "short_desc": "Customer Special Instructions"
               }
             }
           ],
@@ -457,7 +457,7 @@
               },
               "quantity": {
                 "selected": {
-                  "count": "1",
+                  "count": 1,
                   "measure": {
                     "type": "constant",
                     "unit": "wall"
@@ -522,7 +522,7 @@
               },
               "quantity": {
                 "selected": {
-                  "count": "4",
+                  "count": 4,
                   "measure": {
                     "type": "constant",
                     "unit": "wall"
@@ -587,7 +587,7 @@
               },
               "quantity": {
                 "selected": {
-                  "count": "2",
+                  "count": 2,
                   "measure": {
                     "type": "constant",
                     "unit": "wall"
@@ -652,7 +652,7 @@
               },
               "quantity": {
                 "selected": {
-                  "count": "4",
+                  "count": 4,
                   "measure": {
                     "type": "constant",
                     "unit": "wall"
@@ -717,7 +717,7 @@
               },
               "quantity": {
                 "selected": {
-                  "count": "4",
+                  "count": 4,
                   "measure": {
                     "type": "constant",
                     "unit": "wall"
@@ -782,7 +782,7 @@
               },
               "quantity": {
                 "selected": {
-                  "count": "4",
+                  "count": 4,
                   "measure": {
                     "type": "constant",
                     "unit": "wall"

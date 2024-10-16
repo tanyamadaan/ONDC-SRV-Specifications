@@ -369,7 +369,7 @@
         "form": {
           "url": "https//abc.com/checklist",
           "mimetype": "text/html",
-          "submission_id": "xxxxxxxxxx",
+          "submission_id": "xxxxxxxx",
           "status": "SUCCESS"
         }
       }

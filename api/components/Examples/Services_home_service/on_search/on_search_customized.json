@@ -422,7 +422,7 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
+                "value": "199.00",
                 "minimum_value": "199.00"
               },
               "category_ids": [
@@ -568,7 +568,7 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
+                "value": "199.00",
                 "minimum_value": "299.00"
               },
               "quantity": {
@@ -620,7 +620,7 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
+                "value": "199.00",
                 "minimum_value": "199"
               },
               "quantity": {
@@ -682,7 +682,7 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
+                "value": "199.00",
                 "minimum_value": "199"
               },
               "quantity": {
@@ -744,7 +744,7 @@
               },
               "price": {
                 "currency": "INR",
-                "value":"199",
+                "value": "199.00",
                 "minimum_value": "199"
               },
               "quantity": {

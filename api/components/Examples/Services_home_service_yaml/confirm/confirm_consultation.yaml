@@ -70,9 +70,9 @@ value:
                 range:
                   start: '2023-11-16T09:30:00.000Z'
                   end: '2023-11-16T10:30:00.000Z'
-              customer:
-                person:
-                  name: Ramu
+
+              person:
+                name: Ramu
       cancellation_terms:
       - fulfillment_state:
           descriptor:
