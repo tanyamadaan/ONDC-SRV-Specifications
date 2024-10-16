@@ -4145,7 +4145,7 @@ x-flows:
                       item:
                         id: I1
                         quantity:
-                          allocated:
+                          selected:
                             count: 1
                         price:
                           currency: INR
@@ -4164,7 +4164,7 @@ x-flows:
                       item:
                         id: I1
                         quantity:
-                          allocated:
+                          selected:
                             count: 1
                         price:
                           currency: INR
@@ -4183,7 +4183,7 @@ x-flows:
                       item:
                         id: I1
                         quantity:
-                          allocated:
+                          selected:
                             count: 1
                         price:
                           currency: INR
@@ -4407,12 +4407,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4426,12 +4420,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4445,12 +4433,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4531,7 +4513,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Created
+                status: CREATED
                 provider:
                   id: P1
                   locations:
@@ -4580,9 +4562,8 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00.000Z'
                             end: '2023-11-16T10:30:00.000Z'
-                        customer:
-                          person:
-                            name: Ramu
+                        person:
+                          name: Ramu
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
@@ -4629,42 +4610,52 @@ x-flows:
                         price:
                           currency: INR
                           value: '474'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
                     - title: tax
                       price:
                         currency: INR
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
                     - title: discount
                       price:
                         currency: INR
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
                     - title: convenience_fee
                       price:
                         currency: INR
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
                   ttl: P1D
                 payments:
                   - id: P1
@@ -4679,7 +4670,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -4700,6 +4691,21 @@ x-flows:
                               code: UPI_Address
                             value: xxxxxxx
                       - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
+                      - descriptor:
                           code: Buyer_Finder_Fee
                         list:
                           - descriptor:
@@ -4715,6 +4721,7 @@ x-flows:
                     url: https://abc.com/checklist
                     mimetype: text/html
                     submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
+                    status: SUCCESS
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
@@ -4747,7 +4754,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Accepted
+                status: ACCEPTED
                 provider:
                   id: P1
                   locations:
@@ -4883,12 +4890,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4902,12 +4903,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4921,12 +4916,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5060,7 +5049,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: In-progress
+                status: IN-PROGRESS
                 provider:
                   id: P1
                   locations:
@@ -5163,12 +5152,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5182,12 +5165,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5201,12 +5178,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5228,7 +5199,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -5248,6 +5219,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -5296,7 +5282,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: In-progress
+                status: IN-PROGRESS
                 provider:
                   id: P1
                   locations:
@@ -5404,12 +5390,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5423,12 +5403,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5442,12 +5416,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5469,7 +5437,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -5489,6 +5457,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -5537,7 +5520,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: In-progress
+                status: IN-PROGRESS
                 provider:
                   id: P1
                   locations:
@@ -5646,12 +5629,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5665,12 +5642,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5684,12 +5655,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5711,7 +5676,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -5731,6 +5696,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -5773,7 +5753,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Completed
+                status: COMPLETED
                 provider:
                   id: P1
                   locations:
@@ -5877,12 +5857,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5896,12 +5870,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5915,12 +5883,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -5942,7 +5904,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -5962,6 +5924,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -6166,9 +6143,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -6185,9 +6159,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -6204,9 +6175,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
                         price:
                           currency: INR
                           value: '474'
@@ -6648,7 +6616,7 @@ x-flows:
                         parent_item_id: ''
                         descriptor:
                           name: Cook - On Demand
-                          code: 5:other code
+                          code: 'CUSTOM : other code'
                           short_desc: Cook - On Demand
                           long_desc: Cook - On Demand
                           images:
@@ -7223,6 +7191,9 @@ x-flows:
                         value: '00.00'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '00.00'
@@ -7794,6 +7765,9 @@ x-flows:
                         value: '00.00'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '00.00'
@@ -8085,7 +8059,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Created
+                status: CREATED
                 provider:
                   id: P1
                   locations:
@@ -8236,9 +8210,8 @@ x-flows:
                           range:
                             start: '2024-03-04T10:00:00.000Z'
                             end: '2024-03-04T18:00:00.000Z'
-                        customer:
-                          person:
-                            name: Ramu
+                        person:
+                          name: Ramu
                 cancellation_terms:
                   - fulfillment_state:
                       descriptor:
@@ -8276,6 +8249,9 @@ x-flows:
                         value: '00.00'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '00.00'
@@ -8523,7 +8499,7 @@ x-flows:
                     status: NOT-PAID
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -8543,6 +8519,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -8592,7 +8583,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Accepted
+                status: ACCEPTED
                 provider:
                   id: P1
                   locations:
@@ -9060,7 +9051,7 @@ x-flows:
                     status: NOT-PAID
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -9080,6 +9071,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -9137,7 +9143,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: In-progress
+                status: IN-PROGRESS
                 provider:
                   id: P1
                   locations:
@@ -9512,7 +9518,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -9532,6 +9538,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -9708,7 +9729,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: In-progress
+                status: IN-PROGRESS
                 provider:
                   id: P1
                   locations:
@@ -9817,12 +9838,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -9836,12 +9851,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -9855,12 +9864,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -9882,7 +9885,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -9902,6 +9905,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -10124,6 +10142,9 @@ x-flows:
                         value: '99'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '99'
@@ -10343,6 +10364,9 @@ x-flows:
                         value: '99'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '99'
@@ -10359,9 +10383,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -10442,7 +10463,7 @@ x-flows:
             message:
               order:
                 id: C1
-                status: Created
+                status: CREATED
                 provider:
                   id: P1
                   locations:
@@ -10491,9 +10512,8 @@ x-flows:
                           range:
                             start: '2023-11-16T09:30:00.000Z'
                             end: '2023-11-16T10:30:00.000Z'
-                        customer:
-                          person:
-                            name: Ramu
+                        person:
+                          name: Ramu
                 cancellation_terms:
                   - fulfillment_state:
                       descriptor:
@@ -10531,6 +10551,9 @@ x-flows:
                         value: '99'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '99'
@@ -10547,9 +10570,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -10622,6 +10642,7 @@ x-flows:
                     url: https://abc.com/checklist
                     mimetype: text/html
                     submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
+                    status: SUCCESS
       - summary: Seller accepts the order
         api: on_confirm
         description: >-
@@ -10654,7 +10675,7 @@ x-flows:
             message:
               order:
                 id: C1
-                status: Accepted
+                status: ACCEPTED
                 provider:
                   id: P1
                   locations:
@@ -10771,6 +10792,9 @@ x-flows:
                         value: '99'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '99'
@@ -10787,9 +10811,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -10935,7 +10956,7 @@ x-flows:
             message:
               order:
                 id: C1
-                status: Pending
+                status: PENDING
                 provider:
                   id: P1
                 items:
@@ -10967,7 +10988,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -10987,6 +11008,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -11408,9 +11444,6 @@ x-flows:
                         value: '0'
                       item:
                         id: MB1
-                        price:
-                          currency: INR
-                          value: '2784'
                       tags:
                         - descriptor:
                             code: title
@@ -11424,9 +11457,6 @@ x-flows:
                         value: '0'
                       item:
                         id: B1
-                        price:
-                          currency: INR
-                          value: '922'
                       tags:
                         - descriptor:
                             code: title
@@ -11440,9 +11470,6 @@ x-flows:
                         value: '0'
                       item:
                         id: K1
-                        price:
-                          currency: INR
-                          value: '286'
                       tags:
                         - descriptor:
                             code: title
@@ -11456,9 +11483,6 @@ x-flows:
                         value: '0'
                       item:
                         id: L1
-                        price:
-                          currency: INR
-                          value: '4392'
                       tags:
                         - descriptor:
                             code: title
@@ -11472,9 +11496,6 @@ x-flows:
                         value: '0'
                       item:
                         id: B31
-                        price:
-                          currency: INR
-                          value: '2466'
                       tags:
                         - descriptor:
                             code: title
@@ -11488,9 +11509,6 @@ x-flows:
                         value: '0'
                       item:
                         id: B21
-                        price:
-                          currency: INR
-                          value: '2244'
                       tags:
                         - descriptor:
                             code: title
@@ -11504,18 +11522,26 @@ x-flows:
                         value: '0'
                       item:
                         id: L1
-                        price:
-                          currency: INR
-                          value: '4392'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
                     - title: convenience_fee
                       price:
                         currency: INR
                         value: '0'
                       item:
                         id: L1
-                        price:
-                          currency: INR
-                          value: '4392'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
                   ttl: P5D
       - summary: Buyer accepts the quotation and makes the partial payment
         api: update
@@ -11546,7 +11572,7 @@ x-flows:
               update_target: payments
               order:
                 id: O1
-                status: Accepted
+                status: ACCEPTED
                 provider:
                   id: P1
                 items:
@@ -11557,10 +11583,10 @@ x-flows:
                   - id: PI1
                     parent_item_id: PI1
                     quantity:
-                      unitized:
+                      selected:
+                        count: 6
                         measure:
                           unit: rooms
-                          value: '6'
                     fulfillment_ids:
                       - F2
                     payment_ids:
@@ -11579,7 +11605,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -11599,6 +11625,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -12028,9 +12069,6 @@ x-flows:
                         value: '0'
                       item:
                         id: MB1
-                        price:
-                          currency: INR
-                          value: '2784'
                       tags:
                         - descriptor:
                             code: title
@@ -12044,9 +12082,6 @@ x-flows:
                         value: '0'
                       item:
                         id: B1
-                        price:
-                          currency: INR
-                          value: '922'
                       tags:
                         - descriptor:
                             code: title
@@ -12060,9 +12095,6 @@ x-flows:
                         value: '0'
                       item:
                         id: K1
-                        price:
-                          currency: INR
-                          value: '286'
                       tags:
                         - descriptor:
                             code: title
@@ -12076,9 +12108,6 @@ x-flows:
                         value: '0'
                       item:
                         id: L1
-                        price:
-                          currency: INR
-                          value: '4392'
                       tags:
                         - descriptor:
                             code: title
@@ -12092,9 +12121,6 @@ x-flows:
                         value: '0'
                       item:
                         id: B31
-                        price:
-                          currency: INR
-                          value: '2466'
                       tags:
                         - descriptor:
                             code: title
@@ -12108,9 +12134,6 @@ x-flows:
                         value: '0'
                       item:
                         id: B21
-                        price:
-                          currency: INR
-                          value: '2244'
                       tags:
                         - descriptor:
                             code: title
@@ -12124,18 +12147,26 @@ x-flows:
                         value: '0'
                       item:
                         id: L1
-                        price:
-                          currency: INR
-                          value: '4392'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
                     - title: convenience_fee
                       price:
                         currency: INR
                         value: '0'
                       item:
                         id: L1
-                        price:
-                          currency: INR
-                          value: '4392'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
                   ttl: P5D
   - summary: Consultation Services - Schedule-Reselection
     description: >-
@@ -12306,6 +12337,9 @@ x-flows:
                         value: '99'
                       item:
                         id: I1
+                        quantity:
+                          selected:
+                            count: 1
                         price:
                           currency: INR
                           value: '99'
@@ -12568,7 +12602,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Cancelled
+                status: CANCELLED
                 cancellation:
                   cancelled_by: CONSUMER
                   reason:
@@ -12622,12 +12656,6 @@ x-flows:
                         value: '0.00'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -12641,12 +12669,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -12660,12 +12682,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -12905,7 +12921,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Cancelled
+                status: CANCELLED
                 cancellation:
                   cancelled_by: PRODUCER
                   reason:
@@ -12981,12 +12997,6 @@ x-flows:
                         value: '0.00'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -13000,12 +13010,6 @@ x-flows:
                         value: '-0.00'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: '0'
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -13019,12 +13023,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -13038,12 +13036,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          allocated:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '0.00'
                       tags:
                         - descriptor:
                             code: title
@@ -13289,7 +13281,7 @@ x-flows:
               update_target: fulfillments
               order:
                 id: O1
-                status: Accepted
+                status: ACCEPTED
                 provider:
                   id: P1
                   locations:
@@ -13314,7 +13306,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -13334,6 +13326,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -13385,8 +13392,7 @@ x-flows:
                           range:
                             start: '2023-11-20T09:30:00.000Z'
                             end: '2023-11-20T10:30:00.000Z'
-                          days:
-                            - '20'
+                          days: '4'
                         person:
                           name: Ramu
                         instructions:
@@ -13465,7 +13471,7 @@ x-flows:
             message:
               order:
                 id: O1
-                status: Accepted
+                status: ACCEPTED
                 provider:
                   id: P1
                   locations:
@@ -13489,7 +13495,7 @@ x-flows:
                     type: PRE-FULFILLMENT
                     tags:
                       - descriptor:
-                          code: Settlement_Details
+                          code: Settlement_Counterparty
                         list:
                           - descriptor:
                               code: Counterparty
@@ -13509,6 +13515,21 @@ x-flows:
                           - descriptor:
                               code: UPI_Address
                             value: xxxxxxx
+                      - descriptor:
+                          code: Settlement_Details
+                        list:
+                          - descriptor:
+                              code: Window
+                            value: P1D
+                          - descriptor:
+                              code: Basis
+                            value: Completed
+                          - descriptor:
+                              code: Witholding_Amount
+                            value: '0.00'
+                          - descriptor:
+                              code: Phase
+                            value: sale-amount
                       - descriptor:
                           code: Buyer_Finder_Fee
                         list:
@@ -13599,9 +13620,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -14459,7 +14477,7 @@ x-examples:
               message:
                 order:
                   id: C1
-                  status: Created
+                  status: CREATED
                   provider:
                     id: P1
                     locations:
@@ -14508,9 +14526,8 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00.000Z'
                               end: '2023-11-16T10:30:00.000Z'
-                          customer:
-                            person:
-                              name: Ramu
+                          person:
+                            name: Ramu
                   cancellation_terms:
                     - fulfillment_state:
                         descriptor:
@@ -14548,6 +14565,9 @@ x-examples:
                           value: '99'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '99'
@@ -14564,9 +14584,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -14639,6 +14656,7 @@ x-examples:
                       url: https://abc.com/checklist
                       mimetype: text/html
                       submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
+                      status: SUCCESS
           - summary: Buyer confirm the order for the service
             description: Buyer makes the payment and creates the order
             value:
@@ -14662,7 +14680,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Created
+                  status: CREATED
                   provider:
                     id: P1
                     locations:
@@ -14711,9 +14729,8 @@ x-examples:
                             range:
                               start: '2023-11-16T09:30:00.000Z'
                               end: '2023-11-16T10:30:00.000Z'
-                          customer:
-                            person:
-                              name: Ramu
+                          person:
+                            name: Ramu
                           instructions:
                             name: Special Instructions
                             short_desc: Customer Special Instructions
@@ -14760,42 +14777,52 @@ x-examples:
                           price:
                             currency: INR
                             value: '474'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: item
                       - title: tax
                         price:
                           currency: INR
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
                       - title: discount
                         price:
                           currency: INR
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: discount
                       - title: convenience_fee
                         price:
                           currency: INR
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: misc
                     ttl: P1D
                   payments:
                     - id: P1
@@ -14810,7 +14837,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -14831,6 +14858,21 @@ x-examples:
                                 code: UPI_Address
                               value: xxxxxxx
                         - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
+                        - descriptor:
                             code: Buyer_Finder_Fee
                           list:
                             - descriptor:
@@ -14846,6 +14888,7 @@ x-examples:
                       url: https://abc.com/checklist
                       mimetype: text/html
                       submission_id: 65fe13c2-d306-4ef1-8c25-fa126c134b67
+                      status: SUCCESS
           - summary: Buyer confirm the order for the service and customizations
             description: Buyer makes the payment and creates the order and customizations
             value:
@@ -14869,7 +14912,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Created
+                  status: CREATED
                   provider:
                     id: P1
                     locations:
@@ -15020,9 +15063,8 @@ x-examples:
                             range:
                               start: '2024-03-04T10:00:00.000Z'
                               end: '2024-03-04T18:00:00.000Z'
-                          customer:
-                            person:
-                              name: Ramu
+                          person:
+                            name: Ramu
                   cancellation_terms:
                     - fulfillment_state:
                         descriptor:
@@ -15060,6 +15102,9 @@ x-examples:
                           value: '00.00'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '00.00'
@@ -15307,7 +15352,7 @@ x-examples:
                       status: NOT-PAID
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -15327,6 +15372,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -15370,7 +15430,7 @@ x-examples:
                 update_target: payments
                 order:
                   id: O1
-                  status: Accepted
+                  status: ACCEPTED
                   provider:
                     id: P1
                   items:
@@ -15381,10 +15441,10 @@ x-examples:
                     - id: PI1
                       parent_item_id: PI1
                       quantity:
-                        unitized:
+                        selected:
+                          count: 6
                           measure:
                             unit: rooms
-                            value: '6'
                       fulfillment_ids:
                         - F2
                       payment_ids:
@@ -15403,7 +15463,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -15423,6 +15483,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -15852,9 +15927,6 @@ x-examples:
                           value: '0'
                         item:
                           id: MB1
-                          price:
-                            currency: INR
-                            value: '2784'
                         tags:
                           - descriptor:
                               code: title
@@ -15868,9 +15940,6 @@ x-examples:
                           value: '0'
                         item:
                           id: B1
-                          price:
-                            currency: INR
-                            value: '922'
                         tags:
                           - descriptor:
                               code: title
@@ -15884,9 +15953,6 @@ x-examples:
                           value: '0'
                         item:
                           id: K1
-                          price:
-                            currency: INR
-                            value: '286'
                         tags:
                           - descriptor:
                               code: title
@@ -15900,9 +15966,6 @@ x-examples:
                           value: '0'
                         item:
                           id: L1
-                          price:
-                            currency: INR
-                            value: '4392'
                         tags:
                           - descriptor:
                               code: title
@@ -15916,9 +15979,6 @@ x-examples:
                           value: '0'
                         item:
                           id: B31
-                          price:
-                            currency: INR
-                            value: '2466'
                         tags:
                           - descriptor:
                               code: title
@@ -15932,9 +15992,6 @@ x-examples:
                           value: '0'
                         item:
                           id: B21
-                          price:
-                            currency: INR
-                            value: '2244'
                         tags:
                           - descriptor:
                               code: title
@@ -15948,18 +16005,26 @@ x-examples:
                           value: '0'
                         item:
                           id: L1
-                          price:
-                            currency: INR
-                            value: '4392'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: discount
                       - title: convenience_fee
                         price:
                           currency: INR
                           value: '0'
                         item:
                           id: L1
-                          price:
-                            currency: INR
-                            value: '4392'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: misc
                     ttl: P5D
       status:
         examples:
@@ -16738,7 +16803,7 @@ x-examples:
                           parent_item_id: ''
                           descriptor:
                             name: Cook - On Demand
-                            code: 5:other code
+                            code: 'CUSTOM : other code'
                             short_desc: Cook - On Demand
                             long_desc: Cook - On Demand
                             images:
@@ -17178,7 +17243,7 @@ x-examples:
                           parent_item_id: ''
                           descriptor:
                             name: Brooming, Mopping
-                            code: 5:other code
+                            code: 'CUSTOM : other code'
                             short_desc: Complete floor cleaning and sanitization
                             long_desc: Complete floor cleaning and sanitization
                             images:
@@ -17260,7 +17325,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: House size
-                            code: '5: other code'
+                            code: 'CUSTOM : other code'
                             short_desc: House size
                             long_desc: House size
                             images:
@@ -17312,7 +17377,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: No. of Floors
-                            code: '5: other code'
+                            code: 'CUSTOM : other code'
                             short_desc: No. of Floors
                             long_desc: No. of Floors
                             images:
@@ -17343,7 +17408,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: Bathroom Cleaning
-                            code: '5: other code'
+                            code: 'CUSTOM : other code'
                             short_desc: 'Thorough bathroom cleaning for a hygienic space '
                             long_desc: >-
                               Floor, slab and basin cleaning only. Pots will NOT
@@ -17375,7 +17440,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: Dish Washing
-                            code: '5: other code'
+                            code: 'CUSTOM : other code'
                             short_desc: >-
                               Expert dishwashing service ensuring spotless and
                               sanitized dishes
@@ -17404,7 +17469,7 @@ x-examples:
                           parent_item_id: IC4
                           descriptor:
                             name: No. of people
-                            code: '5: other code'
+                            code: 'CUSTOM : other code'
                             short_desc: How many people are there at home?
                             long_desc: How many people are there at home?
                             images:
@@ -17435,7 +17500,7 @@ x-examples:
                           parent_item_id: I1
                           descriptor:
                             name: Dusting
-                            code: '5: other code'
+                            code: 'CUSTOM : other code'
                             short_desc: >-
                               Professional dusting service for a spotless
                               dust-free home
@@ -17570,6 +17635,9 @@ x-examples:
                           value: '99'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '99'
@@ -17682,6 +17750,9 @@ x-examples:
                           value: '99'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '99'
@@ -17797,7 +17868,7 @@ x-examples:
                         item:
                           id: I1
                           quantity:
-                            allocated:
+                            selected:
                               count: 1
                           price:
                             currency: INR
@@ -17816,7 +17887,7 @@ x-examples:
                         item:
                           id: I1
                           quantity:
-                            allocated:
+                            selected:
                               count: 1
                           price:
                             currency: INR
@@ -17835,7 +17906,7 @@ x-examples:
                         item:
                           id: I1
                           quantity:
-                            allocated:
+                            selected:
                               count: 1
                           price:
                             currency: INR
@@ -18010,6 +18081,9 @@ x-examples:
                           value: '00.00'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '00.00'
@@ -18294,9 +18368,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18313,9 +18384,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18332,9 +18400,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
                           price:
                             currency: INR
                             value: '474'
@@ -18462,6 +18527,9 @@ x-examples:
                           value: '99'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '99'
@@ -18478,9 +18546,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -18661,12 +18726,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18680,12 +18739,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18699,12 +18752,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18971,6 +19018,9 @@ x-examples:
                           value: '00.00'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '00.00'
@@ -19262,7 +19312,7 @@ x-examples:
               message:
                 order:
                   id: C1
-                  status: Accepted
+                  status: ACCEPTED
                   provider:
                     id: P1
                     locations:
@@ -19379,6 +19429,9 @@ x-examples:
                           value: '99'
                         item:
                           id: I1
+                          quantity:
+                            selected:
+                              count: 1
                           price:
                             currency: INR
                             value: '99'
@@ -19395,9 +19448,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -19496,7 +19546,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Accepted
+                  status: ACCEPTED
                   provider:
                     id: P1
                     locations:
@@ -19632,12 +19682,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -19651,12 +19695,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -19670,12 +19708,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -19774,7 +19806,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Accepted
+                  status: ACCEPTED
                   provider:
                     id: P1
                     locations:
@@ -20242,7 +20274,7 @@ x-examples:
                       status: NOT-PAID
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -20262,6 +20294,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -20304,7 +20351,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Completed
+                  status: COMPLETED
                   provider:
                     id: P1
                     locations:
@@ -20408,12 +20455,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20427,12 +20468,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20446,12 +20481,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20473,7 +20502,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -20493,6 +20522,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -20532,7 +20576,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: In-progress
+                  status: IN-PROGRESS
                   provider:
                     id: P1
                     locations:
@@ -20635,12 +20679,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20654,12 +20692,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20673,12 +20705,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20700,7 +20726,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -20720,6 +20746,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -20759,7 +20800,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: In-progress
+                  status: IN-PROGRESS
                   provider:
                     id: P1
                     locations:
@@ -20867,12 +20908,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20886,12 +20921,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20905,12 +20934,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -20932,7 +20955,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -20952,6 +20975,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -20993,7 +21031,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: In-progress
+                  status: IN-PROGRESS
                   provider:
                     id: P1
                     locations:
@@ -21368,7 +21406,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -21388,6 +21426,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -21427,7 +21480,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: In-progress
+                  status: IN-PROGRESS
                   provider:
                     id: P1
                     locations:
@@ -21536,12 +21589,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -21555,12 +21602,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -21574,12 +21615,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -21601,7 +21636,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -21621,6 +21656,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -21662,7 +21712,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: In-progress
+                  status: IN-PROGRESS
                   provider:
                     id: P1
                     locations:
@@ -21771,12 +21821,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -21790,12 +21834,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -21809,12 +21847,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -21836,7 +21868,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -21856,6 +21888,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -21902,7 +21949,7 @@ x-examples:
               message:
                 order:
                   id: C1
-                  status: Pending
+                  status: PENDING
                   provider:
                     id: P1
                   items:
@@ -21934,7 +21981,7 @@ x-examples:
                       type: PRE-FULFILLMENT
                       tags:
                         - descriptor:
-                            code: Settlement_Details
+                            code: Settlement_Counterparty
                           list:
                             - descriptor:
                                 code: Counterparty
@@ -21954,6 +22001,21 @@ x-examples:
                             - descriptor:
                                 code: UPI_Address
                               value: xxxxxxx
+                        - descriptor:
+                            code: Settlement_Details
+                          list:
+                            - descriptor:
+                                code: Window
+                              value: P1D
+                            - descriptor:
+                                code: Basis
+                              value: Completed
+                            - descriptor:
+                                code: Witholding_Amount
+                              value: '0.00'
+                            - descriptor:
+                                code: Phase
+                              value: sale-amount
                         - descriptor:
                             code: Buyer_Finder_Fee
                           list:
@@ -22375,9 +22437,6 @@ x-examples:
                           value: '0'
                         item:
                           id: MB1
-                          price:
-                            currency: INR
-                            value: '2784'
                         tags:
                           - descriptor:
                               code: title
@@ -22391,9 +22450,6 @@ x-examples:
                           value: '0'
                         item:
                           id: B1
-                          price:
-                            currency: INR
-                            value: '922'
                         tags:
                           - descriptor:
                               code: title
@@ -22407,9 +22463,6 @@ x-examples:
                           value: '0'
                         item:
                           id: K1
-                          price:
-                            currency: INR
-                            value: '286'
                         tags:
                           - descriptor:
                               code: title
@@ -22423,9 +22476,6 @@ x-examples:
                           value: '0'
                         item:
                           id: L1
-                          price:
-                            currency: INR
-                            value: '4392'
                         tags:
                           - descriptor:
                               code: title
@@ -22439,9 +22489,6 @@ x-examples:
                           value: '0'
                         item:
                           id: B31
-                          price:
-                            currency: INR
-                            value: '2466'
                         tags:
                           - descriptor:
                               code: title
@@ -22455,9 +22502,6 @@ x-examples:
                           value: '0'
                         item:
                           id: B21
-                          price:
-                            currency: INR
-                            value: '2244'
                         tags:
                           - descriptor:
                               code: title
@@ -22471,18 +22515,26 @@ x-examples:
                           value: '0'
                         item:
                           id: L1
-                          price:
-                            currency: INR
-                            value: '4392'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: discount
                       - title: convenience_fee
                         price:
                           currency: INR
                           value: '0'
                         item:
                           id: L1
-                          price:
-                            currency: INR
-                            value: '4392'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: misc
                     ttl: P5D
       cancel:
         examples:
@@ -22534,7 +22586,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Cancelled
+                  status: CANCELLED
                   cancellation:
                     cancelled_by: CONSUMER
                     reason:
@@ -22588,12 +22640,6 @@ x-examples:
                           value: '0.00'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -22607,12 +22653,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -22626,12 +22666,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -22773,7 +22807,7 @@ x-examples:
               message:
                 order:
                   id: O1
-                  status: Cancelled
+                  status: CANCELLED
                   cancellation:
                     cancelled_by: PRODUCER
                     reason:
@@ -22849,12 +22883,6 @@ x-examples:
                           value: '0.00'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -22868,12 +22896,6 @@ x-examples:
                           value: '-0.00'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: '0'
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -22887,12 +22909,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -22906,12 +22922,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            allocated:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '0.00'
                         tags:
                           - descriptor:
                               code: title
@@ -23401,7 +23411,7 @@ x-attributes:
                     "type:code" where type is 1 - EAN, 2 - ISBN, 3 - GTIN, 4 -
                     HSN, 5 - others
                   required: optional
-                  usage: 5:other code
+                  usage: 'CUSTOM : other code'
                   reference: if any
                 descriptor.images:
                   description: >-

@@ -60,6 +60,9 @@ value:
               value: '99'
             item:
               id: I1
+              quantity:
+                selected:
+                  count: 1
               price:
                 currency: INR
                 value: '99'

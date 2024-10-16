@@ -80,7 +80,7 @@ value:
             item:
               id: I1
               quantity:
-                allocated:
+                selected:
                   count: 1
               price:
                 currency: INR
@@ -99,7 +99,7 @@ value:
             item:
               id: I1
               quantity:
-                allocated:
+                selected:
                   count: 1
               price:
                 currency: INR
@@ -118,7 +118,7 @@ value:
             item:
               id: I1
               quantity:
-                allocated:
+                selected:
                   count: 1
               price:
                 currency: INR
