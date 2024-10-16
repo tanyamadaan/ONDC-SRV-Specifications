@@ -21,7 +21,7 @@ value:
   message:
     order:
       id: O1
-      status: Created
+      status: CREATED
       provider:
         id: P1
         locations:
@@ -216,6 +216,9 @@ value:
               value: "00.00"
             item:
               id: I1
+              quantity:
+                selected:
+                  count: 1
               price:
                 currency: INR
                 value: "00.00"
@@ -451,6 +454,21 @@ value:
                 - descriptor:
                     code: UPI_Address
                   value: xxxxxxx
+            - descriptor:
+                code: Settlement_Details
+              list:
+              - descriptor:
+                  code: Window
+                value: P1D
+              - descriptor:
+                  code: Basis
+                value: Completed
+              - descriptor:
+                  code: Witholding_Amount
+                value: '0.00'
+              - descriptor:
+                  code: Phase
+                value: sale-amount
             - descriptor:
                 code: Buyer_Finder_Fee
               list:

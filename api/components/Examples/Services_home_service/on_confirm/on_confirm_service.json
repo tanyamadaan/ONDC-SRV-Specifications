@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "O1",
-      "status": "Accepted",
+      "status": "ACCEPTED",
       "provider": {
         "id": "P1",
         "locations": [
@@ -233,16 +233,7 @@
               "value": "25"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -267,16 +258,7 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -301,16 +283,7 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
+              "id": "I1"
             },
             "tags": [
               {
