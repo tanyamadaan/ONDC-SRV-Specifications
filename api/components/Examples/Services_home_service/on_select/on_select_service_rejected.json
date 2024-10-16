@@ -35,17 +35,13 @@
           "location_ids": [
             "L1"
           ],
-          "quantity": {
-            "selected": {
-              "count": 1
-            }
-          },
           "time": {
             "label": "validity",
             "range": {
               "start": "2022-17-10T00:00:00.000Z",
               "end": "2022-11-20T00:00:00.000Z"
             },
+            "days": "5",
             "schedule": {
               "frequency": "PT1H",
               "holidays": [
@@ -85,7 +81,8 @@
                 "range": {
                   "start": "2023-11-16T09:30:00.000Z",
                   "end": "2023-11-16T10:30:00.000Z"
-                }
+                },
+                "days": "4"
               }
             }
           ]
@@ -108,6 +105,10 @@
               "quantity": {
                 "selected": {
                   "count": 1
+                },
+                "measure": {
+                  "unit": "seats",
+                  "value": "2"
                 }
               },
               "price": {
@@ -116,19 +117,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "item"
-                        }
-                    ]
-                }
+                    "value": "item"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -141,7 +142,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -150,19 +151,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "tax"
-                        }
-                    ]
-                }
+                    "value": "tax"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -175,7 +176,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -184,19 +185,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "discount"
-                        }
-                    ]
-                }
+                    "value": "discount"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -209,7 +210,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -218,19 +219,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "misc"
-                        }
-                    ]
-                }
+                    "value": "misc"
+                  }
+                ]
+              }
             ]
           }
         ],

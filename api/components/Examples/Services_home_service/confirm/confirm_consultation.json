@@ -92,10 +92,8 @@
                   "end": "2023-11-16T10:30:00.000Z"
                 }
               },
-              "customer": {
-                "person": {
-                  "name": "Ramu"
-                }
+              "person": {
+                "name": "Ramu"
               }
             }
           ]
@@ -221,11 +219,11 @@
           "params": {
             "amount": "99",
             "currency": "INR",
-            "transaction_id":"3937",
+            "transaction_id": "3937",
             "bank_account_number": "xxxxxxxx",
             "virtual_payment_address": "xxx@xxxx"
           },
-          "status":"PAID",
+          "status": "PAID",
           "type": "PRE-FULFILLMENT",
           "tags": [
             {
@@ -330,8 +328,7 @@
         "form": {
           "url": "https://abc.com/checklist",
           "mimetype": "text/html",
-          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67",
-          "status": "SUCCESS"
+          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67"
         }
       }
     }

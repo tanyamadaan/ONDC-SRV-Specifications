@@ -72,7 +72,6 @@
           "tracking": false,
           "stops": [
             {
-              "id": "L1",
               "type": "start",
               "location": {
                 "id": "L1",
@@ -96,7 +95,6 @@
               }
             },
             {
-              "id": "L2",
               "type": "end",
               "location": {
                 "gps": "12.974002,77.613458",
@@ -213,19 +211,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "item"
-                        }
-                    ]
-                }
+                    "value": "item"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -238,7 +236,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -247,19 +245,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "tax"
-                        }
-                    ]
-                }
+                    "value": "tax"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -272,7 +270,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -281,19 +279,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "discount"
-                        }
-                    ]
-                }
+                    "value": "discount"
+                  }
+                ]
+              }
             ]
           },
           {
@@ -306,7 +304,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -315,19 +313,19 @@
               }
             },
             "tags": [
-                {
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
                     "descriptor": {
-                        "code": "title"
+                      "code": "type"
                     },
-                    "list": [
-                        {
-                            "descriptor": {
-                                "code": "type"
-                            },
-                            "value": "misc"
-                        }
-                    ]
-                }
+                    "value": "misc"
+                  }
+                ]
+              }
             ]
           }
         ],
@@ -340,11 +338,11 @@
           "params": {
             "amount": "499",
             "currency": "INR",
-            "transaction_id":"3937",
+            "transaction_id": "3937",
             "bank_account_number": "xxxxxxxx",
             "virtual_payment_address": "xxx@xxxx"
           },
-          "status":"PAID",
+          "status": "PAID",
           "type": "PRE-FULFILLMENT",
           "tags": [
             {
@@ -449,7 +447,7 @@
         "form": {
           "url": "https://abc.com/checklist",
           "mimetype": "text/html",
-          "submission_id": "xxxxxxxxxx",
+          "submission_id": "xxxxxxxx",
           "status": "SUCCESS"
         }
       }

@@ -186,7 +186,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -220,7 +220,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -254,7 +254,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {

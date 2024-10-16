@@ -92,10 +92,12 @@
                   "end": "2023-11-16T10:30:00.000Z"
                 }
               },
-              "customer": {
-                "person": {
-                  "name": "Ramu"
-                }
+              "person": {
+                "name": "Ramu"
+              },
+              "instructions": {
+                "name": "Special Instructions",
+                "short_desc": "Customer Special Instructions"
               }
             }
           ]
@@ -163,7 +165,7 @@
               "id": "I1",
               "quantity": {
                 "selected": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -182,7 +184,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -201,7 +203,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -220,7 +222,7 @@
               "id": "I1",
               "quantity": {
                 "allocated": {
-                  "count": "1"
+                  "count": 1
                 }
               },
               "price": {
@@ -239,16 +241,16 @@
           "params": {
             "amount": "499",
             "currency": "INR",
-            "transaction_id":"3937",
+            "transaction_id": "3937",
             "bank_account_number": "xxxxxxxx",
             "virtual_payment_address": "xxx@xxxx"
           },
-          "status":"PAID",
+          "status": "PAID",
           "type": "PRE-FULFILLMENT",
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Counterparty"
+                "code": "Settlement_Details"
               },
               "list": [
                 {
@@ -291,37 +293,6 @@
             },
             {
               "descriptor": {
-                "code": "Settlement_Details"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "Window"
-                  },
-                  "value": "P1D"
-                },
-                {
-                  "descriptor": {
-                    "code": "Basis"
-                  },
-                  "value": "Completed"
-                },
-                {
-                  "descriptor": {
-                    "code": "Witholding_Amount"
-                  },
-                  "value": "0.00"
-                },
-                {
-                  "descriptor": {
-                    "code": "Phase"
-                  },
-                  "value": "sale-amount"
-                }
-              ]
-            },
-            {
-              "descriptor": {
                 "code": "Buyer_Finder_Fee"
               },
               "list": [
@@ -348,8 +319,7 @@
         "form": {
           "url": "https://abc.com/checklist",
           "mimetype": "text/html",
-          "submission_id": "xxxxxxxxxx",
-          "status": "SUCCESS"
+          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67"
         }
       }
     }
