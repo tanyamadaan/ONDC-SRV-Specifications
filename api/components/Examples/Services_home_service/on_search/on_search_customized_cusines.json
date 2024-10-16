@@ -715,6 +715,12 @@
                         "code": "dish_type"
                       },
                       "value": "breakfast"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Mandatory_Appliance"
+                      },
+                      "value": "Microwave"
                     }
                   ]
                 }
@@ -752,6 +758,7 @@
               },
               "category_ids": [
                 "C3",
+                "C21",
                 "C22",
                 "C31"
               ],
@@ -772,6 +779,12 @@
                         "code": "dish_type"
                       },
                       "value": "Appetizers"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Mandatory_Appliance"
+                      },
+                      "value": "Non-stick"
                     }
                   ]
                 }
@@ -829,6 +842,12 @@
                         "code": "dish_type"
                       },
                       "value": "Main Course"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "Mandatory_Appliance"
+                      },
+                      "value": "Microwave"
                     }
                   ]
                 }
