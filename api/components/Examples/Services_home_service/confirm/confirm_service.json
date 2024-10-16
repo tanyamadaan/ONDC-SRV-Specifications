@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "O1",
-      "status": "Created",
+      "status": "CREATED",
       "provider": {
         "id": "P1",
         "locations": [
@@ -172,7 +172,22 @@
                 "currency": "INR",
                 "value": "474"
               }
-            }
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "item"
+                  }
+                ]
+              }
+            ]
           },
           {
             "title": "tax",
@@ -181,17 +196,23 @@
               "value": "25"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
+              "id": "I1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "tax"
+                  }
+                ]
               }
-            }
+            ]
           },
           {
             "title": "discount",
@@ -200,17 +221,23 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
+              "id": "I1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "discount"
+                  }
+                ]
               }
-            }
+            ]
           },
           {
             "title": "convenience_fee",
@@ -219,17 +246,23 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
+              "id": "I1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "misc"
+                  }
+                ]
               }
-            }
+            ]
           }
         ],
         "ttl": "P1D"
@@ -250,7 +283,7 @@
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Details"
+                "code": "Settlement_Counterparty"
               },
               "list": [
                 {
@@ -293,6 +326,37 @@
             },
             {
               "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Window"
+                  },
+                  "value": "P1D"
+                },
+                {
+                  "descriptor": {
+                    "code": "Basis"
+                  },
+                  "value": "Completed"
+                },
+                {
+                  "descriptor": {
+                    "code": "Witholding_Amount"
+                  },
+                  "value": "0.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "Phase"
+                  },
+                  "value": "sale-amount"
+                }
+              ]
+            },
+            {
+              "descriptor": {
                 "code": "Buyer_Finder_Fee"
               },
               "list": [
@@ -319,7 +383,8 @@
         "form": {
           "url": "https://abc.com/checklist",
           "mimetype": "text/html",
-          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67"
+          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67",
+          "status": "SUCCESS"
         }
       }
     }

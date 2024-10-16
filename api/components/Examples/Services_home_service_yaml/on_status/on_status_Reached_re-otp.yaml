@@ -21,7 +21,7 @@ value:
   message:
     order:
       id: O1
-      status: In-progress
+      status: IN-PROGRESS
       provider:
         id: P1
         locations:
@@ -130,12 +130,6 @@ value:
             value: '25'
           item:
             id: I1
-            quantity:
-              allocated:
-                count: 1
-            price:
-              currency: INR
-              value: '474'
           tags:
           - descriptor:
               code: title
@@ -149,12 +143,6 @@ value:
             value: '0'
           item:
             id: I1
-            quantity:
-              allocated:
-                count: 1
-            price:
-              currency: INR
-              value: '474'
           tags:
           - descriptor:
               code: title
@@ -168,12 +156,6 @@ value:
             value: '0'
           item:
             id: I1
-            quantity:
-              allocated:
-                count: 1
-            price:
-              currency: INR
-              value: '474'
           tags:
           - descriptor:
               code: title
@@ -195,26 +177,41 @@ value:
         type: PRE-FULFILLMENT
         tags:
         - descriptor:
+            code: Settlement_Counterparty
+          list:
+            - descriptor:
+                code: Counterparty
+              value: BPP
+            - descriptor:
+                code: Mode
+              value: UPI
+            - descriptor:
+                code: Beneficiary_Name
+              value: xxxxx
+            - descriptor:
+                code: Bank_Account_No
+              value: xxxxx
+            - descriptor:
+                code: Ifsc_Code
+              value: xxxxxxx
+            - descriptor:
+                code: UPI_Address
+              value: xxxxxxx
+        - descriptor:
             code: Settlement_Details
           list:
           - descriptor:
-              code: Counterparty
-            value: BPP
+              code: Window
+            value: P1D
           - descriptor:
-              code: Mode
-            value: UPI
+              code: Basis
+            value: Completed
           - descriptor:
-              code: Beneficiary_Name
-            value: xxxxx
+              code: Witholding_Amount
+            value: '0.00'
           - descriptor:
-              code: Bank_Account_No
-            value: xxxxx
-          - descriptor:
-              code: Ifsc_Code
-            value: xxxxxxx
-          - descriptor:
-              code: UPI_Address
-            value: xxxxxxx
+              code: Phase
+            value: sale-amount
         - descriptor:
             code: Buyer_Finder_Fee
           list:

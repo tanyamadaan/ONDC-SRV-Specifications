@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "C1",
-      "status": "Created",
+      "status": "CREATED",
       "provider": {
         "id": "P1",
         "locations": [
@@ -159,6 +159,11 @@
             },
             "item": {
               "id": "I1",
+              "quantity": {
+                "selected": {
+                  "count": 1
+                }
+              },
               "price": {
                 "currency": "INR",
                 "value": "99"
@@ -187,11 +192,7 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "price": {
-                "currency": "INR",
-                "value": "99"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -328,7 +329,8 @@
         "form": {
           "url": "https://abc.com/checklist",
           "mimetype": "text/html",
-          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67"
+          "submission_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67",
+          "status": "SUCCESS"
         }
       }
     }

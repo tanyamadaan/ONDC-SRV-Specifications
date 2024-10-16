@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "O1",
-      "status": "In-progress",
+      "status": "IN-PROGRESS",
       "provider": {
         "id": "P1",
         "locations": [
@@ -182,16 +182,7 @@
               "value": "25"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -216,16 +207,7 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -250,16 +232,7 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -296,7 +269,7 @@
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Details"
+                "code": "Settlement_Counterparty"
               },
               "list": [
                 {
@@ -334,6 +307,37 @@
                     "code": "UPI_Address"
                   },
                   "value": "xxxxxxx"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Window"
+                  },
+                  "value": "P1D"
+                },
+                {
+                  "descriptor": {
+                    "code": "Basis"
+                  },
+                  "value": "Completed"
+                },
+                {
+                  "descriptor": {
+                    "code": "Witholding_Amount"
+                  },
+                  "value": "0.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "Phase"
+                  },
+                  "value": "sale-amount"
                 }
               ]
             },

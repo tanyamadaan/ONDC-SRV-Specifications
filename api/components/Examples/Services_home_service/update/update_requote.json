@@ -24,7 +24,7 @@
     "update_target": "payments",
     "order": {
       "id": "O1",
-      "status": "Accepted",
+      "status": "ACCEPTED",
       "provider": {
         "id": "P1"
       },
@@ -40,10 +40,10 @@
           "id": "PI1",
           "parent_item_id": "PI1",
           "quantity": {
-            "unitized": {
+            "selected": {
+              "count": 6,
               "measure": {
-                "unit": "rooms",
-                "value": "6"
+                "unit": "rooms"
               }
             }
           },
@@ -72,7 +72,7 @@
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Details"
+                "code": "Settlement_Counterparty"
               },
               "list": [
                 {
@@ -110,6 +110,37 @@
                     "code": "UPI_Address"
                   },
                   "value": "xxxxxxx"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Window"
+                  },
+                  "value": "P1D"
+                },
+                {
+                  "descriptor": {
+                    "code": "Basis"
+                  },
+                  "value": "Completed"
+                },
+                {
+                  "descriptor": {
+                    "code": "Witholding_Amount"
+                  },
+                  "value": "0.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "Phase"
+                  },
+                  "value": "sale-amount"
                 }
               ]
             },
@@ -839,11 +870,7 @@
               "value": "0"
             },
             "item": {
-              "id": "MB1",
-              "price": {
-                "currency": "INR",
-                "value": "2784"
-              }
+              "id": "MB1"
             },
             "tags": [
               {
@@ -868,11 +895,7 @@
               "value": "0"
             },
             "item": {
-              "id": "B1",
-              "price": {
-                "currency": "INR",
-                "value": "922"
-              }
+              "id": "B1"
             },
             "tags": [
               {
@@ -897,11 +920,7 @@
               "value": "0"
             },
             "item": {
-              "id": "K1",
-              "price": {
-                "currency": "INR",
-                "value": "286"
-              }
+              "id": "K1"
             },
             "tags": [
               {
@@ -926,11 +945,7 @@
               "value": "0"
             },
             "item": {
-              "id": "L1",
-              "price": {
-                "currency": "INR",
-                "value": "4392"
-              }
+              "id": "L1"
             },
             "tags": [
               {
@@ -955,11 +970,7 @@
               "value": "0"
             },
             "item": {
-              "id": "B31",
-              "price": {
-                "currency": "INR",
-                "value": "2466"
-              }
+              "id": "B31"
             },
             "tags": [
               {
@@ -984,11 +995,7 @@
               "value": "0"
             },
             "item": {
-              "id": "B21",
-              "price": {
-                "currency": "INR",
-                "value": "2244"
-              }
+              "id": "B21"
             },
             "tags": [
               {
@@ -1013,12 +1020,23 @@
               "value": "0"
             },
             "item": {
-              "id": "L1",
-              "price": {
-                "currency": "INR",
-                "value": "4392"
+              "id": "L1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "discount"
+                  }
+                ]
               }
-            }
+            ]
           },
           {
             "title": "convenience_fee",
@@ -1027,12 +1045,23 @@
               "value": "0"
             },
             "item": {
-              "id": "L1",
-              "price": {
-                "currency": "INR",
-                "value": "4392"
+              "id": "L1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "misc"
+                  }
+                ]
               }
-            }
+            ]
           }
         ],
         "ttl": "P5D"

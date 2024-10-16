@@ -140,11 +140,6 @@
             },
             "item": {
               "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
               "price": {
                 "currency": "INR",
                 "value": "474"
@@ -174,11 +169,6 @@
             },
             "item": {
               "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
               "price": {
                 "currency": "INR",
                 "value": "474"
@@ -208,11 +198,6 @@
             },
             "item": {
               "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
               "price": {
                 "currency": "INR",
                 "value": "474"

@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "O1",
-      "status": "Accepted",
+      "status": "ACCEPTED",
       "provider": {
         "id": "P1",
         "locations": [
@@ -59,7 +59,7 @@
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Details"
+                "code": "Settlement_Counterparty"
               },
               "list": [
                 {
@@ -97,6 +97,37 @@
                     "code": "UPI_Address"
                   },
                   "value": "xxxxxxx"
+                }
+              ]
+            },
+            {
+              "descriptor": {
+                "code": "Settlement_Details"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "Window"
+                  },
+                  "value": "P1D"
+                },
+                {
+                  "descriptor": {
+                    "code": "Basis"
+                  },
+                  "value": "Completed"
+                },
+                {
+                  "descriptor": {
+                    "code": "Witholding_Amount"
+                  },
+                  "value": "0.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "Phase"
+                  },
+                  "value": "sale-amount"
                 }
               ]
             },
@@ -244,11 +275,7 @@
               "value": "0"
             },
             "item": {
-              "id": "I1",
-              "price": {
-                "currency": "INR",
-                "value": "99"
-              }
+              "id": "I1"
             },
             "tags": [
               {

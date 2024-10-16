@@ -23,7 +23,7 @@
   "message": {
     "order": {
       "id": "O1",
-      "status": "Cancelled",
+      "status": "CANCELLED",
       "cancellation": {
         "cancelled_by": "CONSUMER",
         "reason": {
@@ -109,16 +109,7 @@
               "value": "0.00"
             },
             "item": {
-              "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "0.00"
-              }
+              "id": "I1"
             },
             "tags": [
               {
@@ -144,11 +135,6 @@
             },
             "item": {
               "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
               "price": {
                 "currency": "INR",
                 "value": "0.00"
@@ -178,11 +164,6 @@
             },
             "item": {
               "id": "I1",
-              "quantity": {
-                "allocated": {
-                  "count": 1
-                }
-              },
               "price": {
                 "currency": "INR",
                 "value": "0.00"
