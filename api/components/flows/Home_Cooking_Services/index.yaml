@@ -59,7 +59,7 @@ steps:
     description: Buyer adds the service + customizations to cart + selects the schedule for the home service
     reference: if any
     example:
-      $ref: "../../Examples/Services_home_service_yaml/select/select_service_customization_cusines.yaml"
+      $ref: "../../Examples/Services_home_service_yaml/select/select_service_customization.yaml"
   - summary: Seller confirms the schedule and returns the quote
     api: on_select
     description: Seller confirms the schedule and returns the quote
