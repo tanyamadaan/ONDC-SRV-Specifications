@@ -101,7 +101,15 @@ value:
           - title: Sofa Cleaning
             price:
               currency: INR
-              value: '474'
+              value: "474"
+            item:
+              id: I1
+              quantity:
+                selected:
+                  count: 1
+              price:
+                currency: INR
+                value: "474"
             tags:
             - descriptor:
                 code: title
