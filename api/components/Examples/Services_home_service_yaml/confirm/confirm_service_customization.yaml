@@ -175,9 +175,9 @@ value:
               person:
                 name: Ramu
               instructions:
-                  name: ""
-                  short_desc: "Specific Instructions - Optional"
-                  long_desc: ""
+                name: ""
+                short_desc: "Specific Instructions - Optional"
+                long_desc: ""
       cancellation_terms:
         - fulfillment_state:
             descriptor:
