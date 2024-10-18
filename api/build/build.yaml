@@ -4144,12 +4144,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4163,12 +4157,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4182,12 +4170,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4407,12 +4389,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4426,12 +4402,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4445,12 +4415,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4611,6 +4575,15 @@ x-flows:
                     cancellation_fee:
                       percentage: '25'
                     reason_required: true
+                  - fulfillment_state:
+                      descriptor:
+                        code: Pending
+                    cancel_by:
+                      duration: P1D
+                    cancellation_fee:
+                      amount:
+                        value: '0'
+                    reason_required: false
                 quote:
                   price:
                     currency: INR
@@ -6161,9 +6134,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -6177,9 +6147,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -6193,9 +6160,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -7078,12 +7042,8 @@ x-flows:
               order:
                 provider:
                   id: P1
-                  categories:
-                    - id: C1
-                    - id: C21
-                      parent_category_id: C2
-                    - id: C31
-                      parent_category_id: C3
+                  locations:
+                    - id: L1
                 items:
                   - id: I1
                     location_ids:
@@ -7134,6 +7094,9 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: breakfast
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                   - id: IC3
                     parent_item_id: I1
                     location_ids:
@@ -7157,6 +7120,34 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
+                  - id: IC4
+                    parent_item_id: I1
+                    location_ids:
+                      - L1
+                    fulfillment_ids:
+                      - F1
+                    category_ids:
+                      - C3
+                      - C23
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: attribute
+                        list:
+                          - descriptor:
+                              code: type
+                            value: customization
+                          - descriptor:
+                              code: dish_type
+                            value: Main Course
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                 fulfillments:
                   - id: F1
                     type: Home-Service
@@ -7256,6 +7247,25 @@ x-flows:
                             - descriptor:
                                 code: type
                               value: customization
+                    - title: Dal Makhni
+                      price:
+                        currency: INR
+                        value: '199.00'
+                      item:
+                        id: IC4
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
                     - title: tax
                       price:
                         currency: INR
@@ -7301,6 +7311,19 @@ x-flows:
                         value: '25'
                       item:
                         id: IC3
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '25'
+                      item:
+                        id: IC4
                       tags:
                         - descriptor:
                             code: title
@@ -7447,6 +7470,34 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
+                  - id: IC4
+                    parent_item_id: I1
+                    location_ids:
+                      - L1
+                    fulfillment_ids:
+                      - F1
+                    category_ids:
+                      - C3
+                      - C23
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: attribute
+                        list:
+                          - descriptor:
+                              code: type
+                            value: customization
+                          - descriptor:
+                              code: dish_type
+                            value: Main Course
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -7569,6 +7620,9 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: breakfast
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                   - id: IC3
                     parent_item_id: I1
                     location_ids:
@@ -7592,6 +7646,34 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
+                  - id: IC4
+                    parent_item_id: I1
+                    location_ids:
+                      - L1
+                    fulfillment_ids:
+                      - F1
+                    category_ids:
+                      - C3
+                      - C23
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: attribute
+                        list:
+                          - descriptor:
+                              code: type
+                            value: customization
+                          - descriptor:
+                              code: dish_type
+                            value: Main Course
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -8231,6 +8313,25 @@ x-flows:
                             - descriptor:
                                 code: type
                               value: customization
+                    - title: Dal Makhni
+                      price:
+                        currency: INR
+                        value: '199.00'
+                      item:
+                        id: IC4
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
                     - title: tax
                       price:
                         currency: INR
@@ -8276,6 +8377,19 @@ x-flows:
                         value: '25'
                       item:
                         id: IC3
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '25'
+                      item:
+                        id: IC4
                       tags:
                         - descriptor:
                             code: title
@@ -8469,12 +8583,6 @@ x-flows:
                   locations:
                     - id: L1
                   rateable: true
-                  categories:
-                    - id: C1
-                    - id: C21
-                      parent_category_id: C2
-                    - id: C31
-                      parent_category_id: C3
                 items:
                   - id: I1
                     location_ids:
@@ -8550,6 +8658,34 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
+                  - id: IC4
+                    parent_item_id: I1
+                    location_ids:
+                      - L1
+                    fulfillment_ids:
+                      - F1
+                    category_ids:
+                      - C3
+                      - C23
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: attribute
+                        list:
+                          - descriptor:
+                              code: type
+                            value: customization
+                          - descriptor:
+                              code: dish_type
+                            value: Main Course
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -8730,6 +8866,25 @@ x-flows:
                             - descriptor:
                                 code: type
                               value: customization
+                    - title: Dal Makhni
+                      price:
+                        currency: INR
+                        value: '199.00'
+                      item:
+                        id: IC4
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
                     - title: tax
                       price:
                         currency: INR
@@ -8775,6 +8930,19 @@ x-flows:
                         value: '25'
                       item:
                         id: IC3
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '25'
+                      item:
+                        id: IC4
                       tags:
                         - descriptor:
                             code: title
@@ -9157,6 +9325,9 @@ x-flows:
                         price:
                           currency: INR
                           value: '00.00'
+                        quantity:
+                          selected:
+                            count: 1
                       tags:
                         - descriptor:
                             code: title
@@ -9644,6 +9815,14 @@ x-flows:
                       price:
                         currency: INR
                         value: '474'
+                      item:
+                        id: I1
+                        price:
+                          currency: INR
+                          value: '00.00'
+                        quantity:
+                          selected:
+                            count: 1
                       tags:
                         - descriptor:
                             code: title
@@ -9980,9 +10159,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -10202,9 +10378,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -12178,9 +12351,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -14211,6 +14381,34 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
+                    - id: IC4
+                      parent_item_id: I1
+                      location_ids:
+                        - L1
+                      fulfillment_ids:
+                        - F1
+                      category_ids:
+                        - C3
+                        - C23
+                      quantity:
+                        selected:
+                          count: 1
+                      tags:
+                        - descriptor:
+                            code: attribute
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
+                            - descriptor:
+                                code: dish_type
+                              value: Main Course
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -14556,6 +14754,15 @@ x-examples:
                       cancellation_fee:
                         percentage: '25'
                       reason_required: true
+                    - fulfillment_state:
+                        descriptor:
+                          code: Pending
+                      cancel_by:
+                        duration: P1D
+                      cancellation_fee:
+                        amount:
+                          value: '0'
+                      reason_required: false
                   quote:
                     price:
                       currency: INR
@@ -14972,6 +15179,25 @@ x-examples:
                               - descriptor:
                                   code: type
                                 value: customization
+                      - title: Dal Makhni
+                        price:
+                          currency: INR
+                          value: '199.00'
+                        item:
+                          id: IC4
+                          quantity:
+                            selected:
+                              count: 1
+                          price:
+                            currency: INR
+                            value: '199.00'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: customization
                       - title: tax
                         price:
                           currency: INR
@@ -15017,6 +15243,19 @@ x-examples:
                           value: '25'
                         item:
                           id: IC3
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
+                      - title: tax
+                        price:
+                          currency: INR
+                          value: '25'
+                        item:
+                          id: IC4
                         tags:
                           - descriptor:
                               code: title
@@ -17422,9 +17661,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -17537,9 +17773,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -17635,12 +17868,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -17654,12 +17881,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -17673,12 +17894,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -17718,12 +17933,8 @@ x-examples:
                 order:
                   provider:
                     id: P1
-                    categories:
-                      - id: C1
-                      - id: C21
-                        parent_category_id: C2
-                      - id: C31
-                        parent_category_id: C3
+                    locations:
+                      - id: L1
                   items:
                     - id: I1
                       location_ids:
@@ -17774,6 +17985,9 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: breakfast
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                     - id: IC3
                       parent_item_id: I1
                       location_ids:
@@ -17797,6 +18011,34 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
+                    - id: IC4
+                      parent_item_id: I1
+                      location_ids:
+                        - L1
+                      fulfillment_ids:
+                        - F1
+                      category_ids:
+                        - C3
+                        - C23
+                      quantity:
+                        selected:
+                          count: 1
+                      tags:
+                        - descriptor:
+                            code: attribute
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
+                            - descriptor:
+                                code: dish_type
+                              value: Main Course
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                   fulfillments:
                     - id: F1
                       type: Home-Service
@@ -17896,6 +18138,25 @@ x-examples:
                               - descriptor:
                                   code: type
                                 value: customization
+                      - title: Dal Makhni
+                        price:
+                          currency: INR
+                          value: '199.00'
+                        item:
+                          id: IC4
+                          quantity:
+                            selected:
+                              count: 1
+                          price:
+                            currency: INR
+                            value: '199.00'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: customization
                       - title: tax
                         price:
                           currency: INR
@@ -17941,6 +18202,19 @@ x-examples:
                           value: '25'
                         item:
                           id: IC3
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
+                      - title: tax
+                        price:
+                          currency: INR
+                          value: '25'
+                        item:
+                          id: IC4
                         tags:
                           - descriptor:
                               code: title
@@ -18081,9 +18355,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18097,9 +18368,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18113,9 +18381,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18259,9 +18524,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -18442,12 +18704,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18461,12 +18717,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18480,12 +18730,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18619,6 +18863,9 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: breakfast
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                     - id: IC3
                       parent_item_id: I1
                       location_ids:
@@ -18642,6 +18889,34 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
+                    - id: IC4
+                      parent_item_id: I1
+                      location_ids:
+                        - L1
+                      fulfillment_ids:
+                        - F1
+                      category_ids:
+                        - C3
+                        - C23
+                      quantity:
+                        selected:
+                          count: 1
+                      tags:
+                        - descriptor:
+                            code: attribute
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
+                            - descriptor:
+                                code: dish_type
+                              value: Main Course
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -19517,12 +19792,6 @@ x-examples:
                     locations:
                       - id: L1
                     rateable: true
-                    categories:
-                      - id: C1
-                      - id: C21
-                        parent_category_id: C2
-                      - id: C31
-                        parent_category_id: C3
                   items:
                     - id: I1
                       location_ids:
@@ -19598,6 +19867,34 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
+                    - id: IC4
+                      parent_item_id: I1
+                      location_ids:
+                        - L1
+                      fulfillment_ids:
+                        - F1
+                      category_ids:
+                        - C3
+                        - C23
+                      quantity:
+                        selected:
+                          count: 1
+                      tags:
+                        - descriptor:
+                            code: attribute
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
+                            - descriptor:
+                                code: dish_type
+                              value: Main Course
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -19778,6 +20075,25 @@ x-examples:
                               - descriptor:
                                   code: type
                                 value: customization
+                      - title: Dal Makhni
+                        price:
+                          currency: INR
+                          value: '199.00'
+                        item:
+                          id: IC4
+                          quantity:
+                            selected:
+                              count: 1
+                          price:
+                            currency: INR
+                            value: '199.00'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: customization
                       - title: tax
                         price:
                           currency: INR
@@ -19823,6 +20139,19 @@ x-examples:
                           value: '25'
                         item:
                           id: IC3
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
+                      - title: tax
+                        price:
+                          currency: INR
+                          value: '25'
+                        item:
+                          id: IC4
                         tags:
                           - descriptor:
                               code: title
@@ -20870,6 +21199,9 @@ x-examples:
                           price:
                             currency: INR
                             value: '00.00'
+                          quantity:
+                            selected:
+                              count: 1
                         tags:
                           - descriptor:
                               code: title
@@ -21452,6 +21784,14 @@ x-examples:
                         price:
                           currency: INR
                           value: '474'
+                        item:
+                          id: I1
+                          price:
+                            currency: INR
+                            value: '00.00'
+                          quantity:
+                            selected:
+                              count: 1
                         tags:
                           - descriptor:
                               code: title
