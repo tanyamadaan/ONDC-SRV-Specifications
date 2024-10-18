@@ -243,7 +243,7 @@
                 "short_desc": "Instuctions by provider",
                 "long_desc": "Instuctions by provider",
                 "additional_desc": {
-                  "url": "https//abc.com/instructions",
+                  "url": "https://abc.com/checklist",
                   "content_type": "text/html"
                 }
               }
@@ -835,7 +835,7 @@
       ],
       "xinput": {
         "form": {
-          "url": "https//abc.com/checklist",
+          "url": "https://abc.com/checklist",
           "mimetype": "text/html"
         },
         "required": false
