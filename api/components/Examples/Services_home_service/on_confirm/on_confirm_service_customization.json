@@ -163,6 +163,12 @@
                     "code": "dish_type"
                   },
                   "value": "Appetizers"
+                },
+                {
+                  "descriptor": {
+                    "code": "cuisine"
+                  },
+                  "value": "North_Indian"
                 }
               ]
             }
@@ -173,6 +179,9 @@
           "parent_item_id": "I1",
           "location_ids": [
             "L1"
+          ],
+          "fulfillment_ids": [
+            "F1"
           ],
           "category_ids": [
             "C3",

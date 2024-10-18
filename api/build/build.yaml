@@ -7117,6 +7117,31 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                  - id: IC4
+                    parent_item_id: I1
+                    location_ids:
+                      - L1
+                    fulfillment_ids:
+                      - F1
+                    category_ids:
+                      - C3
+                      - C23
+                    quantity:
+                      selected:
+                        count: 1
+                    tags:
+                      - descriptor:
+                          code: attribute
+                        list:
+                          - descriptor:
+                              code: type
+                            value: customization
+                          - descriptor:
+                              code: dish_type
+                            value: Main Course
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                 fulfillments:
                   - id: F1
                     type: Home-Service
@@ -7216,6 +7241,25 @@ x-flows:
                             - descriptor:
                                 code: type
                               value: customization
+                    - title: Dal Makhni
+                      price:
+                        currency: INR
+                        value: '199.00'
+                      item:
+                        id: IC4
+                        quantity:
+                          selected:
+                            count: 1
+                        price:
+                          currency: INR
+                          value: '199.00'
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
                     - title: tax
                       price:
                         currency: INR
@@ -7261,6 +7305,19 @@ x-flows:
                         value: '25'
                       item:
                         id: IC3
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '25'
+                      item:
+                        id: IC4
                       tags:
                         - descriptor:
                             code: title
@@ -7407,10 +7464,15 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                   - id: IC4
                     parent_item_id: I1
                     location_ids:
                       - L1
+                    fulfillment_ids:
+                      - F1
                     category_ids:
                       - C3
                       - C23
@@ -7575,10 +7637,15 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                   - id: IC4
                     parent_item_id: I1
                     location_ids:
                       - L1
+                    fulfillment_ids:
+                      - F1
                     category_ids:
                       - C3
                       - C23
@@ -8052,10 +8119,15 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                   - id: IC4
                     parent_item_id: I1
                     location_ids:
                       - L1
+                    fulfillment_ids:
+                      - F1
                     category_ids:
                       - C3
                       - C23
@@ -8577,10 +8649,15 @@ x-flows:
                           - descriptor:
                               code: dish_type
                             value: Appetizers
+                          - descriptor:
+                              code: cuisine
+                            value: North_Indian
                   - id: IC4
                     parent_item_id: I1
                     location_ids:
                       - L1
+                    fulfillment_ids:
+                      - F1
                     category_ids:
                       - C3
                       - C23
@@ -14295,10 +14372,15 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                     - id: IC4
                       parent_item_id: I1
                       location_ids:
                         - L1
+                      fulfillment_ids:
+                        - F1
                       category_ids:
                         - C3
                         - C23
@@ -14903,10 +14985,15 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                     - id: IC4
                       parent_item_id: I1
                       location_ids:
                         - L1
+                      fulfillment_ids:
+                        - F1
                       category_ids:
                         - C3
                         - C23
@@ -17912,6 +17999,31 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                    - id: IC4
+                      parent_item_id: I1
+                      location_ids:
+                        - L1
+                      fulfillment_ids:
+                        - F1
+                      category_ids:
+                        - C3
+                        - C23
+                      quantity:
+                        selected:
+                          count: 1
+                      tags:
+                        - descriptor:
+                            code: attribute
+                          list:
+                            - descriptor:
+                                code: type
+                              value: customization
+                            - descriptor:
+                                code: dish_type
+                              value: Main Course
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                   fulfillments:
                     - id: F1
                       type: Home-Service
@@ -18011,6 +18123,25 @@ x-examples:
                               - descriptor:
                                   code: type
                                 value: customization
+                      - title: Dal Makhni
+                        price:
+                          currency: INR
+                          value: '199.00'
+                        item:
+                          id: IC4
+                          quantity:
+                            selected:
+                              count: 1
+                          price:
+                            currency: INR
+                            value: '199.00'
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: customization
                       - title: tax
                         price:
                           currency: INR
@@ -18056,6 +18187,19 @@ x-examples:
                           value: '25'
                         item:
                           id: IC3
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
+                      - title: tax
+                        price:
+                          currency: INR
+                          value: '25'
+                        item:
+                          id: IC4
                         tags:
                           - descriptor:
                               code: title
@@ -18727,10 +18871,15 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                     - id: IC4
                       parent_item_id: I1
                       location_ids:
                         - L1
+                      fulfillment_ids:
+                        - F1
                       category_ids:
                         - C3
                         - C23
@@ -19700,10 +19849,15 @@ x-examples:
                             - descriptor:
                                 code: dish_type
                               value: Appetizers
+                            - descriptor:
+                                code: cuisine
+                              value: North_Indian
                     - id: IC4
                       parent_item_id: I1
                       location_ids:
                         - L1
+                      fulfillment_ids:
+                        - F1
                       category_ids:
                         - C3
                         - C23
