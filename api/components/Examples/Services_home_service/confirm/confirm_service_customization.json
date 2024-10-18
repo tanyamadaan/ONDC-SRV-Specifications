@@ -245,7 +245,7 @@
                 "short_desc": "Instuctions by provider",
                 "long_desc": "Instuctions by provider",
                 "additional_desc": {
-                  "url": "https://abc.com/instructions",
+                  "url": "https://abc.com/checklist",
                   "content_type": "text/html"
                 }
               }
