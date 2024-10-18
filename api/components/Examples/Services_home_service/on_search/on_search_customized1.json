@@ -15,8 +15,8 @@
     "bap_uri": "https://buyerapp.com/ondc",
     "bpp_id": "sellerapp.com",
     "bpp_uri": "https://sellerapp.com/ondc",
-    "transaction_id": "65fe13c2-d306-4ef1-8c25-fa126c134b67",
-    "message_id": "ea89883a-57ff-44de-87fa-66b07c8d25d9",
+    "transaction_id": "T1",
+    "message_id": "M1",
     "timestamp": "2024-03-04T22:00:30.000Z",
     "ttl": "PT30S"
   },
@@ -76,17 +76,14 @@
             "label": "validity",
             "range": {
               "start": "2024-03-04T00:00:00.000Z",
-              "end": "2024-04-04T00:00:00.000Z"
+              "end": "2024-03-09T19:00:00.000Z"
             },
-            "days": "1,2,3,4,5,6",
+            "days": "4,5",
             "schedule": {
-              "frequency": "PT12H",
+              "frequency": "PT1H",
               "holidays": [
                 "2024-03-06",
-                "2024-03-08",
-                "2024-03-18",
-                "2024-04-08",
-                "2024-04-20"
+                "2024-03-08"
               ],
               "times": [
                 "2024-03-04T09:00:00.000Z",
@@ -195,7 +192,6 @@
                 }
               ]
             },
-            
             {
               "id": "C2",
               "descriptor": {
@@ -398,6 +394,62 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "C31",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "North Indian",
+                "code": "North_Indian"
+              }
+            },
+            {
+              "id": "C32",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Chinese",
+                "code": "CHINESE"
+              }
+            },
+            {
+              "id": "C33",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Italian-American",
+                "code": "ITALIAN_AMERICAN"
+              }
+            },
+            {
+              "id": "C34",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Continental",
+                "code": "CONTINENTAL"
+              }
+            },
+            {
+              "id": "C35",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Thai",
+                "code": "THAI"
+              }
+            },
+            {
+              "id": "C36",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "Mexican",
+                "code": "MEXICAN"
+              }
+            },
+            {
+              "id": "C37",
+              "parent_category_id": "C3",
+              "descriptor": {
+                "name": "South Indian",
+                "code": "SOUTH_INDIAN"
+              }
             }
           ],
           "items": [
@@ -406,7 +458,7 @@
               "parent_item_id": "",
               "descriptor": {
                 "name": "Cook - On Demand",
-                "code": "CUSTOM : other code",
+                "code": "5:other code",
                 "short_desc": "Cook - On Demand",
                 "long_desc": "Cook - On Demand",
                 "images": [
@@ -423,7 +475,6 @@
               },
               "price": {
                 "currency": "INR",
-                "value": "199.00",
                 "minimum_value": "199.00"
               },
               "category_ids": [
@@ -445,9 +496,6 @@
                       "code": "Pending"
                     }
                   },
-                  "cancel_by": {
-                    "duration": "P1D"
-                  },
                   "cancellation_fee": {
                     "amount": {
                       "value": "0"
@@ -461,9 +509,6 @@
                       "code": "In-Transit"
                     }
                   },
-                  "cancel_by": {
-                    "duration": "P1D"
-                  },
                   "cancellation_fee": {
                     "percentage": "5"
                   },
@@ -474,9 +519,6 @@
                     "descriptor": {
                       "code": "At-Location"
                     }
-                  },
-                  "cancel_by": {
-                    "duration": "P1D"
                   },
                   "cancellation_fee": {
                     "percentage": "25"
@@ -558,7 +600,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "People",
-                "code": "CUSTOM: other code",
+                "code": "5: other code",
                 "short_desc": "No. of People",
                 "long_desc": "No. of People",
                 "images": [
@@ -569,7 +611,6 @@
               },
               "price": {
                 "currency": "INR",
-                "value": "199.00",
                 "minimum_value": "299.00"
               },
               "quantity": {
@@ -610,7 +651,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Sandwich",
-                "code": "CUSTOM: other code",
+                "code": "5: other code",
                 "short_desc": "Sandwich",
                 "long_desc": "Sandwich",
                 "images": [
@@ -621,7 +662,6 @@
               },
               "price": {
                 "currency": "INR",
-                "value": "199.00",
                 "minimum_value": "199"
               },
               "quantity": {
@@ -637,7 +677,8 @@
               },
               "category_ids": [
                 "C3",
-                "C21"
+                "C21",
+                "C31"
               ],
               "tags": [
                 {
@@ -656,12 +697,6 @@
                         "code": "dish_type"
                       },
                       "value": "breakfast"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "cuisine"
-                      },
-                      "value": "North_Indian"
                     }
                   ]
                 }
@@ -672,7 +707,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Dahi Ke Kebab",
-                "code": "CUSTOM: other code",
+                "code": "5: other code",
                 "short_desc": "Dahi Ke Kebab",
                 "long_desc": "Dahi Ke Kebab",
                 "images": [
@@ -683,7 +718,6 @@
               },
               "price": {
                 "currency": "INR",
-                "value": "199.00",
                 "minimum_value": "199"
               },
               "quantity": {
@@ -699,7 +733,8 @@
               },
               "category_ids": [
                 "C3",
-                "C22"
+                "C22",
+                "C31"
               ],
               "tags": [
                 {
@@ -718,12 +753,6 @@
                         "code": "dish_type"
                       },
                       "value": "Appetizers"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "cuisine"
-                      },
-                      "value": "North_Indian"
                     }
                   ]
                 }
@@ -734,7 +763,7 @@
               "parent_item_id": "I1",
               "descriptor": {
                 "name": "Dal Makhni",
-                "code": "CUSTOM: other code",
+                "code": "5: other code",
                 "short_desc": "Dal Makhni",
                 "long_desc": "Dal Makhni",
                 "images": [
@@ -745,7 +774,6 @@
               },
               "price": {
                 "currency": "INR",
-                "value": "199.00",
                 "minimum_value": "199"
               },
               "quantity": {
@@ -761,7 +789,8 @@
               },
               "category_ids": [
                 "C3",
-                "C22"
+                "C22",
+                "C31"
               ],
               "tags": [
                 {
@@ -780,12 +809,6 @@
                         "code": "dish_type"
                       },
                       "value": "Main Course"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "cuisine"
-                      },
-                      "value": "North_Indian"
                     }
                   ]
                 }
