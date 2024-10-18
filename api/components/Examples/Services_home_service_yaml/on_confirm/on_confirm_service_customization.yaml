@@ -27,12 +27,6 @@ value:
         locations:
           - id: L1
         rateable: true
-        categories:
-          - id: C1
-          - id: C21
-            parent_category_id: C2
-          - id: C31
-            parent_category_id: C3
       items:
         - id: I1
           location_ids:

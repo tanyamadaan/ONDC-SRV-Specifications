@@ -7042,12 +7042,8 @@ x-flows:
               order:
                 provider:
                   id: P1
-                  categories:
-                    - id: C1
-                    - id: C21
-                      parent_category_id: C2
-                    - id: C31
-                      parent_category_id: C3
+                  locations:
+                    - id: L1
                 items:
                   - id: I1
                     location_ids:
@@ -8408,12 +8404,6 @@ x-flows:
                   locations:
                     - id: L1
                   rateable: true
-                  categories:
-                    - id: C1
-                    - id: C21
-                      parent_category_id: C2
-                    - id: C31
-                      parent_category_id: C3
                 items:
                   - id: I1
                     location_ids:
@@ -17608,12 +17598,8 @@ x-examples:
                 order:
                   provider:
                     id: P1
-                    categories:
-                      - id: C1
-                      - id: C21
-                        parent_category_id: C2
-                      - id: C31
-                        parent_category_id: C3
+                    locations:
+                      - id: L1
                   items:
                     - id: I1
                       location_ids:
@@ -19377,12 +19363,6 @@ x-examples:
                     locations:
                       - id: L1
                     rateable: true
-                    categories:
-                      - id: C1
-                      - id: C21
-                        parent_category_id: C2
-                      - id: C31
-                        parent_category_id: C3
                   items:
                     - id: I1
                       location_ids:
