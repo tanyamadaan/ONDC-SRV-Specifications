@@ -97,6 +97,29 @@ value:
                 - descriptor:
                     code: dish_type
                   value: Appetizers
+        - id: IC4
+          parent_item_id: I1
+          location_ids:
+            - L1
+          category_ids:
+            - C3
+            - C23
+          quantity:
+            selected:
+              count: 1
+          tags:
+            - descriptor:
+                code: attribute
+              list:
+                - descriptor:
+                    code: type
+                  value: customization
+                - descriptor:
+                    code: dish_type
+                  value: Main Course
+                - descriptor:
+                    code: cuisine
+                  value: North_Indian
       billing:
         name: ONDC buyer
         address:
