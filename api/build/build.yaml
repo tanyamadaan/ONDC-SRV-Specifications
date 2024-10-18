@@ -4144,12 +4144,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4163,12 +4157,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -4182,12 +4170,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        quantity:
-                          selected:
-                            count: 1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -6152,9 +6134,6 @@ x-flows:
                         value: '25'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -6168,9 +6147,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -6184,9 +6160,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '474'
                       tags:
                         - descriptor:
                             code: title
@@ -9971,9 +9944,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -12166,9 +12136,6 @@ x-flows:
                         value: '0'
                       item:
                         id: I1
-                        price:
-                          currency: INR
-                          value: '99'
                       tags:
                         - descriptor:
                             code: title
@@ -17419,9 +17386,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -17534,9 +17498,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '99'
                         tags:
                           - descriptor:
                               code: title
@@ -17632,12 +17593,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -17651,12 +17606,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -17670,12 +17619,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          quantity:
-                            selected:
-                              count: 1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18078,9 +18021,6 @@ x-examples:
                           value: '25'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18094,9 +18034,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
@@ -18110,9 +18047,6 @@ x-examples:
                           value: '0'
                         item:
                           id: I1
-                          price:
-                            currency: INR
-                            value: '474'
                         tags:
                           - descriptor:
                               code: title
