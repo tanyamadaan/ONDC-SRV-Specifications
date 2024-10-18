@@ -74,6 +74,9 @@ value:
                 - descriptor:
                     code: dish_type
                   value: breakfast
+                - descriptor:
+                    code: cuisine
+                  value: North_Indian
         - id: IC3
           parent_item_id: I1
           location_ids:
@@ -97,6 +100,9 @@ value:
                 - descriptor:
                     code: dish_type
                   value: Appetizers
+                - descriptor:
+                    code: cuisine
+                  value: North_Indian
         - id: IC4
           parent_item_id: I1
           location_ids:

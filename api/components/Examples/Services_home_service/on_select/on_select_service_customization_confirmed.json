@@ -114,6 +114,12 @@
                     "code": "dish_type"
                   },
                   "value": "breakfast"
+                },
+                {
+                  "descriptor": {
+                    "code": "cuisine"
+                  },
+                  "value": "North_Indian"
                 }
               ]
             }
@@ -155,6 +161,12 @@
                     "code": "dish_type"
                   },
                   "value": "Appetizers"
+                },
+                {
+                  "descriptor": {
+                    "code": "cuisine"
+                  },
+                  "value": "North_Indian"
                 }
               ]
             }
