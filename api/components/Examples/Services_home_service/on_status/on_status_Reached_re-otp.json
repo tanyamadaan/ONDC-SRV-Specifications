@@ -76,7 +76,9 @@
                 "descriptor": {
                   "name": "ABC Store",
                   "images": [
-                    "https://gf-integration/images/5.png"
+                    {
+                      "url": "https://gf-integration/images/5.png"
+                    }
                   ]
                 },
                 "gps": "12.956399,77.636803"
@@ -153,18 +155,6 @@
             "price": {
               "currency": "INR",
               "value": "474"
-            },
-            "item": {
-              "id": "I1",
-              "quantity": {
-                "selected": {
-                  "count": 1
-                }
-              },
-              "price": {
-                "currency": "INR",
-                "value": "474"
-              }
             },
             "tags": [
               {

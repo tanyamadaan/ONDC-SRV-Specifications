@@ -34,7 +34,9 @@
         {
           "id": "I2",
           "parent_item_id": "PI2",
-          "fulfillment_ids": ["F1"],
+          "fulfillment_ids": [
+            "F1"
+          ],
           "quantity": {
             "selected": {
               "count": 1
@@ -269,7 +271,7 @@
           "tags": [
             {
               "descriptor": {
-                "code": "Settlement_Details"
+                "code": "Settlement_Counterparty"
               },
               "list": [
                 {
